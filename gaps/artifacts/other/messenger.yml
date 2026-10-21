@@ -1,0 +1,42 @@
+# Messenger, die noch keine eigene Seite haben (siehe hooks/gaps.py).
+# Jeder Eintrag hat genau ein Topic (Schlüssel aus extra.topics in mkdocs.base.yml); die Seite
+# gruppiert danach. Bekommt ein Eintrag eine Seite, wird er hier gelöscht.
+
+- name: WhatsApp
+  topic: communication
+- name: Telegram
+  topic: communication
+- name: Threema
+  topic: communication
+- name: Session
+  topic: communication
+- name: Rocket.Chat
+  topic: communication
+- name: Signal
+  topic: communication
+- name: Facebook Messenger
+  topic: communication
+- name: Instagram Direct
+  topic: communication
+- name: Snapchat
+  topic: communication
+- name: Discord
+  topic: communication
+- name: Wire
+  topic: communication
+- name: Element / Matrix
+  topic: communication
+- name: Microsoft Teams
+  topic: communication
+- name: Slack
+  topic: communication
+- name: Viber
+  topic: communication
+- name: WeChat
+  topic: communication
+- name: Line
+  topic: communication
+- name: Briar
+  topic: communication
+- name: SimpleX
+  topic: communication

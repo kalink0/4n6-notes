@@ -1,0 +1,75 @@
+# iOS-Artefakte, die noch keine eigene Seite haben (siehe hooks/gaps.py).
+# Jeder Eintrag hat genau ein Topic (Schlüssel aus extra.topics in mkdocs.base.yml); die Seite
+# gruppiert danach. Bekommt ein Eintrag eine Seite, wird er hier gelöscht.
+# Einzelne Biome-Streams werden auf der Seite Biome behandelt, nicht hier.
+
+- name: Bildschirmzeit (Screen Time)
+  topic: program-execution
+
+- name: applicationState.db
+  topic: installed-software
+- name: Mobile Installation Logs
+  topic: installed-software
+
+- name: Spotlight
+  topic: file-existence
+
+- name: SMS und iMessage (sms.db)
+  topic: communication
+- name: Anrufliste (CallHistory.storedata)
+  topic: communication
+- name: Kontakte
+  topic: communication
+- name: Siri Remembers
+  topic: communication
+
+- name: Cache.db (NSURLCache)
+  topic: web-activity
+
+- name: iCloud / CloudKit
+  topic: data-transfer
+
+- name: Tastatur und Texteingabe
+  topic: commands-input
+
+- name: Accounts
+  topic: accounts
+- name: Keychain
+  topic: accounts
+
+- name: WLAN
+  topic: network
+- name: DataUsage
+  topic: network
+
+- name: PowerLog
+  topic: device-state
+- name: Health
+  topic: device-state
+- name: Wecker und Uhr
+  topic: device-state
+- name: IntelligencePlatform (Knowledge Graph)
+  topic: device-state
+
+- name: Bluetooth und Zubehör
+  topic: external-devices
+
+- name: Systeminformationen
+  topic: system-config
+- name: Sysdiagnose
+  topic: system-config
+- name: lockdownd.log
+  topic: system-config
+
+- name: Photos.sqlite
+  topic: user-content
+- name: Notizen
+  topic: user-content
+- name: Kalender
+  topic: user-content
+- name: Apple Wallet / Apple Pay
+  topic: user-content
+- name: Medienbibliothek und Apple Music
+  topic: user-content
+- name: Podcasts
+  topic: user-content

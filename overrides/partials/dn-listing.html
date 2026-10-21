@@ -1,0 +1,54 @@
+{#- On section index pages: list the pages and subsections of the section. -#}
+{%- import "partials/dn-strings.html" as strings with context -%}
+{%- set dn = strings.dn -%}
+{#- Sections in extra.az_index: all pages A-Z with a short description (hooks/az_index.py). -#}
+{%- if page and page.meta and page.meta.dn_az %}
+  <h2 id="dn-listing">{{ dn.az_title }}</h2>
+  <p class="dn-az__letters">
+    {%- for group in page.meta.dn_az %}
+      <a href="#dn-az-{{ group.letter | lower }}">{{ group.letter }}</a>
+    {%- endfor %}
+  </p>
+  {%- for group in page.meta.dn_az %}
+    <h3 id="dn-az-{{ group.letter | lower }}">{{ group.letter }}</h3>
+    <ul class="dn-az">
+      {%- for entry in group.entries %}
+        <li><a href="{{ entry.url | url }}">{{ entry.title | e }}</a>
+          {%- if entry.status == "draft" %} <span class="md-status md-status--draft" title="{{ dn.draft_short }}"></span>{% endif %}
+          {%- if entry.excerpt %} <span class="dn-az__excerpt">– {{ entry.excerpt | e }}</span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+  {%- endfor %}
+{%- elif page and page.is_index and page.parent %}
+  <h2 id="dn-listing">{{ dn.listing }}</h2>
+  <ul class="dn-listing">
+    {%- for item in page.parent.children %}
+      {%- if item.is_section %}
+        {%- for child in item.children %}
+          {%- if child.is_page and child.is_index %}
+            <li><a href="{{ child.url | url }}">{{ item.title }}</a>
+              {%- if child.meta and child.meta.status == "draft" %} <span class="md-status md-status--draft" title="{{ dn.draft_short }}"></span>{% endif %}</li>
+          {%- endif %}
+        {%- endfor %}
+      {%- elif item.is_page and not item.is_index %}
+        <li><a href="{{ item.url | url }}">{{ item.title }}</a>
+          {%- if item.meta and item.meta.status == "draft" %} <span class="md-status md-status--draft" title="{{ dn.draft_short }}"></span>{% endif %}</li>
+      {%- endif %}
+    {%- endfor %}
+  </ul>
+{%- endif %}
+{#- Entries the section does not cover yet (gaps/<section>.yml, see hooks/gaps.py). -#}
+{%- if page and page.meta and page.meta.dn_gaps %}
+  <h2 id="dn-gaps">{{ dn.gaps_title }}</h2>
+  <p>{{ dn.gaps_text }}</p>
+  {%- for group in page.meta.dn_gaps %}
+    {%- if group.title %}
+      <h3>{{ group.title }}</h3>
+    {%- endif %}
+    <ul class="dn-gaps">
+      {%- for gap in group.entries %}
+        <li>{{ gap.name }}{% if gap.note %} <span class="dn-gaps__note">– {{ gap.note }}</span>{% endif %}</li>
+      {%- endfor %}
+    </ul>
+  {%- endfor %}
+{%- endif %}

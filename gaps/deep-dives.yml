@@ -1,0 +1,14 @@
+# Deep Dives, die es noch nicht gibt (siehe hooks/gaps.py).
+# Bekommt ein Eintrag eine Seite, wird er hier gelöscht.
+
+- name: APFS-Snapshots
+- name: Edge-basierte Apps (EBWebView)
+- name: Helium-basierte Apps
+- name: Hive und Isar
+- name: IndexedDB und Web-Apps
+- name: MMKV
+- name: RDP-Verbindungen unter Windows
+- name: USB-Geräte unter Windows
+- name: UWP-Apps
+- name: Windows Subsystem for Linux (WSL)
+- name: Word-Dokumente

@@ -1,0 +1,84 @@
+# Samsung-Artefakte, die noch keine eigene Seite haben (siehe hooks/gaps.py).
+# Jeder Eintrag hat genau ein Topic (Schlüssel aus extra.topics in mkdocs.base.yml); die Seite
+# gruppiert danach. Bekommt ein Eintrag eine Seite, wird er hier gelöscht.
+
+- name: SDHMS
+  topic: device-state
+- name: SRM Heating
+  topic: device-state
+- name: eRR.p
+  topic: device-state
+- name: Recovery- / Wipe-History
+  topic: device-state
+- name: Sleep Detection / Context Engine (mcfds)
+  topic: device-state
+
+- name: Rubin
+  topic: program-execution
+- name: Samsung Digital Wellbeing
+  topic: program-execution
+- name: Privacy Dashboard
+  topic: program-execution
+- name: Smart Manager
+  topic: program-execution
+- name: ContextLog
+  topic: program-execution
+- name: Smart Suggestions
+  topic: program-execution
+
+- name: SmartSwitch History
+  topic: external-devices
+- name: SmartThings / Galaxy SmartTag
+  topic: location
+
+- name: Launcher (OneUI.db)
+  topic: installed-software
+- name: Samsung Members
+  topic: installed-software
+
+- name: MyFiles FileInfo / FileCache
+  topic: file-access
+- name: MyFiles Such- und Download-Historie
+  topic: file-access
+
+- name: Gallery-Papierkorb (alt)
+  topic: file-existence
+- name: MyFiles Cloud
+  topic: file-existence
+- name: CMH
+  topic: file-existence
+- name: Media Provider / Story Service
+  topic: file-existence
+- name: Gallery Hidden Album
+  topic: file-existence
+
+- name: Secure Folder History Log
+  topic: file-system-changes
+
+- name: Weather Clock
+  topic: location
+
+- name: Logs Provider (logs.db)
+  topic: communication
+
+- name: Badge Provider
+  topic: notifications
+
+- name: Honeyboard Contact Learner
+  topic: commands-input
+
+- name: Wallet
+  topic: accounts
+
+- name: WLAN-DB / wifigeofence
+  topic: network
+- name: IMS Service
+  topic: network
+- name: secure_wifi.db
+  topic: network
+
+- name: Bixby Routines
+  topic: system-config
+
+- name: Samsung Notes
+  topic: user-content

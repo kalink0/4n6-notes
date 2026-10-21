@@ -1,0 +1,17 @@
+INHERIT: mkdocs.base.yml
+docs_dir: docs/en
+site_dir: site/en
+site_url: https://kalink0.github.io/dfir-notes/en/
+edit_uri: edit/main/docs/en/
+copyright: Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+
+theme:
+  language: en
+
+plugins:
+  - search:
+      lang: en
+
+extra:
+  status:
+    draft: Draft

@@ -1,0 +1,91 @@
+# Android-Artefakte, die noch keine eigene Seite haben (siehe hooks/gaps.py).
+# Jeder Eintrag hat genau ein Topic (Schlüssel aus extra.topics in mkdocs.base.yml); die Seite
+# gruppiert danach. Bekommt ein Eintrag eine Seite, wird er hier gelöscht.
+# Samsung-Artefakte stehen in gaps/artifacts/android/samsung.yml. Andere Hersteller haben noch
+# keinen eigenen Unterabschnitt und stehen hier mit dem Hersteller im Namen.
+
+- name: Recent Tasks / Snapshots
+  topic: program-execution
+- name: Berechtigungen / App Ops / Privacy Dashboard
+  topic: program-execution
+- name: Digital Wellbeing (Google)
+  topic: program-execution
+- name: Battery Usage (Settings Intelligence)
+  topic: program-execution
+- name: Device Personalization Services / ASI
+  topic: program-execution
+- name: Device Health Services (Turbo)
+  topic: program-execution
+
+- name: Installierte Apps (packages.xml, Play Store)
+  topic: installed-software
+
+- name: Media Provider (external.db)
+  topic: file-existence
+- name: Pixel Screenshots
+  topic: file-existence
+- name: Pixel Recorder
+  topic: file-existence
+- name: Honor Media Library
+  topic: file-existence
+- name: Oppo/OnePlus Smart Sidebar File Dock
+  topic: file-existence
+
+- name: On-Device Location History (Timeline)
+  topic: location
+- name: Find-My-Device-App
+  topic: location
+
+- name: Anrufe / SMS / Kontakte
+  topic: communication
+- name: Pixel Call Screen
+  topic: communication
+
+- name: Notification History
+  topic: notifications
+
+- name: Downloads
+  topic: web-activity
+
+- name: Quick Share
+  topic: data-transfer
+
+- name: Gboard
+  topic: commands-input
+- name: Zwischenablage
+  topic: commands-input
+
+- name: Konten (accounts_ce/de)
+  topic: accounts
+- name: Private Space / Arbeitsprofil / weitere Nutzer
+  topic: accounts
+- name: Xiaomi Second Space
+  topic: accounts
+
+- name: WLAN (WifiConfigStore, Hotspot)
+  topic: network
+- name: Intrusion Logging
+  topic: network
+- name: netstats
+  topic: network
+
+- name: Shutdown Checkpoints
+  topic: device-state
+- name: System-Dropbox
+  topic: device-state
+- name: Pixel Now Playing
+  topic: device-state
+
+- name: Bluetooth
+  topic: external-devices
+- name: Cast
+  topic: external-devices
+- name: ADB-Autorisierungen
+  topic: external-devices
+
+- name: Factory Reset / Ersteinrichtung
+  topic: system-config
+- name: Settings
+  topic: system-config
+- name: SIM / Telephony
+  topic: system-config

@@ -1,0 +1,54 @@
+# Begriffe, die im Glossar noch fehlen (siehe hooks/gaps.py).
+# Ist ein Begriff beschrieben, wird der Eintrag hier gelöscht.
+
+- name: Caches
+- name: Cluster und Sektor
+- name: Dateisysteme
+- name: Datenspeicher
+- name: Datenwiederherstellung
+- name: Forensische Datencontainer
+- name: Gelöschte Daten
+- name: Hash-Wert
+- name: Koordinierte Weltzeit
+- name: Makros
+- name: Partition
+- name: White-/Blacklist
+- name: Write-Blocker
+- name: Zeitstempel
+- name: Artefakt
+- name: MSISDN
+- name: IP-Adresse
+- name: MAC-Adresse
+- name: Privater Modus / Inkognito-Modus
+- name: Timeline
+- name: RAID
+- name: Steganografie
+
+# Sicherungsarten
+- name: Forensisches Abbild (Image)
+- name: RAM-Sicherung
+- name: Live-Sicherung
+- name: Cloud-Sicherung
+- name: Chip-Off / JTAG / ISP
+
+# Verschlüsselung
+- name: Dateibasierte Verschlüsselung (FBE) / Vollverschlüsselung (FDE)
+- name: Trusted Platform Module (TPM)
+- name: Secure Enclave
+- name: Recovery Key
+
+# Angriffe
+- name: Exploit
+- name: Cold-Boot-Angriff
+- name: DMA-Angriff
+- name: Maskenangriff / Hybridangriff
+
+# Software (Seite "Beschreibungen von Software"). Offen: ggf. pro Software ein eigenes Glossar
+# für deren Begriffe, falls sie von den Standardbegriffen der digitalen Forensik abweichen.
+- name: Griffeye
+- name: Magnet Axiom
+- name: Cellebrite Inseyets Physical Analyzer
+- name: Nuix
+- name: X-Ways Forensics
+- name: ALEAPP / iLEAPP
+- name: Cellebrite Pathfinder

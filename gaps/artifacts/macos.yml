@@ -1,0 +1,113 @@
+# macOS-Artefakte, die noch keine eigene Seite haben (siehe hooks/gaps.py).
+# Jeder Eintrag hat genau ein Topic (Schlüssel aus extra.topics in mkdocs.base.yml); die Seite
+# gruppiert danach. Bekommt ein Eintrag eine Seite, wird er hier gelöscht.
+# Apple-Apps, die es auch auf iOS gibt, stehen hier pro Plattform; Safari liegt unter other.
+# APFS-Snapshots gehören in die Deep Dives, nicht hierher.
+
+- name: KnowledgeC
+  topic: program-execution
+- name: Biome
+  topic: program-execution
+- name: Saved Application State
+  topic: program-execution
+- name: Bildschirmzeit (RMAdminStore)
+  topic: program-execution
+- name: Dock
+  topic: program-execution
+- name: Crash Reports
+  topic: program-execution
+- name: ExecPolicy und Notarisierung
+  topic: program-execution
+
+- name: Installationshistorie
+  topic: installed-software
+
+- name: .DS_Store
+  topic: file-access
+- name: Spotlight Shortcuts
+  topic: file-access
+- name: Document Revisions
+  topic: file-existence
+- name: CoreSpotlight
+  topic: file-existence
+
+- name: Ortungsdienste (clients.plist)
+  topic: location
+
+- name: InteractionC
+  topic: communication
+- name: Nachrichten (chat.db)
+  topic: communication
+- name: Mail
+  topic: communication
+- name: Anrufliste und FaceTime
+  topic: communication
+- name: Kontakte
+  topic: communication
+
+- name: Quarantine Events
+  topic: data-transfer
+- name: AirDrop
+  topic: data-transfer
+- name: File Provider / iCloud Drive
+  topic: data-transfer
+- name: Druckaufträge (CUPS)
+  topic: data-transfer
+
+- name: Shell-Historie (zsh, bash)
+  topic: commands-input
+- name: sudo lastrun
+  topic: commands-input
+- name: Siri Analytics
+  topic: commands-input
+
+- name: Benutzerkonten (dslocal)
+  topic: accounts
+- name: utmpx
+  topic: accounts
+- name: Internet-Accounts
+  topic: accounts
+- name: Keychain
+  topic: accounts
+
+- name: WLAN
+  topic: network
+- name: Netzwerknutzung (netusage.sqlite)
+  topic: network
+- name: Remotezugriff (Apple Remote Desktop, Bildschirmfreigabe)
+  topic: network
+- name: Firewall-Log
+  topic: network
+
+- name: Unified Logs
+  topic: device-state
+- name: PowerLog
+  topic: device-state
+- name: Apple System Log (ASL)
+  topic: device-state
+- name: Personalization Portrait
+  topic: device-state
+
+- name: iOS-Kopplung und -Backups (lockdown, MobileSync)
+  topic: external-devices
+- name: Bluetooth
+  topic: external-devices
+
+- name: Systeminformationen
+  topic: system-config
+- name: TCC.db
+  topic: system-config
+- name: XProtect
+  topic: system-config
+
+- name: Launch Agents und Launch Daemons
+  topic: persistence
+- name: Background Task Management (Anmeldeobjekte)
+  topic: persistence
+
+- name: Fotos (Photos.sqlite)
+  topic: user-content
+- name: Notizen
+  topic: user-content
+- name: Kalender
+  topic: user-content

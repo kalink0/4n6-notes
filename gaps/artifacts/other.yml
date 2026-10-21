@@ -1,0 +1,76 @@
+# Sonstige Artefakte, die noch keine eigene Seite haben (siehe hooks/gaps.py).
+# Jeder Eintrag hat genau ein Topic (Schlüssel aus extra.topics in mkdocs.base.yml); die Seite
+# gruppiert danach. Bekommt ein Eintrag eine Seite, wird er hier gelöscht.
+# Messenger und Browser stehen in gaps/artifacts/other/.
+
+- name: Spotify
+  topic: program-execution
+
+- name: KeePassXC
+  topic: file-access
+- name: VLC
+  topic: file-access
+
+- name: OneDrive
+  topic: file-existence
+- name: Google Drive
+  topic: file-existence
+- name: Dropbox
+  topic: file-existence
+- name: Nextcloud-Client
+  topic: file-existence
+- name: MEGA
+  topic: file-existence
+- name: EXIF
+  topic: file-existence
+- name: Office-Dokumentmetadaten
+  topic: file-existence
+- name: PDF-Metadaten
+  topic: file-existence
+- name: C2PA / Content Credentials
+  topic: file-existence
+- name: XMP
+  topic: file-existence
+
+- name: Google Maps
+  topic: location
+- name: Waze
+  topic: location
+- name: Strava / Komoot
+  topic: location
+- name: Garmin Connect
+  topic: location
+- name: Fitbit
+  topic: location
+
+- name: Thunderbird
+  topic: communication
+- name: Outlook (PST/OST)
+  topic: communication
+- name: Gmail-App
+  topic: communication
+- name: KI-Chat-Apps
+  topic: communication
+- name: Zoom
+  topic: communication
+- name: Kleinanzeigen / eBay / Vinted
+  topic: communication
+
+- name: BitTorrent-Clients
+  topic: data-transfer
+
+- name: Bitwarden
+  topic: accounts
+- name: Krypto-Wallets
+  topic: accounts
+
+- name: AnyDesk
+  topic: network
+- name: TeamViewer
+  topic: network
+- name: RustDesk
+  topic: network
+- name: Chrome Remote Desktop
+  topic: network
+- name: VPN-Clients
+  topic: network

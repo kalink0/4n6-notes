@@ -1,0 +1,72 @@
+# Windows-Artefakte, die noch keine eigene Seite haben (siehe hooks/gaps.py).
+# Jeder Eintrag hat genau ein Topic (Schlüssel aus extra.topics in mkdocs.base.yml); die Seite
+# gruppiert danach. Bekommt ein Eintrag eine Seite, wird er hier gelöscht.
+# Dateisystemstrukturen ($MFT, $LogFile, $I30) gehören in die Deep Dives, nicht hierher.
+
+- name: USBSTOR / USB
+  topic: external-devices
+- name: MountedDevices
+  topic: external-devices
+- name: MountPoints2
+  topic: external-devices
+- name: setupapi.dev.log
+  topic: external-devices
+- name: Partition/Diagnostic-Log
+  topic: external-devices
+- name: Windows Portable Devices
+  topic: external-devices
+
+- name: NetworkList
+  topic: network
+- name: WLAN-Profile und WLAN-AutoConfig
+  topic: network
+- name: RDP Bitmap Cache
+  topic: network
+
+- name: SAM
+  topic: accounts
+- name: ProfileList
+  topic: accounts
+
+- name: Systeminformationen
+  topic: system-config
+
+- name: Autostart-Einträge in der Registry
+  topic: persistence
+- name: Dienste
+  topic: persistence
+- name: Geplante Aufgaben
+  topic: persistence
+
+- name: Windows Error Reporting
+  topic: program-execution
+- name: RecentFileCache.bcf
+  topic: program-execution
+- name: Sysinternals-EULA
+  topic: program-execution
+
+- name: WordWheelQuery
+  topic: commands-input
+- name: TypedPaths
+  topic: commands-input
+- name: Notepad TabState
+  topic: commands-input
+
+- name: 7-Zip-Historie
+  topic: file-access
+- name: OAlerts
+  topic: file-access
+
+- name: Microsoft Defender
+  topic: file-existence
+
+- name: Zone.Identifier (Mark of the Web)
+  topic: web-activity
+- name: WebCache.dat
+  topic: web-activity
+
+- name: OneDrive
+  topic: data-transfer
+
+- name: Phone Link (Smartphone-Link)
+  topic: communication

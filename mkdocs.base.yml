@@ -1,0 +1,159 @@
+# Shared configuration. Each language has its own config (mkdocs.de.yml, mkdocs.en.yml)
+# that inherits from this file. German (docs/de) is the source language.
+site_name: DFIR Notes
+repo_url: https://github.com/kalink0/dfir-notes
+repo_name: kalink0/dfir-notes
+
+theme:
+  name: material
+  custom_dir: overrides
+  icon:
+    logo: material/fingerprint
+  features:
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+# Pages kept in the repository but not published yet (paths relative to docs/<lang>/).
+# Artifacts and glossary are published completely. Deep dives are published page by page once
+# complete: add a "!deep-dives/<page>.md" line below. When a section is published completely,
+# remove it here (and re-enable its commented-out link on the start pages, docs/de/index.md and
+# docs/en/index.md, if it is still commented out).
+exclude_docs: |
+  deep-dives/*
+  !deep-dives/index.md
+  !deep-dives/sqlite.md
+
+hooks:
+  - hooks/i18n.py
+  - hooks/search_tags.py
+  - hooks/credits.py
+  - hooks/gaps.py
+  - hooks/az_index.py
+
+# Rebuild on changes to the gap lists when using mkdocs serve.
+watch:
+  - gaps
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  source_language: de
+  source_docs_dir: docs/de
+  # Order of the top-level sections (folder names). Everything below is sorted by title.
+  nav_order:
+    - artifacts
+    - deep-dives
+    - glossary
+  # Sections whose index page lists all pages A-Z with a short description (hooks/az_index.py).
+  az_index:
+    - glossary
+  # Platform tag for pages under artifacts/<folder>/, shown and searchable in the search
+  # (e.g. "+tags:ios +fsevents"). Folders not listed here get no tag.
+  platforms:
+    android: Android
+    ios: iOS
+    linux: Linux
+    macos: macOS
+    windows: Windows
+  # Topics for artifact pages (front matter of the German page: topics: [key, ...]), shown and
+  # searchable in the search in both languages. Keys never change; only labels may be edited.
+  # Every topic needs a label for each language below (alternate).
+  topics:
+    program-execution:
+      de: Programmausführung / App-Nutzung
+      en: Program execution / app usage
+    installed-software:
+      de: Installierte Programme / Apps
+      en: Installed software / apps
+    file-access:
+      de: Datei- und Ordnerzugriff
+      en: File and folder access
+    file-existence:
+      de: Dateiexistenz und Löschung
+      en: File existence and deletion
+    file-system-changes:
+      de: Dateisystemänderungen
+      en: File system changes
+    location:
+      de: Standort
+      en: Location
+    communication:
+      de: Kommunikation
+      en: Communication
+    notifications:
+      de: Benachrichtigungen
+      en: Notifications
+    web-activity:
+      de: Webaktivität
+      en: Web activity
+    data-transfer:
+      de: Datenübertragung
+      en: Data transfer
+    commands-input:
+      de: Befehle und Eingaben
+      en: Commands and input
+    accounts:
+      de: Benutzerkonten und Anmeldung
+      en: Accounts and logon
+    network:
+      de: Netzwerk und Fernzugriff
+      en: Network and remote access
+    device-state:
+      de: Gerätezustand und -nutzung
+      en: Device state and usage
+    external-devices:
+      de: Externe Geräte und Verbindungen
+      en: External devices and connections
+    system-config:
+      de: System und Konfiguration
+      en: System and configuration
+    persistence:
+      de: Persistenz / Autostart
+      en: Persistence / autostart
+    user-content:
+      de: Nutzerinhalte
+      en: User content
+  alternate:
+    - name: Deutsch
+      lang: de
+    - name: English
+      lang: en
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn

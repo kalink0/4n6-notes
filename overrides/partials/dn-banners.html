@@ -1,0 +1,58 @@
+{%- import "partials/dn-strings.html" as strings with context -%}
+{%- set dn = strings.dn -%}
+{#- GitHub handle as link, followed by the full name if given. -#}
+{%- macro people(list) -%}
+  {%- for p in list -%}
+    <a href="https://github.com/{{ p.handle }}">{{ p.handle }}</a>{% if p.name %} ({{ p.name }}){% endif %}
+    {%- if not loop.last %}, {% endif -%}
+  {%- endfor -%}
+{%- endmacro -%}
+{%- macro date(value) -%}
+  <time datetime="{{ value }}">{{ value }}</time>
+{%- endmacro -%}
+{%- if page and page.meta -%}
+  {%- set original_url = base_url ~ "/../" ~ config.extra.source_language ~ "/" ~ page.url -%}
+  {%- if page.meta.i18n_fallback and config.theme.language != config.extra.source_language %}
+    <div class="admonition info">
+      <p class="admonition-title">{{ dn.fallback_title }}</p>
+      <p>{{ dn.fallback_text }}</p>
+    </div>
+  {%- endif %}
+  {%- if page.meta.i18n_outdated %}
+    <div class="admonition warning">
+      <p class="admonition-title">{{ dn.outdated_title }}</p>
+      <p>{{ dn.outdated_text }} <a href="{{ original_url }}" hreflang="{{ config.extra.source_language }}">{{ dn.original }}</a></p>
+    </div>
+  {%- endif %}
+  {%- if page.meta.translation == "machine" and not page.meta.i18n_fallback %}
+    <div class="admonition info">
+      <p class="admonition-title">{{ dn.machine_title }}</p>
+      <p>{{ dn.machine_text }} <a href="{{ original_url }}" hreflang="{{ config.extra.source_language }}">{{ dn.original }}</a></p>
+    </div>
+  {%- endif %}
+  {%- if page.meta.status == "draft" %}
+    <div class="admonition warning">
+      <p class="admonition-title">{{ dn.draft_title }}</p>
+      <p>{{ dn.draft_text }}</p>
+    </div>
+  {%- endif %}
+  {%- set authors = page.meta.dn_authors or [] %}
+  {%- set reviewers = page.meta.dn_reviewers or [] %}
+  {%- set status = page.meta.status %}
+  {%- set parts = [] %}
+  {%- if authors %}{% set _ = parts.append(dn.written_by ~ " " ~ people(authors)) %}{% endif %}
+  {%- if status in ["complete", "reviewed"] and page.meta.completed %}
+    {%- set _ = parts.append(dn.completed_on ~ " " ~ date(page.meta.completed)) %}
+  {%- endif %}
+  {%- if status == "complete" %}{% set _ = parts.append(dn.not_reviewed) %}{% endif %}
+  {%- if status == "reviewed" and page.meta.reviewed %}
+    {%- if reviewers %}
+      {%- set _ = parts.append(dn.reviewed_by ~ " " ~ people(reviewers) ~ " " ~ dn.on ~ " " ~ date(page.meta.reviewed)) %}
+    {%- else %}
+      {%- set _ = parts.append(dn.reviewed_on ~ " " ~ date(page.meta.reviewed)) %}
+    {%- endif %}
+  {%- endif %}
+  {%- if parts %}
+    <p class="dn-reviewed">{{ parts | join(" · ") }}</p>
+  {%- endif %}
+{%- endif -%}

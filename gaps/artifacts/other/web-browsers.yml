@@ -1,0 +1,57 @@
+# Browser-Artefakte, die noch keine eigene Seite haben (siehe hooks/gaps.py).
+# Jeder Eintrag hat genau ein Topic (Schlüssel aus extra.topics in mkdocs.base.yml); die Seite
+# gruppiert danach. Bekommt ein Eintrag eine Seite, wird er hier gelöscht.
+# Chromium steht für die ganze Familie: Chrome, Edge, Brave, Opera, Vivaldi, Samsung Internet.
+
+- name: Firefox Verlauf, Lesezeichen, Downloads
+  topic: web-activity
+- name: Firefox Sessions / Tabs
+  topic: web-activity
+- name: Firefox Cache
+  topic: web-activity
+- name: Firefox Cookies
+  topic: web-activity
+- name: Firefox Local Storage / IndexedDB
+  topic: web-activity
+- name: Firefox Formularverlauf
+  topic: web-activity
+- name: Firefox Logins
+  topic: web-activity
+
+- name: Chromium Verlauf, Downloads
+  topic: web-activity
+- name: Chromium Lesezeichen
+  topic: web-activity
+- name: Chromium Sessions / Tabs
+  topic: web-activity
+- name: Chromium Cache
+  topic: web-activity
+- name: Chromium Cookies
+  topic: web-activity
+- name: Chromium Local Storage / IndexedDB
+  topic: web-activity
+- name: Chromium Autofill / Login Data
+  topic: web-activity
+
+- name: Safari Verlauf
+  topic: web-activity
+- name: Safari Sessions / Tabs
+  topic: web-activity
+- name: Safari Lesezeichen und Leseliste
+  topic: web-activity
+- name: Safari Downloads
+  topic: web-activity
+- name: Safari Cache
+  topic: web-activity
+- name: Safari Cookies
+  topic: web-activity
+
+- name: Tor Browser
+  topic: web-activity
+
+- name: Firefox Erweiterungen
+  topic: installed-software
+- name: Chromium Erweiterungen
+  topic: installed-software
+- name: Safari Erweiterungen
+  topic: installed-software
