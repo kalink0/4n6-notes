@@ -3,24 +3,26 @@
 Checks:
 - no references to the private Nextcloud host or its link formats
 - every page has a title and a valid status (draft, complete, reviewed); index.md may omit it
-- complete and reviewed pages have a completion date (`completed: YYYY-MM-DD`) and, on German
-  pages, authors; reviewed pages also have a review date (`reviewed: YYYY-MM-DD`) and reviewers.
+- complete and reviewed pages have a completion date (`completed: YYYY-MM-DD`) and authors;
+  reviewed pages also have a review date (`reviewed: YYYY-MM-DD`) and reviewers.
   Dates are valid, not in the future and only set with the matching status
-- authors (`authors: [...]`, German pages only) and reviewers (`reviewers: [...]`) are GitHub
-  handles, optionally with the full name: `kalink0 (Max Mustermann)`; nobody reviews a page they
-  wrote
-- every translated page has a German original and valid translation metadata
-- topics (`topics: [key, ...]`) only on German artifact pages and only with keys from
+- authors (`authors: [...]`) and reviewers (`reviewers: [...]`) of each language version are
+  GitHub handles, optionally with the full name: `kalink0 (Max Mustermann)`; nobody reviews a
+  version they wrote
+- every folder under docs/ is a language of extra.alternate; a version that says it is a
+  translation (translation, translation_of: <lang>:<hash>) names an existing version
+- topics (`topics: [key, ...]`) only on artifact pages and only with keys from
   extra.topics in mkdocs.base.yml; every topic has a label for every language
 - gap lists (gaps/<section>.yml) belong to an existing section and have a name for every entry;
   if a list uses topics, every entry has one known topic
-Reports (without failing) translations whose German original changed, overview pages (index.md,
-except the start page) with more than the title,
-artifact pages without topics, topics no page uses and gap entries that already have a page or heading in their section.
+Reports (without failing) translations whose source version changed, language versions with
+differing topics, overview pages (index.md, except the start page) with more than the title,
+artifact pages without topics, topics no page uses and gap entries that already have a page or
+heading in their section.
 
 Usage:
     python scripts/check_content.py              run all checks
-    python scripts/check_content.py --hash FILE  print translation_of value for a German page
+    python scripts/check_content.py --hash FILE  print the translation_of value for a version
 """
 
 import re
@@ -37,10 +39,9 @@ sys.path.insert(0, str(ROOT / "hooks"))
 from mkdocs.utils.meta import get_data  # noqa: E402
 
 from credits import parse_people  # noqa: E402
-from i18n import source_hash  # noqa: E402
+from i18n import TRANSLATION_OF, source_hash  # noqa: E402
 
 DOCS = ROOT / "docs"
-SOURCE_LANG = "de"
 STATUSES = {"draft", "complete", "reviewed"}
 TRANSLATIONS = {"machine", "human"}
 FORBIDDEN = [
@@ -51,14 +52,15 @@ FORBIDDEN = [
 ]
 
 
-def check_gaps(errors: list[str], topics: dict) -> list[str]:
+def check_gaps(errors: list[str], topics: dict, languages: list[str]) -> list[str]:
     """Validate gaps/*.yml; return entries that already have a page title or heading."""
     covered: list[str] = []
     for path in sorted(GAPS.rglob("*.yml")) if GAPS.is_dir() else []:
         rel = path.relative_to(ROOT).as_posix()
-        section = DOCS / SOURCE_LANG / path.relative_to(GAPS).with_suffix("")
-        if not (section / "index.md").is_file():
-            errors.append(f"{rel}: no section index at {(section / 'index.md').relative_to(DOCS).as_posix()}")
+        section = path.relative_to(GAPS).with_suffix("").as_posix()
+        dirs = [DOCS / lang / section for lang in languages if (DOCS / lang / section / "index.md").is_file()]
+        if not dirs:
+            errors.append(f"{rel}: no section index at docs/<lang>/{section}/index.md")
             continue
         entries = yaml.safe_load(path.read_text(encoding="utf-8")) or []
         if not isinstance(entries, list):
@@ -66,19 +68,18 @@ def check_gaps(errors: list[str], topics: dict) -> list[str]:
             continue
         uses_topics = any(isinstance(e, dict) and e.get("topic") for e in entries)
         existing: set[str] = set()
-        for page in section.rglob("*.md"):
+        for page in (p for d in dirs for p in d.rglob("*.md")):
             text = page.read_text(encoding="utf-8")
             _, meta = get_data(text)
             existing.add(str(meta.get("title", "")).strip().casefold())
             existing.update(m.strip().casefold() for m in re.findall(r"^##\s+(.+)$", text, re.M))
         for i, entry in enumerate(entries, 1):
             name = entry.get("name") if isinstance(entry, dict) else None
-            if isinstance(name, dict):
-                name = name.get(SOURCE_LANG)
-            if not str(name or "").strip():
-                errors.append(f"{rel}: entry {i} has no (German) name")
-            elif str(name).strip().casefold() in existing:
-                covered.append(f"{rel}: {name}")
+            names = [str(n).strip() for n in (name.values() if isinstance(name, dict) else [name]) if str(n or "").strip()]
+            if not names:
+                errors.append(f"{rel}: entry {i} has no name")
+            elif any(n.casefold() in existing for n in names):
+                covered.append(f"{rel}: {names[0]}")
             topic = entry.get("topic") if isinstance(entry, dict) else None
             if topic is not None and topic not in topics:
                 errors.append(f"{rel}: entry {i} has unknown topic {topic!r} (see extra.topics in mkdocs.base.yml)")
@@ -87,9 +88,26 @@ def check_gaps(errors: list[str], topics: dict) -> list[str]:
     return covered
 
 
+def check_dates(errors: list[str], rel: str, meta: dict) -> None:
+    status = meta.get("status")
+    for field, statuses in (("completed", {"complete", "reviewed"}), ("reviewed", {"reviewed"})):
+        value = meta.get(field)
+        if status in statuses:
+            if value is None:
+                errors.append(f"{rel}: status is {status} but {field} (date) is missing")
+            elif not isinstance(value, date) or isinstance(value, datetime):
+                errors.append(f"{rel}: {field} must be a date YYYY-MM-DD, got {value!r}")
+            elif value > date.today():
+                errors.append(f"{rel}: {field} date {value} is in the future")
+        elif value is not None:
+            errors.append(f"{rel}: {field} date set but status is {status!r}")
+
+
 def main() -> int:
     if len(sys.argv) == 3 and sys.argv[1] == "--hash":
-        print(source_hash(Path(sys.argv[2]).read_text(encoding="utf-8")))
+        path = Path(sys.argv[2]).resolve()
+        lang = path.relative_to(DOCS).parts[0]
+        print(f"{lang}:{source_hash(path.read_text(encoding='utf-8'))}")
         return 0
 
     errors: list[str] = []
@@ -103,18 +121,32 @@ def main() -> int:
         missing = [lang for lang in languages if not str((labels or {}).get(lang, "")).strip()]
         if missing:
             errors.append(f"mkdocs.base.yml: topic {key!r} has no label for {', '.join(missing)}")
-    used_topics: set[str] = set()
-    source_dir = DOCS / SOURCE_LANG
     for lang_dir in sorted(p for p in DOCS.iterdir() if p.is_dir()):
-        for page in sorted(lang_dir.rglob("*.md")):
-            rel = page.relative_to(DOCS).as_posix()
+        if lang_dir.name not in languages:
+            errors.append(f"docs/{lang_dir.name}: not a language in extra.alternate (mkdocs.base.yml)")
+
+    # Every version of a page: uri -> {lang: (rel, text, body, meta)}
+    pages: dict[str, dict[str, tuple]] = {}
+    for lang in languages:
+        lang_dir = DOCS / lang
+        for page in sorted(lang_dir.rglob("*.md")) if lang_dir.is_dir() else []:
             text = page.read_text(encoding="utf-8")
+            body, meta = get_data(text)
+            uri = page.relative_to(lang_dir).as_posix()
+            pages.setdefault(uri, {})[lang] = (page.relative_to(DOCS).as_posix(), text, body, meta)
+
+    used_topics: set[str] = set()
+    differing_topics: list[str] = []
+    for uri, versions in sorted(pages.items()):
+        is_index = uri.rsplit("/", 1)[-1] == "index.md"
+        is_artifact = uri.split("/")[0] == "artifacts" and not is_index
+        page_topics: dict[str, list] = {}
+        for lang, (rel, text, body, meta) in versions.items():
             for pattern in FORBIDDEN:
                 for m in pattern.finditer(text):
                     line = text.count("\n", 0, m.start()) + 1
                     errors.append(f"{rel}:{line}: private Nextcloud reference '{m.group(0)}'")
-            body, meta = get_data(text)
-            if page.name == "index.md" and page.parent != lang_dir:
+            if is_index and uri != "index.md":
                 # Only the title; the list of pages is generated.
                 rest = re.sub(r"^# .*$", "", body, count=1, flags=re.M)
                 if rest.strip():
@@ -122,79 +154,63 @@ def main() -> int:
             if not str(meta.get("title", "")).strip():
                 errors.append(f"{rel}: missing title")
             # Overview pages (index.md) may omit the status; the section listing is generated.
-            if not (page.name == "index.md" and "status" not in meta) and meta.get("status") not in STATUSES:
-                errors.append(f"{rel}: status must be one of {sorted(STATUSES)}, got {meta.get('status')!r}")
             status = meta.get("status")
-            for field, statuses in (("completed", {"complete", "reviewed"}), ("reviewed", {"reviewed"})):
-                value = meta.get(field)
-                if status in statuses:
-                    if value is None:
-                        errors.append(f"{rel}: status is {status} but {field} (date) is missing")
-                    elif not isinstance(value, date) or isinstance(value, datetime):
-                        errors.append(f"{rel}: {field} must be a date YYYY-MM-DD, got {value!r}")
-                    elif value > date.today():
-                        errors.append(f"{rel}: {field} date {value} is in the future")
-                elif value is not None:
-                    errors.append(f"{rel}: {field} date set but status is {status!r}")
+            if not (is_index and "status" not in meta) and status not in STATUSES:
+                errors.append(f"{rel}: status must be one of {sorted(STATUSES)}, got {status!r}")
+            check_dates(errors, rel, meta)
+            authors = parse_people(meta.get("authors"))
+            if authors is None:
+                errors.append(f"{rel}: authors must be GitHub handles, optionally 'handle (Full Name)'")
+            elif not authors and status in {"complete", "reviewed"}:
+                errors.append(f"{rel}: status is {status} but authors are missing")
             reviewers = parse_people(meta.get("reviewers"))
             if reviewers is None:
                 errors.append(f"{rel}: reviewers must be GitHub handles, optionally 'handle (Full Name)'")
-            elif reviewers and meta.get("status") != "reviewed":
-                errors.append(f"{rel}: reviewers set but status is {meta.get('status')!r}")
-            elif not reviewers and meta.get("status") == "reviewed":
+            elif reviewers and status != "reviewed":
+                errors.append(f"{rel}: reviewers set but status is {status!r}")
+            elif not reviewers and status == "reviewed":
                 errors.append(f"{rel}: status is reviewed but reviewers are missing")
-            if lang_dir.name == SOURCE_LANG:
-                authors = parse_people(meta.get("authors"))
-                if authors is None:
-                    errors.append(f"{rel}: authors must be GitHub handles, optionally 'handle (Full Name)'")
-                elif not authors and status in {"complete", "reviewed"}:
-                    errors.append(f"{rel}: status is {status} but authors are missing")
-            else:
-                if meta.get("authors") is not None:
-                    errors.append(f"{rel}: authors belong on the German page only")
-                original = source_dir / page.relative_to(lang_dir)
-                _, original_meta = get_data(original.read_text(encoding="utf-8")) if original.is_file() else ("", {})
-                authors = parse_people(original_meta.get("authors"))
             own = {p["handle"].casefold() for p in authors or []} & {p["handle"].casefold() for p in reviewers or []}
             if own:
                 errors.append(f"{rel}: reviewed by its own author(s): {', '.join(sorted(own))}")
-            page_topics = meta.get("topics")
-            is_artifact = page.relative_to(lang_dir).parts[0] == "artifacts" and page.name != "index.md"
-            if lang_dir.name != SOURCE_LANG:
-                if page_topics is not None:
-                    errors.append(f"{rel}: topics belong on the German page only")
-            elif page_topics is not None and not is_artifact:
+            keys = meta.get("topics")
+            if keys is not None and not is_artifact:
                 errors.append(f"{rel}: topics are only for artifact pages")
-            elif page_topics is not None and not isinstance(page_topics, list):
-                errors.append(f"{rel}: topics must be a list of keys, got {page_topics!r}")
-            elif is_artifact:
-                for key in page_topics or []:
+            elif keys is not None and not isinstance(keys, list):
+                errors.append(f"{rel}: topics must be a list of keys, got {keys!r}")
+            elif keys:
+                page_topics[lang] = keys
+                for key in keys:
                     if key in topics:
                         used_topics.add(key)
                     else:
                         errors.append(f"{rel}: unknown topic {key!r} (see extra.topics in mkdocs.base.yml)")
-                if not page_topics:
-                    without_topics.append(rel)
-            if lang_dir.name == SOURCE_LANG:
+            translation, source = meta.get("translation"), meta.get("translation_of")
+            if translation is None and source is None:
                 continue
-            original = source_dir / page.relative_to(lang_dir)
-            if not original.is_file():
-                errors.append(f"{rel}: no German original at {original.relative_to(DOCS).as_posix()}")
-                continue
-            if meta.get("translation") not in TRANSLATIONS:
+            if translation not in TRANSLATIONS:
                 errors.append(f"{rel}: translation must be one of {sorted(TRANSLATIONS)}")
-            if not re.fullmatch(r"sha256:[0-9a-f]{12}", str(meta.get("translation_of", ""))):
-                errors.append(f"{rel}: translation_of missing or malformed")
-            elif meta["translation_of"] != source_hash(original.read_text(encoding="utf-8")):
+            m = TRANSLATION_OF.fullmatch(str(source or ""))
+            if not m:
+                errors.append(f"{rel}: translation_of must be '<lang>:sha256:<12 hex>', got {source!r}")
+            elif m["lang"] == lang or m["lang"] not in versions:
+                errors.append(f"{rel}: translation_of names {m['lang']!r}, but there is no version of this page in that language")
+            elif m["hash"] != source_hash(versions[m["lang"]][1]):
                 outdated.append(rel)
+        if is_artifact and not page_topics:
+            without_topics.append(versions[next(iter(versions))][0])
+        if len({tuple(sorted(k)) for k in page_topics.values()}) > 1:
+            differing_topics.append(f"{uri}: " + "; ".join(f"{lang}: {', '.join(k)}" for lang, k in page_topics.items()))
 
     for rel in outdated:
-        print(f"outdated translation (German original changed): {rel}")
+        print(f"outdated translation (source version changed): {rel}")
+    for entry in differing_topics:
+        print(f"topics differ between language versions: {entry}")
     for rel in busy_index:
         print(f"overview page with more than the title: {rel}")
     for rel in without_topics:
         print(f"artifact page without topics: {rel}")
-    covered_gaps = check_gaps(errors, topics)
+    covered_gaps = check_gaps(errors, topics, languages)
     for gap in covered_gaps:
         print(f"gap entry already covered, remove it: {gap}")
     unused_topics = sorted(set(topics) - used_topics)
@@ -206,6 +222,7 @@ def main() -> int:
         f"{len(errors)} error(s), {len(outdated)} outdated translation(s), "
         f"{len(busy_index)} overview page(s) with extra content, "
         f"{len(without_topics)} artifact page(s) without topics, "
+        f"{len(differing_topics)} page(s) with differing topics, "
         f"{len(unused_topics)} unused topic(s), {len(covered_gaps)} covered gap entr(y/ies)"
     )
     return 1 if errors else 0

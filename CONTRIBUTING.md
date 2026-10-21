@@ -1,10 +1,53 @@
 # Rules for artifact pages
 
-Applies to all pages under `docs/de/artifacts/`. English translations follow the same structure
-(see README). Template for new pages: [`templates/artifact.md`](templates/artifact.md).
+Applies to all pages under `docs/<lang>/artifacts/`. Template for new pages:
+[`templates/artifact.md`](templates/artifact.md).
 
-German pages are the source. Headings and fixed phrases that appear on the pages are given here in
-German, exactly as they are written on the page.
+Headings and fixed phrases that appear on the pages are given here in German, exactly as they are
+written on the page; their English wording is listed under [Languages](#languages).
+
+## Languages
+
+A page can be written in any language of the site (`docs/<lang>/`, currently `de` and `en`). The
+same path in several languages gives the page's **language versions**. They are equal: none of them
+is the original.
+
+- Each version has its own title, status, `completed` date, authors and reviewers. Whoever writes,
+  translates or extends a version is one of its authors.
+- Each version may be extended on its own. When content is added to one version, the other
+  versions should follow; a later `completed` date in another version is shown on the page
+  ("Newer language version available").
+- A version translated from another one says so: `translation: human` or `machine` and
+  `translation_of: <lang>:<hash>` (see README, "Page front matter"). It is then marked as possibly
+  outdated when that version changes. A version that is extended on its own drops both fields.
+- Topics belong to the page, not to a language; they may be set in any version, and the page gets
+  the topics of all versions. `scripts/check_content.py` reports versions with differing topics.
+- A page without a version in a language is shown there in another version, with a banner: English
+  first (widest readership), then German (the repository's main language), then the others
+  (`extra.fallback_order` in `mkdocs.base.yml`).
+
+Adding a language (e.g. French, `fr`):
+
+1. `mkdocs.fr.yml`: copy `mkdocs.en.yml` and change `docs_dir`, `site_dir`, `site_url`,
+   `edit_uri`, `copyright`, `theme.language`, the search language and the status label.
+2. `mkdocs.base.yml`: add the language to `extra.alternate` and a label to every topic in
+   `extra.topics` (`scripts/check_content.py` reports missing labels).
+3. `overrides/partials/dn-strings.html`: add the UI strings; until then the English ones are shown.
+4. `docs/fr/index.md`: the start page, e.g. translated from `docs/en/index.md` or
+   `docs/de/index.md`. All other pages are shown in another version until they exist in French.
+5. Add the language's headings and phrases to the table below.
+
+Fixed headings and phrases (each version uses the column of its language):
+
+| German | English |
+| --- | --- |
+| `## Bedeutung` | `## Meaning` |
+| `## Spezifische Kurzinformation` | `## Key facts` |
+| `## Referenzen` | `## References` |
+| `## Tools` | `## Tools` |
+| `## Quellen` (glossary) | `## Sources` |
+| `*Noch kein Inhalt.*` | `*No content yet.*` |
+| `Ablageort` | `Location` |
 
 ## Structure
 
@@ -24,7 +67,7 @@ if they are almost identical. The pages do not link to each other.
 
 ## Topics
 
-Every artifact page gets at least one topic in the front matter of the German page. Topics say
+Every artifact page gets at least one topic in its front matter (in any language version). Topics say
 what the artifact gives evidence of; they are shown and searchable in the search, together with
 the platform tag that every page gets automatically from its folder.
 
@@ -35,7 +78,7 @@ topics: [program-execution, network]
 - Only keys from `extra.topics` in `mkdocs.base.yml`. A new topic is added there first, with a
   label for every language.
 - Keys never change. Only the labels may be edited.
-- Topics are set on the German page only; translations take them from there.
+- Topics are the same in every language version (see [Languages](#languages)).
 - Collection artifacts (e.g. event logs, Unified Logs, Registry) get only their most important
   topics, not every topic that could apply.
 - Missing topics are currently only reported by `scripts/check_content.py`; once every page has
@@ -55,7 +98,7 @@ Overview pages (`index.md`) have no status. They only hold the title; the list o
 section is generated.
 
 People are given as GitHub handles, optionally followed by the full name in parentheses. The
-authors are set on the German page only; translations take them from there.
+authors and reviewers are set per language version.
 
 ```yaml
 status: reviewed
@@ -103,8 +146,8 @@ under "Noch nicht beschrieben" (not covered yet).
   Lists without topics (e.g. the glossary) are shown as one flat list.
 - File system structures (e.g. `$MFT`, FAT) are not artifact gaps; they belong to the deep dives.
 - The note is short and factual; it is shown publicly.
-- `name` and `note` may also be given per language (`{de: …, en: …}`); otherwise the English site
-  shows the German text.
+- `name` and `note` are written in German or English, or given per language (`{de: …, en: …}`);
+  a site without its own text shows the German one.
 - When an entry gets its page (or, in the glossary, its section), it is removed from the list.
   `scripts/check_content.py` reports entries whose name already appears as a page title or heading.
 - Gaps are listed in the gap file, not as checklists on the pages.
@@ -208,7 +251,7 @@ Statements that change with updates (versions, defaults, rollouts) get a point i
 
 Internal links are relative paths to the `.md` file, e.g. `[Biome](biome/index.md)` or
 `[SQLite](../../../deep-dives/sqlite.md)`. MkDocs checks them during the build. The same paths also
-work in English, because missing translations fall back to the German original.
+work in every language, because a missing version falls back to another one.
 
 What gets linked:
 

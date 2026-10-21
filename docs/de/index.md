@@ -27,7 +27,7 @@ Seiten mit dem Hinweis **Nicht reviewed** sind Entwürfe, die noch nicht geprüf
 
 ## Sprachen
 
-Deutsch ist die Originalsprache. Die englische Fassung entsteht nach und nach. Noch nicht übersetzte Seiten werden dort im deutschen Original angezeigt und sind entsprechend gekennzeichnet.
+Seiten können in jeder Sprache der Website verfasst werden, derzeit Deutsch und Englisch; die meisten gibt es bisher nur auf Deutsch. Alle Sprachfassungen einer Seite sind gleichberechtigt; weitere Fassungen und Sprachen kommen nach und nach dazu. Fehlt eine Seite in einer Sprache, wird eine andere Fassung angezeigt – zuerst Englisch, sonst Deutsch – und entsprechend gekennzeichnet.
 
 ## Lizenz
 

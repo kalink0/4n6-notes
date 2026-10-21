@@ -3,7 +3,9 @@
 A collection of notes on digital forensics and incident response: artifact descriptions,
 deep dives into file systems and file formats, and a glossary.
 
-German is the original language, English is added gradually.
+Pages can be written in any of the site's languages (currently German and English); the language
+versions of a page are equal and are added over time. Most pages currently exist in German only. Further languages
+can be added, see CONTRIBUTING.md (Languages).
 
 **Website:** https://kalink0.github.io/dfir-notes/
 
@@ -13,9 +15,11 @@ German is the original language, English is added gradually.
 - `status: complete` pages are finished by their author; `status: reviewed` pages were also
   checked by a second person. Both show the authors and dates, reviewed pages also the reviewers
   (see CONTRIBUTING.md).
-- Sections without content say “Noch kein Inhalt.” (no content yet).
-- English pages without a translation show the German original with a **Not yet translated** banner.
-- Machine translations and translations whose German original has changed since are marked as such.
+- Sections without content say “Noch kein Inhalt.” or “No content yet.”.
+- A page without a version in the site's language shows another version (English first, then
+  German) with a banner.
+- Machine translations, translations whose source version has changed since and pages with a
+  newer version in another language are marked as such.
 
 ## Corrections and feedback
 
@@ -25,13 +29,13 @@ Please open an [issue](https://github.com/kalink0/dfir-notes/issues) or a pull r
 
 | Path | Content |
 | --- | --- |
-| `docs/de/` | German pages (source) |
-| `docs/en/` | English translations, same paths as `docs/de/` |
+| `docs/de/` | German pages |
+| `docs/en/` | English pages, same paths as `docs/de/` |
 | `mkdocs.base.yml` | Shared configuration |
 | `mkdocs.de.yml`, `mkdocs.en.yml` | Per-language configuration |
-| `hooks/i18n.py` | Fallback to German, outdated-translation detection, navigation order |
+| `hooks/i18n.py` | Language versions of each page, fallback, outdated-translation detection, navigation order |
 | `hooks/search_tags.py` | Platform and topic tags for artifact pages in the search |
-| `hooks/credits.py` | Authors (from the German page) and reviewers shown on the page |
+| `hooks/credits.py` | Authors and reviewers shown on the page |
 | `gaps/`, `hooks/gaps.py` | Entries a section does not cover yet, listed on the section's index page |
 | `hooks/az_index.py` | A–Z list with short descriptions on the glossary's index page |
 | `overrides/` | Theme overrides: banners, authors and reviewers, section listings, language selector |
@@ -41,7 +45,7 @@ Please open an [issue](https://github.com/kalink0/dfir-notes/issues) or a pull r
 
 ## Page front matter
 
-German page:
+A language version (here German, `docs/de/`):
 
 ```yaml
 ---
@@ -55,25 +59,29 @@ topics: [program-execution]   # artifact pages only, keys from extra.topics in m
 ---
 ```
 
-English translation (same path under `docs/en/`):
+A version translated from another one (same path under another language, here `docs/en/`) has
+its own status, dates, authors and reviewers, plus where it was translated from:
 
 ```yaml
 ---
 title: "BAM - Background Activity Moderator"
-status: draft
+status: complete
+completed: 2026-10-21
+authors: [some-translator]
 translation: human   # human | machine
-translation_of: sha256:0123456789ab
+translation_of: de:sha256:0123456789ab   # language and hash of the version it was translated from
 ---
 ```
 
-`translation_of` is the hash of the German page the translation is based on:
+`translation_of` is printed by:
 
 ```sh
 python scripts/check_content.py --hash docs/de/artifacts/windows/bam.md
 ```
 
-When the German page changes later, the English page is marked as possibly outdated
-until `translation_of` is updated.
+When that version changes later, the translation is marked as possibly outdated until
+`translation_of` is updated. A version extended on its own drops `translation` and
+`translation_of`. Topics may be set in any version; see CONTRIBUTING.md (Languages).
 
 ## Build locally
 

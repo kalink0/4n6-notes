@@ -11,23 +11,37 @@
   <time datetime="{{ value }}">{{ value }}</time>
 {%- endmacro -%}
 {%- if page and page.meta -%}
-  {%- set original_url = base_url ~ "/../" ~ config.extra.source_language ~ "/" ~ page.url -%}
-  {%- if page.meta.i18n_fallback and config.theme.language != config.extra.source_language %}
+  {#- Link to the same page in another language build. -#}
+  {%- macro version_link(lang, name) -%}
+    <a href="{{ base_url }}/../{{ lang }}/{{ page.url }}" hreflang="{{ lang }}">{{ name }}</a>
+  {%- endmacro -%}
+  {%- set versions = page.meta.i18n_versions or [] %}
+  {%- set source = page.meta.i18n_source %}
+  {%- if page.meta.i18n_fallback %}
+    {%- set shown = (config.extra.alternate | selectattr("lang", "equalto", page.meta.i18n_lang) | first).name %}
     <div class="admonition info">
       <p class="admonition-title">{{ dn.fallback_title }}</p>
-      <p>{{ dn.fallback_text }}</p>
+      <p>{{ dn.fallback_text }} {{ shown }}.</p>
     </div>
   {%- endif %}
   {%- if page.meta.i18n_outdated %}
     <div class="admonition warning">
       <p class="admonition-title">{{ dn.outdated_title }}</p>
-      <p>{{ dn.outdated_text }} <a href="{{ original_url }}" hreflang="{{ config.extra.source_language }}">{{ dn.original }}</a></p>
+      <p>{{ dn.outdated_text }} {{ version_link(source.lang, source.name) }}</p>
     </div>
   {%- endif %}
-  {%- if page.meta.translation == "machine" and not page.meta.i18n_fallback %}
+  {%- if page.meta.translation == "machine" %}
     <div class="admonition info">
       <p class="admonition-title">{{ dn.machine_title }}</p>
-      <p>{{ dn.machine_text }} <a href="{{ original_url }}" hreflang="{{ config.extra.source_language }}">{{ dn.original }}</a></p>
+      <p>{{ dn.machine_text }}{% if source %} {{ version_link(source.lang, source.name) }}{% endif %}</p>
+    </div>
+  {%- endif %}
+  {%- set newer = versions | selectattr("newer") | list %}
+  {%- if newer %}
+    <div class="admonition info">
+      <p class="admonition-title">{{ dn.newer_title }}</p>
+      <p>{{ dn.newer_text }}
+        {% for v in newer %}{{ version_link(v.lang, v.name) }} ({{ date(v.completed) }}){% if not loop.last %}, {% endif %}{% endfor %}</p>
     </div>
   {%- endif %}
   {%- if page.meta.status == "draft" %}
@@ -54,5 +68,9 @@
   {%- endif %}
   {%- if parts %}
     <p class="dn-reviewed">{{ parts | join(" · ") }}</p>
+  {%- endif %}
+  {%- if versions %}
+    <p class="dn-reviewed">{{ dn.versions }}
+      {% for v in versions %}{{ version_link(v.lang, v.name) }}{% if v.completed %} ({{ date(v.completed) }}){% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</p>
   {%- endif %}
 {%- endif -%}

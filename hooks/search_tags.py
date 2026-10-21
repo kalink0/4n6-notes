@@ -1,9 +1,9 @@
 """Search tags for artifact pages: platform and topics.
 
 Pages under artifacts/<folder>/ get the platform from extra.platforms as a tag, plus the label
-of each topic listed in the German page's front matter (topics: [key, ...]) in the build
-language, from extra.topics. Topics are always read from the German source, so a translation
-does not repeat them.
+of each topic in the build language, from extra.topics. Topics (topics: [key, ...]) belong to the
+page, not to a language version: they may be set in any version, and every version gets the
+topics of all versions.
 
 The search shows the tags next to each result and makes them searchable
 (e.g. "+tags:ios +fsevents"). The topic labels of the other languages are added to the page as
@@ -12,21 +12,12 @@ themselves do not show the tags.
 """
 
 from html import escape
-from pathlib import Path
 
 from mkdocs.config.defaults import MkDocsConfig
 from mkdocs.structure.files import Files
 from mkdocs.structure.pages import Page
-from mkdocs.utils.meta import get_data
 
-
-def _source_topics(page: Page, config: MkDocsConfig) -> list:
-    source = Path(config.config_file_path).parent / config.extra["source_docs_dir"]
-    path = source / page.file.src_uri
-    if not path.is_file():
-        return []
-    _, meta = get_data(path.read_text(encoding="utf-8"))
-    return meta.get("topics") or []
+from i18n import versions
 
 
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str:
@@ -40,7 +31,8 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
     if platform:
         tags.append(platform)
     topics = config.extra.get("topics", {})
-    for key in _source_topics(page, config):
+    keys = [key for meta in versions(config, page.file.src_uri).values() for key in meta.get("topics") or []]
+    for key in dict.fromkeys(keys):
         # Unknown keys are reported by scripts/check_content.py.
         labels = topics.get(key)
         if labels:

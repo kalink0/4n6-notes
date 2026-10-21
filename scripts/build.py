@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
-SOURCE_LANG = "de"
+DEFAULT_LANG = "de"
 
 REDIRECT = """<!doctype html>
 <html lang="{lang}">
@@ -43,9 +43,9 @@ def main() -> int:
         if result.returncode != 0:
             return result.returncode
 
-    (SITE / "index.html").write_text(REDIRECT.format(lang=SOURCE_LANG), encoding="utf-8")
+    (SITE / "index.html").write_text(REDIRECT.format(lang=DEFAULT_LANG), encoding="utf-8")
     # GitHub Pages serves /404.html for every unknown path; the German one uses absolute asset URLs.
-    shutil.copy(SITE / SOURCE_LANG / "404.html", SITE / "404.html")
+    shutil.copy(SITE / DEFAULT_LANG / "404.html", SITE / "404.html")
     return 0
 
 

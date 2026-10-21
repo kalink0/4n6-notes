@@ -1,5 +1,6 @@
 # Shared configuration. Each language has its own config (mkdocs.de.yml, mkdocs.en.yml)
-# that inherits from this file. German (docs/de) is the source language.
+# that inherits from this file. Each language has its own docs/<lang>/ folder; the language
+# versions of a page are equal, see hooks/i18n.py.
 site_name: DFIR Notes
 repo_url: https://github.com/kalink0/dfir-notes
 repo_name: kalink0/dfir-notes
@@ -45,16 +46,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
-# Pages kept in the repository but not published yet (paths relative to docs/<lang>/).
-# Artifacts and glossary are published completely. Deep dives are published page by page once
-# complete: add a "!deep-dives/<page>.md" line below. When a section is published completely,
-# remove it here (and re-enable its commented-out link on the start pages, docs/de/index.md and
-# docs/en/index.md, if it is still commented out).
-exclude_docs: |
-  deep-dives/*
-  !deep-dives/index.md
-  !deep-dives/sqlite.md
-
 hooks:
   - hooks/i18n.py
   - hooks/search_tags.py
@@ -70,8 +61,11 @@ extra_css:
   - assets/stylesheets/extra.css
 
 extra:
-  source_language: de
-  source_docs_dir: docs/de
+  # Pages can be written in any language below (alternate), see hooks/i18n.py. A page without a
+  # version in the build language shows the first existing version in this order (then the order
+  # of alternate): English for the widest readership, then German, the repository's main language.
+  # Gap texts without a text in the build language follow the same order.
+  fallback_order: [en, de]
   # Order of the top-level sections (folder names). Everything below is sorted by title.
   nav_order:
     - artifacts
@@ -88,8 +82,8 @@ extra:
     linux: Linux
     macos: macOS
     windows: Windows
-  # Topics for artifact pages (front matter of the German page: topics: [key, ...]), shown and
-  # searchable in the search in both languages. Keys never change; only labels may be edited.
+  # Topics for artifact pages (front matter of any language version: topics: [key, ...]), shown
+  # and searchable in the search in every language. Keys never change; only labels may be edited.
   # Every topic needs a label for each language below (alternate).
   topics:
     program-execution:

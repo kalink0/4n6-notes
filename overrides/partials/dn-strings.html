@@ -1,5 +1,6 @@
-{#- UI strings for the status banners and section listings, per build language. -#}
-{%- set dn = {
+{#- UI strings for the status banners and section listings, per build language. A language
+    without its own strings uses the English ones. -#}
+{%- set strings = {
   "de": {
     "draft_title": "Entwurf",
     "draft_text": "Diese Seite ist noch unfertig; Abschnitte fehlen oder sind unvollständig.",
@@ -9,6 +10,15 @@
     "completed_on": "Fertiggestellt am",
     "reviewed_by": "Reviewed von",
     "on": "am",
+    "fallback_title": "Noch nicht auf Deutsch verfügbar",
+    "fallback_text": "Diese Seite gibt es noch nicht auf Deutsch. Angezeigt wird die Fassung auf",
+    "outdated_title": "Übersetzung möglicherweise veraltet",
+    "outdated_text": "Die Fassung, aus der diese Seite übersetzt wurde, hat sich seitdem geändert:",
+    "machine_title": "Maschinelle Übersetzung",
+    "machine_text": "Diese Seite wurde maschinell übersetzt und noch nicht von einer Person geprüft.",
+    "newer_title": "Neuere Sprachfassung vorhanden",
+    "newer_text": "Eine andere Sprachfassung wurde später fertiggestellt als diese:",
+    "versions": "Weitere Sprachfassungen:",
     "listing": "Seiten in diesem Bereich",
     "az_title": "Begriffe A–Z",
     "gaps_title": "Noch nicht beschrieben",
@@ -24,17 +34,20 @@
     "completed_on": "Completed on",
     "reviewed_by": "Reviewed by",
     "on": "on",
-    "fallback_title": "Not yet translated",
-    "fallback_text": "This page has not been translated yet. It is shown in the German original.",
+    "fallback_title": "Not yet available in English",
+    "fallback_text": "This page does not exist in English yet. Shown is the version in",
     "outdated_title": "Translation may be outdated",
-    "outdated_text": "The German original has changed since this translation was made.",
-    "original": "German original",
+    "outdated_text": "The version this page was translated from has changed since:",
     "machine_title": "Machine translation",
     "machine_text": "This page was translated by machine and has not been checked by a person yet.",
+    "newer_title": "Newer language version available",
+    "newer_text": "Another language version was completed later than this one:",
+    "versions": "Other language versions:",
     "listing": "Pages in this section",
     "az_title": "Terms A–Z",
     "gaps_title": "Not covered yet",
     "gaps_text": "These entries are still missing. Contributions are welcome.",
     "draft_short": "Draft",
   },
-}[config.theme.language] -%}
+} -%}
+{%- set dn = strings.get(config.theme.language, strings.en) -%}

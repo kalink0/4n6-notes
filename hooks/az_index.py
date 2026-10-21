@@ -28,7 +28,7 @@ def excerpt(body: str) -> str:
     body = re.sub(r"<!--.*?-->", "", body, flags=re.S)
     for para in re.split(r"\n\s*\n", body):
         para = para.strip()
-        if not para or para.startswith(("#", "|", "-", "*Noch kein", "!!!", "<", "```")) or re.match(r"\d+\.", para):
+        if not para or para.startswith(("#", "|", "-", "*Noch kein", "*No content", "!!!", "<", "```")) or re.match(r"\d+\.", para):
             continue
         text = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", para)
         text = " ".join(re.sub(r"[*_`]", "", text).split())

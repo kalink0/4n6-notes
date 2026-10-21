@@ -1,16 +1,20 @@
 """Language handling for the per-language MkDocs builds.
 
-German (extra.source_docs_dir) is the source language. Every other language build
-contains every German page: a page without a translation is added from the German
-source and marked as fallback, so a missing translation is visible instead of absent.
-
-Front matter of a translated page:
-    translation_of: <hash of the German page body, see scripts/check_content.py --hash>
+Every language of extra.alternate has its own docs/<lang>/ folder. The versions of a page (same
+path in several languages) are equal: each has its own title, status, authors and reviewers. A
+version may say it was translated from another one:
     translation: machine | human
-If the German body no longer matches translation_of, the page is marked outdated.
+    translation_of: <lang>:<hash of that version's body, see scripts/check_content.py --hash>
+If that version's body no longer matches, the translation is marked outdated.
+
+Every language build contains every page: a page without a version in the build language is
+added from another version, chosen by extra.fallback_order and then the order of
+extra.alternate, and marked as fallback. Each page lists its versions in the other languages with
+their completion date, and points out versions completed later than itself.
 """
 
 import hashlib
+import re
 from pathlib import Path
 
 from mkdocs.config.defaults import MkDocsConfig
@@ -19,7 +23,10 @@ from mkdocs.structure.nav import Navigation, Section
 from mkdocs.structure.pages import Page
 from mkdocs.utils.meta import get_data
 
-_fallback: set[str] = set()
+TRANSLATION_OF = re.compile(r"(?P<lang>[a-z]{2,3}(?:-[A-Za-z]+)?):(?P<hash>sha256:[0-9a-f]{12})")
+
+# Pages of the current build taken from another language: src_uri -> language of that version.
+_fallback: dict[str, str] = {}
 
 
 def source_hash(text: str) -> str:
@@ -31,24 +38,51 @@ def source_hash(text: str) -> str:
     return "sha256:" + hashlib.sha256(body.strip().encode("utf-8")).hexdigest()[:12]
 
 
-def _is_source_build(config: MkDocsConfig) -> bool:
-    return config.theme["language"] == config.extra["source_language"]
+def languages(config: MkDocsConfig) -> list[str]:
+    return [alt["lang"] for alt in config.extra["alternate"]]
 
 
-def _source_dir(config: MkDocsConfig) -> Path:
-    return Path(config.config_file_path).parent / config.extra["source_docs_dir"]
+def fallback_languages(config: MkDocsConfig) -> list[str]:
+    """Languages in the order in which a missing version is taken from them."""
+    langs = languages(config)
+    preferred = [lang for lang in config.extra.get("fallback_order", []) if lang in langs]
+    return preferred + [lang for lang in langs if lang not in preferred]
+
+
+def docs_root(config: MkDocsConfig) -> Path:
+    return Path(config.config_file_path).parent / "docs"
+
+
+def versions(config: MkDocsConfig, uri: str) -> dict[str, dict]:
+    """Front matter of every version of a page, by language (in the order of extra.alternate)."""
+    found = {}
+    for lang in languages(config):
+        path = docs_root(config) / lang / uri
+        if path.is_file():
+            _, meta = get_data(path.read_text(encoding="utf-8"))
+            found[lang] = meta
+    return found
 
 
 def on_files(files: Files, config: MkDocsConfig) -> Files:
     _fallback.clear()
-    if _is_source_build(config):
-        return files
-    src = _source_dir(config)
-    for path in sorted(src.rglob("*.md")):
-        uri = path.relative_to(src).as_posix()
-        if files.get_file_from_path(uri) is None:
-            files.append(File.generated(config, uri, abs_src_path=str(path)))
-            _fallback.add(uri)
+    docs = docs_root(config)
+    build_lang = config.theme["language"]
+    uris = sorted({
+        path.relative_to(docs / lang).as_posix()
+        for lang in languages(config)
+        if lang != build_lang and (docs / lang).is_dir()
+        for path in (docs / lang).rglob("*.md")
+    })
+    for uri in uris:
+        if files.get_file_from_path(uri) is not None:
+            continue
+        for lang in fallback_languages(config):
+            path = docs / lang / uri
+            if path.is_file():
+                files.append(File.generated(config, uri, abs_src_path=str(path)))
+                _fallback[uri] = lang
+                break
     return files
 
 
@@ -102,14 +136,28 @@ def on_nav(nav: Navigation, config: MkDocsConfig, files: Files) -> Navigation:
 
 def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Files) -> str:
     uri = page.file.src_uri
+    lang = _fallback.get(uri, config.theme["language"])
     page.meta["i18n_fallback"] = uri in _fallback
-    if _is_source_build(config):
-        return markdown
-    source = _source_dir(config) / uri
+    page.meta["i18n_lang"] = lang
     if page.meta["i18n_fallback"]:
-        # Edits belong to the German source, not to a translation that does not exist yet.
-        page.edit_url = f"{config.repo_url}/edit/main/{config.extra['source_docs_dir']}/{uri}"
-    elif source.is_file():
-        expected = source_hash(source.read_text(encoding="utf-8"))
-        page.meta["i18n_outdated"] = page.meta.get("translation_of") != expected
+        # Edits belong to the version that is shown.
+        page.edit_url = f"{config.repo_url}/edit/main/docs/{lang}/{uri}"
+    names = {alt["lang"]: alt["name"] for alt in config.extra["alternate"]}
+    own_date = page.meta.get("completed")
+    page.meta["i18n_versions"] = [
+        {
+            "lang": other,
+            "name": names[other],
+            "completed": meta.get("completed"),
+            "newer": bool(own_date and meta.get("completed") and meta["completed"] > own_date),
+        }
+        for other, meta in versions(config, uri).items()
+        if other != lang
+    ]
+    # Malformed values are reported by scripts/check_content.py.
+    m = TRANSLATION_OF.fullmatch(str(page.meta.get("translation_of", "")))
+    source = docs_root(config) / m["lang"] / uri if m else None
+    if source is not None and source.is_file():
+        page.meta["i18n_source"] = {"lang": m["lang"], "name": names.get(m["lang"], m["lang"])}
+        page.meta["i18n_outdated"] = m["hash"] != source_hash(source.read_text(encoding="utf-8"))
     return markdown

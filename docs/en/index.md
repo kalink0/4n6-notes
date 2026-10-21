@@ -1,7 +1,7 @@
 ---
 title: DFIR Notes
 translation: machine
-translation_of: sha256:f9939d7b59f1
+translation_of: de:sha256:277a09402a49
 ---
 
 # DFIR Notes
@@ -29,7 +29,7 @@ Pages marked **Not reviewed** are drafts that have not been reviewed yet. They a
 
 ## Languages
 
-German is the original language. The English version is being added gradually. Pages that have not been translated yet are shown in the German original and are marked accordingly.
+Pages can be written in any of the site's languages, currently German and English; most of them exist in German only so far. All language versions of a page are equal; further versions and languages are added gradually. If a page does not exist in a language, another version is shown – English first, otherwise German – and marked accordingly.
 
 ## License
 
