@@ -3,9 +3,12 @@
 A collection of notes on digital forensics and incident response: artifact descriptions,
 deep dives into file systems and file formats, and a glossary.
 
+Since 2017 I have collected this knowledge in a private knowledge base. I have now decided to
+continue it here in public.
+
 Pages can be written in any of the site's languages (currently German and English); the language
-versions of a page are equal and are added over time. Most pages currently exist in German only. Further languages
-can be added, see CONTRIBUTING.md (Languages).
+versions of a page are equal and are added over time. Most pages currently exist in German only.
+Further languages can be added, see CONTRIBUTING.md (Languages).
 
 **Website:** https://kalink0.github.io/dfir-notes/
 
