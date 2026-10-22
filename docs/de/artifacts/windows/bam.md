@@ -20,8 +20,8 @@ Aus digitalforensischer Sicht bedeuten Einträge des BAM, dass eine Applikation 
 2. Aufbewahrung: Die Daten liegen ca. 7 Tage vor.
 3. Besonderheiten und Fallstricke: Applikationen, welche im Terminal gestartet wurden, werden NICHT geloggt. Applikationen, welche von externen Medien (z.B. USB-Sticks, Netzlaufwerke) gestartet wurden, werden NICHT geloggt.
 4. Ablageort (Registry):  
-   ab Windows 10 1809: **HKLM\\SYSTEM\\{CURRENT_CONTROL_SET}\\Services\\bam\\State\\UserSettings\\{USER_SID}**  
-   Windows 10 1709/1803: **HKLM\\SYSTEM\\{CURRENT_CONTROL_SET}\\Services\\bam\\UserSettings\\{USER_SID}**
+   ab Windows 10 1809: **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Services\bam\State\UserSettings\{USER_SID}`**  
+   Windows 10 1709/1803: **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Services\bam\UserSettings\{USER_SID}`**
 
 ## Referenzen
 

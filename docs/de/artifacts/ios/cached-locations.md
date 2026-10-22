@@ -22,7 +22,7 @@ Aus digitalforensischer Sicht kann anhand der gespeicherten Cached Locations ges
 3. Zeitstempel im Format Mac Absolute Time (Sekunden seit 2001-01-01, UTC)
 4. Die Abstände zwischen den Einträgen sind unregelmäßig (Sekunden bis über 20 Minuten); eine Lücke belegt nicht, dass das Gerät aus war oder sich nicht bewegt hat
 5. Ablageort:  
-   **/private/var/mobile/Library/Caches/com.apple.routined/Cache.sqlite**
+   **`/private/var/mobile/Library/Caches/com.apple.routined/Cache.sqlite`**
 
 ## Referenzen
 

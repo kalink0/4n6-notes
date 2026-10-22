@@ -22,7 +22,7 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass die Applikation bzw. der 
 4. Zeitstempel: FILETIME, UTC; LastWrite-Zeit eines Eintrags = letzte Aktualisierung, nicht Ausführung
 5. Besonderheiten und Fallstricke: SHA1 bei großen Dateien nur über die ersten 30 MB; Transaktionslogs (`.LOG1`/`.LOG2`) einbeziehen
 6. Ablageort:  
-   **C:\Windows\AppCompat\Programs\Amcache.hve**
+   **`C:\Windows\AppCompat\Programs\Amcache.hve`**
 
 ## Referenzen
 

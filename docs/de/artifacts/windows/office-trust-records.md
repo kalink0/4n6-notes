@@ -25,7 +25,7 @@ Aus digitalforensischer Sicht bedeutet die Existenz eines *Trust Records*, dass 
    ff ff ff 7f = "Enable Content" wurde durch das Nutzerkonto geklickt (Makros aktiviert)
 4. Zeitstempel: Bedeutung der ersten 8 Bytes im Data Value: Zeitstempel der Erstellung des Dokumentes
 5. Ablageort:  
-   **HKCU\\Software\\Microsoft\\Office\\{VERSION}\\{APPNAME}\\Security\\Trusted Documents\\TrustRecords**
+   **`HKCU\Software\Microsoft\Office\{VERSION}\{APPNAME}\Security\Trusted Documents\TrustRecords`**
 
 ## Referenzen
 

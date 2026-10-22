@@ -20,7 +20,7 @@ Aus digitalforensischer Sicht belegt eine Datei in fsCachedData, dass die zugeh√
 2. Dateinamen sind UUID-√§hnlich; der Dateityp ist nur am Inhalt erkennbar
 3. Ob eine Antwort in fsCachedData liegt, zeigt in der Cache.db die Spalte `isDataOnFS` der Tabelle `cfurl_cache_response`
 4. Ablageort:  
-   **/private/var/mobile/Containers/Data/Application/{UUID}/Library/Caches/{BUNDLE_ID}/fsCachedData/**
+   **`/private/var/mobile/Containers/Data/Application/{UUID}/Library/Caches/{BUNDLE_ID}/fsCachedData/`**
 
 ## Referenzen
 

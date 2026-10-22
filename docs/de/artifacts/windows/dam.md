@@ -21,8 +21,8 @@ Aus digitalforensischer Sicht bedeuten Einträge des DAM, dass eine Applikation 
 3. Aufbewahrung: Die Daten liegen ca. 7 Tage vor.
 4. Besonderheiten und Fallstricke: Applikationen, welche im Terminal gestartet wurden, werden NICHT geloggt. Applikationen, welche von externen Medien (z.B. USB-Sticks, Netzlaufwerke) gestartet wurden, werden NICHT geloggt.
 5. Ablageort (Registry):  
-   ab Windows 10 1809: **HKLM\\SYSTEM\\{CURRENT_CONTROL_SET}\\Services\\dam\\state\\UserSettings\\{USER_SID}**  
-   Windows 10 1709/1803: **HKLM\\SYSTEM\\{CURRENT_CONTROL_SET}\\Services\\dam\\UserSettings\\{USER_SID}**
+   ab Windows 10 1809: **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Services\dam\state\UserSettings\{USER_SID}`**  
+   Windows 10 1709/1803: **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Services\dam\UserSettings\{USER_SID}`**
 
 ## Referenzen
 

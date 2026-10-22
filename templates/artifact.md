@@ -66,13 +66,19 @@ Ausführliche Bedeutung dieses Eintragstyps.
 <!--
 Ein Fakt pro Punkt, kurz, in dieser Reihenfolge. Was nicht zutrifft oder unbekannt ist, entfällt.
 Aussagen, die sich mit Updates ändern, bekommen einen Stand: "seit iOS 16", "Stand 2026-07".
-Ablageort: Pfad fett und eingerückt (3 Leerzeichen, unter dem Listenpunkt).
-Platzhalter in geschweiften Klammern: {UUID}, {user}, nicht mit spitzen Klammern.
-Pfade mit * zusätzlich in Backticks: **`C:\Windows\Prefetch\*.pf`**
+Pfade (Dateien, Ordner, Registry-Schlüssel) stehen immer fett und in Backticks, im Ablageort
+wie im Fließtext:
+    **`C:\Windows\Prefetch\*.pf`**
+    **`HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs`**
+    **`/private/var/db/diagnostics`**
+Backslashes einfach, nie doppelt (in Backticks wird nichts maskiert).
+Platzhalter in geschweiften Klammern: {USER}, {USER_SID}, {DRIVE}, {UUID}; nie spitze Klammern.
+Ausnahme: In Tabellenzellen stehen Pfade nur in Backticks, nicht fett.
+Ablageort: Pfad eingerückt (3 Leerzeichen, unter dem Listenpunkt).
 Bei mehreren Ablageorten einer pro Zeile, mit zwei Leerzeichen am Zeilenende:
 7. Ablageort:  
-   iOS: **/private/var/…**  
-   macOS: **~/Library/…**
+   iOS: **`/private/var/…`**  
+   macOS: **`~/Library/…`**
 -->
 
 1. Verfügbarkeit: Betriebssystem/Version, ggf. Hardware
@@ -82,7 +88,7 @@ Bei mehreren Ablageorten einer pro Zeile, mit zwei Leerzeichen am Zeilenende:
 5. Zeitstempel: Format, Zeitzone, Bedeutung der einzelnen Zeitstempel
 6. Besonderheiten und Fallstricke
 7. Ablageort:  
-   **/pfad/zur/datei**
+   **`/pfad/zur/datei`**
 
 ## Referenzen
 

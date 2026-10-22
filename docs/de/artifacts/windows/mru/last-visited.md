@@ -22,8 +22,8 @@ Aus digitalforensischer Sicht bedeuten Einträge in der Last Visited-MRU, dass d
 2. Reihenfolge über `MRUListEx` (Windows XP: `MRUList`); die letzte Schreibzeit des Schlüssels gehört nur zum neuesten Eintrag
 3. Diese MRU korreliert mit der MRU - OpenSavePidlMRU - ein neuer Eintrag dort aktualisiert auch den Eintrag der Applikation in dieser MRU
 4. Ablageorte:  
-   ab Windows Vista: **HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\LastVisitedPidlMRU**  
-   Windows XP: **HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\LastVisitedMRU**
+   ab Windows Vista: **`HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedPidlMRU`**  
+   Windows XP: **`HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedMRU`**
 
 ## Referenzen
 

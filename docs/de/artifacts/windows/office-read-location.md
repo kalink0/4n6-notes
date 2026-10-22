@@ -22,7 +22,7 @@ Aus digitalforensischer Sicht kann anhand der Daten gesagt werden, dass das ange
 4. Zeitstempel: Cross-Validierung: Der `Datetime`-Wert (lokale Zeit) sollte nach Umrechnung in UTC mit der **Last-Write-Time des jeweiligen** `Document n`**-Unterschlüssels** übereinstimmen
 5. Besonderheiten und Fallstricke: Erfasst werden auch PDFs und über Outlook geöffnete Dokumente; deren Pfad zeigt dann auf den temporären Outlook-Cache. Dokumente auf Netzlaufwerken werden ebenfalls erfasst.
 6. Ablageort:  
-   **HKCU\\Software\\Microsoft\\Office\\{VERSION}\\Word\\Reading Locations**
+   **`HKCU\Software\Microsoft\Office\{VERSION}\Word\Reading Locations`**
 
 ## Referenzen
 

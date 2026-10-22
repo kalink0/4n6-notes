@@ -26,8 +26,8 @@ Aus digitalforensischer Sicht bedeuten Einträge in der MRU-Liste für RDC, dass
 4. Der Unterschlüssel Servers enthält pro Ziel einen eigenen Schlüssel mit UsernameHint (verwendeter Benutzername) und ist nicht auf zehn Einträge begrenzt
 5. Mit mstsc /public werden weder MRU noch Servers geschrieben
 6. Ablageorte:  
-   **HKCU\\Software\\Microsoft\\Terminal Server Client\\Default**  
-   **HKCU\\Software\\Microsoft\\Terminal Server Client\\Servers\\{HOST}**
+   **`HKCU\Software\Microsoft\Terminal Server Client\Default`**  
+   **`HKCU\Software\Microsoft\Terminal Server Client\Servers\{HOST}`**
 
 ## Referenzen
 

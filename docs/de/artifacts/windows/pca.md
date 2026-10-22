@@ -22,9 +22,9 @@ Aus digitalforensischer Sicht bedeuten Einträge in der PcaAppLaunchDic.txt, das
 4. Zeitstempel: UTC; in der PcaAppLaunchDic.txt Zeitpunkt der letzten Ausführung
 5. Besonderheiten und Fallstricke: Nur GUI-based Applikationen bzw. Applikationen die aus der GUI heraus gestartet wurden. PcaAppLaunchDic.txt ist ANSI-kodiert: nach einem Pfad mit Nicht-ANSI-Zeichen werden keine neuen Programme mehr erfasst. Pfade in PcaGeneralDb sind normalisiert (kleingeschrieben, ohne Laufwerksbuchstabe, Benutzernamen ersetzt).
 6. Ablageort:  
-   **C:\\Windows\\appcompat\\pca\\PcaAppLaunchDic.txt**  
-   **C:\\Windows\\appcompat\\pca\\PcaGeneralDb0.txt**  
-   **C:\\Windows\\appcompat\\pca\\PcaGeneralDb1.txt**
+   **`C:\Windows\appcompat\pca\PcaAppLaunchDic.txt`**  
+   **`C:\Windows\appcompat\pca\PcaGeneralDb0.txt`**  
+   **`C:\Windows\appcompat\pca\PcaGeneralDb1.txt`**
 
 ## Referenzen
 

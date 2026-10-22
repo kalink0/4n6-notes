@@ -22,8 +22,8 @@ Aus digitalforensischer Sicht bedeuten Einträge in der Open/Save-MRU, dass das 
 2. Reihenfolge über `MRUListEx` (Windows XP: `MRUList`); die letzte Schreibzeit eines Unterschlüssels gehört nur zum jeweils neuesten Eintrag
 3. Diese MRU korreliert mit der MRU - LastVisitedPidlMRU - ein neuer Eintrag dort ist auch ein neuer Eintrag in dieser MRU
 4. Ablageorte:  
-   ab Windows Vista: **HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\OpenSavePidlMRU**  
-   Windows XP: **HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\OpenSaveMRU**
+   ab Windows Vista: **`HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePidlMRU`**  
+   Windows XP: **`HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSaveMRU`**
 
 ## Referenzen
 

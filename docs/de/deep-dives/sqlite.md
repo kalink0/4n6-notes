@@ -211,3 +211,5 @@ fqlite - <https://github.com/pawlaszczyk/fqlite>
 SQBite - <https://github.com/SpyderForensics/SQLite_Forensics/tree/main/SQBite>
 
 sqlite-dissect - <https://github.com/dod-cyber-crime-center/sqlite-dissect>
+
+sqlite-gui-analyzer - <https://github.com/akhil-dara/sqlite-gui-analyzer>

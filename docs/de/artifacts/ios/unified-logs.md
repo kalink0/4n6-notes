@@ -30,9 +30,12 @@ Eine einzelne tracev3 kann zwar auch gelesen werden, jedoch fehlen die genauen Z
 
 1. Die Logs rotieren nach Größe, nicht nach festen Tagen; der Großteil der Einträge bleibt nur wenige Tage erhalten, nur ein kleiner Teil 14 Tage oder länger - bei Relevanz schnellstmöglich sichern.
 2. Ein sysdiagnose enthält einen deutlich kürzeren Zeitraum als die Logs auf dem Gerät (in Tests 2 statt 14 Tage)
-3. Ablageort:  
-   **/private/var/db/diagnostics**  
-   **/private/var/db/uuidtext**
+3. Binärformat, komprimiert; die Dateien sind nicht direkt lesbar und müssen mit einem Parser oder `log show` auf einem Mac dekodiert werden
+4. Sehr umfangreich, gezieltes Filtern ist für die Auswertung notwendig
+5. Dekodiert vervielfacht sich die Datenmenge (in Tests aus rund 200 MB logarchive etwa 35 GB) - entsprechend Speicherplatz einplanen
+6. Ablageort:  
+   **`/private/var/db/diagnostics`**  
+   **`/private/var/db/uuidtext`**
 
 ## Referenzen
 

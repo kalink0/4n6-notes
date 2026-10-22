@@ -23,9 +23,9 @@ Aus digitalforensischer Sicht kann gesagt werden, dass Einträge im USN Journal 
 3. Maximale Größe liegt standardmäßig bei 30 - 40 MB (logische Dateigröße von $J durch Sparse-Bereich deutlich größer) - je nach Verwendung der Partition kann man 1 - 2 Wochen in die Vergangenheit schauen
 4. Ablageort (Im Root-Verzeichnis einer NTFS-Partition): **`\$Extend\$UsnJrnl`**
 
-   **$J** - Alternate Data Stream - beinhaltet das eigentliche Journal
+   **`$J`** - Alternate Data Stream - beinhaltet das eigentliche Journal
 
-   **$Max** - Alternate Data Stream - beinhaltet Metadaten zur maximalen Größe des Journals
+   **`$Max`** - Alternate Data Stream - beinhaltet Metadaten zur maximalen Größe des Journals
 
 ## Referenzen
 

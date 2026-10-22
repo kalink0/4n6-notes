@@ -24,8 +24,8 @@ Aus digitalforensischer Sicht belegen die Einträge auf dem sendenden Gerät, da
 6. Für die Zuordnung einer Übertragung zu einem Gegenüber werden die Logs beider Geräte benötigt
 7. Weitere AirDrop-Spuren: PowerLog (Tabelle `PLXPCAgent_EventForward_AirDrop`, untersucht bis iOS 14), KnowledgeC (Stream `/photos/share/airdrop`, iOS 13 und 14) und InteractionC
 8. Ablageorte:  
-   **/private/var/db/diagnostics/** (Unified Logs, auch im sysdiagnose als system_logs.logarchive)  
-   **/private/var/mobile/Library/Preferences/com.apple.sharingd.plist**
+   **`/private/var/db/diagnostics/`** (Unified Logs, auch im sysdiagnose als system_logs.logarchive)  
+   **`/private/var/mobile/Library/Preferences/com.apple.sharingd.plist`**
 
 ## Referenzen
 

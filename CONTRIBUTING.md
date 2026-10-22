@@ -191,22 +191,34 @@ or is unknown is left out):
 6. Particularities and pitfalls
 7. Location (Ablageort), always the last item
 
-Location: the path itself in bold, on its own line, indented by three spaces under the list item.
+Location: the path on its own line, indented by three spaces under the list item.
 With several paths, one per line, with two spaces at the end of the line and the platform in front
 (not bold):
 
 ```markdown
 7. Ablageort:  
-   **/private/var/mobile/Library/…/datei.db**
+   **`/private/var/mobile/Library/…/datei.db`**
 
 7. Ablageort:  
-   iOS: **/private/var/…**  
-   macOS: **~/Library/…**
+   iOS: **`/private/var/…`**  
+   macOS: **`~/Library/…`**
 ```
 
-- Placeholders in paths use curly braces, not angle brackets: `{UUID}`, `{user}`.
-- Paths containing `*` are additionally wrapped in backticks, so the `*` is not read as
-  formatting: ``**`C:\Windows\Prefetch\*.pf`**``
+### Writing paths
+
+All paths on the pages (files, folders, registry keys) are written in bold and in backticks:
+
+```markdown
+**`C:\Windows\Prefetch\*.pf`**
+**`HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs`**
+**`/private/var/db/diagnostics`**
+```
+
+- Backslashes are always single, never doubled (nothing is escaped inside backticks).
+- Placeholders use curly braces, e.g. `{USER}`, `{USER_SID}`, `{DRIVE}`, `{UUID}`; never angle
+  brackets.
+- Applies to locations and to paths in running text.
+- Exception: paths in table cells are only in backticks, not bold.
 
 Statements that change with updates (versions, defaults, rollouts) get a point in time:
 "seit iOS 16" (since iOS 16), "Stand 2026-07" (as of 2026-07).

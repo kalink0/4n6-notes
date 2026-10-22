@@ -19,8 +19,8 @@ Aus digitalforensischer Sicht lassen sich anhand von Einträgen des FSEvents Aus
 1. Die Zeitstempel sind NICHT direkt enthalten in der Ablage des FSEvents. Die Dateien, welche bis zu 5000 Events enthalten, haben aber selbst einen Zeitstempel, der den Zeitraum eingrenzt.
 2. Es gibt zusätzlich zur Ablage im Dateisystem einen Puffer im Arbeitsspeicher - dies bedeutet, dass die Most Recent File Changes ggf. noch nicht auf den Datenträger geschrieben sind im laufenden System.
 3. Ablageort (ggf. noch mehr Orte in iOS):  
-   **/private/var/.fseventsd**  
-   **/private/var/mobile/.fseventsd**
+   **`/private/var/.fseventsd`**  
+   **`/private/var/mobile/.fseventsd`**
 
 ## Referenzen
 

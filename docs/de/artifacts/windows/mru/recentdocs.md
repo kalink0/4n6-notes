@@ -23,7 +23,7 @@ Aus digitalforensischer Sicht bedeuten Einträge in der RecentDocs MRU Liste, da
 3. Dateien mit identischen Namen, aber unterschiedlichen Pfaden werden nur einen Eintrag in der MRU-Liste erzeugen.
 4. Beim Erstellen oder Öffnen einer Datei werden auch der übergeordnete Ordner und ggf. dessen übergeordneter Ordner eingetragen; ein Ordner-Eintrag belegt daher nicht, dass der Ordner geöffnet wurde
 5. Ablageorte:  
-   **HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs**
+   **`HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs`**
 
 ## Referenzen
 

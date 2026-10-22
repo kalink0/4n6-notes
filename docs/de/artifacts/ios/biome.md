@@ -26,9 +26,9 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass iOS zum angegebenen Zeitp
 8. Einträge zu einer App bleiben auch nach dem Löschen der App erhalten
 9. SEGB-Dateien kommen auch außerhalb von Biome vor, z.B. in DuetExpertCenter/streams
 10. Ablageorte:  
-    **/private/var/mobile/Library/Biome/streams/public/** (iOS 14 bis 16)  
-    **/private/var/mobile/Library/Biome/streams/restricted/** (ab iOS 15)  
-    **/private/var/db/biome/streams/restricted/** (ab iOS 16)
+    **`/private/var/mobile/Library/Biome/streams/public/`** (iOS 14 bis 16)  
+    **`/private/var/mobile/Library/Biome/streams/restricted/`** (ab iOS 15)  
+    **`/private/var/db/biome/streams/restricted/`** (ab iOS 16)
     
 ## Referenzen
 

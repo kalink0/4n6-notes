@@ -27,9 +27,9 @@ Die Genauigkeit bzgl. Zeit und Ort ist bei der Interpretation hierbei mit zu bea
 5. Die örtliche Genauigkeit liegt bei bis zu 250 m bzgl. des Verlassens
 6. Die Cloud-Datenbank kann Aufenthalte enthalten, die andere Geräte desselben Apple-Accounts erfasst haben (z.B. iPad, Mac)
 7. Ablageort:  
-   **/private/var/mobile/Library/Caches/com.apple.routined/Local.sqlite**  
-   **/private/var/mobile/Library/Caches/com.apple.routined/Cloud.sqlite**  
-   **/private/var/mobile/Library/Caches/com.apple.routined/Cloud-V2.sqlite**
+   **`/private/var/mobile/Library/Caches/com.apple.routined/Local.sqlite`**  
+   **`/private/var/mobile/Library/Caches/com.apple.routined/Cloud.sqlite`**  
+   **`/private/var/mobile/Library/Caches/com.apple.routined/Cloud-V2.sqlite`**
 
 ## Referenzen
 

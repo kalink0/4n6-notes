@@ -30,11 +30,11 @@ Aus digitalforensischer Sicht belegen diese Spuren, dass das Gerät zurückgeset
 5. `SetupLastExit` ist unzuverlässig, es ändert sich auch bei späteren Einstellungsänderungen (z.B. Apple Pay)
 6. Bei AddressBook und CallHistory zählt der Erstellungs-, nicht der Änderungszeitpunkt
 7. Ablageorte:  
-   **/private/var/root/.obliterated**  
-   **/private/var/root/Library/Logs/MobileContainerManager/containermanager.log.{N}**  
-   **/private/var/mobile/Library/Preferences/com.apple.purplebuddy.plist**  
-   **/private/var/mobile/Library/AddressBook/AddressBook.sqlitedb**  
-   **/private/var/mobile/Library/CallHistoryDB/CallHistory.storedata**
+   **`/private/var/root/.obliterated`**  
+   **`/private/var/root/Library/Logs/MobileContainerManager/containermanager.log.{N}`**  
+   **`/private/var/mobile/Library/Preferences/com.apple.purplebuddy.plist`**  
+   **`/private/var/mobile/Library/AddressBook/AddressBook.sqlitedb`**  
+   **`/private/var/mobile/Library/CallHistoryDB/CallHistory.storedata`**
 
 ## Referenzen
 

@@ -20,9 +20,9 @@ Aus digitalforensischer Sicht bedeuten Einträge in dem MUI Cache, dass das Prog
 2. Zeitstempel: Es liegen keine Zeitstempel vor
 3. Besonderheiten und Fallstricke: Nur Programme mit GUI-Komponente werden protokolliert. Nutzerkontenbasiert
 4. Ablageort:  
-   Bis Windows XP: **NTUSER.dat - HKCU\\Software\\Microsoft\\Windows\\ShellNoRoam\\MUICache**  
-   Ab Windows Vista: **USRCLASS.dat - Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache**  
-   Ab Windows Vista (Live-System): **HKCU\\Software\\Classes\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\MuiCache**
+   Bis Windows XP: **`NTUSER.dat - HKCU\Software\Microsoft\Windows\ShellNoRoam\MUICache`**  
+   Ab Windows Vista: **`USRCLASS.dat - Local Settings\Software\Microsoft\Windows\Shell\MuiCache`**  
+   Ab Windows Vista (Live-System): **`HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\MuiCache`**
 
 ## Referenzen
 

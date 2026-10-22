@@ -21,7 +21,7 @@ Aus digitalforensischer Sicht bedeutet ein Eintrag mit einem Ausführungszähler
 3. Format und Struktur: Relevante Tabellen: tiles und tiles_content – enthalten Anwendungspfad, Anzeigename und Ausführungszähler (launchCount)
 4. Besonderheiten und Fallstricke: Nur im Startmenü verknüpfte Apps werden pro User getrackt -
 5. Ablageort:  
-   **%LOCALAPPDATA%\\Packages\\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\\LocalState\\Search\\AppsIndex.db**
+   **`%LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\Search\AppsIndex.db`**
 
 ## Referenzen
 

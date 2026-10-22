@@ -33,7 +33,7 @@ Die Bedeutung der einzelnen Einträge wird im Folgenden beschrieben. Es könnne 
 1. Die Datenbank wurde eingeführt mit iOS 10. Seit iOS 16 sind immer mehr der sonst in KnowledgeC zu findenden Daten in die Biome geschoben worden.
 2. Der Aufbewahrungszeitraum ist abhängig von den Eintragstypen, meist etwa vier Wochen.
 3. Ablageort:  
-   **/private/var/mobile/Library/CoreDuet/Knowledge/knowledgeC.db**
+   **`/private/var/mobile/Library/CoreDuet/Knowledge/knowledgeC.db`**
 
 ## Referenzen
 

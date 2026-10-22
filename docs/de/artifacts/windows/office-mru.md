@@ -19,10 +19,10 @@ Aus digitalforensischer Sicher bedeuten Einträge in der Office MRU, dass die an
 1. Format und Struktur: File MRU = Zuletzt geöffnete Dateien. Place MRU = Zuletzt aufgerufene/verwendete Ordner zum Öffnen/Speichern von Dateien
 2. Besonderheiten und Fallstricke: Wenn ACCOUNT = LiveID_xxxx -> Microsoft Account, wenn ACCOUNT = ADAL -> Azure Active Directory (heute Microsoft Entra ID); zusätzlich kommt ACCOUNT = AD_xxxx vor
 3. Ablageort:  
-   **HKCU\\SOFTWARE\\Microsoft\\Office\\{VERSION}\\{APPNAME}\\User MRU\\{ACCOUNT}\\File MRU**  
-   **HKCU\\SOFTWARE\\Microsoft\\Office\\{VERSION}\\{APPNAME}\\User MRU\\{ACCOUNT}\\Place MRU**  
-   **HKCU\\SOFTWARE\\Microsoft\\Office\\{VERSION}\\{APPNAME}\\File MRU**  
-   **HKCU\\SOFTWARE\\Microsoft\\Office\\{VERSION}\\{APPNAME}\\Place MRU**
+   **`HKCU\SOFTWARE\Microsoft\Office\{VERSION}\{APPNAME}\User MRU\{ACCOUNT}\File MRU`**  
+   **`HKCU\SOFTWARE\Microsoft\Office\{VERSION}\{APPNAME}\User MRU\{ACCOUNT}\Place MRU`**  
+   **`HKCU\SOFTWARE\Microsoft\Office\{VERSION}\{APPNAME}\File MRU`**  
+   **`HKCU\SOFTWARE\Microsoft\Office\{VERSION}\{APPNAME}\Place MRU`**
 
 ## Referenzen
 

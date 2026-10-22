@@ -22,7 +22,7 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass zum angegebenen Zeitpunkt
 4. Zeitstempel im Format Mac Absolute Time (Sekunden seit 2001-01-01, UTC)
 5. Wo die Absenderkennung steht, hängt von der App ab, z.B. Telefonnummer bei WhatsApp und Signal meist in `rawIdentifier`, bei SMS in `ThreadID`
 6. Ablageort:  
-   **/private/var/mobile/Library/DuetExpertCenter/notificationAndSuggestionDB.db**
+   **`/private/var/mobile/Library/DuetExpertCenter/notificationAndSuggestionDB.db`**
 
 ## Referenzen
 

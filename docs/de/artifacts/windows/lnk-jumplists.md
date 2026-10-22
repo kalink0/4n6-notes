@@ -29,9 +29,9 @@ Aus digitalforensischer Sicht bedeutet die Existenz von Jumplists folgendes:
 2. Die Anzahl der Aufrufe (Interaction Account) ist nach derzeitigem Stand nicht genau erklärbar/nachvollziehbar und daher ist der Wert mit Vorsicht zu behandeln.
 3. Ablageort:
 
-   **%AppData%\\Microsoft\\Windows\\Recent\\AutomaticDestinations**
+   **`%AppData%\Microsoft\Windows\Recent\AutomaticDestinations`**
 
-   **%AppData%\\Microsoft\\Windows\\Recent\\CustomDestinations**
+   **`%AppData%\Microsoft\Windows\Recent\CustomDestinations`**
 
 ## Referenzen
 

@@ -23,7 +23,7 @@ Einträge in der Run Commands MRU bedeuten aus digitalforensischer Sicht, dass i
 3. Reihenfolge über `MRUList`; die letzte Schreibzeit des Schlüssels gehört nur zum neuesten Eintrag
 4. Befehle, die nicht ausgeführt werden können (z.B. nicht existierende Datei), werden nicht eingetragen
 5. Ablageorte:  
-   **HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RunMRU**
+   **`HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU`**
 
 ## Referenzen
 

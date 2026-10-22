@@ -24,7 +24,7 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass zum angegebenen Zeitpunkt
 6. Die Empfängeranzahl zählt den Gerätenutzer nicht mit
 7. Ein Teil der Anhänge ist keiner Interaktion mehr zugeordnet und hat keinen Zeitstempel
 8. Ablageort:  
-   **/private/var/mobile/Library/CoreDuet/People/interactionC.db**
+   **`/private/var/mobile/Library/CoreDuet/People/interactionC.db`**
 
 ## Referenzen
 
