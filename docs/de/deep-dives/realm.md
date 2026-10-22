@@ -1,49 +1,59 @@
 ---
 title: "Realm Datenbanken"
-status: draft
+status: complete
+completed: 2026-10-22
+authors: [kalink0 (Marco Neumann)]
 ---
 
 # Realm Datenbanken
 
 ## Bedeutung
 
-*Noch kein Inhalt.*
+### Technische Beschreibung:
+
+Realm ist eine objektorientierte Datenbank für mobile Apps, die als Alternative zu SQLite eingesetzt wird. Daten werden als Objekte mit Eigenschaften gespeichert, nicht als Zeilen in Tabellen. Eine Datenbank besteht aus einer einzelnen Datei, separate Journal- oder WAL-Dateien gibt es nicht. Forensisch relevant ist, dass die Datei neben dem aktuellen Stand auch den Stand vor dem letzten Commit und Reste älterer Daten enthalten kann.
+
+### Nicht-technische Beschreibung:
+
+Realm ist ein Datenspeicher, den manche Apps statt der üblichen SQLite-Datenbank nutzen. Darin legt die App ihre Daten ab, zum Beispiel Nutzerdaten, Inhalte oder Einstellungen. Für eine Untersuchung kann dieser Speicher zeigen, welche Daten die App gespeichert hat und was sich zuletzt daran geändert hat.
 
 ## Spezifische Kurzinformation
 
-*Noch kein Inhalt.*
+### Komponenten
 
-## REALM DB Dateistruktur
+Ablageort:
 
-Quelle: „Mobile Forensics – The File Format Handbook“, Kapitel 8 (Cobley/Geneste 2022)
+- Im Datenverzeichnis der jeweiligen App, Dateiendung meist `.realm`
 
----
+#### Datei-Header (24 Byte)
 
-### 1. Datei-Header (24 Byte) – vollständig geparst, als korrekt bestätigt
-
-Die Struktur ist in `alloc_slab.hpp` definiert (Quellcode von Realm Core):
+##### Funktionsweise
 
 ```
 Offset  Größe Feld             Hinweise
 0x00     8    m_top_ref[0]     little-endian uint64 – Datei-Offset des Root-Arrays A
 0x08     8    m_top_ref[1]     little-endian uint64 – Datei-Offset des Root-Arrays B
 0x10     4    m_mnemonic       ASCII "T-DB" (0x54 2D 44 42); Magic Value
-0x14     2    m_file_format    Version des Dateiformats; in der Praxis 0x18 (=24) gesehen
+0x14     1    m_file_format[0] Version des Dateiformats für top_ref[0]; aktuell 24
+0x15     1    m_file_format[1] Version des Dateiformats für top_ref[1]; aktuell 24
 0x16     1    m_reserved       zum Zeitpunkt der Erstellung immer 0x00
 0x17     1    m_flags          Bit 0 (LSB): 0 = top_ref[0] aktiv, 1 = top_ref[1] aktiv
                                Bits 1–7: zum Zeitpunkt der Erstellung ungenutzt
 ```
 
-**Vergleich mit Journaling / WAL**: Die beiden top_refs entsprechen in Realm dem WAL von SQLite.  
-Der „aktuelle“ (lesekonsistente) Zweig ist der, den Bit 0 der Flags auswählt. Alle Schreibvorgänge  
-gehen in den *anderen* Zweig. Checkpoint = Umschalten des Flags.
+Realm arbeitet nach dem Copy-on-Write-Prinzip: Bei einem Commit werden geänderte Arrays nicht überschrieben, sondern an freie Stellen neu geschrieben. Danach zeigt der inaktive Top Ref auf den neuen Stand und das Flag wird umgeschaltet. Der bisher aktive Top Ref bleibt als Stand vor dem letzten Commit erhalten.
 
----
+##### Forensischer Nutzen
 
-### 2. Realm Arrays – die einzige Struktur nach dem Header
+Das Flag zeigt, welcher Top Ref den aktuellen Stand enthält. Der andere Top Ref enthält den Stand vor dem letzten Commit. Durch den Vergleich beider Stände lassen sich Objekte erkennen, die bei der letzten Transaktion gelöscht oder geändert wurden.
 
-Nach dem 24-Byte-Header besteht die Datei **ausschließlich** aus Realm Arrays, die als B+-Baum
-angeordnet sind. Es gibt zwei Arten:
+Unterschiedliche File-Format-Werte der beiden Top Refs zeigen, dass beim letzten Commit ein Format-Upgrade stattfand.
+
+#### Realm Arrays
+
+##### Funktionsweise
+
+Nach dem 24-Byte-Header besteht die Datei aus Realm Arrays, die als B+-Baum angeordnet sind, und freien Bereichen. Es gibt zwei Arten von Arrays:
 
 | Typ             | has_refs | Rolle                                        |
 |-----------------|----------|----------------------------------------------|
@@ -54,9 +64,7 @@ Arrays beginnen mit einem festen **8-Byte-Header**, gefolgt von einer Payload va
 Aufeinanderfolgende Arrays lassen sich finden, indem man nach dem 4-Byte-Prüfsummenmuster `AAAA`
 (0x41414141) sucht.
 
----
-
-### 3. Array-Header (8 Byte)
+Array-Header (8 Byte):
 
 ```
 Offset  Größe Feld             Hinweise
@@ -65,7 +73,7 @@ Offset  Größe Feld             Hinweise
 0x05     3    size             big-endian uint24 – Anzahl der *Elemente* in der Payload
 ```
 
-#### 3a. Flags-Byte – Bitgruppen (MSB = Bit 7)
+Flags-Byte – Bitgruppen (MSB = Bit 7):
 
 ```
 Bit(s)  Maske Name                 Werte / Bedeutung
@@ -77,16 +85,16 @@ Bit(s)  Maske Name                 Werte / Bedeutung
 [2:0]   0x07  width_ndx            3-Bit-Index 0–7 in die Umrechnungstabelle für width (siehe unten)
 ```
 
-#### 3b. Umrechnungstabelle width_ndx → width
+Umrechnungstabelle width_ndx → width:
 
 ```
-width_ndx  : 	0   1   2   3   4    5    6    7
+width_ndx  :  0   1   2   3   4    5    6    7
 width      :  0   1   2   4   8   16   32   64
 ```
 
 „width“ = Größe eines Elements (bei Schema 0 in Bit, bei Schema 1 in Byte).
 
-#### 3c. Formel width_scheme → Anzahl der Payload-Bytes
+Formel width_scheme → Anzahl der Payload-Bytes:
 
 ```
 width_scheme  Bedeutung          Formel
@@ -103,30 +111,63 @@ payload_bytes = (payload_bytes + 7) & ~7
 
 Gesamtlänge des Arrays in Byte = 8 (Header) + payload_bytes_aligned.
 
-### 4. Inhalte
+#### Logischer Aufbau
 
-#### 4.1 Datenbanken
+##### Funktionsweise
 
-*Noch kein Inhalt.*
+Die Arrays bilden eine Hierarchie:
 
-#### 4.2 Parameter
+1. Group: oberster Knoten, auf den ein Top Ref zeigt
+2. Tables: je eine pro Klasse des Schemas (Klassennamen mit Präfix `class_`)
+3. Cluster Tree: B+-Baum je Tabelle
+4. Clusters: Blätter des Cluster Trees, enthalten die eigentlichen Objektdaten
 
-*Noch kein Inhalt.*
+Verweise zwischen Objekten (Links) werden über ObjKeys gespeichert, die internen Kennungen der Objekte.
 
-#### 4.3 Objekte
+##### Forensischer Nutzen
 
-*Noch kein Inhalt.*
+Die Klassennamen im Schema zeigen, welche Arten von Daten die App speichert. Um Objektdaten einer Klasse und ihren Eigenschaften zuzuordnen, muss die Hierarchie vom Top Ref bis zu den Clusters durchlaufen werden.
+
+#### Freie Bereiche
+
+##### Funktionsweise
+
+Bereiche, die zu keinem der beiden Top Refs gehören. Realm markiert sie als frei und verwendet sie bei späteren Commits wieder.
+
+##### Forensischer Nutzen
+
+Freie Bereiche können Reste älterer oder gelöschter Objekte enthalten, bis Realm sie wiederverwendet. Über das Muster `AAAA` lassen sich darin Arrays finden.
+
+## Checkliste Analyse
+
+1. Die Datei nie in Realm Studio oder mit der App am Original öffnen. Realm Studio aktualisiert ältere Dateien auf das aktuelle Format und schreibt dabei einen neuen Commit.
+2. Signatur `T-DB` an Offset 16 prüfen.
+3. Header auswerten: aktiven Top Ref über das Flag bestimmen, File-Format beider Top Refs vergleichen.
+4. Aktiven Top Ref auswerten: Schema, Tabellen (Klassen), Objekte.
+5. Inaktiven Top Ref auswerten und mit dem aktiven vergleichen.
+6. Freie Bereiche nach Arrays durchsuchen.
 
 ## Referenzen
 
-2026-01: <https://digital4n6withdamien.blogspot.com/2026/01/the-realm-files-vol-3-realm-header.html>
+2026-05: [beBinary: Object by Object – RealmDB Forensics with crush](https://bebinary4n6.blogspot.com/2026/05/object-by-object-realmdb-forensics-with.html)
 
-2025-11: <https://digital4n6withdamien.blogspot.com/2025/11/the-realm-files-vol-2-physical.html>
+2026-01: [Damien Attoe: The Realm Files – Vol 3 – The Realm Header](https://digital4n6withdamien.blogspot.com/2026/01/the-realm-files-vol-3-realm-header.html)
 
-2025-09: <https://digital4n6withdamien.blogspot.com/2025/09/the-realm-files-vol-1-intro-to-realmdb.html>
+2025-11: [Damien Attoe: The Realm Files – Vol 2 – Physical Structure Overview](https://digital4n6withdamien.blogspot.com/2025/11/the-realm-files-vol-2-physical.html)
 
-2022: [Cobley, Geneste: Realm, in Mobile Forensics – The File Format Handbook (Springer, 2022)](https://doi.org/10.1007/978-3-030-98467-0_8)
+2025-09: [Damien Attoe: The Realm Files – Vol 1 – Intro to RealmDB](https://digital4n6withdamien.blogspot.com/2025/09/the-realm-files-vol-1-intro-to-realmdb.html)
+
+2022-05: [Cobley, Geneste: Realm – Mobile Forensics – The File Format Handbook, Kapitel 8 (Springer, Open Access)](https://doi.org/10.1007/978-3-030-98467-0_8)
+
+2022: [Kim et al.: Methods for recovering deleted data from the Realm database (FSI: Digital Investigation)](https://www.sciencedirect.com/science/article/abs/pii/S2666281722000221)
+
+2019-11: [Alexis Brignoni: Realm database storage primer for digital forensic examiners](https://abrignoni.blogspot.com/2019/11/realm-database-storage-primer-for.html)
+
+crush Format Reference:
+- <https://kalink0.github.io/crush-forensics/formats/realm/>
 
 ## Tools
 
-realm-studio - <https://github.com/realm/realm-studio>
+crush - <https://github.com/kalink0/crush-forensics>
+
+Realm Studio - <https://github.com/realm/realm-studio>

@@ -185,9 +185,9 @@ Der forensische Nutzen ist gering, da die Index-Daten der shm auch aus der WAL g
 
 2018: Umfangreiche Erklärungen zu Aufbau und interner Funktionsweise im Buch "SQLite Forensics" von Paul Sanderson - ISBN 9781980293071
 
-[Sanderson Forensics: Forensic examination of SQLite WAL files](https://sqliteforensictoolkit.com/forensic-examination-of-sqlite-write-ahead-log-wal-files/)
+2015-03: [Sanderson Forensics: Forensic examination of SQLite WAL files](https://sqliteforensictoolkit.com/forensic-examination-of-sqlite-write-ahead-log-wal-files/)
 
-[Belkasoft: SQLite-Analyse (Freelist, WAL, unallozierter Bereich, Carving)](https://belkasoft.com/sqlite-analysis)
+[Belkasoft: SQLite Forensics with Belkasoft X)](https://belkasoft.com/sqlite)
 
 SQLite-Dokumentation:
 - Dateiformat: <https://www.sqlite.org/fileformat2.html>
@@ -195,9 +195,10 @@ SQLite-Dokumentation:
 - Journal-Modes: <https://www.sqlite.org/pragma.html#pragma_journal_mode>
 
 crush Format Reference:
-- <https://kalink0.github.io/crush-forensics/formats/sqlite/>
-- <https://kalink0.github.io/crush-forensics/formats/sqlite-journal/>
-- <https://kalink0.github.io/crush-forensics/formats/sqlite-wal/>
+- <https://kalink0.github.io/crush-forensics/formats/de/sqlite/>
+- <https://kalink0.github.io/crush-forensics/formats/de/sqlite-journal/>
+- <https://kalink0.github.io/crush-forensics/formats/de/sqlite-wal/>
+
 ## Tools
 
 crush - <https://github.com/kalink0/crush-forensics>
