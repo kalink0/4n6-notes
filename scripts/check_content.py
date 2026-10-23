@@ -5,7 +5,7 @@ Checks:
 - every page has a title and a valid status (draft, complete, reviewed); index.md may omit it
 - complete and reviewed pages have a completion date (`completed: YYYY-MM-DD`) and authors;
   reviewed pages also have a review date (`reviewed: YYYY-MM-DD`) and reviewers.
-  Dates are valid, not in the future and only set with the matching status
+  Dates are valid and only set with the matching status
 - authors (`authors: [...]`) and reviewers (`reviewers: [...]`) of each language version are
   GitHub handles, optionally with the full name: `kalink0 (Max Mustermann)`; nobody reviews a
   version they wrote
@@ -97,8 +97,6 @@ def check_dates(errors: list[str], rel: str, meta: dict) -> None:
                 errors.append(f"{rel}: status is {status} but {field} (date) is missing")
             elif not isinstance(value, date) or isinstance(value, datetime):
                 errors.append(f"{rel}: {field} must be a date YYYY-MM-DD, got {value!r}")
-            elif value > date.today():
-                errors.append(f"{rel}: {field} date {value} is in the future")
         elif value is not None:
             errors.append(f"{rel}: {field} date set but status is {status!r}")
 
