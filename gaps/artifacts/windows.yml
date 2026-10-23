@@ -42,8 +42,6 @@
   topic: program-execution
 - name: RecentFileCache.bcf
   topic: program-execution
-- name: Sysinternals-EULA
-  topic: program-execution
 
 - name: WordWheelQuery
   topic: commands-input
