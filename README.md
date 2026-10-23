@@ -10,7 +10,7 @@ Pages can be written in any of the site's languages (currently German and Englis
 versions of a page are equal and are added over time. Most pages currently exist in German only.
 Further languages can be added, see CONTRIBUTING.md (Languages).
 
-**Website:** https://kalink0.github.io/dfir-notes/
+**Website:** https://4n6.be-binary.de/
 
 ## Content status
 

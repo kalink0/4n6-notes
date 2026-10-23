@@ -1,7 +1,7 @@
 INHERIT: mkdocs.base.yml
 docs_dir: docs/en
 site_dir: site/en
-site_url: https://kalink0.github.io/dfir-notes/en/
+site_url: https://4n6.be-binary.de/en/
 edit_uri: edit/main/docs/en/
 copyright: Content licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
 
