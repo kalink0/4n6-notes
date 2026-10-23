@@ -22,9 +22,8 @@ Nicht belegt ist, zu welchem genauen Zeitpunkt ein einzelner Schritt oder eine P
 2. Enthält etwa die letzten 10 Tage
 3. Schritte sind in umgekehrter Reihenfolge gespeichert, der neueste zuerst
 4. Schritt als `Zustand-Akkustand-Dauer`, Akkustand und Dauer hexadezimal (z.B. `oZI-35-c2957` = 53 %, 796 503 ms)
-5. Zeitangaben der einzelnen Schritte sind Dauern in Millisekunden, keine Zeitpunkte; nur Beginn und Ende des Tageseintrags sind Unix-Zeitstempel in Millisekunden (UTC)
-6. Paketänderungen werden vom ALEAPP-Parser nicht ausgewertet
-7. Ablageort:  
+5. Zeitangaben der einzelnen Schritte sind Dauer in Millisekunden, keine Zeitpunkte; nur Beginn und Ende des Tageseintrags sind Unix-Zeitstempel in Millisekunden (UTC)
+6. Ablageort:  
    **`/data/system/batterystats-daily.xml`**
 
 ## Referenzen
