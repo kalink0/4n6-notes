@@ -37,8 +37,6 @@ Aus digitalforensischer Sicht bedeutet die Existenz und der Inhalt einer Prefetc
 
 2015-06: <https://blog.digital-forensics.it/2015/06/a-first-look-at-windows-10-prefetch.html>
 
-2015-01: <https://www.sans.org/blog/what-is-new-in-windows-application-execution/>
-
 2013-09: <https://www.hecfblog.com/2013/09/daily-blog-72-understanding-artifacts.html>
 
 2026-10 (abgerufen): <https://forensics.wiki/prefetch/>

@@ -30,8 +30,6 @@ Aus digitalforensischer Sicht kann gesagt werden, dass Einträge im USN Journal 
 
 2026-09: <https://www.it-connect.tech/windows-forensics-part-10-analyzing-the-ntfs-usn-journal/>
 
-2022-11: <https://blog.haboob.sa/blog/advanced-usn-journal-forensics>
-
 2020-11: <https://docs.velociraptor.app/blog/2020/2020-11-13-the-windows-usn-journal-f0c55c9010e/>
 
 2013-01: <https://journeyintoir.blogspot.com/2013/01/re-introducing-usnjrnl.html>

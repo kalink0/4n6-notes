@@ -24,8 +24,6 @@ Aus digitalforensischer Sicht belegt eine Datei in fsCachedData, dass die zugeh√
 
 ## Referenzen
 
-2026-10: <https://stinger.io/mobile/ios/Dynamic-Analysis/iOS-HTTP-Caching/> (abgerufen)
-
 2018-08: <https://abrignoni.blogspot.com/2018/08/finding-discord-chats-in-ios.html>
 
 ## Tools

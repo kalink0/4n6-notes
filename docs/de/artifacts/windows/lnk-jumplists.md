@@ -57,8 +57,8 @@ Aus digitalforensischer Sicht bedeutet die Existenz von Jumplists folgendes:
 
 JLECmd - <https://ericzimmerman.github.io/>
 
-JumpList Explorer - <https://download.ericzimmermanstools.com/net9/JumpListExplorer.zip>
+JumpList Explorer - <https://ericzimmerman.github.io/>
 
-LECmd - <https://download.ericzimmermanstools.com/net9/LECmd.zip>
+LECmd - <https://ericzimmerman.github.io/>
 
 Jumplist-Browser - <https://github.com/kacos2000/Jumplist-Browser>

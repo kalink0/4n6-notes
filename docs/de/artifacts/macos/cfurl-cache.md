@@ -30,8 +30,6 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass das Programm die URL zum 
 
 2026-10: <https://developer.apple.com/documentation/foundation/urlcache> (abgerufen)
 
-2026-10: <https://stinger.io/mobile/ios/Dynamic-Analysis/iOS-HTTP-Caching/> (abgerufen)
-
 2022-12: <https://trustedsec.com/blog/looting-ios-apps-cache-db>
 
 2008-10: <https://dreness.com/blog/archives/73>

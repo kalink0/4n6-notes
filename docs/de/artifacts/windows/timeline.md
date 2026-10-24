@@ -29,12 +29,6 @@ Aus digitalforensischer Sicht bedeuten Einträge in der Windows Timeline, dass d
 
 2025-10: <https://securelist.com/forensic-artifacts-in-windows-11/117680/>
 
-2020-08: <https://cellebrite.com/en/exploring-the-windows-activity-timeline-part-3-the-value-of-clipboard-content/>
-
-2020-07: <https://cellebrite.com/en/exploring-the-windows-activity-timeline-part-1-the-high-points/>
-
-2020-07: <https://cellebrite.com/en/exploring-the-windows-activity-timeline-part-2-syncing-across-devices/>
-
 ## Tools
 
 WxTCmd - <https://ericzimmerman.github.io/>

@@ -36,8 +36,6 @@ Wenn eine Datei sich in einer Volume Shadow Copy befindet, kann aus digitalforen
 
 2011-01: <https://windowsir.blogspot.com/2011/01/accessing-volume-shadow-copies.html>
 
-2008-10: <https://www.sans.org/blog/vista-and-windows-7-shadow-volume-forensics/>
-
 ## Tools
 
 libvshadow - <https://github.com/libyal/libvshadow>
