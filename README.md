@@ -44,7 +44,7 @@ Please open an [issue](https://github.com/kalink0/dfir-notes/issues) or a pull r
 | `overrides/` | Theme overrides: banners, authors and reviewers, section listings, language selector |
 | `scripts/check_content.py` | Content checks (also run in CI) |
 | `scripts/build.py` | Builds all languages into `site/` |
-| `CONTRIBUTING.md`, `templates/` | Rules and template for artifact pages |
+| `CONTRIBUTING.md`, `templates/` | How to contribute, rules and template for pages |
 
 ## Page front matter
 
@@ -55,8 +55,8 @@ A language version (here German, `docs/de/`):
 title: "BAM - Background Activity Moderator"
 status: complete     # draft | complete | reviewed
 completed: 2026-10-19   # with complete and reviewed
-authors: [kalink0 (Marco Neumann)]   # GitHub handle, optionally with the full name
-# reviewers: [some-handle]   with status: reviewed, never one of the authors
+authors: [some-handle (Full Name)]   # GitHub handle, optionally with the full name
+# reviewers: [other-handle]  with status: reviewed, never one of the authors
 # reviewed: 2026-10-21       review date, with status: reviewed
 topics: [program-execution]   # artifact pages only, keys from extra.topics in mkdocs.base.yml
 ---

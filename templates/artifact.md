@@ -1,7 +1,7 @@
 ---
 title: "Name des Artefakts"
 status: draft
-authors: [github-handle]  # optional mit Namen: [kalink0 (Marco Neumann)]
+authors: [github-handle]  # optional mit Namen: [github-handle (Vorname Nachname)]
 topics: []  # mindestens ein Schlüssel aus extra.topics in mkdocs.base.yml
 ---
 
@@ -15,12 +15,12 @@ Person gegengelesen). Personen als GitHub-Handle, optional mit Namen in Klammern
 Fertiggestellt, setzt der Autor:
     status: complete
     completed: 2026-10-19
-    authors: [kalink0 (Marco Neumann)]
+    authors: [github-handle (Vorname Nachname)]
 
 Reviewed, ergänzt der Reviewer (nie einer der Autoren); completed und authors bleiben:
     status: reviewed
     completed: 2026-10-19
-    authors: [kalink0 (Marco Neumann)]
+    authors: [github-handle (Vorname Nachname)]
     reviewers: [max-mustermann (Max Mustermann), erika-m]
     reviewed: 2026-10-21
 
@@ -47,7 +47,7 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass … Nicht belegt ist dage
 
 <!--
 Tabelle nur bei Artefakten mit einer Reihe von Unterartefakten (z.B. Streams in KnowledgeC
-oder Biome); ob ein Artefakt sie bekommt, legt der Maintainer fest. Sonst Tabelle löschen.
+oder Biome). Sonst Tabelle löschen.
 "Belegt": kurz, möglichst ein Satz. "Relevante Felder": nur die für diese Aussage nötigen.
 -->
 
@@ -94,7 +94,7 @@ Bei mehreren Ablageorten einer pro Zeile, mit zwei Leerzeichen am Zeilenende:
 
 <!--
 Format: YYYY-MM: <URL>, eine Quelle pro Absatz, neueste zuerst.
-Datum = Veröffentlichung bzw. letzte Überarbeitung (jede Überarbeitung zählt). Nicht sichtbar?
+Datum = Veröffentlichung bzw. letzte Überarbeitung. Nicht sichtbar?
 Metadaten der Seite prüfen (z.B. datePublished). Sonst Abrufdatum mit Zusatz (abgerufen).
 Nur Quellen zu diesem Artefakt, die einem Analysten helfen (Artikel, Vorträge,
 Formatbeschreibungen). Kein Quellcode als reiner Beleg.
@@ -110,7 +110,6 @@ Format: Name - <URL> bzw. Name (Modul) - <URL>, ein Tool pro Absatz.
 URL = Hauptseite des Tools (zum Herunterladen), nicht der Quellcode eines Moduls.
 Nur freie Tools (Open Source oder kostenlos), keine kommerziellen.
 Nur Tools, die das Artefakt dekodieren; Formaterkennung oder generische Viewer reichen nicht.
-crush-forensics und peach-forensics nach demselben Kriterium prüfen.
 Keine Versionsangaben. Einzige erlaubte Ergänzung: (nur alte Versionen), wenn das Tool nicht
 mehr weiterentwickelt wird und nur ältere Versionen des Artefakts kann.
 -->

@@ -1,13 +1,12 @@
 """Content checks for docs/. Exits non-zero on any error.
 
 Checks:
-- no references to the private Nextcloud host or its link formats
 - every page has a title and a valid status (draft, complete, reviewed); index.md may omit it
 - complete and reviewed pages have a completion date (`completed: YYYY-MM-DD`) and authors;
   reviewed pages also have a review date (`reviewed: YYYY-MM-DD`) and reviewers.
   Dates are valid and only set with the matching status
 - authors (`authors: [...]`) and reviewers (`reviewers: [...]`) of each language version are
-  GitHub handles, optionally with the full name: `kalink0 (Max Mustermann)`; nobody reviews a
+  GitHub handles, optionally with the full name: `some-handle (Full Name)`; nobody reviews a
   version they wrote
 - every folder under docs/ is a language of extra.alternate; a version that says it is a
   translation (translation, translation_of: <lang>:<hash>) names an existing version
@@ -44,12 +43,6 @@ from i18n import TRANSLATION_OF, source_hash  # noqa: E402
 DOCS = ROOT / "docs"
 STATUSES = {"draft", "complete", "reviewed"}
 TRANSLATIONS = {"machine", "human"}
-FORBIDDEN = [
-    re.compile(r"REDACTED"),
-    re.compile(r"REDACTED"),
-    re.compile(r"/apps/collectives/"),
-    re.compile(r"[?&]fileId="),
-]
 
 
 def check_gaps(errors: list[str], topics: dict, languages: list[str]) -> list[str]:
@@ -140,10 +133,6 @@ def main() -> int:
         is_artifact = uri.split("/")[0] == "artifacts" and not is_index
         page_topics: dict[str, list] = {}
         for lang, (rel, text, body, meta) in versions.items():
-            for pattern in FORBIDDEN:
-                for m in pattern.finditer(text):
-                    line = text.count("\n", 0, m.start()) + 1
-                    errors.append(f"{rel}:{line}: private Nextcloud reference '{m.group(0)}'")
             if is_index and uri != "index.md":
                 # Only the title; the list of pages is generated.
                 rest = re.sub(r"^# .*$", "", body, count=1, flags=re.M)

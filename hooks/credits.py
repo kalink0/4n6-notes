@@ -7,7 +7,7 @@ Front matter:
 Each language version has its own authors and reviewers.
 
 Each entry is a GitHub handle, optionally followed by the full name in parentheses:
-"kalink0" or "kalink0 (Max Mustermann)". The handle links to the GitHub profile.
+"some-handle" or "some-handle (Full Name)". The handle links to the GitHub profile.
 The format and the rule that nobody reviews their own page are checked by
 scripts/check_content.py.
 """

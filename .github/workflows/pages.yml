@@ -23,8 +23,8 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      # Content checks + strict build of every language; fails on broken links and
-      # on references to the private Nextcloud.
+      # Content checks + strict build of every language; fails on rule violations and
+      # broken links.
       - run: python scripts/build.py
       - if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v6

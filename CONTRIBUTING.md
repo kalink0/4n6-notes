@@ -1,7 +1,18 @@
-# Rules for artifact pages
+# Contributing
 
-Applies to all pages under `docs/<lang>/artifacts/`. Template for new pages:
+Corrections, new pages, translations and reviews are welcome. This file describes how to submit them
+and the rules for the pages. Template for new artifact pages:
 [`templates/artifact.md`](templates/artifact.md).
+
+## How to contribute
+
+1. Fork the repository and create a branch.
+2. Make your changes following the rules below.
+3. Run the content checks and the build (see README, "Build locally"):
+   `.venv/bin/python scripts/build.py`. It fails on rule violations and broken links.
+4. Open a pull request. The same checks run there automatically.
+
+For smaller corrections or suggestions, opening an issue is enough.
 
 Headings and fixed phrases that appear on the pages are given here in German, exactly as they are
 written on the page; their English wording is listed under [Languages](#languages).
@@ -81,8 +92,7 @@ topics: [program-execution, network]
 - Topics are the same in every language version (see [Languages](#languages)).
 - Collection artifacts (e.g. event logs, Unified Logs, Registry) get only their most important
   topics, not every topic that could apply.
-- Missing topics are currently only reported by `scripts/check_content.py`; once every page has
-  topics, they become mandatory.
+- Missing topics are reported by `scripts/check_content.py`.
 
 ## Status
 
@@ -103,8 +113,8 @@ authors and reviewers are set per language version.
 ```yaml
 status: reviewed
 completed: 2026-10-19
-authors: [kalink0 (Marco Neumann)]
-reviewers: [some-handle]
+authors: [some-handle (Full Name)]
+reviewers: [other-handle]
 reviewed: 2026-10-21
 ```
 
@@ -112,7 +122,7 @@ reviewed: 2026-10-21
 - When the page is finished, the author sets `status: complete` and `completed` (date).
 - Only a reviewer sets `status: reviewed`, after checking the content, and adds `reviewers` and
   `reviewed` (date). The reviewer is a second person, never one of the authors.
-- Reviewers are only people with commit rights on this repository (currently only kalink0).
+- Anyone may review. Reviews, like all other changes, are submitted as a pull request.
 - If the content of a `reviewed` page changes, it goes back to `complete` (or `draft`, if it is
   unfinished again) until it has been reviewed again; `reviewers` and `reviewed` are removed.
   Whoever makes the change adds themselves to `authors` and updates `completed`.
@@ -145,7 +155,7 @@ under "Noch nicht beschrieben" (not covered yet).
 - Artifact gaps get exactly one topic (key from `extra.topics`); the page groups them by topic.
   Lists without topics (e.g. the glossary) are shown as one flat list.
 - File system structures (e.g. `$MFT`, FAT) are not artifact gaps; they belong to the deep dives.
-- The note is short and factual; it is shown publicly.
+- The note is short and factual.
 - `name` and `note` are written in German or English, or given per language (`{de: …, en: …}`);
   a site without its own text shows the German one.
 - When an entry gets its page (or, in the glossary, its section), it is removed from the list.
@@ -161,8 +171,8 @@ Running text in two parts:
    the limits are (what it does *not* show, common misinterpretations).
 
 If the artifact contains a series of sub-artifacts (e.g. streams in KnowledgeC or Biome, event IDs in
-Event Logs), a table follows. The maintainer decides whether an artifact gets the table. Properties
-of individual entries (e.g. flags in FSEvents) are not sub-artifacts.
+Event Logs), a table follows. Properties of individual entries (e.g. flags in FSEvents) are not
+sub-artifacts.
 
 ```markdown
 | Eintragstyp | Belegt | Relevante Felder |
@@ -229,8 +239,7 @@ Statements that change with updates (versions, defaults, rollouts) get a point i
 - The date is the source's **publication date**, not the access date. If the publication date is
   not shown, check the page metadata (e.g. `datePublished`). If it is still unknown, use the access
   date with the suffix `(abgerufen)` (accessed).
-- For revised documents, the date of the last revision applies. Every revision counts, including
-  typo fixes: whoever revises a document has checked the content and found it correct.
+- For revised documents, the date of the last revision applies.
 - Order: newest first.
 - Only sources that help an analyst understand or analyze the artifact (articles, talks, format
   descriptions). Sources that only prove a statement, such as operating system or tool source code,
@@ -254,10 +263,6 @@ Statements that change with updates (versions, defaults, rollouts) get a point i
   structured form. Not sufficient:
   - format detection alone (e.g. by signature)
   - generic viewers (e.g. any SQLite browser for an SQLite-based artifact)
-- The same criterion applies to the maintainer's own tools
-  [crush-forensics](https://github.com/kalink0/crush-forensics) and
-  [peach-forensics](https://github.com/kalink0/peach-forensics). For every page that is edited,
-  check whether they decode the artifact.
 
 ## Links
 
