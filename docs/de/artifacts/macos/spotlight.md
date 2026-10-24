@@ -21,10 +21,8 @@ Aus digitalforensischer Sicht belegt ein Eintrag in der Spotlight-Datenbank, das
 3. Einträge gelöschter Dateien bleiben eine Zeit lang in **`store.db`** erhalten; gelöschte Datenbankseiten lassen sich aus dem freien Speicher wiederherstellen
 4. Von Apple nicht dokumentiertes Format mit komprimierten Seiten
 5. Nicht jedes Datumsfeld ist ein echter Zeitstempel, teils stehen Platzhalterwerte (z.B. Jahr 2247)
-6. Ablageort: 
-
-   **`/Volumes/{VOLUME}/.Spotlight-V100/Store-V2/{UUID}/`** (Root-Verzeichnis eines Laufwerks)
-
+6. Ablageort:  
+   **`/Volumes/{VOLUME}/.Spotlight-V100/Store-V2/{UUID}/`** (Root-Verzeichnis eines Laufwerks)  
    Startvolume ab macOS 10.15: **`/System/Volumes/Data/.Spotlight-V100/Store-V2/{UUID}/`**
 
 ## Referenzen

@@ -21,7 +21,8 @@ Wenn eine Datei sich in einer Volume Shadow Copy befindet, kann aus digitalforen
 1. Unter Windows 10/11 ist der Systemschutz standardmäßig nicht aktiviert
 2. Erstellung u.a. bei Softwareinstallation, Windows-Update oder manuellem Wiederherstellungspunkt
 3. Ist der reservierte Speicherplatz voll, wird die älteste Schattenkopie gelöscht
-4. Ablageort: **`{DRIVE}:\System Volume Information\{GUID}{3808876b-c176-4e48-b7ae-04046e6cc752}`**
+4. Ablageort:  
+   **`{DRIVE}:\System Volume Information\{GUID}{3808876b-c176-4e48-b7ae-04046e6cc752}`**
 
 ## Referenzen
 

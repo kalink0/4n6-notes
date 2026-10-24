@@ -51,11 +51,11 @@ Auf demselben Gerät können Spuren von beiden Seiten liegen:
 
 5. **Fast-Pair-Cache:** Einträge bleiben auch nach dem Entkoppeln erhalten. Ein Eintrag belegt nicht sicher, dass das Zubehör gekoppelt war.
 
-6. **Ablageorte:**
-    - **`/data/data/com.google.android.gms/databases/personalsafety_db`**
-    - **`/data/data/com.google.android.gms/files/personalsafety/shared/`** (`personalsafety_info.pb`, `personalsafety_optin.pb`)
-    - **`/data/system_ce/{USER_ID}/notification_history/history/`**
-    - **`/data/data/com.google.android.gms/files/nearby-fast-pair/nearby_fast_pair_item_cache.db`** (LevelDB)
+6. Ablageorte:  
+   **`/data/data/com.google.android.gms/databases/personalsafety_db`**  
+   **`/data/data/com.google.android.gms/files/personalsafety/shared/`** (`personalsafety_info.pb`, `personalsafety_optin.pb`)  
+   **`/data/system_ce/{USER_ID}/notification_history/history/`**  
+   **`/data/data/com.google.android.gms/files/nearby-fast-pair/nearby_fast_pair_item_cache.db`** (LevelDB)
 
 ## Referenzen
 

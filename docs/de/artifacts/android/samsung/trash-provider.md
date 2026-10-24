@@ -22,10 +22,8 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass die Datei zum angegebenen
 4. Beim Wiederherstellen wird der Datenbankeintrag sofort gelöscht; nach Ablauf der Frist kann der Eintrag erhalten bleiben, obwohl die Datei entfernt ist
 5. Einträge aus dem Sicheren Ordner sind an der Benutzer-ID 150 erkennbar
 6. Zeitstempel: Unix-Zeit in Millisekunden (UTC)
-7. Ablageort:
-
-   Datenbank: **`/data/data/com.samsung.android.providers.trash/databases/trash.db`**
-
+7. Ablageort:  
+   Datenbank: **`/data/data/com.samsung.android.providers.trash/databases/trash.db`**  
    Dateien: **`/data/media/{USER_ID}/Android/.Trash/`**
 
 ## Referenzen

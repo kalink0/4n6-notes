@@ -25,9 +25,9 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass macOS zum angegebenen Zei
 7. Die Geräte hinter remote sind in **`/Users/{USER}/Library/Biome/sync/sync.db`** verzeichnet
 8. Neben streams gibt es den Ordner sets mit SQLite-Datenbanken, z.B. zu installierten Apps oder Kontakten
 9. Ablageorte:  
-    **`/Users/{USER}/Library/Biome/streams/public/`**  
-    **`/Users/{USER}/Library/Biome/streams/restricted/`**  
-    **`/private/var/db/biome/streams/`**
+   **`/Users/{USER}/Library/Biome/streams/public/`**  
+   **`/Users/{USER}/Library/Biome/streams/restricted/`**  
+   **`/private/var/db/biome/streams/`**
 
 ## Referenzen
 

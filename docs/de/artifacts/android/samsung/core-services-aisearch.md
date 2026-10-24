@@ -21,8 +21,7 @@ Aus digitalforensischer Sicht belegt eine Textdatei im Index, dass ein Dokument 
 3. Gespeichert wird nur der Dateiname zum Zeitpunkt der Indexierung, nicht der ursprüngliche Ablageort
 4. Der Text gelöschter Dokumente bleibt erhalten (beobachtet ca. 2 Wochen nach Löschung)
 5. Der Zeitstempel der Textdatei entspricht ungefähr dem Zeitpunkt der Indexierung, nicht der Erstellung des Originals
-6. Ablageort:
-
+6. Ablageort:  
    **`/data/data/com.samsung.android.scs/files/aisearch/`**
 
 ## Referenzen

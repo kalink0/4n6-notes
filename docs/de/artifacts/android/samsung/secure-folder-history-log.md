@@ -19,10 +19,8 @@ Aus digitalforensischer Sicht belegen die Einträge, dass eine Verschiebeaktion 
 1. `request` dokumentiert die Anforderung, `result` die Rückmeldung. Eine eindeutige Zuordnung über eine gemeinsame ID ist nicht möglich.
 2. Einzelne Dateinamen werden nicht gespeichert.
 3. Zeitstempel: als String gespeichert, Zeitzone unbekannt.
-
-Ablageort:
-
-**`/data/data/com.samsung.knox.securefolder/databases/history_log_database`**
+4. Ablageort:  
+   **`/data/data/com.samsung.knox.securefolder/databases/history_log_database`**
 
 ## Referenzen
 

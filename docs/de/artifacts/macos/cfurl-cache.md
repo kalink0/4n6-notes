@@ -21,12 +21,9 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass das Programm die URL zum 
 3. Gespeicherte Anfragen und Antworten können Header mit Sitzungs-Cookies und Tokens enthalten
 4. Zeitstempel der Datenbank in UTC; der Zeitstempel im gespeicherten Antwortobjekt weicht davon teils ab
 5. Die Cache-Größe ist begrenzt; Programme können Einträge selbst löschen oder einen anderen Ablageort festlegen
-6. Ablageort:
-
-   **`/Users/{USER}/Library/Caches/{BUNDLE_ID}/Cache.db`**
-
-   **`/Users/{USER}/Library/Caches/{BUNDLE_ID}/fsCachedData/`**
-
+6. Ablageort:  
+   **`/Users/{USER}/Library/Caches/{BUNDLE_ID}/Cache.db`**  
+   **`/Users/{USER}/Library/Caches/{BUNDLE_ID}/fsCachedData/`**  
    Programme mit Sandbox: **`/Users/{USER}/Library/Containers/{BUNDLE_ID}/Data/Library/Caches/{BUNDLE_ID}/`**
 
 ## Referenzen

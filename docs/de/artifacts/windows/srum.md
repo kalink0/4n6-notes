@@ -20,8 +20,9 @@ Aus digitalforensischer Sicht geben Einträge des SRUM Aufschluss über ausgefü
 2. Zeitfenster für das Erstellen von Einträgen liegt bei standardmäßig 60 Minuten - eine genauere Aussage über die Ressourcennutzung ist daher nicht möglich
 3. Ablagedauer beträgt etwa 30 - 60 Tage.
 4. Infomation werden nicht SOFORT in die Datenbank geschrieben. Es liegen noch nicht geschriebene Daten in der Registry vor. Die Registry dient als temporärer Speicher.
-5. Ablageort temporär (Reigstry): **`HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SRUM`**
-6. Ablageort persistiert: **`C:\Windows\System32\sru\SRUDB.dat`**
+5. Ablageort:  
+   Temporär (Registry): **`HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SRUM`**  
+   Persistiert: **`C:\Windows\System32\sru\SRUDB.dat`**
 
 ## Referenzen
 

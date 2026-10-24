@@ -20,10 +20,8 @@ Aus digitalforensischer Sicht bedeuten die Einträge, dass die App in der Spalte
 
 1. Die Daten gehen zeitlich weit nach hinten - derzeitige Datenlage → 6 Monate - noch nicht abschließend validiert.
 2. Zeitstempel: Unix-Zeit in Millisekunden (UTC)
-
-Ablageort: 
-
-**`/data/system/PkgPredictions.db`**
+3. Ablageort:  
+   **`/data/system/PkgPredictions.db`**
 
 ## Referenzen
 

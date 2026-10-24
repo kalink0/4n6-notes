@@ -21,8 +21,8 @@ Aus digitalforensischer Sicht bedeuten Einträge in der Windows Timeline, dass d
 1. Verfügbar ab Windows 10, Version 1803, in Windows 11 entfernt
 2. Speicherdauer 30 Tage mit Online-Account, ca. 5 Tage mit Offline-Account
 3. Potentiell Daten von anderen Geräten (Account-gebunden, auch O365 ohne Windows; bei Microsoft-Konten nur bis Juli 2021, bei Azure-AD-Konten auch danach)
-4. Ablageort: **`C:\Users\{user}\AppData\Local\ConnectedDevicesPlatform\{userId}\ActivitiesCache.db`**
-
+4. Ablageort:  
+   **`C:\Users\{user}\AppData\Local\ConnectedDevicesPlatform\{userId}\ActivitiesCache.db`**  
    userID kann sein: lokaler Username, Microsoft-Account ID, Azure-AD-Account
 
 ## Referenzen

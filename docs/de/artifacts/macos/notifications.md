@@ -22,14 +22,10 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass das Programm dem Benutzer
 4. Unter **`/private/var/folders`** erfolgt die Zuordnung zum Benutzer über den Besitzer (UID) des Ordners
 5. Nach einem Upgrade können ältere Datenbanken neben der aktuellen vorhanden sein
 6. Ab macOS 15 durch TCC geschützt; am laufenden System nicht ohne Freigabe lesbar
-7. Ablageort:
-
-   Bis macOS 10.9: **`/Users/{USER}/Library/Application Support/NotificationCenter/{UUID}.db`**
-
-   macOS 10.10 bis 10.12: **`/private/var/folders/{XX}/{ID}/0/com.apple.notificationcenter/db/db`**
-
-   macOS 10.13 bis 14: **`/private/var/folders/{XX}/{ID}/0/com.apple.notificationcenter/db2/db`**
-
+7. Ablageort:  
+   Bis macOS 10.9: **`/Users/{USER}/Library/Application Support/NotificationCenter/{UUID}.db`**  
+   macOS 10.10 bis 10.12: **`/private/var/folders/{XX}/{ID}/0/com.apple.notificationcenter/db/db`**  
+   macOS 10.13 bis 14: **`/private/var/folders/{XX}/{ID}/0/com.apple.notificationcenter/db2/db`**  
    Ab macOS 15: **`/Users/{USER}/Library/Group Containers/group.com.apple.usernoted/db2/db`**
 
 ## Referenzen

@@ -19,7 +19,8 @@ Aus digtalforensischer Sicht bedeuten Einträge, dass der Nutzeraccount von der 
 1. Standardmäßig aktiviert unter Windows Server Versionen, ab Windows Server 2012
 2. Logins der letzten 2-3 Jahre vorhanden
 3. Zeitstempel in UTC
-4. Ablageort: **`C:\Windows\System32\LogFiles\Sum`**  
+4. Ablageort:  
+   **`C:\Windows\System32\LogFiles\Sum`**  
    Current.mdb: aktives Jahr  
    {GUID}.mdb: Kopie von Current.mdb (alle 24 Stunden aktualisiert) sowie je eine Datei für die beiden Vorjahre  
    SystemIdentity.mdb: Serverrollen und Zuordnung RoleGuid zu Rollenname

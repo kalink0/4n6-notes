@@ -20,14 +20,10 @@ Aus digitalforensischer Sicht belegt ein Eintrag in der Zwischenablage-Historie,
 2. Kopierte Bilder liegen nicht in der Datenbank, sondern als Datei **`clip`** in einem Unterordner von **`clipboard`**, dessen Name ein Unix-Zeitstempel in Millisekunden ist
 3. Ältere Versionen speichern statt des Paketnamens die UID der App, die über **`packages.xml`** aufgelöst werden muss
 4. Zeitstempel: Unix-Zeit in Millisekunden (UTC)
-5. Ablageort:
-
-   **`[…]/com.samsung.android.honeyboard/`**
-
-   Zwischenablage (Text): **`databases/ClipItem.db`**
-
-   Zwischenablage (Bilder): **`clipboard/{TIMESTAMP}/clip`**
-
+5. Ablageort:  
+   **`[…]/com.samsung.android.honeyboard/`**  
+   Zwischenablage (Text): **`databases/ClipItem.db`**  
+   Zwischenablage (Bilder): **`clipboard/{TIMESTAMP}/clip`**  
    Entfernte Wortvorschläge: **`databases/RemoveListManager`**
 
 ## Referenzen

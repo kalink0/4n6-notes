@@ -24,8 +24,7 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass die Datei vorhanden war u
 6. Was als Zugriff (hit) gezählt wird, ist nicht geklärt
 7. Ab macOS 10.14 vom System geschützt; am laufenden System nicht ohne Weiteres lesbar
 8. Der Benutzer kann den Cache mit **`qlmanage -r cache`** leeren
-9. Ablageort:
-
+9. Ablageort:  
    **`/private/var/folders/{XX}/{ID}/C/com.apple.QuickLook.thumbnailcache/`**
 
 ## Referenzen

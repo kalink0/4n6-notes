@@ -20,12 +20,9 @@ Aus digitalforensischer Sicht bedeuten die Einträge, dass die jeweilige Datei/d
 2. Nur Dateioperationen, die über die Samsung MyFiles-App durchgeführt wurden, sind darin aufgeführt.
 3. Keine automatische Löschung beobachtet; Einträge reichten ca. 1,5 Jahre zurück
 4. Zeitstempel: als Text gespeichert, UTC
-
-Ablageort:
-
-**`/data/data/com.sec.android.app.myfiles/databases/OperationHistory.db`**
-
-**`/data/user/{USER_ID}/com.sec.android.app.myfiles/databases/OperationHistory.db`**
+5. Ablageort:  
+   **`/data/data/com.sec.android.app.myfiles/databases/OperationHistory.db`**  
+   **`/data/user/{USER_ID}/com.sec.android.app.myfiles/databases/OperationHistory.db`**
 
 ## Referenzen
 

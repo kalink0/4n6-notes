@@ -28,8 +28,7 @@ Nicht belegt ist, dass der Nutzer die Nachricht gesehen oder geöffnet hat.
    - nur ein Verweis (URL), über den die App den eigentlichen Inhalt abruft
 4. Einträge werden gelöscht, sobald die Google Play-Dienste die Nachricht an die App weitergegeben haben
 5. Zeitstempel im Schlüssel: Unix-Zeit in Mikrosekunden, Zeitpunkt des Eingangs der Nachricht
-6. Ablageort:
-
+6. Ablageort:  
    **`/data/data/com.google.android.gms/files/fcm_queued_messages.ldb/`**
 
 ## Referenzen

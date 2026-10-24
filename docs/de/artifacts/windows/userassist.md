@@ -19,7 +19,8 @@ Aus digitalforensischer Sicht geben Einträge in der User Assist Auskunft darüb
 1. Einträge sind ROT-13 kodiert
 2. Erfasst nur über die Windows-Oberfläche gestartete Programme (Startmenü/Suche, Desktop, Explorer, Taskleiste, Ausführen); Starts über die Kommandozeile i.d.R. nicht
 3. Kann pro Benutzer über die Datenschutzeinstellung "App-Starts nachverfolgen" deaktiviert werden
-4. Ablageort (Registry): **`HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{GUID}\Count`**
+4. Ablageort (Registry):  
+   **`HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{GUID}\Count`**
 
 ## Referenzen
 

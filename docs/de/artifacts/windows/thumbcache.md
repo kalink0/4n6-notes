@@ -18,7 +18,8 @@ Anhand des Thumbnail Caches alleine kann nicht genau gesagt werden, was genau ei
 ## Spezifische Kurzinformation
 
 1. Originalpfad kann unter bestimmen Umständen ermittelt werden (siehe zusätzliche Hinweise)
-2. Ablageort: **`%LOCALAPPDATA%\Microsoft\Windows\Explorer\thumbcache_*.db`**
+2. Ablageort:  
+   **`%LOCALAPPDATA%\Microsoft\Windows\Explorer\thumbcache_*.db`**
 
 ### Zusätzliche Hinweise (Forensik)
 

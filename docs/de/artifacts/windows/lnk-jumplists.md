@@ -27,10 +27,8 @@ Aus digitalforensischer Sicht bedeutet die Existenz von Jumplists folgendes:
 
 1. JumpLists werden Apps zugeordnet, welche per AppID identifiziert werden können (Listen siehe unten) - eine AppID gibt an, in welchem Kontext die JumpList vorliegt und gibt daher Info darüber, wie der Nutzeraccount die Aktion durchgeführt hat.
 2. Die Anzahl der Aufrufe (Interaction Account) ist nach derzeitigem Stand nicht genau erklärbar/nachvollziehbar und daher ist der Wert mit Vorsicht zu behandeln.
-3. Ablageort:
-
-   **`%AppData%\Microsoft\Windows\Recent\AutomaticDestinations`**
-
+3. Ablageort:  
+   **`%AppData%\Microsoft\Windows\Recent\AutomaticDestinations`**  
    **`%AppData%\Microsoft\Windows\Recent\CustomDestinations`**
 
 ## Referenzen

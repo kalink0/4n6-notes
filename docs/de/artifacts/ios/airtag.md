@@ -37,8 +37,8 @@ Aus digitalforensischer Sicht belegen die Daten auf dem Gerät des Besitzers, we
 8. Warnungen werden auch durch andere „Wo ist?“-Geräte ausgelöst, z.B. AirPods
 9. Zusätzlich speichert die „Wo ist?“-App Name, Seriennummer und letzten Standort eigener AirTags im Cache `Items.data`, auswertbar nur wenn unverschlüsselt
 10. Ablageorte:  
-   **`/private/var/mobile/Library/com.apple.icloud.searchpartyd/`**  
-   **`/private/var/mobile/Library/Caches/com.apple.findmy.fmipcore/Items.data`**
+    **`/private/var/mobile/Library/com.apple.icloud.searchpartyd/`**  
+    **`/private/var/mobile/Library/Caches/com.apple.findmy.fmipcore/Items.data`**
 
 ## Referenzen
 

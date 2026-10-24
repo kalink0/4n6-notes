@@ -23,12 +23,9 @@ Aus digitalforensischer Sicht belegt ein Objekt im Papierkorb, dass es über das
 5. Zu Objekten im Papierkorb kann ein Put-Back-Eintrag fehlen (beobachtet unter macOS 15 und 26)
 6. Mit „Sofort löschen“ werden Objekte ohne Umweg über den Papierkorb gelöscht
 7. Optional automatisches Leeren nach 30 Tagen (Finder-Einstellung); gelöschte iCloud-Drive-Objekte werden immer nach 30 Tagen entfernt
-8. Ablageort:
-
-   Auf Disk mit Home-Verzeichnis: **`/Users/{USER}/.Trash/`**
-
-   Auf allen anderen Disks: **`/.Trashes/{UID}/`**
-
+8. Ablageort:  
+   Auf Disk mit Home-Verzeichnis: **`/Users/{USER}/.Trash/`**  
+   Auf allen anderen Disks: **`/.Trashes/{UID}/`**  
    iCloud Drive: **`/Users/{USER}/Library/Mobile Documents/com~apple~CloudDocs/.Trash/`**
 
 ## Referenzen

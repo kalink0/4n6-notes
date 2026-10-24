@@ -26,9 +26,9 @@ Es kann anhand dieses Artefakts keine Aussage zum genauen Zeitpunkt getroffen we
 1. Aktuelle/neue ShimCaches werden erst beim Neustart/Herunterfahren des Systems in die Registry geschrieben
 2. Der ShimCache beinhaltet bis zu 1024 Einträge
 3. Das Feld "Is Executed" gibt es erst ab Windows Vista
-4. Ablageort (Registry):
-   1. Windows XP: **`HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatibility\AppCompatCache`**
-   2. Ab Windows Vista: **`HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache\AppCompatCache`**
+4. Ablageort (Registry):  
+   Windows XP: **`HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatibility\AppCompatCache`**  
+   Ab Windows Vista: **`HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache\AppCompatCache`**
 
 ## Referenzen
 

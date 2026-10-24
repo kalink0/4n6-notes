@@ -20,16 +20,15 @@ Aus digitalforensischer Sicht bedeuten abgelegte Shellbags, dass der Nutzeraccou
 2. Shellbags bleiben erhalten, auch wenn der eigentliche Dateipfad nicht mehr exisitiert (Löschung, Abziehen externer Datenspeicher)
 3. Ab Windows 11 22H2 werden auch Archive (ZIP, 7-ZIP, RAR, TAR, GZIP) unterstützt
 4. In Windows Store Apps werden ggf. zusätzlich Shellbags erzeugt. Diese liegen in eigenen User.dat und UserClasses.dat in der jeweiligen Windows App Verzeichnis-Struktur
-5. Ablageorte (bis Windows XP, Registry):  
-   NTUSER.dat: **`HKCU\Software\Microsoft\Windows\ShellNoRoam\BagMRU`**  
-   NTUSER.dat: **`HKCU\Software\Microsoft\Windows\ShellNoRoam\Bags`**  
-   NTUSER.dat: **`HKCU\Software\Microsoft\Windows\Shell\BagMRU`**  
-   NTUSER.dat: **`HKCU\Software\Microsoft\Windows\Shell\Bags`**
-6. Ablageorte (ab Windows Vista, Registry)  
-   NTUSER.dat: **`HKCU\Software\Microsoft\Windows\Shell\BagMRU`**  
-   NTUSER.dat: **`HKCU\Software\Microsoft\Windows\Shell\Bags`**  
-   UsrClass.dat: **`HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU`**  
-   UsrClass.dat: **`HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags`**  
+5. Ablageorte (Registry):  
+   Bis Windows XP, NTUSER.dat: **`HKCU\Software\Microsoft\Windows\ShellNoRoam\BagMRU`**  
+   Bis Windows XP, NTUSER.dat: **`HKCU\Software\Microsoft\Windows\ShellNoRoam\Bags`**  
+   Bis Windows XP, NTUSER.dat: **`HKCU\Software\Microsoft\Windows\Shell\BagMRU`**  
+   Bis Windows XP, NTUSER.dat: **`HKCU\Software\Microsoft\Windows\Shell\Bags`**  
+   Ab Windows Vista, NTUSER.dat: **`HKCU\Software\Microsoft\Windows\Shell\BagMRU`**  
+   Ab Windows Vista, NTUSER.dat: **`HKCU\Software\Microsoft\Windows\Shell\Bags`**  
+   Ab Windows Vista, UsrClass.dat: **`HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU`**  
+   Ab Windows Vista, UsrClass.dat: **`HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags`**  
    Store-Apps: **`%USERPROFILE%\AppData\Local\Packages\{PACKAGE}\SystemAppData\Helium\User.dat`**  
    Store-Apps: **`%USERPROFILE%\AppData\Local\Packages\{PACKAGE}\SystemAppData\Helium\UserClasses.dat`**
 

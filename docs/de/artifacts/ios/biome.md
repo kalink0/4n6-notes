@@ -29,7 +29,7 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass iOS zum angegebenen Zeitp
     **`/private/var/mobile/Library/Biome/streams/public/`** (iOS 14 bis 16)  
     **`/private/var/mobile/Library/Biome/streams/restricted/`** (ab iOS 15)  
     **`/private/var/db/biome/streams/restricted/`** (ab iOS 16)
-    
+
 ## Referenzen
 
 2026-07: <https://blog.digital-forensics.it/2026/07/84-streams-later-exploring-evolution-of.html>

@@ -22,14 +22,10 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass über das Benutzerkonto d
 4. Die Listenlänge ist begrenzt, der älteste Eintrag fällt beim Überschreiten heraus
 5. Das im Bookmark enthaltene Erstellungsdatum ist das der Zieldatei, nicht der Zeitpunkt der Nutzung
 6. Listen einzelner Programme werden nur aktualisiert, wenn das Programm läuft, und können daher sehr alte Einträge enthalten
-7. Ablageort:
-
-   Bis macOS 10.10: **`/Users/{USER}/Library/Preferences/com.apple.recentitems.plist`**
-
-   **`/Users/{USER}/Library/Preferences/*LSSharedFileList.plist`**
-
-   Ab macOS 10.11: **`/Users/{USER}/Library/Application Support/com.apple.sharedfilelist/`**
-
+7. Ablageort:  
+   Bis macOS 10.10: **`/Users/{USER}/Library/Preferences/com.apple.recentitems.plist`**  
+   **`/Users/{USER}/Library/Preferences/*LSSharedFileList.plist`**  
+   Ab macOS 10.11: **`/Users/{USER}/Library/Application Support/com.apple.sharedfilelist/`**  
    Ab macOS 10.11 (je Programm eine Liste): **`/Users/{USER}/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/`**
 
 ## Referenzen

@@ -47,14 +47,11 @@ Die Tabelle enthält nur eine Auswahl häufig relevanter Ereignisse; Windows pro
 4. Viele Security-Ereignisse entstehen nur bei entsprechend gesetzter Überwachungsrichtlinie, z. B. Prozessstart (4688, die Befehlszeile zusätzlich) und geplante Tasks (4698)
 5. Ein Protokoll lässt sich nur vollständig löschen, und das Löschen wird selbst protokolliert (1102 bzw. 104)
 6. Zeitstempel in UTC
-7. Der Ablageort der Hauptprotokolle kann über die Registry geändert sein, Wert `File` unter:
-
+7. Der Ablageort der Hauptprotokolle kann über die Registry geändert sein, Wert `File` unter:  
    **`HKLM\SYSTEM\CurrentControlSet\Services\EventLog\{LOG}`**
 
-8. Ablageort (Default):
-
-   Ab Windows Vista: **`C:\Windows\System32\winevt\Logs\*.evtx`**
-
+8. Ablageort (Default):  
+   Ab Windows Vista: **`C:\Windows\System32\winevt\Logs\*.evtx`**  
    Bis Windows XP: **`C:\Windows\System32\config\*.evt`**
 
 ## Referenzen
