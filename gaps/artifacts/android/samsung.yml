@@ -52,9 +52,6 @@
 - name: Gallery Hidden Album
   topic: file-existence
 
-- name: Secure Folder History Log
-  topic: file-system-changes
-
 - name: Weather Clock
   topic: location
 
