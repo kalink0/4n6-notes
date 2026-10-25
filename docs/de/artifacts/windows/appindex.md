@@ -1,8 +1,10 @@
 ---
 title: "Windows AppIndex"
-status: complete
+status: reviewed
 completed: 2026-10-19
 authors: [kalink0 (Marco Neumann)]
+reviewers: [dugeonlady]
+reviewed: 2026-10-25
 topics: [program-execution, installed-software]
 ---
 
@@ -17,7 +19,7 @@ Aus digitalforensischer Sicht bedeutet ein Eintrag mit einem Ausführungszähler
 ## Spezifische Kurzinformation
 
 1. Voraussetzungen: Deaktivierbar über "Start- und Suchergebnisse verbessern" - RegKey: HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced - Start_TrackProgs = 0
-2. Aufbewahrung: Begrenzte Historie: Datensatz wird bei Entpinnen/Deinstallation zeitnah entfernt - Zeitunkt der Löschung nicht deterministisch
+2. Aufbewahrung: Begrenzte Historie: Datensatz wird bei Entpinnen/Deinstallation zeitnah entfernt - Zeitpunkt der Löschung nicht deterministisch
 3. Format und Struktur: Relevante Tabellen: tiles und tiles_content – enthalten Anwendungspfad, Anzeigename und Ausführungszähler (launchCount)
 4. Besonderheiten und Fallstricke: Nur im Startmenü verknüpfte Apps werden pro User getrackt -
 5. Ablageort:  
