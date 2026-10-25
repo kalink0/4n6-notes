@@ -3,7 +3,7 @@ title: "iOS App Snapshots"
 status: complete
 completed: 2026-10-25
 authors: [kalink0 (Marco Neumann)]
-topics: [app usage]
+topics: [program-execution]
 ---
 
 ## Bedeutung
