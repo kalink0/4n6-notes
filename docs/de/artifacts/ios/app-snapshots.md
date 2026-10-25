@@ -1,5 +1,5 @@
 ---
-title: "iOS App Snapshots"
+title: "App Snapshots"
 status: complete
 completed: 2026-10-25
 authors: [kalink0 (Marco Neumann)]
@@ -15,7 +15,7 @@ Aus digitalforensischer Sicht zeigen die Snapshots den letzten auf dem Bildschir
 ## Spezifische Kurzinformation
 
 1. Zuerst unter iOS 10 festgestellt
-2. Snapshot-Metadaten liegen in `applicationState.db` unter dem Schlüssel `XBApplicationSnapshotManifest` (key=2, Tabelle=kvs) vor. Die zugehörigen Informationen sind in bplists gespeichert. Die Snapshot-Bilder liegen im KTX-Format vor
+2. Snapshot-Metadaten liegen in `applicationState.db` unter dem Schlüssel `XBApplicationSnapshotManifest` (key=2, Tabelle=kvs) vor. Die zugehörigen Informationen sind in bplists gespeichert. Die Snapshot-Bilder liegen im KTX-Format oder bei aktuellen iOS-Version als PNG vor
 3. Das `creationDate` entspricht der Erstellung der Datei. Die genaue Bedeutung vom `lastUsedDate` ist nicht abschließend geklärt
 4. Die Inhalte können ausgeblendet sein wenn die App vom App-Entwickler und/oder Nutzer als sensibel deklariert wurden - der Snapshot ist dann schwarz
 5. **Ablageort:**

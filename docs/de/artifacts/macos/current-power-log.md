@@ -1,7 +1,7 @@
 ---
 title: "macOS CurrentPowerLog"
 status: complete
-completed: 2026-10-24
+completed: 2026-10-25
 authors: [kalink0 (Marco Neumann)]
 topics: [device-state, program-execution]
 ---
@@ -17,9 +17,11 @@ Aus digitalforensischer Sicht können die gespeicherten Ereignisse Hinweise auf 
 ## Spezifische Kurzinformation
 
 1. Dateiformat: SQLite, Dateiendung `.PLSQL`.
-2. Die Datenbank enthält Ereignistabellen unterschiedlicher Systemkomponenten.
-3. Neben der aktuellen Datenbank können archivierte Powerlog-Dateien vorhanden sein.
-4. Ablageort:  
+2. Es liegen ungefähr Daten der letzten 3 Tage vor
+3. Zeitstempel müssen ggf. mit einem Offset berechnet werden (Monotonic clock).
+3. Die Datenbank enthält Ereignistabellen unterschiedlicher Systemkomponenten.
+4. Neben der aktuellen Datenbank können archivierte Powerlog-Dateien vorhanden sein.
+5. Ablageort:  
    **`/private/var/db/powerlog/Library/BatteryLife/CurrentPowerlog.PLSQL`**  
    Archiv: **`/private/var/db/powerlog/Library/BatteryLife/Archives/*.PLSQL.gz`**
 
@@ -28,6 +30,8 @@ Aus digitalforensischer Sicht können die gespeicherten Ereignisse Hinweise auf 
 2026-10: <https://housekeeping101.github.io/sec-research-site/dfir--and--forensics/forensics/macos_forensics_framework_v1_9>
 
 2026-10: <https://objectivebythesea.org/v8/talks/OBTS_v8_sEdwards.pdf>
+
+2025-06: <https://doubleblak.com/blogPost.php?k=powerlog>
 
 ## Tools
 
