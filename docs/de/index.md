@@ -1,10 +1,10 @@
 ---
-title: DFIR Notes
+title: 4n6 Notes
 ---
 
-# DFIR Notes
+# 4n6 Notes
 
-Sammlung von Informationen zur digitalen Forensik und Incident Response (DFIR).
+Sammlung von Informationen zur digitalen Forensik.
 
 Immer Work-in-Progress – da es immer was Neues zu entdecken gibt.
 
@@ -37,4 +37,4 @@ Verlinkte Dokumente Dritter unterliegen den Bedingungen ihrer jeweiligen Urheber
 
 ## Korrekturen und Hinweise
 
-Fehler gefunden oder eine Ergänzung? Gerne als [Issue auf GitHub](https://github.com/kalink0/dfir-notes/issues).
+Fehler gefunden oder eine Ergänzung? Gerne als [Issue auf GitHub](https://github.com/kalink0/4n6-notes/issues).

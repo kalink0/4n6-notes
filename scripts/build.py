@@ -16,12 +16,12 @@ REDIRECT = """<!doctype html>
 <html lang="{lang}">
 <head>
 <meta charset="utf-8">
-<title>DFIR Notes</title>
+<title>4n6 Notes</title>
 <meta http-equiv="refresh" content="0; url={lang}/">
 <link rel="canonical" href="{lang}/">
 </head>
 <body>
-<p><a href="{lang}/">DFIR Notes</a></p>
+<p><a href="{lang}/">4n6 Notes</a></p>
 </body>
 </html>
 """

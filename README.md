@@ -1,6 +1,6 @@
-# DFIR Notes
+# 4n6 Notes
 
-A collection of notes on digital forensics and incident response: artifact descriptions,
+A collection of notes on digital forensics: artifact descriptions,
 deep dives into file systems and file formats, and a glossary.
 
 Since 2017 I have collected this knowledge in a private knowledge base. I have now decided to
@@ -26,7 +26,7 @@ Further languages can be added, see CONTRIBUTING.md (Languages).
 
 ## Corrections and feedback
 
-Please open an [issue](https://github.com/kalink0/dfir-notes/issues) or a pull request.
+Please open an [issue](https://github.com/kalink0/4n6-notes/issues) or a pull request.
 
 ## Repository layout
 

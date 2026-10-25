@@ -1,18 +1,18 @@
 ---
-title: DFIR Notes
+title: 4n6 Notes
 translation: machine
-translation_of: de:sha256:277a09402a49
+translation_of: de:sha256:f05a1d13b482
 ---
 
-# DFIR Notes
+# 4n6 Notes
 
-A collection of information on digital forensics and incident response (DFIR).
+A collection of information on Digital Forensics.
 
 Always work in progress – there is always something new to discover.
 
 ## Contents
 
-### [DFIR Artifacts](artifacts/index.md)
+### [Artifacts](artifacts/index.md)
 
 Descriptions of artifacts of all kinds. Overview of their meaning, sources, key facts and tools/scripts for processing.
 
@@ -39,4 +39,4 @@ Linked third-party documents are subject to the terms of their respective author
 
 ## Corrections and feedback
 
-Found an error or have an addition? Feel free to open an [issue on GitHub](https://github.com/kalink0/dfir-notes/issues).
+Found an error or have an addition? Feel free to open an [issue on GitHub](https://github.com/kalink0/4n6-notes/issues).

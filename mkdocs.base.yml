@@ -1,9 +1,9 @@
 # Shared configuration. Each language has its own config (mkdocs.de.yml, mkdocs.en.yml)
 # that inherits from this file. Each language has its own docs/<lang>/ folder; the language
 # versions of a page are equal, see hooks/i18n.py.
-site_name: DFIR Notes
-repo_url: https://github.com/kalink0/dfir-notes
-repo_name: kalink0/dfir-notes
+site_name: 4n6 Notes
+repo_url: https://github.com/kalink0/4n6-notes
+repo_name: kalink0/4n6-notes
 
 theme:
   name: material
