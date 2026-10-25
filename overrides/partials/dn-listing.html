@@ -14,7 +14,7 @@
     <ul class="dn-az">
       {%- for entry in group.entries %}
         <li><a href="{{ entry.url | url }}">{{ entry.title | e }}</a>
-          {%- if entry.status == "draft" %} <span class="md-status md-status--draft" title="{{ dn.draft_short }}"></span>{% endif %}
+          {%- if entry.status in dn.status_short %} <span class="md-status md-status--{{ entry.status }}" title="{{ dn.status_short[entry.status] }}"></span>{% endif %}
           {%- if entry.excerpt %} <span class="dn-az__excerpt">– {{ entry.excerpt | e }}</span>{% endif %}</li>
       {%- endfor %}
     </ul>
@@ -27,12 +27,12 @@
         {%- for child in item.children %}
           {%- if child.is_page and child.is_index %}
             <li><a href="{{ child.url | url }}">{{ item.title }}</a>
-              {%- if child.meta and child.meta.status == "draft" %} <span class="md-status md-status--draft" title="{{ dn.draft_short }}"></span>{% endif %}</li>
+              {%- if child.meta and child.meta.status in dn.status_short %} <span class="md-status md-status--{{ child.meta.status }}" title="{{ dn.status_short[child.meta.status] }}"></span>{% endif %}</li>
           {%- endif %}
         {%- endfor %}
       {%- elif item.is_page and not item.is_index %}
         <li><a href="{{ item.url | url }}">{{ item.title }}</a>
-          {%- if item.meta and item.meta.status == "draft" %} <span class="md-status md-status--draft" title="{{ dn.draft_short }}"></span>{% endif %}</li>
+          {%- if item.meta and item.meta.status in dn.status_short %} <span class="md-status md-status--{{ item.meta.status }}" title="{{ dn.status_short[item.meta.status] }}"></span>{% endif %}</li>
       {%- endif %}
     {%- endfor %}
   </ul>

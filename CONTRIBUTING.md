@@ -102,7 +102,7 @@ A page has one of three statuses:
 | --- | --- | --- |
 | `draft` | Unfinished, sections missing or incomplete | **Entwurf** banner, icon in the navigation |
 | `complete` | Finished and checked by the author | Authors, completion date, "not yet reviewed" |
-| `reviewed` | Also checked by a second person | Authors, completion date, reviewers, review date |
+| `reviewed` | Also checked by a second person | Authors, completion date, reviewers, review date, icon in the navigation |
 
 Overview pages (`index.md`) have no status. They only hold the title; the list of pages in the
 section is generated.
