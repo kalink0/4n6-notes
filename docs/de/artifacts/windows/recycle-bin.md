@@ -1,8 +1,10 @@
 ---
 title: "Recycle Bin"
-status: complete
+status: reviewed
 completed: 2026-10-19
 authors: [kalink0 (Marco Neumann)]
+reviewers: [dugeonlady]
+reviewed: 2026-10-26
 topics: [file-existence]
 ---
 
@@ -10,7 +12,7 @@ topics: [file-existence]
 
 ## Bedeutung
 
-Der Recycle Bin, im deutschen "Papierkorb", enthält vom Benutzer gelöschte Dateien. Diese Dateien können vom Benutzer wiederhergstellt werden. Der Recycle Bin enthält Metadaten zu den Dateien wie z.B. löschender Benutzer, vorheriger Dateipfad, Zeitstempel der Datei und Löschzeitpunkt der Datei. Für den Nutzer wird die SID des Benutzerkontos gespeichert, welches verwendet wurde um die Datei zu löschen.
+Der Recycle Bin, im deutschen "Papierkorb", enthält vom Benutzer gelöschte Dateien. Diese Dateien können vom Benutzer wiederhergestellt werden. Der Recycle Bin enthält Metadaten zu den Dateien wie z.B. löschender Benutzer, vorheriger Dateipfad, Zeitstempel der Datei und Löschzeitpunkt der Datei. Für den Nutzer wird die SID des Benutzerkontos gespeichert, welches verwendet wurde, um die Datei zu löschen.
 
 Aus digitalforensischer Sicht kann anhand der Dateien im Recycle Bin gesagt werden, dass der Nutzer-Account mit der hinterlegten SID die Datei aktiv zu dem Löschzeitpunkt gelöscht hat.
 

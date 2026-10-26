@@ -4,7 +4,7 @@ status: reviewed
 completed: 2026-10-19
 authors: [kalink0 (Marco Neumann)]
 reviewers: [dugeonlady]
-reviewed: 2026-10-25
+reviewed: 2026-10-26
 topics: [program-execution]
 ---
 
@@ -12,9 +12,9 @@ topics: [program-execution]
 
 ## Bedeutung
 
-Der BAM ist ein Windowsdienst welcher Hintergrundprozesse überwacht und kontrolliert. Ziel ist die Optimierung der Performance und des Energieverbrauchs. Die Daten werden nach 7 Tagen vom System gelöscht. Für den Nutzer wird die zugehörige SID gespeichert. Es wird der Pfad der Executable und der Zeitpunkt der letzten Ausführung gespeichert.
+Der BAM ist ein Windowsdienst, welcher Hintergrundprozesse überwacht und kontrolliert. Ziel ist die Optimierung der Performance und des Energieverbrauchs. Die Daten werden nach 7 Tagen vom System gelöscht. Der BAM wird pro Nutzer unter der zugehörigen SID gespeichert. Es wird der Pfad der Executable und der Zeitpunkt der letzten Ausführung gespeichert.
 
-Aus digitalforensischer Sicht bedeuten Einträge des BAM, dass eine Applikation im Kontext des Nutzerkontos zu dem angegeben Zeitpunkt ausgeführt wurde.
+Aus digitalforensischer Sicht bedeuten Einträge des BAM, dass eine Applikation im Kontext des Nutzerkontos zu dem angegebenen Zeitpunkt ausgeführt wurde.
 
 ## Spezifische Kurzinformation
 

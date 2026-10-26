@@ -1,8 +1,10 @@
 ---
 title: "LNK - JumpLists"
-status: complete
+status: reviewed
 completed: 2026-10-19
 authors: [kalink0 (Marco Neumann)]
+reviewers: [dugeonlady]
+reviewed: 2026-10-26
 topics: [file-access, program-execution]
 ---
 
@@ -10,9 +12,9 @@ topics: [file-access, program-execution]
 
 ## Bedeutung
 
-JumpLists werden seit Windows 7 im Betriebssystem verwendet. JumpLists zeigen dem Benutzer zuletzt geöffnete Dateien und zuletzt verwendete Programme zum Beispiel im Startmenü an. Die Funktion dient der Erhöhung der Benutzerfreundlichkeit und wird vom Betriebssystem selbst ausgeführt anhand der Bedienung des Benutzers.
+JumpLists werden seit Windows 7 im Betriebssystem verwendet. JumpLists zeigen dem Benutzer zuletzt geöffnete Dateien und zuletzt verwendete Programme zum Beispiel im Startmenü an. Die Funktionalität dient der Verbesserung der Benutzerfreundlichkeit. Das Anlegen der Einträge wird vom Betriebssystem automatisch durchgeführt anhand der Aktionen des Benutzers.
 
-Ein Benutzer kann auch selbst Einträge an z.B. das Startmenü "anpinnen" - diese Funktion dient ebenfalls der Benutzerfreundlichkeit und die Ablage erfolgt ebenfalls in JumpLists. Man kann diese Funktion als setzen von "Favoriten" bezeichnen. Zusätzlich werden bei den automatisch generierten Einträgen die Zeitstempel des letzten Zugriffs gespeichert und die Anzahl der Zugriffe.
+Ein Benutzer kann auch selbst Einträge an z.B. das Startmenü "anpinnen" - diese Funktion dient auch der Benutzerfreundlichkeit und die Ablage erfolgt ebenfalls in JumpLists. Man kann diese Funktion als setzen von "Favoriten" bezeichnen. Sowohl bei den manuell erstellten als auch bei den automatisch generierten Einträgen werden die Zeitstempel des letzten Zugriffs und die Anzahl der Zugriffe gespeichert.
 
 Aus digitalforensischer Sicht bedeutet die Existenz von Jumplists folgendes:
 
@@ -25,7 +27,7 @@ Aus digitalforensischer Sicht bedeutet die Existenz von Jumplists folgendes:
 
 ## Spezifische Kurzinformation
 
-1. JumpLists werden Apps zugeordnet, welche per AppID identifiziert werden können (Listen siehe unten) - eine AppID gibt an, in welchem Kontext die JumpList vorliegt und gibt daher Info darüber, wie der Nutzeraccount die Aktion durchgeführt hat.
+1. JumpLists werden Apps zugeordnet, welche per AppID identifiziert werden können (Listen siehe unten) - eine AppID gibt an, in welchem Kontext die JumpList vorliegt und gibt daher Auskunft darüber, wie der Nutzeraccount die Aktion durchgeführt hat.
 2. Die Anzahl der Aufrufe (Interaction Account) ist nach derzeitigem Stand nicht genau erklärbar/nachvollziehbar und daher ist der Wert mit Vorsicht zu behandeln.
 3. Ablageort:  
    **`%AppData%\Microsoft\Windows\Recent\AutomaticDestinations`**  

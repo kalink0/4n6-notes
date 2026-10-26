@@ -1,8 +1,10 @@
 ---
 title: "Prefetch"
-status: complete
+status: reviewed
 completed: 2026-10-19
 authors: [kalink0 (Marco Neumann)]
+reviewers: [dugeonlady]
+reviewed: 2026-10-26
 topics: [program-execution]
 ---
 
@@ -10,9 +12,9 @@ topics: [program-execution]
 
 ## Bedeutung
 
-Das Betriebssystem Windows erstellt sogenannte Prefetch-Dateien. Diese Dateien beinhalten mindestens die letzte Ausführung eines Programms, die Anzahl der Ausführungen und die geladenen Libraries und Dateien beim Starten. Zusätzlich können bis zu 7 weitere Zeitpunkte von Programmausführungen enthalten sein. Der Nutzen dieser Prefetch Dateien liegt darin, dass das Betriebssystem technische Maßnahmen ergreifen kann um einen schnelleren Start von Applikationen zu ermöglichen und somit die Benutzererfahrung verbessert.
+Das Betriebssystem Windows erstellt sogenannte Prefetch-Dateien. Diese Dateien beinhalten mindestens die letzte Ausführung eines Programms, die Anzahl der Ausführungen und die geladenen Libraries und Dateien beim Starten. Zusätzlich können bis zu 7 weitere Zeitpunkte von Programmausführungen enthalten sein. Der Nutzen dieser Prefetch-Dateien liegt darin, dass das Betriebssystem technische Maßnahmen ergreifen kann, um einen schnelleren Start von Applikationen zu ermöglichen und somit die Benutzererfahrung zu verbessern.
 
-Aus digitalforensischer Sicht bedeutet die Existenz und der Inhalt einer Prefetch Datei, dass eine referenzierte Applikation auf dem System zu den angegebenen Zeitpunkten gestartet wurde. Zusätzlich lässt sich sagen, welche Libraries und Dateien beim Start der Applikation verwendet werden.
+Aus digitalforensischer Sicht bedeutet die Existenz und der Inhalt einer Prefetch-Datei, dass eine referenzierte Applikation auf dem System zu den angegebenen Zeitpunkten gestartet wurde. Zusätzlich lässt sich sagen, welche Libraries und Dateien beim Start der Applikation verwendet werden.
 
 ## Spezifische Kurzinformation
 

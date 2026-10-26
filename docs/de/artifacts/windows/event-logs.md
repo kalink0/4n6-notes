@@ -1,8 +1,10 @@
 ---
 title: "EventLogs"
-status: complete
+status: reviewed
 completed: 2026-10-21
 authors: [kalink0 (Marco Neumann)]
+reviewers: [dugeonlady]
+reviewed: 2026-10-26
 topics: [accounts, network, external-devices, program-execution, persistence, device-state, commands-input, system-config]
 ---
 
@@ -65,6 +67,8 @@ Die Tabelle enthält nur eine Auswahl häufig relevanter Ereignisse; Windows pro
 2017-12: <https://blogs.jpcert.or.jp/en/2017/12/research-report-released-detecting-lateral-movement-through-tracking-event-logs-version-2.html>
 
 2015-11: [Microsoft: Windows security audit events (spreadsheet)](https://www.microsoft.com/download/details.aspx?id=50034)
+
+<https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/>
 
 ## Tools
 

@@ -1,8 +1,10 @@
 ---
 title: "EMDMgmt - ReadyBoost"
-status: complete
+status: reviewed
 completed: 2026-10-19
 authors: [kalink0 (Marco Neumann)]
+reviewers: [dugeonlady]
+reviewed: 2026-10-26
 topics: [external-devices]
 ---
 
