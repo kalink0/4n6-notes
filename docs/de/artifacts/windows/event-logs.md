@@ -58,6 +58,8 @@ Die Tabelle enthält nur eine Auswahl häufig relevanter Ereignisse; Windows pro
 
 ## Referenzen
 
+2026-10 (abgerufen): <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/>
+
 2026-09: <https://nxlog.co/news-and-blog/posts/windows-task-scheduler-event-ids/>
 
 2026-02: <https://blog.elcomsoft.com/2026/02/forensic-analysis-of-windows-10-and-11-event-logs/>
@@ -67,8 +69,6 @@ Die Tabelle enthält nur eine Auswahl häufig relevanter Ereignisse; Windows pro
 2017-12: <https://blogs.jpcert.or.jp/en/2017/12/research-report-released-detecting-lateral-movement-through-tracking-event-logs-version-2.html>
 
 2015-11: [Microsoft: Windows security audit events (spreadsheet)](https://www.microsoft.com/download/details.aspx?id=50034)
-
-<https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/>
 
 ## Tools
 
