@@ -6,3 +6,9 @@ authors: [kalink0 (Marco Neumann)]
 translation: machine
 translation_of: de
 ---
+
+# Before First Unlock (BFU) Acquisition
+
+In a BFU acquisition, a mobile device is acquired that has not yet been unlocked since the last restart.
+
+A BFU acquisition contains only little user-generated data.
