@@ -1,7 +1,7 @@
 ---
 title: "Encryption and Attacks"
 translation: machine
-translation_of: de:sha256:b0e61d596a17
+translation_of: de
 ---
 
 # Encryption and Attacks

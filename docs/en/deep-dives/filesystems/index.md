@@ -1,7 +1,7 @@
 ---
 title: "File Systems"
 translation: machine
-translation_of: de:sha256:709c8e225291
+translation_of: de
 ---
 
 # File Systems

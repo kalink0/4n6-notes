@@ -4,5 +4,5 @@ status: complete
 completed: 2026-10-26
 authors: [kalink0 (Marco Neumann)]
 translation: machine
-translation_of: de:sha256:1589c0f3a7a5
+translation_of: de
 ---

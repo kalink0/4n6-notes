@@ -1,7 +1,7 @@
 ---
 title: "Deep Dives"
 translation: machine
-translation_of: de:sha256:f248c614715a
+translation_of: de
 ---
 
 # Deep Dives

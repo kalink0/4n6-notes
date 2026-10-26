@@ -8,19 +8,18 @@ Checks:
 - authors (`authors: [...]`) and reviewers (`reviewers: [...]`) of each language version are
   GitHub handles, optionally with the full name: `some-handle (Full Name)`
 - every folder under docs/ is a language of extra.alternate; a version that says it is a
-  translation (translation, translation_of: <lang>:<hash>) names an existing version
+  translation (translation, translation_of: <lang>) names an existing version
 - topics (`topics: [key, ...]`) only on artifact pages and only with keys from
   extra.topics in mkdocs.base.yml; every topic has a label for every language
 - gap lists (gaps/<section>.yml) belong to an existing section and have a name for every entry;
   if a list uses topics, every entry has one known topic
-Reports (without failing) translations whose source version changed, language versions with
+Reports (without failing) translations whose source version was completed later, language versions with
 differing topics, overview pages (index.md, except the start page) with more than the title,
 artifact pages without topics, topics no page uses and gap entries that already have a page or
 heading in their section.
 
 Usage:
     python scripts/check_content.py              run all checks
-    python scripts/check_content.py --hash FILE  print the translation_of value for a version
 """
 
 import re
@@ -37,7 +36,7 @@ sys.path.insert(0, str(ROOT / "hooks"))
 from mkdocs.utils.meta import get_data  # noqa: E402
 
 from credits import parse_people  # noqa: E402
-from i18n import TRANSLATION_OF, source_hash  # noqa: E402
+from i18n import TRANSLATION_OF  # noqa: E402
 
 DOCS = ROOT / "docs"
 STATUSES = {"draft", "complete", "reviewed"}
@@ -94,12 +93,6 @@ def check_dates(errors: list[str], rel: str, meta: dict) -> None:
 
 
 def main() -> int:
-    if len(sys.argv) == 3 and sys.argv[1] == "--hash":
-        path = Path(sys.argv[2]).resolve()
-        lang = path.relative_to(DOCS).parts[0]
-        print(f"{lang}:{source_hash(path.read_text(encoding='utf-8'))}")
-        return 0
-
     errors: list[str] = []
     outdated: list[str] = []
     without_topics: list[str] = []
@@ -175,18 +168,20 @@ def main() -> int:
                 errors.append(f"{rel}: translation must be one of {sorted(TRANSLATIONS)}")
             m = TRANSLATION_OF.fullmatch(str(source or ""))
             if not m:
-                errors.append(f"{rel}: translation_of must be '<lang>:sha256:<12 hex>', got {source!r}")
+                errors.append(f"{rel}: translation_of must be a language, e.g. 'de', got {source!r}")
             elif m["lang"] == lang or m["lang"] not in versions:
                 errors.append(f"{rel}: translation_of names {m['lang']!r}, but there is no version of this page in that language")
-            elif m["hash"] != source_hash(versions[m["lang"]][1]):
-                outdated.append(rel)
+            else:
+                own, theirs = meta.get("completed"), versions[m["lang"]][3].get("completed")
+                if own and theirs and theirs > own:
+                    outdated.append(rel)
         if is_artifact and not page_topics:
             without_topics.append(versions[next(iter(versions))][0])
         if len({tuple(sorted(k)) for k in page_topics.values()}) > 1:
             differing_topics.append(f"{uri}: " + "; ".join(f"{lang}: {', '.join(k)}" for lang, k in page_topics.items()))
 
     for rel in outdated:
-        print(f"outdated translation (source version changed): {rel}")
+        print(f"outdated translation (source version completed later): {rel}")
     for entry in differing_topics:
         print(f"topics differ between language versions: {entry}")
     for rel in busy_index:

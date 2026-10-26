@@ -4,7 +4,7 @@ status: complete
 completed: 2026-10-26
 authors: [kalink0 (Marco Neumann)]
 translation: machine
-translation_of: de:sha256:7e53f8c9dcb8
+translation_of: de
 topics: [device-state]
 ---
 
