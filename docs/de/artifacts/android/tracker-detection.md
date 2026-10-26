@@ -59,12 +59,12 @@ Auf demselben Gerät können Spuren von beiden Seiten liegen:
 
 ## Referenzen
 
-- 2026-10 (abgerufen) - Google - Unbekannte Tracker erkennen - <https://support.google.com/android/answer/13658562>
-- 2024-08 - Josh Hickman - Not All Androids Who Wander Are Lost: A Look at Android's Find My Device Network - <https://thebinaryhick.blog/2024/08/23/not-all-androids-who-wonder-are-lost-a-look-at-androids-find-my-device-network/>
-- 2023-08 - Josh Hickman - Android & AirTags Part II - <https://thebinaryhick.blog/2023/08/13/android-airtags-part-ii/>
+2026-10 (abgerufen): <https://support.google.com/android/answer/13658562>
+
+2024-08: <https://thebinaryhick.blog/2024/08/23/not-all-androids-who-wonder-are-lost-a-look-at-androids-find-my-device-network/>
+
+2023-08: <https://thebinaryhick.blog/2023/08/13/android-airtags-part-ii/>
 
 ## Tools
 
-- ALEAPP (Android Airtag Alerts / Scans / Last Scan / Passive Scan) - <https://github.com/abrignoni/ALEAPP>
-- ALEAPP (Android Notification History) - <https://github.com/abrignoni/ALEAPP>
-- ALEAPP (Nearby - Fast Pair Devices) - <https://github.com/abrignoni/ALEAPP>
+ALEAPP (Android Airtag Alerts / Scans / Last Scan / Passive Scan, Android Notification History, Nearby - Fast Pair Devices) - <https://github.com/abrignoni/ALEAPP>
