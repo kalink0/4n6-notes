@@ -14,7 +14,7 @@ topics: [file-access]
 
 Microsoft Office speichert die zuletzt geöffneten Dateien und die zuletzt verwendeten Ordner, in denen die Dateien lagen, um die Bedienung durch den Nutzer angenehmer zu gestalten.
 
-Aus digitalforensischer Sichet bedeuten Einträge in der Office MRU, dass die angegebenen Dateien (gemäß Dateiname) unter dem angegebenen Dateipfad durch das Nutzerkonto in Microsoft Office geöffnet wurden. Der angegebene Zeitstempel entspricht hierbei dem Zeitpunkt des letzten Öffnens des Dokumentes.
+Aus digitalforensischer Sicht bedeuten Einträge in der Office MRU, dass die angegebenen Dateien (gemäß Dateiname) unter dem angegebenen Dateipfad durch das Nutzerkonto in Microsoft Office geöffnet wurden. Der angegebene Zeitstempel entspricht hierbei dem Zeitpunkt des letzten Öffnens des Dokumentes.
 
 ## Spezifische Kurzinformation
 
