@@ -42,7 +42,7 @@ Eine einzelne tracev3 kann zwar auch gelesen werden, jedoch fehlen die genauen Z
 
 2026-10: <https://eclecticlight.co/2026/10/19/can-i-browse-log-entries-from-2-weeks-ago/>
 
-2026-10: <https://developer.apple.com/documentation/os/logging> (abgerufen)
+2026-10 (abgerufen): <https://developer.apple.com/documentation/os/logging>
 
 2026-09: <https://thesisfriday.com/how-to-investigate-the-apple-unified-log/>
 
@@ -68,6 +68,6 @@ macos-UnifiedLogs - <https://github.com/mandiant/macos-UnifiedLogs>
 
 peach-forensics (AUL) - <https://github.com/kalink0/peach-forensics>
 
-Velociraptor (Exchange: MacOS.UnifiedLogParser, MacOS.UnifiedLogHunter) - <https://github.com/Velocidex/velociraptor>
-
 UnifiedLogReader - <https://github.com/ydkhatri/UnifiedLogReader> (nur alte Versionen)
+
+Velociraptor (Exchange: MacOS.UnifiedLogParser, MacOS.UnifiedLogHunter) - <https://github.com/Velocidex/velociraptor>

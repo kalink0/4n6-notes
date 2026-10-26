@@ -10,7 +10,7 @@ topics: [program-execution, device-state, web-activity, notifications, communica
 
 ## Bedeutung
 
-Die Datenbank knowledgeC ist eine systeminterne macOS Datenbank. Das Betriebssystem nutzt diese Datenbank, um Informationen zu zum Beispiel App-Nutzung des Nutzers, Display-Status oder Ladezustand des Geräts zu speichern. Ziel ist es, das Bedienerlebnis zu optimieren.
+Die Datenbank knowledgeC ist eine systeminterne macOS Datenbank. Das Betriebssystem nutzt diese Datenbank, um zum Beispiel Informationen zur App-Nutzung des Nutzers, zum Display-Status oder zum Ladezustand des Geräts zu speichern. Ziel ist es, das Bedienerlebnis zu optimieren.
 
 Aus digitalforensischer Sicht lassen sich anhand der Einträge in der Datenbank je nach Eintragstyp unterschiedliche Aussagen treffen. 
 Die Bedeutung der einzelnen Einträge wird im Folgenden beschrieben. Es können noch mehr Typen vorliegen.

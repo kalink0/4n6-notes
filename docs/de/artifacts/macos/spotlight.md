@@ -35,12 +35,12 @@ Aus digitalforensischer Sicht belegt ein Eintrag in der Spotlight-Datenbank, das
 
 2019-07: <https://papers.put.as/papers/macosx/2019/summit_archive_1564171500.pdf>
 
-2019-04: [Atwal, Scanlon, Le-Khac: Shining a light on Spotlight, Digital Investigation 28 (2019)](https://doi.org/10.1016/j.diin.2019.01.019)
+2019-04: <https://doi.org/10.1016/j.diin.2019.01.019>
 
 ## Tools
+
+DLEAPP (Parser: Spotlight Store Files) - <https://github.com/abrignoni/DLEAPP>
 
 mac_apt (Plugin: SPOTLIGHT) - <https://github.com/ydkhatri/mac_apt>
 
 spotlight_parser - <https://github.com/ydkhatri/spotlight_parser>
-
-DLEAPP (Parser: Spotlight Store Files) - <https://github.com/abrignoni/DLEAPP>

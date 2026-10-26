@@ -29,11 +29,11 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass der angegebene Prozess zu
 
 ## Referenzen
 
-2026-10: <https://www.freedesktop.org/software/systemd/man/latest/journald.conf.html> (abgerufen)
+2026-10 (abgerufen): <https://www.freedesktop.org/software/systemd/man/latest/journald.conf.html>
 
-2026-10: <https://www.freedesktop.org/software/systemd/man/latest/systemd.journal-fields.html> (abgerufen)
+2026-10 (abgerufen): <https://www.freedesktop.org/software/systemd/man/latest/systemd.journal-fields.html>
 
-2026-10: <https://systemd.io/JOURNAL_FILE_FORMAT/> (abgerufen)
+2026-10 (abgerufen): <https://systemd.io/JOURNAL_FILE_FORMAT/>
 
 2022-07: <https://mcsi-library.readthedocs.io/articles/2022/07/linux-systemd-journal-in-digital-forensics/linux-systemd-journal-in-digital-forensics.html>
 

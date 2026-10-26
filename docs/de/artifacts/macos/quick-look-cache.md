@@ -39,8 +39,8 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass die Datei vorhanden war u
 
 ## Tools
 
-mac_apt (Plugin: QUICKLOOK) - <https://github.com/ydkhatri/mac_apt>
-
 DLEAPP (Parser: QuickLook Thumbnails) - <https://github.com/abrignoni/DLEAPP>
 
-OSX-QuickLook-Parser - <https://github.com/mdegrazia/OSX-QuickLook-Parser> (nur bis macOS 10.14)
+mac_apt (Plugin: QUICKLOOK) - <https://github.com/ydkhatri/mac_apt>
+
+OSX-QuickLook-Parser - <https://github.com/mdegrazia/OSX-QuickLook-Parser> (nur alte Versionen)
