@@ -39,7 +39,7 @@ Auf demselben Gerät können Spuren von beiden Seiten liegen:
 | Benachrichtigungsverlauf (`notification_history`) | Verfolgt | Package, Zeitpunkt und Inhalt der Tracker-Warnung |
 | `nearby_fast_pair_item_cache.db` | Owner | MAC, Gerätename, Titel (vom Nutzer vergebener Name), erste und letzte Beobachtung, Bild |
 
-## Kurzinfo
+## Spezifische Kurzinformation
 
 1. **Vorhaltezeit:** Scan-Einträge werden nur etwa zwei Tage vorgehalten. Eine leere Datenbank belegt nicht, dass das Scannen deaktiviert war.
 

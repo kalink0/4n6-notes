@@ -31,6 +31,8 @@ is the original.
 - A version translated from another one says so: `translation: human` or `machine` and
   `translation_of: <lang>:<hash>` (see README, "Page front matter"). It is then marked as possibly
   outdated when that version changes. A version that is extended on its own drops both fields.
+- A machine translation is checked in the review, not by its author. Until then it shows a notice
+  that no person has checked it; once `reviewed`, the notice says so. `translation: machine` stays.
 - Topics belong to the page, not to a language; they may be set in any version, and the page gets
   the topics of all versions. `scripts/check_content.py` reports versions with differing topics.
 - A page without a version in a language is shown there in another version, with a banner: English

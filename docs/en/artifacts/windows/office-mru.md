@@ -1,0 +1,9 @@
+---
+title: "Office MRU"
+status: complete
+completed: 2026-10-26
+authors: [kalink0 (Marco Neumann)]
+translation: machine
+translation_of: de:sha256:6dcc49f8f2b8
+topics: [file-access]
+---

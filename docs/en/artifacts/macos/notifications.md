@@ -1,0 +1,9 @@
+---
+title: "Notifications"
+status: complete
+completed: 2026-10-26
+authors: [kalink0 (Marco Neumann)]
+translation: machine
+translation_of: de:sha256:6fef7ba8a87d
+topics: [communication]
+---

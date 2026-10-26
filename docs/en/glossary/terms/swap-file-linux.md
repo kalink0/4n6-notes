@@ -1,0 +1,8 @@
+---
+title: "Swap File (Linux)"
+status: complete
+completed: 2026-10-26
+authors: [kalink0 (Marco Neumann)]
+translation: machine
+translation_of: de:sha256:88b3d69f27d0
+---
