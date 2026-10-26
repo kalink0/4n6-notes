@@ -123,7 +123,8 @@ reviewed: 2026-10-21
 - New pages start as `draft`. The author may add themselves to `authors` right away.
 - When the page is finished, the author sets `status: complete` and `completed` (date).
 - Only a reviewer sets `status: reviewed`, after checking the content, and adds `reviewers` and
-  `reviewed` (date). The reviewer is a second person, never one of the authors.
+  `reviewed` (date). Nobody reviews their own change; an earlier author may review a later
+  change by someone else.
 - Anyone may review. Reviews, like all other changes, are submitted as a pull request.
 - If the content of a `reviewed` page changes, it goes back to `complete` (or `draft`, if it is
   unfinished again) until it has been reviewed again; `reviewers` and `reviewed` are removed.

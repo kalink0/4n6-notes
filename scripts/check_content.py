@@ -6,8 +6,7 @@ Checks:
   reviewed pages also have a review date (`reviewed: YYYY-MM-DD`) and reviewers.
   Dates are valid and only set with the matching status
 - authors (`authors: [...]`) and reviewers (`reviewers: [...]`) of each language version are
-  GitHub handles, optionally with the full name: `some-handle (Full Name)`; nobody reviews a
-  version they wrote
+  GitHub handles, optionally with the full name: `some-handle (Full Name)`
 - every folder under docs/ is a language of extra.alternate; a version that says it is a
   translation (translation, translation_of: <lang>:<hash>) names an existing version
 - topics (`topics: [key, ...]`) only on artifact pages and only with keys from
@@ -157,9 +156,6 @@ def main() -> int:
                 errors.append(f"{rel}: reviewers set but status is {status!r}")
             elif not reviewers and status == "reviewed":
                 errors.append(f"{rel}: status is reviewed but reviewers are missing")
-            own = {p["handle"].casefold() for p in authors or []} & {p["handle"].casefold() for p in reviewers or []}
-            if own:
-                errors.append(f"{rel}: reviewed by its own author(s): {', '.join(sorted(own))}")
             keys = meta.get("topics")
             if keys is not None and not is_artifact:
                 errors.append(f"{rel}: topics are only for artifact pages")

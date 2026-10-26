@@ -17,7 +17,7 @@ Fertiggestellt, setzt der Autor:
     completed: 2026-10-19
     authors: [github-handle (Vorname Nachname)]
 
-Reviewed, ergänzt der Reviewer (nie einer der Autoren); completed und authors bleiben:
+Reviewed, ergänzt der Reviewer (nie, wer die Änderung gemacht hat); completed und authors bleiben:
     status: reviewed
     completed: 2026-10-19
     authors: [github-handle (Vorname Nachname)]

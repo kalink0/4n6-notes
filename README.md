@@ -56,7 +56,7 @@ title: "BAM - Background Activity Moderator"
 status: complete     # draft | complete | reviewed
 completed: 2026-10-19   # with complete and reviewed
 authors: [some-handle (Full Name)]   # GitHub handle, optionally with the full name
-# reviewers: [other-handle]  with status: reviewed, never one of the authors
+# reviewers: [other-handle]  with status: reviewed, never whoever made the change
 # reviewed: 2026-10-21       review date, with status: reviewed
 topics: [program-execution]   # artifact pages only, keys from extra.topics in mkdocs.base.yml
 ---
