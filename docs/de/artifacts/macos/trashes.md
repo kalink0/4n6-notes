@@ -30,7 +30,7 @@ Aus digitalforensischer Sicht belegt ein Objekt im Papierkorb, dass es über das
 
 ## Referenzen
 
-2026-10: <https://support.apple.com/guide/mac-help/delete-files-and-folders-on-mac-mchlp1093/26/mac> (abgerufen)
+2026-10 (abgerufen): <https://support.apple.com/guide/mac-help/delete-files-and-folders-on-mac-mchlp1093/26/mac>
 
 2019-07: <https://papers.put.as/papers/macosx/2019/summit_archive_1565288427.pdf>
 
@@ -40,6 +40,6 @@ Aus digitalforensischer Sicht belegt ein Objekt im Papierkorb, dass es über das
 
 DLEAPP (Parser: Trash Put Back) - <https://github.com/abrignoni/DLEAPP>
 
-mac_apt (Plugin: TRASH) - <https://github.com/ydkhatri/mac_apt>
-
 DSStoreParser - <https://github.com/nicoleibrahim/DSStoreParser>
+
+mac_apt (Plugin: TRASH) - <https://github.com/ydkhatri/mac_apt>

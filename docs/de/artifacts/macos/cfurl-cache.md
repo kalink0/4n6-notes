@@ -28,7 +28,7 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass das Programm die URL zum 
 
 ## Referenzen
 
-2026-10: <https://developer.apple.com/documentation/foundation/urlcache> (abgerufen)
+2026-10 (abgerufen): <https://developer.apple.com/documentation/foundation/urlcache>
 
 2022-12: <https://trustedsec.com/blog/looting-ios-apps-cache-db>
 

@@ -31,8 +31,6 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass macOS zum angegebenen Zei
 
 ## Referenzen
 
-2026-10: <https://belkasoft.com/knowledgec-database-forensics-with-belkasoft> (abgerufen)
-
 2026-06: <https://unit42.paloaltonetworks.com/new-macos-artifact-discovered/>
 
 2023-10: <https://cellebrite.com/en/understanding-and-decoding-the-newest-ios-segb-format/>

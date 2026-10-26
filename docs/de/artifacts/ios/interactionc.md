@@ -28,7 +28,7 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass zum angegebenen Zeitpunkt
 
 ## Referenzen
 
-2026-10: <https://developer.apple.com/documentation/foundation/supporting-suggestions-in-your-app-s-share-extension> (abgerufen)
+2026-10 (abgerufen): <https://developer.apple.com/documentation/foundation/supporting-suggestions-in-your-app-s-share-extension>
 
 2024-03: <https://www.msab.com/blog/hidden-gems-in-apple-ios-digital-forensics/>
 

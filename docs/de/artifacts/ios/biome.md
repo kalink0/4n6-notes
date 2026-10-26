@@ -34,7 +34,7 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass iOS zum angegebenen Zeitp
 
 2026-07: <https://blog.digital-forensics.it/2026/07/84-streams-later-exploring-evolution-of.html>
 
-2026-07: <https://bebinary4n6.blogspot.com/2026/05/beyond-c-segb-and-biome-forensics-with.html>
+2026-05: <https://bebinary4n6.blogspot.com/2026/05/beyond-c-segb-and-biome-forensics-with.html>
 
 2023-10: <https://cellebrite.com/en/understanding-and-decoding-the-newest-ios-segb-format/>
 

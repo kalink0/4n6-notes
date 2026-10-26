@@ -32,8 +32,16 @@
   {%- endif %}
   {%- if page.meta.translation == "machine" %}
     <div class="admonition info">
+      {#- Machine translations are checked in the review, not by the author. -#}
+      {%- if page.meta.status == "reviewed" %}
+      <p class="admonition-title">{{ dn.machine_title_reviewed }}</p>
+      {%- else %}
       <p class="admonition-title">{{ dn.machine_title }}</p>
-      <p>{{ dn.machine_text }}{% if source %} {{ version_link(source.lang, source.name) }}{% endif %}</p>
+      <p>{{ dn.machine_text }}</p>
+      {%- endif %}
+      {%- if source %}
+      <p>{{ dn.translated_from }} {{ version_link(source.lang, source.name) }}</p>
+      {%- endif %}
     </div>
   {%- endif %}
   {%- set newer = versions | selectattr("newer") | list %}

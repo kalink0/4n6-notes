@@ -29,8 +29,13 @@ is the original.
   versions should follow; a later `completed` date in another version is shown on the page
   ("Newer language version available").
 - A version translated from another one says so: `translation: human` or `machine` and
-  `translation_of: <lang>:<hash>` (see README, "Page front matter"). It is then marked as possibly
-  outdated when that version changes. A version that is extended on its own drops both fields.
+  `translation_of: <lang>` (see README, "Page front matter"). It is marked as possibly outdated
+  when that version has a later `completed` date; after updating the translation, set its own
+  `completed`. A version that is extended on its own drops both fields.
+- Whoever changes the content of a finished version updates its `completed` date; corrections
+  that do not change the content (typos, formatting) leave it as it is.
+- A machine translation is checked in the review, not by its author. Until then it shows a notice
+  that no person has checked it; once `reviewed`, the notice says so. `translation: machine` stays.
 - Topics belong to the page, not to a language; they may be set in any version, and the page gets
   the topics of all versions. `scripts/check_content.py` reports versions with differing topics.
 - A page without a version in a language is shown there in another version, with a banner: English
@@ -121,7 +126,8 @@ reviewed: 2026-10-21
 - New pages start as `draft`. The author may add themselves to `authors` right away.
 - When the page is finished, the author sets `status: complete` and `completed` (date).
 - Only a reviewer sets `status: reviewed`, after checking the content, and adds `reviewers` and
-  `reviewed` (date). The reviewer is a second person, never one of the authors.
+  `reviewed` (date). Nobody reviews their own change; an earlier author may review a later
+  change by someone else.
 - Anyone may review. Reviews, like all other changes, are submitted as a pull request.
 - If the content of a `reviewed` page changes, it goes back to `complete` (or `draft`, if it is
   unfinished again) until it has been reviewed again; `reviewers` and `reviewed` are removed.

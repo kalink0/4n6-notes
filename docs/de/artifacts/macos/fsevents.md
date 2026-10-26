@@ -42,6 +42,6 @@ FSEventsParser-rs - <https://github.com/Houwenda/FSEventsParser-rs>
 
 mac_apt (Plugin: FSEVENTS) - <https://github.com/ydkhatri/mac_apt>
 
-Plaso (Parser: fseventsd) - <https://github.com/log2timeline/plaso> (nur bis macOS 13)
+Plaso (Parser: fseventsd) - <https://github.com/log2timeline/plaso>
 
 Velociraptor (Artefakt: MacOS.Forensics.FSEvents) - <https://docs.velociraptor.app/artifact_references/pages/macos.forensics.fsevents/>
