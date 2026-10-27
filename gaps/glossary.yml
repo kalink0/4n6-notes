@@ -18,13 +18,6 @@
 - name: RAID
 - name: Steganografie
 
-# Sicherungsarten
-- name: Forensisches Abbild (Image)
-- name: RAM-Sicherung
-- name: Live-Sicherung
-- name: Cloud-Sicherung
-- name: Chip-Off / JTAG / ISP
-
 # Verschlüsselung
 - name: Trusted Platform Module (TPM)
 - name: Secure Enclave
