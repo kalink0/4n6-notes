@@ -8,9 +8,7 @@
 - name: Datenwiederherstellung
 - name: Forensische Datencontainer
 - name: Gelöschte Daten
-- name: Hash-Wert
 - name: Koordinierte Weltzeit
-- name: Makros
 - name: Partition
 - name: Zeitstempel
 - name: Privater Modus / Inkognito-Modus
