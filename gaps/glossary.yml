@@ -32,7 +32,6 @@
 - name: Chip-Off / JTAG / ISP
 
 # Verschlüsselung
-- name: Dateibasierte Verschlüsselung (FBE) / Vollverschlüsselung (FDE)
 - name: Trusted Platform Module (TPM)
 - name: Secure Enclave
 - name: Recovery Key
