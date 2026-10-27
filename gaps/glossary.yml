@@ -18,11 +18,6 @@
 - name: RAID
 - name: Steganografie
 
-# Verschlüsselung
-- name: Trusted Platform Module (TPM)
-- name: Secure Enclave
-- name: Recovery Key
-
 # Angriffe
 - name: Exploit
 - name: Cold-Boot-Angriff
