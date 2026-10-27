@@ -1,8 +1,10 @@
 ---
 title: "PowerShell Command History"
-status: complete
+status: reviewed
 completed: 2026-10-19
 authors: [kalink0 (Marco Neumann)]
+reviewers: [dugeonlady]
+reviewed: 2026-10-26
 topics: [commands-input]
 ---
 
@@ -12,13 +14,13 @@ topics: [commands-input]
 
 Die PowerShell Command History speichert die letzten standardmäßig 4096 ausgeführten Befehle in der PowerShell. Diese Funktion dient dazu, dem Anwender die zuletzt ausgeführten Befehle einfach wieder zur Verfügung zu stellen. Die Ablage der Einträge ist chronologisch, jedoch ohne genaue Zeitangaben.
 
-Aus digitalforensischer Sicht bedeutet die Existenz von Einträgen in der Command History, dass die aufgeführten Befehle im Nutzerkontext ausgeführt wurden. Nicht belegt ist dagegen, dass ein Befehl erfolgreich ausgeführt wurde. Ebenso belegt das Fehlen eines Befehls nicht, dass er nicht ausgeführt wurde.
+Aus digitalforensischer Sicht bedeutet die Existenz von Einträgen in der Command History, dass die gelisteten Befehle im Nutzerkontext ausgeführt wurden. Nicht belegt ist dagegen, ob ein Befehl erfolgreich ausgeführt wurde. Ebenso belegt das Fehlen eines Befehls nicht, dass er nicht ausgeführt wurde.
 
 ## Spezifische Kurzinformation
 
 1. Ab PowerShell v5, Windows 10, standardmäßig aktiviert
 2. Standardmäßig werden die letzten 4096 Befehle chronologisch gespeichert, ohne genaue Zeitstempel; direkt wiederholte identische Befehle werden nur einmal gespeichert
-3. Anhand Erstelldatum und letztes Bearbeitungsdatum kann Rückschluss auf Zeitraum der History getroffen werden.
+3. Anhand des Erstelldatums und letzten Bearbeitungsdatums kann Rückschluss auf den Zeitraum der History getroffen werden.
 4. Wird NICHT geschrieben bei Verwendung der PowerShell ISE - nur Konsolenverwendung
 5. Befehle mit password, token, secret u.ä. werden ab PowerShell 7 nicht gespeichert
 6. Ablageort:  

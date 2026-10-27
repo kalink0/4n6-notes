@@ -1,8 +1,10 @@
 ---
 title: "EventLogs"
-status: complete
+status: reviewed
 completed: 2026-10-21
 authors: [kalink0 (Marco Neumann)]
+reviewers: [dugeonlady]
+reviewed: 2026-10-26
 topics: [accounts, network, external-devices, program-execution, persistence, device-state, commands-input, system-config]
 ---
 
@@ -55,6 +57,8 @@ Die Tabelle enthält nur eine Auswahl häufig relevanter Ereignisse; Windows pro
    Bis Windows XP: **`C:\Windows\System32\config\*.evt`**
 
 ## Referenzen
+
+2026-10 (abgerufen): <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/>
 
 2026-09: <https://nxlog.co/news-and-blog/posts/windows-task-scheduler-event-ids/>
 

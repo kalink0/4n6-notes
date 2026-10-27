@@ -1,8 +1,10 @@
 ---
 title: "Office MRU"
-status: complete
+status: reviewed
 completed: 2026-10-19
 authors: [kalink0 (Marco Neumann)]
+reviewers: [dugeonlady]
+reviewed: 2026-10-26
 topics: [file-access]
 ---
 
@@ -12,7 +14,7 @@ topics: [file-access]
 
 Microsoft Office speichert die zuletzt geöffneten Dateien und die zuletzt verwendeten Ordner, in denen die Dateien lagen, um die Bedienung durch den Nutzer angenehmer zu gestalten.
 
-Aus digitalforensischer Sicher bedeuten Einträge in der Office MRU, dass die angegeben Dateien (gemäß Dateiname) unter dem angegeben Dateipfad durch das Nutzerkonto in Microsoft Office geöffnet wurden. Der angegebene Zeitstempel entspricht hierbei dem Zeitpunkt des letzten Öffnens des Dokumentes.
+Aus digitalforensischer Sicht bedeuten Einträge in der Office MRU, dass die angegebenen Dateien (gemäß Dateiname) unter dem angegebenen Dateipfad durch das Nutzerkonto in Microsoft Office geöffnet wurden. Der angegebene Zeitstempel entspricht hierbei dem Zeitpunkt des letzten Öffnens des Dokumentes.
 
 ## Spezifische Kurzinformation
 
