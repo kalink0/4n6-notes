@@ -202,7 +202,7 @@ or is unknown is left out):
 1. Availability: operating system/version, hardware if relevant
 2. Prerequisites: enabled by default or opt-in, can be disabled
 3. Retention: period, rotation, deletion behavior
-4. Format and structure: file type, central tables/fields (in `code` formatting)
+4. Format and structure: file type
 5. Timestamps: format, time zone, which timestamp means what
 6. Particularities and pitfalls
 7. Location (Ablageort), always the last item
@@ -272,22 +272,6 @@ Statements that change with updates (versions, defaults, rollouts) get a point i
 
 ## Links
 
-Internal links are relative paths to the `.md` file, e.g. `[Biome](biome/index.md)` or
-`[SQLite](../../../deep-dives/sqlite.md)`. MkDocs checks them during the build. The same paths also
-work in every language, because a missing version falls back to another one.
-
-What gets linked:
-
-| What | Where on the page |
-| --- | --- |
-| Another artifact the text already refers to (e.g. successor: "seit iOS 16 in die [Biome](…) verschoben") | At that point in the text |
-| Deep dive on the file format or timestamps (e.g. SQLite, LevelDB, timestamps) | Key facts, at the format or timestamp item |
-| Glossary terms | At the first mention in the text |
-
-Rules:
-
-- Each target is linked only once per page, at the first suitable place.
-- No links just because of similarity or as "see also" without a reference in the text. This also
-  applies to the same artifact on another platform: anyone looking for it finds both pages through
-  the search.
-- No link to a page whose relevant section only contains `*Noch kein Inhalt.*`.
+Pages contain no internal links (to artifacts, deep dives or glossary terms). They are hard to
+keep up to date when pages are added, moved or renamed. Related pages are found through the
+search. Links to external sources belong in the references and tools.

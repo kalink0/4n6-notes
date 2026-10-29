@@ -4,10 +4,6 @@
 # Apple-Apps, die es auch auf iOS gibt, stehen hier pro Plattform; Safari liegt unter other.
 # APFS-Snapshots gehören in die Deep Dives, nicht hierher.
 
-- name: KnowledgeC
-  topic: program-execution
-- name: Biome
-  topic: program-execution
 - name: Saved Application State
   topic: program-execution
 - name: Bildschirmzeit (RMAdminStore)
@@ -34,8 +30,6 @@
 - name: Ortungsdienste (clients.plist)
   topic: location
 
-- name: InteractionC
-  topic: communication
 - name: Nachrichten (chat.db)
   topic: communication
 - name: Mail
@@ -79,8 +73,6 @@
 - name: Firewall-Log
   topic: network
 
-- name: Unified Logs
-  topic: device-state
 - name: PowerLog
   topic: device-state
 - name: Apple System Log (ASL)
