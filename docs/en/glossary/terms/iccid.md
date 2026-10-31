@@ -1,7 +1,7 @@
 ---
 title: "ICCID"
 status: complete
-completed: 2026-10-26
+completed: 2026-10-31
 authors: [kalink0 (Marco Neumann)]
 translation: machine
 translation_of: de
@@ -19,4 +19,4 @@ Structure:
 - **Individual serial number** of the SIM
 - **Check digit** (Luhn checksum)
 
-An ICCID is assigned to exactly one SIM card or one eSIM profile. The ICCID can be used to send requests to the respective provider, e.g. for subscriber data.
+An ICCID is assigned to exactly one SIM card or one eSIM profile.

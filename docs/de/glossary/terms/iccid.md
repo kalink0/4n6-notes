@@ -1,7 +1,7 @@
 ---
 title: "ICCID"
 status: complete
-completed: 2026-10-21
+completed: 2026-10-31
 authors: [kalink0 (Marco Neumann)]
 ---
 
@@ -17,4 +17,4 @@ Aufbau:
 - **Individuelle Seriennummer** der SIM
 - **Prüfziffer** (Luhn-Checksumme)
 
-Eine ICCID ist genau einer SIM-Karte bzw. einem eSIM-Profil zugeordnet. Mit der ICCID können Anfragen an den jeweiligen Provider gestellt werden, z. B. zu Stammdaten.
+Eine ICCID ist genau einer SIM-Karte bzw. einem eSIM-Profil zugeordnet.
