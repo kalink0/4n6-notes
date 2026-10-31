@@ -10,10 +10,10 @@ topics: [program-execution, device-state, external-devices, web-activity, notifi
 
 ## Bedeutung
 
-Die Datenbank knowledgeC ist eine systeminterne iOS Datenbank. Das Betriebssystem nutzt diese Datenbank um Informationen zu zum Beispiel App-Nutzung des Nutzers, Batterie-Nutzung des Geräts inkl. Ladezyklen oder Verbindungsstatus zu Bluetooth/WLAN zu speichern. Ziel ist es das Bedienerlebnis zu optimieren.
+Die Datenbank knowledgeC ist eine systeminterne iOS Datenbank. Das Betriebssystem nutzt diese Datenbank um zum Beispiel Informationen zur App-Nutzung des Nutzers, zur Batterie-Nutzung des Geräts inkl. Ladezyklen oder zum Verbindungsstatus zu Bluetooth/WLAN zu speichern. Ziel ist es das Bedienerlebnis zu optimieren.
 
 Aus digitalforensischer Sicht lassen sich anhand der Einträge in der Datenbank je nach Eintragstyp unterschiedliche Aussagen treffen. 
-Die Bedeutung der einzelnen Einträge wird im Folgenden beschrieben. Es könnne noch mehr Typen vorliegen.
+Die Bedeutung der einzelnen Einträge wird im Folgenden beschrieben. Es können noch mehr Typen vorliegen.
 
 | Eintragstyp | Belegt | Relevante Felder |
 | --- | --- | --- |

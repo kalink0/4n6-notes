@@ -56,7 +56,7 @@ title: "BAM - Background Activity Moderator"
 status: complete     # draft | complete | reviewed
 completed: 2026-10-19   # with complete and reviewed
 authors: [some-handle (Full Name)]   # GitHub handle, optionally with the full name
-# reviewers: [other-handle]  with status: reviewed, never one of the authors
+# reviewers: [other-handle]  with status: reviewed, never whoever made the change
 # reviewed: 2026-10-21       review date, with status: reviewed
 topics: [program-execution]   # artifact pages only, keys from extra.topics in mkdocs.base.yml
 ---
@@ -72,18 +72,12 @@ status: complete
 completed: 2026-10-21
 authors: [some-translator]
 translation: human   # human | machine
-translation_of: de:sha256:0123456789ab   # language and hash of the version it was translated from
+translation_of: de   # language of the version it was translated from
 ---
 ```
 
-`translation_of` is printed by:
-
-```sh
-python scripts/check_content.py --hash docs/de/artifacts/windows/bam.md
-```
-
-When that version changes later, the translation is marked as possibly outdated until
-`translation_of` is updated. A version extended on its own drops `translation` and
+When that version gets a later `completed` date, the translation is marked as possibly outdated
+until its own `completed` is updated. A version extended on its own drops `translation` and
 `translation_of`. Topics may be set in any version; see CONTRIBUTING.md (Languages).
 
 ## Build locally

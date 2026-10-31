@@ -44,9 +44,9 @@ Aus digitalforensischer Sicht belegen die Daten auf dem Gerät des Besitzers, we
 
 2026-03: <https://thebinaryhick.blog/2026/03/22/old-dog-new-tricks-lost-apples-2-0/>
 
-2026-02: <https://thebinaryhick.blog/2024/09/02/where-the-wild-tags-are-other-airtag-stories/>
+2025-08: <https://thebinaryhick.blog/2025/08/19/further-observations-more-on-ios-search-party/>
 
-2026-02: <https://thebinaryhick.blog/2025/08/19/further-observations-more-on-ios-search-party/>
+2024-09: <https://thebinaryhick.blog/2024/09/02/where-the-wild-tags-are-other-airtag-stories/>
 
 2022-04: <https://blog.d204n6.com/2022/04/airtag-youre-it.html>
 

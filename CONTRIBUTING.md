@@ -29,8 +29,13 @@ is the original.
   versions should follow; a later `completed` date in another version is shown on the page
   ("Newer language version available").
 - A version translated from another one says so: `translation: human` or `machine` and
-  `translation_of: <lang>:<hash>` (see README, "Page front matter"). It is then marked as possibly
-  outdated when that version changes. A version that is extended on its own drops both fields.
+  `translation_of: <lang>` (see README, "Page front matter"). It is marked as possibly outdated
+  when that version has a later `completed` date; after updating the translation, set its own
+  `completed`. A version that is extended on its own drops both fields.
+- Whoever changes the content of a finished version updates its `completed` date; corrections
+  that do not change the content (typos, formatting) leave it as it is.
+- A machine translation is checked in the review, not by its author. Until then it shows a notice
+  that no person has checked it; once `reviewed`, the notice says so. `translation: machine` stays.
 - Topics belong to the page, not to a language; they may be set in any version, and the page gets
   the topics of all versions. `scripts/check_content.py` reports versions with differing topics.
 - A page without a version in a language is shown there in another version, with a banner: English
@@ -121,7 +126,8 @@ reviewed: 2026-10-21
 - New pages start as `draft`. The author may add themselves to `authors` right away.
 - When the page is finished, the author sets `status: complete` and `completed` (date).
 - Only a reviewer sets `status: reviewed`, after checking the content, and adds `reviewers` and
-  `reviewed` (date). The reviewer is a second person, never one of the authors.
+  `reviewed` (date). Nobody reviews their own change; an earlier author may review a later
+  change by someone else.
 - Anyone may review. Reviews, like all other changes, are submitted as a pull request.
 - If the content of a `reviewed` page changes, it goes back to `complete` (or `draft`, if it is
   unfinished again) until it has been reviewed again; `reviewers` and `reviewed` are removed.
@@ -196,7 +202,7 @@ or is unknown is left out):
 1. Availability: operating system/version, hardware if relevant
 2. Prerequisites: enabled by default or opt-in, can be disabled
 3. Retention: period, rotation, deletion behavior
-4. Format and structure: file type, central tables/fields (in `code` formatting)
+4. Format and structure: file type
 5. Timestamps: format, time zone, which timestamp means what
 6. Particularities and pitfalls
 7. Location (Ablageort), always the last item
@@ -266,22 +272,6 @@ Statements that change with updates (versions, defaults, rollouts) get a point i
 
 ## Links
 
-Internal links are relative paths to the `.md` file, e.g. `[Biome](biome/index.md)` or
-`[SQLite](../../../deep-dives/sqlite.md)`. MkDocs checks them during the build. The same paths also
-work in every language, because a missing version falls back to another one.
-
-What gets linked:
-
-| What | Where on the page |
-| --- | --- |
-| Another artifact the text already refers to (e.g. successor: "seit iOS 16 in die [Biome](…) verschoben") | At that point in the text |
-| Deep dive on the file format or timestamps (e.g. SQLite, LevelDB, timestamps) | Key facts, at the format or timestamp item |
-| Glossary terms | At the first mention in the text |
-
-Rules:
-
-- Each target is linked only once per page, at the first suitable place.
-- No links just because of similarity or as "see also" without a reference in the text. This also
-  applies to the same artifact on another platform: anyone looking for it finds both pages through
-  the search.
-- No link to a page whose relevant section only contains `*Noch kein Inhalt.*`.
+Pages contain no internal links (to artifacts, deep dives or glossary terms). They are hard to
+keep up to date when pages are added, moved or renamed. Related pages are found through the
+search. Links to external sources belong in the references and tools.

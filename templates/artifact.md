@@ -17,7 +17,7 @@ Fertiggestellt, setzt der Autor:
     completed: 2026-10-19
     authors: [github-handle (Vorname Nachname)]
 
-Reviewed, ergänzt der Reviewer (nie einer der Autoren); completed und authors bleiben:
+Reviewed, ergänzt der Reviewer (nie, wer die Änderung gemacht hat); completed und authors bleiben:
     status: reviewed
     completed: 2026-10-19
     authors: [github-handle (Vorname Nachname)]
@@ -37,8 +37,7 @@ Fließtext in zwei Teilen:
 1. Was ist das Artefakt? Welche Komponente schreibt es, wann und wozu?
 2. Was belegt ein Eintrag forensisch, und was belegt er NICHT (Grenzen, Fehlinterpretationen)?
 Keine Pfade, Versionslisten, Feldnamen oder Tools; die gehören in die Kurzinformation.
-Links auf andere Artefakte nur, wo der Text ohnehin darauf Bezug nimmt (z.B. Nachfolger),
-nicht als "siehe auch" und nicht auf dasselbe Artefakt auf einer anderen Plattform.
+Keine internen Links (auf Artefakte, Deep Dives oder Glossar).
 -->
 
 Was ist das Artefakt, welche Komponente schreibt es und wann? Wozu dient es dem System?
@@ -84,7 +83,7 @@ Bei mehreren Ablageorten einer pro Zeile, mit zwei Leerzeichen am Zeilenende:
 1. Verfügbarkeit: Betriebssystem/Version, ggf. Hardware
 2. Voraussetzungen: standardmäßig aktiv oder Opt-in, abschaltbar durch …
 3. Aufbewahrung: Zeitraum, Rotation, Löschverhalten
-4. Format und Struktur: Dateityp, zentrale Tabellen/Felder in `Code`-Schreibweise
+4. Format und Struktur: Dateityp
 5. Zeitstempel: Format, Zeitzone, Bedeutung der einzelnen Zeitstempel
 6. Besonderheiten und Fallstricke
 7. Ablageort:  

@@ -4,8 +4,8 @@ Every language of extra.alternate has its own docs/<lang>/ folder. The versions 
 path in several languages) are equal: each has its own title, status, authors and reviewers. A
 version may say it was translated from another one:
     translation: machine | human
-    translation_of: <lang>:<hash of that version's body, see scripts/check_content.py --hash>
-If that version's body no longer matches, the translation is marked outdated.
+    translation_of: <lang>
+If that version was completed later than this one, the translation is marked outdated.
 
 Every language build contains every page: a page without a version in the build language is
 added from another version, chosen by extra.fallback_order and then the order of
@@ -13,7 +13,6 @@ extra.alternate, and marked as fallback. Each page lists its versions in the oth
 their completion date, and points out versions completed later than itself.
 """
 
-import hashlib
 import re
 from pathlib import Path
 
@@ -23,19 +22,10 @@ from mkdocs.structure.nav import Navigation, Section
 from mkdocs.structure.pages import Page
 from mkdocs.utils.meta import get_data
 
-TRANSLATION_OF = re.compile(r"(?P<lang>[a-z]{2,3}(?:-[A-Za-z]+)?):(?P<hash>sha256:[0-9a-f]{12})")
+TRANSLATION_OF = re.compile(r"(?P<lang>[a-z]{2,3}(?:-[A-Za-z]+)?)")
 
 # Pages of the current build taken from another language: src_uri -> language of that version.
 _fallback: dict[str, str] = {}
-
-
-def source_hash(text: str) -> str:
-    """Hash of a page body without front matter, used for translation_of.
-
-    The "sha256:" prefix keeps YAML from reading an all-digit hash as a number.
-    """
-    body, _ = get_data(text.replace("\r\n", "\n"))
-    return "sha256:" + hashlib.sha256(body.strip().encode("utf-8")).hexdigest()[:12]
 
 
 def languages(config: MkDocsConfig) -> list[str]:
@@ -144,20 +134,26 @@ def on_page_markdown(markdown: str, page: Page, config: MkDocsConfig, files: Fil
         page.edit_url = f"{config.repo_url}/edit/main/docs/{lang}/{uri}"
     names = {alt["lang"]: alt["name"] for alt in config.extra["alternate"]}
     own_date = page.meta.get("completed")
+    others = {other: meta for other, meta in versions(config, uri).items() if other != lang}
+    # Malformed values are reported by scripts/check_content.py.
+    m = TRANSLATION_OF.fullmatch(str(page.meta.get("translation_of", "")))
+    source_lang = m["lang"] if m and m["lang"] in others else None
+    # A translation of this version is completed after it, which does not make it newer.
     page.meta["i18n_versions"] = [
         {
             "lang": other,
             "name": names[other],
             "completed": meta.get("completed"),
-            "newer": bool(own_date and meta.get("completed") and meta["completed"] > own_date),
+            "newer": bool(own_date and meta.get("completed") and meta["completed"] > own_date
+                          and str(meta.get("translation_of", "")) != lang),
         }
-        for other, meta in versions(config, uri).items()
-        if other != lang
+        for other, meta in others.items()
     ]
-    # Malformed values are reported by scripts/check_content.py.
-    m = TRANSLATION_OF.fullmatch(str(page.meta.get("translation_of", "")))
-    source = docs_root(config) / m["lang"] / uri if m else None
-    if source is not None and source.is_file():
-        page.meta["i18n_source"] = {"lang": m["lang"], "name": names.get(m["lang"], m["lang"])}
-        page.meta["i18n_outdated"] = m["hash"] != source_hash(source.read_text(encoding="utf-8"))
+    if source_lang:
+        page.meta["i18n_source"] = {"lang": source_lang, "name": names.get(source_lang, source_lang)}
+        # A newer source is shown as an outdated translation, not again as a newer version.
+        for version in page.meta["i18n_versions"]:
+            if version["lang"] == source_lang:
+                page.meta["i18n_outdated"] = version["newer"]
+                version["newer"] = False
     return markdown

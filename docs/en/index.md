@@ -1,7 +1,7 @@
 ---
 title: 4n6 Notes
 translation: machine
-translation_of: de:sha256:f05a1d13b482
+translation_of: de
 ---
 
 # 4n6 Notes

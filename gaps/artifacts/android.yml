@@ -47,9 +47,6 @@
 - name: Downloads
   topic: web-activity
 
-- name: Quick Share
-  topic: data-transfer
-
 - name: Gboard
   topic: commands-input
 - name: Zwischenablage
