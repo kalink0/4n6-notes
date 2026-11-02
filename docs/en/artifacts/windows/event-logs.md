@@ -1,10 +1,12 @@
 ---
 title: "EventLogs"
-status: complete
+status: reviewed
 completed: 2026-10-26
 authors: [kalink0 (Marco Neumann)]
 translation: machine
-translation_of: de
+translation_of: de#
+reviewers: [dugeonlady]
+reviewed: 2026-11-02
 topics: [accounts, network, external-devices, program-execution, persistence, device-state, commands-input, system-config]
 ---
 
