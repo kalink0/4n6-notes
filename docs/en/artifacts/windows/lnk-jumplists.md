@@ -12,22 +12,22 @@ topics: [file-access, program-execution]
 
 ## Meaning
 
-JumpLists have been used in the operating system since Windows 7. JumpLists show the user recently opened files and recently used programs, for example in the Start menu. The feature serves to increase usability and is carried out by the operating system itself based on the user's operation.
+JumpLists are being used by the operating system starting with Windows 7. JumpLists show the user recently opened files and recently used programs, for example in the Start menu. The feature serves to enhance usability. Entries are created automatically by the operating system based on the user's actions.
 
-A user can also "pin" entries themselves, e.g. to the Start menu - this feature also serves usability, and the entries are also stored in JumpLists. This feature can be described as setting "favourites". In addition, for the automatically generated entries, the timestamps of the last access and the number of accesses are stored.
+User can also "pin" entries themselves, e.g. to the Start menu. This feature also serves usability, and the entries are also stored in JumpLists. This feature can be described as setting "favourites". For user-generated as well as for automatically generated entries, the timestamps of the last access and the number of accesses are stored.
 
-From a digital forensics perspective, the existence of JumpLists means the following:
+From a digital forensics perspective, the existence of JumpLists shows the following:
 
 1. For the automatically generated entries:
-   1. The user account last opened/started the given target file (according to the file name) at the given time (last accessed).
-   2. The user account opened the file/program for the first time at the given time (creation date). The system therefore created the entry.
+   1. The user account last opened/started a specific file (according to the file name) at a certain time (last accessed).
+   2. The user account opened a file/program for the first time at a certain time (creation date). The system therefore created the entry.
 2. For the manually created entries:
-   1. The user account last opened/started the given target file (according to the file name) at the given time (last accessed).
-   2. The user account actively "pinned" the file/program at the given time (creation date). This can also be done as part of a program installation.
+   1. The user account last opened/started a specific file (according to the file name) at a certain time (last accessed).
+   2. The user account actively "pinned" a file/program at a certain time (creation date). This can also be done during installation of a program.
 
 ## Key facts
 
-1. JumpLists are assigned to apps, which can be identified by AppID (lists see below) - an AppID indicates in which context the JumpList exists and therefore gives information on how the user account performed the action.
+1. JumpLists are assigned to apps, which can be identified by AppID (lists see below). An AppID indicates in which context the JumpList exists and therefore gives information on how the user account performed the action.
 2. The number of accesses (interaction count) cannot be exactly explained/traced according to current knowledge, and the value should therefore be treated with caution.
 3. Location:  
    **`%AppData%\Microsoft\Windows\Recent\AutomaticDestinations`**  

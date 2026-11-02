@@ -4,7 +4,7 @@ status: reviewed
 completed: 2026-10-19
 authors: [kalink0 (Marco Neumann)]
 reviewers: [dugeonlady]
-reviewed: 2026-10-26
+reviewed: 2026-11-02
 topics: [file-access, program-execution]
 ---
 
@@ -28,7 +28,7 @@ Aus digitalforensischer Sicht bedeutet die Existenz von Jumplists folgendes:
 ## Spezifische Kurzinformation
 
 1. JumpLists werden Apps zugeordnet, welche per AppID identifiziert werden können (Listen siehe unten) - eine AppID gibt an, in welchem Kontext die JumpList vorliegt und gibt daher Auskunft darüber, wie der Nutzeraccount die Aktion durchgeführt hat.
-2. Die Anzahl der Aufrufe (Interaction Account) ist nach derzeitigem Stand nicht genau erklärbar/nachvollziehbar und daher ist der Wert mit Vorsicht zu behandeln.
+2. Die Anzahl der Aufrufe (Interaction Count) ist nach derzeitigem Stand nicht genau erklärbar/nachvollziehbar und daher ist der Wert mit Vorsicht zu behandeln.
 3. Ablageort:  
    **`%AppData%\Microsoft\Windows\Recent\AutomaticDestinations`**  
    **`%AppData%\Microsoft\Windows\Recent\CustomDestinations`**

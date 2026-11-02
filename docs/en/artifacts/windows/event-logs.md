@@ -12,15 +12,15 @@ topics: [accounts, network, external-devices, program-execution, persistence, de
 
 ## Meaning
 
-Through the Windows Event Log service, Windows logs events of the operating system, of services and of applications. Administrators use the logs for troubleshooting and monitoring; the Security log is used for security monitoring, for example of logons and privilege changes. Each event has an event ID, a timestamp and, depending on the type, further data fields.
+Windows logs events of the operating system, of services and of applications using the Windows Event Log service. Administrators utilise these logs for troubleshooting and monitoring; i.e. the Security log tracks security related events like logons and privilege changes. Each event has an event ID, a timestamp and, depending on the type, further data fields.
 
-What an event shows from a digital forensics perspective depends on the log and event ID. The absence of an event does not show that the action did not take place, as logging depends on the audit policy and the log size.
+Relevance of an event from a digital forensics perspective depends on the log file and event ID. The absence of an event does not show that the action did not take place, as logging depends on the audit policy and the log size.
 
-The table only contains a selection of frequently relevant events; Windows logs far more event IDs in numerous further logs.
+The following table only contains a selection of frequently relevant events. Windows logs far more event IDs in numerous further logs.
 
 | Entry type (log, event ID) | Shows | Relevant fields |
 | --- | --- | --- |
-| `Security` 4624 | Successful logon; the type follows from the logon type (2 local, 3 network, 10 RDP) | `TargetUserName`, `LogonType`, `IpAddress`, `TargetLogonId` |
+| `Security` 4624 | Successful logon; the type can be identified from the logon type (2 local, 3 network, 10 RDP) | `TargetUserName`, `LogonType`, `IpAddress`, `TargetLogonId` |
 | `Security` 4625 | Failed logon | `TargetUserName`, `LogonType`, `IpAddress`, `Status`, `SubStatus` |
 | `Security` 4634, 4647 | Logoff or user-initiated logoff | `TargetLogonId` |
 | `Security` 4648 | Logon with explicitly specified credentials, e.g. "Run as" | `SubjectUserName`, `TargetUserName`, `TargetServerName`, `ProcessName` |
@@ -35,7 +35,7 @@ The table only contains a selection of frequently relevant events; Windows logs 
 | `TerminalServices-RDPClient/Operational` 1024 | Outgoing RDP connection to the named target system | `Value` |
 | `Partition/Diagnostic` 1006 | Drive connected or removed, with manufacturer, model and serial number | `Manufacturer`, `Model`, `SerialNumber`, `Vbr0` |
 | `WLAN-AutoConfig/Operational` 8001, 8003 | Connection to a Wi-Fi network established or disconnected | `SSID` |
-| `PowerShell/Operational` 4104 | Executed PowerShell script block | `ScriptBlockText` |
+| `PowerShell/Operational` 4104 | Executed block of PowerShell script | `ScriptBlockText` |
 | `System` 12, 13 | System start or shutdown | `StartTime`, `StopTime` |
 | `System` 1074, 6008 | Shutdown or restart by a process or user; unexpected shutdown | – |
 | `Security` 4616 | System time changed | `PreviousTime`, `NewTime`, `ProcessName` |
@@ -43,9 +43,9 @@ The table only contains a selection of frequently relevant events; Windows logs 
 
 ## Key facts
 
-1. Since Windows Vista in the EVTX format, up to Windows XP / Server 2003 in the older EVT format
-2. One file per log; besides Application, Security and System, numerous further logs of services and applications (`%4` instead of `/` in the file name)
-3. Default size of the main logs approx. 20 MB; once it is reached, the oldest entries are overwritten, alternatively Windows archives the full log as `Archive-*.evtx`
+1. Stored in the EVTX format starting with Windows Vista, up to Windows XP / Server 2003 in the older EVT format
+2. One file per log - in addition to Application, Security and System, numerous further logs of services and applications (`%4` instead of `/` in the file name)
+3. Default size of the main logs approx. 20 MB. Once this limit is reached, the oldest entries are overwritten. Alternatively Windows archives the full log as `Archive-*.evtx`
 4. Many Security events are only created if the audit policy is set accordingly, e.g. process start (4688, additionally the command line) and scheduled tasks (4698)
 5. A log can only be cleared completely, and the clearing is itself logged (1102 or 104)
 6. Timestamps in UTC
@@ -57,6 +57,8 @@ The table only contains a selection of frequently relevant events; Windows logs 
    Up to Windows XP: **`C:\Windows\System32\config\*.evt`**
 
 ## References
+
+2026-10 (accessed): <https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/>
 
 2026-09: <https://nxlog.co/news-and-blog/posts/windows-task-scheduler-event-ids/>
 

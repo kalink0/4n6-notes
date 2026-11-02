@@ -12,9 +12,9 @@ topics: [program-execution]
 
 ## Meaning
 
-The DAM is a Windows service that monitors and controls started programs. The aim is to optimise performance and energy consumption. The data is deleted by the system after 7 days. For the user, the associated SID is stored. The path of the executable and the time of the last execution are stored. The DAM only collects data on mobile devices (e.g. tablets).
+The DAM is a Windows service that monitors and controls running programs. It is being used to optimise performance and energy consumption. The DAM is stored per user identified by the corresponding SID. The executable's path and the last execution time are being recorded. Data is stored for 7 days and then automatically deleted by the system. The DAM only collects data on mobile devices (e.g. tablets/laptops).
 
-From a digital forensics perspective, DAM entries mean that an application was executed in the context of the user account at the given time.
+From a digital forensics perspective, DAM entries show that an application was executed in the context of a certain user account at a given point in time.
 
 ## Key facts
 
