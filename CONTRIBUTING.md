@@ -35,7 +35,9 @@ is the original.
 - Whoever changes the content of a finished version updates its `completed` date; corrections
   that do not change the content (typos, formatting) leave it as it is.
 - A machine translation is checked in the review, not by its author. Until then it shows a notice
-  that no person has checked it; once `reviewed`, the notice says so. `translation: machine` stays.
+  that no person has checked it. The review sets `translation: human`, also if nothing had to be
+  changed. A new machine translation of the page sets `translation: machine` and `status: complete`
+  again.
 - Topics belong to the page, not to a language; they may be set in any version, and the page gets
   the topics of all versions. `scripts/check_content.py` reports versions with differing topics.
 - A page without a version in a language is shown there in another version, with a banner: English
