@@ -8,7 +8,8 @@ Checks:
 - authors (`authors: [...]`) and reviewers (`reviewers: [...]`) of each language version are
   GitHub handles, optionally with the full name: `some-handle (Full Name)`
 - every folder under docs/ is a language of extra.alternate; a version that says it is a
-  translation (translation, translation_of: <lang>) names an existing version
+  translation (translation, translation_of: <lang>) names an existing version; a reviewed
+  translation is not marked `translation: machine`
 - topics (`topics: [key, ...]`) only on artifact pages and only with keys from
   extra.topics in mkdocs.base.yml; every topic has a label for every language
 - gap lists (gaps/<section>.yml) belong to an existing section and have a name for every entry;
@@ -166,6 +167,8 @@ def main() -> int:
                 continue
             if translation not in TRANSLATIONS:
                 errors.append(f"{rel}: translation must be one of {sorted(TRANSLATIONS)}")
+            if translation == "machine" and meta.get("status") == "reviewed":
+                errors.append(f"{rel}: a reviewed translation has translation: human, not machine")
             m = TRANSLATION_OF.fullmatch(str(source or ""))
             if not m:
                 errors.append(f"{rel}: translation_of must be a language, e.g. 'de', got {source!r}")
