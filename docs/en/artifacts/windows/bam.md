@@ -6,7 +6,7 @@ authors: [kalink0 (Marco Neumann)]
 translation: human
 translation_of: de
 reviewers: [dugeonlady]
-reviewed: 2026-11-02
+reviewed: 2026-11-05
 topics: [program-execution]
 ---
 
@@ -24,7 +24,7 @@ From a digital forensics perspective, BAM entries show that an application was e
 2. Retention: the data is available for approx. 7 days.
 3. Special features and pitfalls: applications started in the terminal are NOT logged. Applications started from external media (e.g. USB sticks, network drives) are NOT logged.
 4. Location (registry):  
-   from Windows 10 1809: **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Services\bam\State\UserSettings\{USER_SID}`**  
+   Starting with Windows 10 1809: **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Services\bam\State\UserSettings\{USER_SID}`**  
    Windows 10 1709/1803: **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Services\bam\UserSettings\{USER_SID}`**
 
 ## References
