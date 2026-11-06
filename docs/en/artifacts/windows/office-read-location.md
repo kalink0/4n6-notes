@@ -1,10 +1,12 @@
 ---
 title: "Office Read Location"
-status: complete
+status: reviewed
 completed: 2026-10-26
 authors: [kalink0 (Marco Neumann)]
-translation: machine
+translation: human
 translation_of: de
+reviewers: [dugeonlady]
+reviewed: 2026-11-05
 topics: [file-access]
 ---
 
@@ -12,9 +14,9 @@ topics: [file-access]
 
 ## Meaning
 
-Microsoft Word stores the last position at which a user account last read or viewed a document ("Reading Locations" feature, also known as "Pick up where you left off"). This allows the user account to be navigated to this position when the document is opened again – also across devices, if signed in with a Microsoft account.
+Microsoft Word stores the position at which a user account last read or viewed a document ("Reading Locations" feature, also known as "Pick up where you left off"). This allows the user account to be navigated to this position when the document is opened again – also across devices, if signed in with a Microsoft account.
 
-From a digital forensics perspective, the data allows the statement that the given document was opened by the user account and was closed at the given time. The last displayed position in the document (character position of the top visible line from the start of the document) can also be determined from the data.
+From a digital forensics perspective, the data allows the statement that a certain document was opened by the user account and was closed at a specific time. The last displayed position in the document (character position of the top visible line from the start of the document) can also be determined from the data.
 
 ## Key facts
 

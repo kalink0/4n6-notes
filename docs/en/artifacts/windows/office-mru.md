@@ -1,10 +1,12 @@
 ---
 title: "Office MRU"
-status: complete
+status: reviewed
 completed: 2026-10-26
 authors: [kalink0 (Marco Neumann)]
-translation: machine
+translation: human
 translation_of: de
+reviewers: [dugeonlady]
+reviewed: 2026-11-05
 topics: [file-access]
 ---
 
@@ -12,9 +14,9 @@ topics: [file-access]
 
 ## Meaning
 
-Microsoft Office stores the recently opened files and the recently used folders in which the files were located, to make operation more convenient for the user.
+To enhance usability, Microsoft Office stores the recently opened files and the recently used folders in which the files were located.
 
-From a digital forensics perspective, entries in the Office MRU mean that the given files (according to the file name) were opened under the given file path by the user account in Microsoft Office. The given timestamp corresponds to the time the document was last opened.
+From a digital forensics perspective, entries in the Office MRU show that certain files (according to the file name) were opened under a specific file path by the user account in Microsoft Office. The stored timestamp corresponds to the time the document was last opened.
 
 ## Key facts
 

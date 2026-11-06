@@ -1,10 +1,12 @@
 ---
 title: "MUI - Multilingual User Interface - Cache"
-status: complete
+status: reviewed
 completed: 2026-10-26
 authors: [kalink0 (Marco Neumann)]
-translation: machine
+translation: human
 translation_of: de
+reviewers: [dugeonlady]
+reviewed: 2026-11-05
 topics: [program-execution]
 ---
 
@@ -12,9 +14,9 @@ topics: [program-execution]
 
 ## Meaning
 
-In Windows operating systems, the MUI (Multilingual User Interface) cache serves to ensure multilingual support. The aim is to be able to offer the user as complete a translation as possible of all programs executed on the Windows system. For this, data such as file path and name is *stored/used/...*
+In Windows operating systems, the MUI (Multilingual User Interface) cache serves to provide better multilingual support. The goal is to offer the user as complete a translation as possible of all programs executed on the Windows system. For this, data such as file path and name is stored.
 
-From a digital forensics perspective, entries in the MUI cache mean that the program was executed on the system under the given path and name in the session of the user account and displayed a user interface there. The account under which the process ran can differ (e.g. with "Run as").
+From a digital forensics perspective, entries in the MUI cache show that the program was executed on the system under the given path and name in the session of the user account and displayed a user interface there. The account under which the process ran can differ (e.g. with "Run as").
 
 ## Key facts
 
@@ -23,7 +25,7 @@ From a digital forensics perspective, entries in the MUI cache mean that the pro
 3. Special features and pitfalls: only programs with a GUI component are logged. Per user account
 4. Location:  
    Up to Windows XP: **`NTUSER.dat - HKCU\Software\Microsoft\Windows\ShellNoRoam\MUICache`**  
-   From Windows Vista: **`USRCLASS.dat - Local Settings\Software\Microsoft\Windows\Shell\MuiCache`**  
+   Starting with Windows Vista: **`USRCLASS.dat - Local Settings\Software\Microsoft\Windows\Shell\MuiCache`**  
    From Windows Vista (live system): **`HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\MuiCache`**
 
 ## References

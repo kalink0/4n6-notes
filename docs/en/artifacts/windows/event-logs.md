@@ -6,7 +6,7 @@ authors: [kalink0 (Marco Neumann)]
 translation: human
 translation_of: de
 reviewers: [dugeonlady]
-reviewed: 2026-11-02
+reviewed: 2026-11-05
 topics: [accounts, network, external-devices, program-execution, persistence, device-state, commands-input, system-config]
 ---
 
@@ -55,7 +55,7 @@ The following table only contains a selection of frequently relevant events. Win
    **`HKLM\SYSTEM\CurrentControlSet\Services\EventLog\{LOG}`**
 
 8. Location (default):  
-   From Windows Vista: **`C:\Windows\System32\winevt\Logs\*.evtx`**  
+   Starting with Windows Vista: **`C:\Windows\System32\winevt\Logs\*.evtx`**  
    Up to Windows XP: **`C:\Windows\System32\config\*.evt`**
 
 ## References
