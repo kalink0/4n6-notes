@@ -43,13 +43,6 @@
 - name: RecentFileCache.bcf
   topic: program-execution
 
-- name: WordWheelQuery
-  topic: commands-input
-- name: TypedPaths
-  topic: commands-input
-- name: Notepad TabState
-  topic: commands-input
-
 - name: 7-Zip-Historie
   topic: file-access
 - name: OAlerts
