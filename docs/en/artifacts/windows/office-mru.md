@@ -6,7 +6,7 @@ authors: [kalink0 (Marco Neumann)]
 translation: human
 translation_of: de
 reviewers: [dugeonlady]
-reviewed: 2026-11-05
+reviewed: 2026-11-06
 topics: [file-access]
 ---
 
@@ -21,7 +21,7 @@ From a digital forensics perspective, entries in the Office MRU show that certai
 ## Key facts
 
 1. Format and structure: File MRU = recently opened files. Place MRU = recently opened/used folders for opening/saving files
-2. Special features and pitfalls: if ACCOUNT = LiveID_xxxx -> Microsoft account, if ACCOUNT = ADAL -> Azure Active Directory (today Microsoft Entra ID); ACCOUNT = AD_xxxx also occurs
+2. Particularities and pitfalls: if ACCOUNT = LiveID_xxxx -> Microsoft account, if ACCOUNT = ADAL -> Azure Active Directory (today Microsoft Entra ID); ACCOUNT = AD_xxxx also occurs
 3. Location:  
    **`HKCU\SOFTWARE\Microsoft\Office\{VERSION}\{APPNAME}\User MRU\{ACCOUNT}\File MRU`**  
    **`HKCU\SOFTWARE\Microsoft\Office\{VERSION}\{APPNAME}\User MRU\{ACCOUNT}\Place MRU`**  

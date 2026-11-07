@@ -6,7 +6,7 @@ authors: [kalink0 (Marco Neumann)]
 translation: human
 translation_of: de
 reviewers: [dugeonlady]
-reviewed: 2026-10-30
+reviewed: 2026-11-06
 topics: [program-execution, installed-software]
 ---
 
@@ -23,7 +23,7 @@ From a digital forensics perspective, an entry with a launch count greater than 
 1. Prerequisites: can be disabled via "Improve Start and search results" - RegKey: HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced - Start_TrackProgs = 0
 2. Retention: limited history - the record is removed soon after unpinning/uninstalling - time of deletion not deterministic
 3. Format and structure: relevant tables: tiles and tiles_content – contain application path, display name and launch count (launchCount)
-4. Special features and pitfalls: only apps linked in the Start menu are tracked per user
+4. Particularities and pitfalls: only apps linked in the Start menu are tracked per user
 5. Location:  
    **`%LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\LocalState\Search\AppsIndex.db`**
 

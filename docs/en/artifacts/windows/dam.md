@@ -6,7 +6,7 @@ authors: [kalink0 (Marco Neumann)]
 translation: human
 translation_of: de
 reviewers: [dugeonlady]
-reviewed: 2026-11-05
+reviewed: 2026-11-06
 topics: [program-execution]
 ---
 
@@ -23,7 +23,7 @@ From a digital forensics perspective, DAM entries show that an application was e
 1. Availability: introduced with Windows 10 - update 1709
 2. Prerequisites: only used on mobile devices/tablets
 3. Retention: the data is available for approx. 7 days.
-4. Special features and pitfalls: applications started in the terminal are NOT logged. Applications started from external media (e.g. USB sticks, network drives) are NOT logged.
+4. Particularities and pitfalls: applications started in the terminal are NOT logged. Applications started from external media (e.g. USB sticks, network drives) are NOT logged.
 5. Location (registry):  
    Starting with Windows 10 1809: **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Services\dam\state\UserSettings\{USER_SID}`**  
    Windows 10 1709/1803: **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Services\dam\UserSettings\{USER_SID}`**

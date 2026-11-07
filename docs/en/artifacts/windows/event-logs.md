@@ -45,16 +45,15 @@ The following table only contains a selection of frequently relevant events. Win
 
 ## Key facts
 
-1. Stored in the EVTX format starting with Windows Vista, up to Windows XP / Server 2003 in the older EVT format
-2. One file per log - in addition to Application, Security and System, numerous further logs of services and applications (`%4` instead of `/` in the file name)
-3. Default size of the main logs approx. 20 MB. Once this limit is reached, the oldest entries are overwritten. Alternatively Windows archives the full log as `Archive-*.evtx`
-4. Many Security events are only created if the audit policy is set accordingly, e.g. process start (4688, additionally the command line) and scheduled tasks (4698)
-5. A log can only be cleared completely, and the clearing is itself logged (1102 or 104)
-6. Timestamps in UTC
-7. The location of the main logs may have been changed via the registry, value `File` under:  
+1. Retention: Default size of the main logs approx. 20 MB. Once this limit is reached, the oldest entries are overwritten. Alternatively Windows archives the full log as `Archive-*.evtx`
+2. Format and structure: One file per log - in addition to Application, Security and System, numerous further logs of services and applications (`%4` instead of `/` in the file name)
+   Starting with Windows Vista: EVTX format
+   Up to Windows XP / Server 2003: EVT format
+3. Timestamps: in UTC
+4. Particularities and pitfalls: Many Security events are only created if the audit policy is set accordingly, e.g. process start (4688, additionally the command line) and scheduled tasks (4698). A log can only be cleared completely, and the clearing is itself logged (1102 or 104)
+5. The location of the main logs may have been changed via the registry, value `File` under:  
    **`HKLM\SYSTEM\CurrentControlSet\Services\EventLog\{LOG}`**
-
-8. Location (default):  
+6. Location (default):  
    Starting with Windows Vista: **`C:\Windows\System32\winevt\Logs\*.evtx`**  
    Up to Windows XP: **`C:\Windows\System32\config\*.evt`**
 

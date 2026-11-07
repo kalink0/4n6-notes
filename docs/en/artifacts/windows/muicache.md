@@ -6,7 +6,7 @@ authors: [kalink0 (Marco Neumann)]
 translation: human
 translation_of: de
 reviewers: [dugeonlady]
-reviewed: 2026-11-05
+reviewed: 2026-11-06
 topics: [program-execution]
 ---
 
@@ -22,7 +22,7 @@ From a digital forensics perspective, entries in the MUI cache show that the pro
 
 1. Format and structure: contains the path, the name and possibly version information from the PE file
 2. Timestamps: there are no timestamps
-3. Special features and pitfalls: only programs with a GUI component are logged. Per user account
+3. Particularities and pitfalls: only programs with a GUI component are logged. Per user account
 4. Location:  
    Up to Windows XP: **`NTUSER.dat - HKCU\Software\Microsoft\Windows\ShellNoRoam\MUICache`**  
    Starting with Windows Vista: **`USRCLASS.dat - Local Settings\Software\Microsoft\Windows\Shell\MuiCache`**  

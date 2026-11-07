@@ -4,7 +4,7 @@ status: reviewed
 completed: 2026-10-21
 authors: [kalink0 (Marco Neumann)]
 reviewers: [dugeonlady]
-reviewed: 2026-10-26
+reviewed: 2026-11-06
 topics: [accounts, network, external-devices, program-execution, persistence, device-state, commands-input, system-config]
 ---
 
@@ -43,15 +43,14 @@ Die Tabelle enthält nur eine Auswahl häufig relevanter Ereignisse; Windows pro
 
 ## Spezifische Kurzinformation
 
-1. Seit Windows Vista im Format EVTX, bis Windows XP / Server 2003 im älteren Format EVT
-2. Eine Datei pro Protokoll; neben Application, Security und System zahlreiche weitere Protokolle von Diensten und Anwendungen (im Dateinamen `%4` statt `/`)
-3. Standardgröße der Hauptprotokolle ca. 20 MB; ist sie erreicht, werden die ältesten Einträge überschrieben, alternativ archiviert Windows das volle Protokoll als `Archive-*.evtx`
-4. Viele Security-Ereignisse entstehen nur bei entsprechend gesetzter Überwachungsrichtlinie, z. B. Prozessstart (4688, die Befehlszeile zusätzlich) und geplante Tasks (4698)
-5. Ein Protokoll lässt sich nur vollständig löschen, und das Löschen wird selbst protokolliert (1102 bzw. 104)
-6. Zeitstempel in UTC
+1. Aufbewahrung: Standardgröße der Hauptprotokolle ca. 20 MB; ist sie erreicht, werden die ältesten Einträge überschrieben, alternativ archiviert Windows das volle Protokoll als `Archive-*.evtx`
+2. Format und Struktur: Eine Datei pro Protokoll; neben Application, Security und System zahlreiche weitere Protokolle von Diensten und Anwendungen (im Dateinamen `%4` statt `/`)
+   Ab Windows Vista: EVTX Format
+   Bis Windows XP / Server 2003: EVT Format
+3. Zeitstempel: in UTC
+4. Besonderheiten und Fallstricke: Viele Security-Ereignisse entstehen nur bei entsprechend gesetzter Überwachungsrichtlinie, z. B. Prozessstart (4688, die Befehlszeile zusätzlich) und geplante Tasks (4698). Ein Protokoll lässt sich nur vollständig löschen, und das Löschen wird selbst protokolliert (1102 bzw. 104)
 7. Der Ablageort der Hauptprotokolle kann über die Registry geändert sein, Wert `File` unter:  
    **`HKLM\SYSTEM\CurrentControlSet\Services\EventLog\{LOG}`**
-
 8. Ablageort (Default):  
    Ab Windows Vista: **`C:\Windows\System32\winevt\Logs\*.evtx`**  
    Bis Windows XP: **`C:\Windows\System32\config\*.evt`**

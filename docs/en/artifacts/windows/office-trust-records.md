@@ -1,10 +1,12 @@
 ---
 title: "Office Trust Records"
-status: complete
+status: reviewed
 completed: 2026-10-26
 authors: [kalink0 (Marco Neumann)]
-translation: machine
+translation: human
 translation_of: de
+reviewers: [dugeonlady]
+reviewed: 2026-11-07
 topics: [file-access]
 ---
 
@@ -12,15 +14,15 @@ topics: [file-access]
 
 ## Meaning
 
-Microsoft Office opens documents that come from the internet or from another untrusted source in the so-called *Protected View*. This view ensures that no malicious functions in the document can be executed.
+Microsoft Office opens documents that come from the internet or from another untrusted source in the so-called *Protected View*. This view ensures that malicious functions in the document cannot be executed automatically.
 
-The user is actively asked whether the *Protected View* should be left in order to be able to edit the document and, in a second step, whether any macros present should be enabled. If the user confirms this, a so-called *Trust Record* is created.
+In order to edit the document, the user is actively asked whether the *Protected View* should be left. In a second step, they're asked whether any present macros should be enabled. If the user confirms this, a so-called *Trust Record* is created.
 
-From a digital forensics perspective, the existence of a *Trust Record* means that the user actively enabled the editing view of the document with the given file path and file name and possibly enabled macros - this can be read from the data value.
+From a digital forensics perspective, the existence of a *Trust Record* shows that the user actively enabled the editing view of a document and possibly enabled macros. It is stored using the documents file path and file name as key. The data value contains information about the chosen trusted action.
 
 ## Key facts
 
-1. Availability: the security feature has existed since MS Office 2010
+1. Availability: the security feature has existed starting with MS Office 2010
 2. Prerequisites: Trust Records are only set if the default settings require active consent from the user.
 3. Format and structure: meaning of the last 4 bytes in the data value:  
    01 00 00 00 = "Enable Editing" was clicked by the user account  
