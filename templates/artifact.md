@@ -36,7 +36,8 @@ reviewers und reviewed werden entfernt.
 Fließtext in zwei Teilen:
 1. Was ist das Artefakt? Welche Komponente schreibt es, wann und wozu?
 2. Was belegt ein Eintrag forensisch, und was belegt er NICHT (Grenzen, Fehlinterpretationen)?
-Keine Pfade, Versionslisten, Feldnamen oder Tools; die gehören in die Kurzinformation.
+Keine Pfade, Versionslisten oder Tools; die gehören in die Kurzinformation.
+Tabellen- und Feldnamen nur in der Spalte "Relevante Felder" der Typ-Tabelle.
 Keine internen Links (auf Artefakte, Deep Dives oder Glossar).
 -->
 
@@ -63,8 +64,11 @@ Ausführliche Bedeutung dieses Eintragstyps.
 ## Spezifische Kurzinformation
 
 <!--
-Ein Fakt pro Punkt, kurz, in dieser Reihenfolge. Was nicht zutrifft oder unbekannt ist, entfällt.
-Aussagen, die sich mit Updates ändern, bekommen einen Stand: "seit iOS 16", "Stand 2026-07".
+Ein Punkt pro Kategorie, kurz, in dieser Reihenfolge; ein Punkt kann mehrere Aussagen enthalten.
+Was nicht zutrifft oder unbekannt ist, entfällt.
+Jeder Punkt beginnt mit der Bezeichnung seiner Kategorie, genau wie unten (z.B. "3. Aufbewahrung: …").
+Aussagen, die sich mit Updates ändern, sagen, seit wann sie gelten: "seit iOS 16", "seit 2026-07".
+Das ist die Version bzw. der Zeitpunkt, ab dem es gilt, nicht das Datum der letzten Prüfung.
 Pfade (Dateien, Ordner, Registry-Schlüssel) stehen immer fett und in Backticks, im Ablageort
 wie im Fließtext:
     **`C:\Windows\Prefetch\*.pf`**

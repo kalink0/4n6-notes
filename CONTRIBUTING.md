@@ -1,8 +1,9 @@
 # Contributing
 
 Corrections, new pages, translations and reviews are welcome. This file describes how to submit them
-and the rules for the pages. Template for new artifact pages:
-[`templates/artifact.md`](templates/artifact.md).
+and the rules for the pages. Templates for new artifact pages:
+[`templates/artifact.md`](templates/artifact.md) (German),
+[`templates/artifact.en.md`](templates/artifact.en.md) (English).
 
 ## How to contribute
 
@@ -65,6 +66,12 @@ Fixed headings and phrases (each version uses the column of its language):
 | `## Tools` | `## Tools` |
 | `## Quellen` (glossary) | `## Sources` |
 | `*Noch kein Inhalt.*` | `*No content yet.*` |
+| `Verfügbarkeit` | `Availability` |
+| `Voraussetzungen` | `Prerequisites` |
+| `Aufbewahrung` | `Retention` |
+| `Format und Struktur` | `Format and structure` |
+| `Zeitstempel` | `Timestamps` |
+| `Besonderheiten und Fallstricke` | `Particularities and pitfalls` |
 | `Ablageort` | `Location` |
 
 ## Structure
@@ -78,6 +85,10 @@ Every artifact page has exactly these four sections, in this order:
 
 A section without content stays in place and contains `*Noch kein Inhalt.*` (no content yet).
 Subsections use `###`, not bold text (e.g. for individual entry types).
+
+Pages are written for readers who do not know the tests or test data behind them. Each statement
+makes clear which object is meant, where it comes from (which mechanism writes it) and what follows
+from it.
 
 If a similar artifact exists on several platforms (e.g. FSEvents on macOS and iOS), these are
 separate artifacts, each with its own complete page. Texts are not merged or replaced by links, even
@@ -193,23 +204,25 @@ sub-artifacts.
 - If a type needs more than two sentences (limitations, pitfalls), it also gets a `###` subsection
   below the table.
 
-Not in this section: paths, version lists, general table and field names (except in the type
-table), tools. These go into the key facts.
+Not in this section: paths, version lists and tools; these go into the key facts. Table and field
+names are not given on the page, except in the "Relevante Felder" column of the type table.
 
 ## Spezifische Kurzinformation (key facts)
 
-Numbered list, one fact per item, short. Items appear in this order (anything that does not apply
-or is unknown is left out):
+Numbered list, one entry per category below, short. An entry may contain several statements.
+Entries appear in this order (anything that does not apply or is unknown is left out) and start
+with the category's label, exactly as written here (English wording under
+[Languages](#languages)), e.g. `3. Aufbewahrung: …`:
 
-1. Availability: operating system/version, hardware if relevant
-2. Prerequisites: enabled by default or opt-in, can be disabled
-3. Retention: period, rotation, deletion behavior
-4. Format and structure: file type
-5. Timestamps: format, time zone, which timestamp means what
-6. Particularities and pitfalls
-7. Location (Ablageort), always the last item
+1. `Verfügbarkeit` (availability): operating system/version, hardware if relevant
+2. `Voraussetzungen` (prerequisites): enabled by default or opt-in, can be disabled
+3. `Aufbewahrung` (retention): period, rotation, deletion behavior
+4. `Format und Struktur` (format and structure): file type
+5. `Zeitstempel` (timestamps): format, time zone, which timestamp means what
+6. `Besonderheiten und Fallstricke` (particularities and pitfalls)
+7. `Ablageort` (location), always the last entry
 
-Location: the path on its own line, indented by three spaces under the list item.
+Location: the path on its own line, indented by three spaces under the list entry.
 With several paths, one per line, with two spaces at the end of the line and the platform in front
 (not bold):
 
@@ -238,8 +251,10 @@ All paths on the pages (files, folders, registry keys) are written in bold and i
 - Applies to locations and to paths in running text.
 - Exception: paths in table cells are only in backticks, not bold.
 
-Statements that change with updates (versions, defaults, rollouts) get a point in time:
-"seit iOS 16" (since iOS 16), "Stand 2026-07" (as of 2026-07).
+Statements that change with updates (versions, defaults, rollouts) say since when they apply:
+"seit iOS 16" (since iOS 16), "seit 2026-07" (since 2026-07). This is the version or point in time
+from which it applies, not the date the fact was last checked; the page's `completed` date covers
+that.
 
 ## Referenzen (references)
 
