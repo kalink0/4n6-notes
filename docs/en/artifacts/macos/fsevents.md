@@ -34,7 +34,19 @@ From a digital forensics perspective, FSEvents entries allow statements about ac
 
 ## Tools
 
+### Core tools
+
 DLEAPP (parser: FSEvents) - <https://github.com/abrignoni/DLEAPP>
+
+mac_apt (plugin: FSEVENTS) - <https://github.com/ydkhatri/mac_apt>
+
+Velociraptor (artifact: MacOS.Forensics.FSEvents) - <https://docs.velociraptor.app/artifact_references/pages/macos.forensics.fsevents/>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
+artemis - <https://github.com/puffycid/artemis>
 
 FSEParser - <https://github.com/dlcowen/FSEventsParser>
 
@@ -42,8 +54,4 @@ FSEventsParser - <https://github.com/mac4n6/FSEventsParser>
 
 FSEventsParser-rs - <https://github.com/Houwenda/FSEventsParser-rs>
 
-mac_apt (plugin: FSEVENTS) - <https://github.com/ydkhatri/mac_apt>
-
 Plaso (parser: fseventsd) - <https://github.com/log2timeline/plaso>
-
-Velociraptor (artifact: MacOS.Forensics.FSEvents) - <https://docs.velociraptor.app/artifact_references/pages/macos.forensics.fsevents/>

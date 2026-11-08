@@ -40,8 +40,14 @@ From a digital forensics perspective, an entry shows that the document was opene
 
 ## Tools
 
+### Core tools
+
 DLEAPP (parser: Shared File Lists (sfl2, sfl3, sfl4)) - <https://github.com/abrignoni/DLEAPP>
 
 mac_apt (plugin: RECENTITEMS) - <https://github.com/ydkhatri/mac_apt>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
 
 macMRU-Parser - <https://github.com/mac4n6/macMRU-Parser>

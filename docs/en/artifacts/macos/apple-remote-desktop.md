@@ -48,6 +48,10 @@ From a digital forensics perspective, the program usage entries show that a prog
 
 ## Tools
 
-ARDvark - <https://github.com/mandiant/ARDvark>
+### Core tools
 
 mac_apt (Plugin: ARD) - <https://github.com/ydkhatri/mac_apt>
+
+### Other tools
+
+ARDvark - <https://github.com/mandiant/ARDvark>

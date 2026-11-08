@@ -40,8 +40,14 @@ From a digital forensics perspective, an item in the Trash shows that it was mov
 
 ## Tools
 
+### Core tools
+
 DLEAPP (parser: Trash Put Back) - <https://github.com/abrignoni/DLEAPP>
 
-DSStoreParser - <https://github.com/nicoleibrahim/DSStoreParser>
-
 mac_apt (plugin: TRASH) - <https://github.com/ydkhatri/mac_apt>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
+DSStoreParser - <https://github.com/nicoleibrahim/DSStoreParser>

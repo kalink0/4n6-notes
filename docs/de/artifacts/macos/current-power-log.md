@@ -35,6 +35,12 @@ Aus digitalforensischer Sicht können die gespeicherten Ereignisse Hinweise auf 
 
 ## Tools
 
+### Kern-Tools
+
+DLEAPP (Parser: PowerLog) - <https://github.com/abrignoni/DLEAPP>
+
 APOLLO - <https://github.com/mac4n6/APOLLO>
+
+### Weitere Tools
 
 EffectivePower - <https://github.com/saagarjha/EffectivePower>

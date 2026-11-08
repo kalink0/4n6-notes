@@ -39,14 +39,18 @@ From a digital forensics perspective, entries mean that the user account accesse
 
 ## Tools
 
-SumECmd - <https://ericzimmerman.github.io/>
-
-KStrike - <https://github.com/brimorlabs/KStrike>
+### Core tools
 
 DLEAPP (parser: User Access Logging) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (plugin: ual) - <https://docs.dissect.tools/en/stable/plugins/ual.html>
 
 Velociraptor (artifact: Windows.Forensics.UserAccessLogs) - <https://docs.velociraptor.app/>
+
+SumECmd - <https://ericzimmerman.github.io/>
+
+### Other tools
+
+KStrike - <https://github.com/brimorlabs/KStrike>
 
 Plaso (parser: user_access_logging) - <https://github.com/log2timeline/plaso>

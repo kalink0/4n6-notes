@@ -54,6 +54,12 @@ Aus digitalforensischer Sicht belegt eine gespeicherte Verbindung, dass aus dies
 
 ## Tools
 
+### Kern-Tools
+
 mac_apt (Plugin: SCREENSHARING) - <https://github.com/ydkhatri/mac_apt>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
 
 macOS Screen Sharing FileTransferHistory Parser - <https://github.com/Forensic-IT/macos-screensharing-filetransferhistory>

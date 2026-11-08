@@ -67,4 +67,4 @@ Auf demselben Gerät können Spuren von beiden Seiten liegen:
 
 ## Tools
 
-ALEAPP (Android Airtag Alerts / Scans / Last Scan / Passive Scan, Android Notification History, Nearby - Fast Pair Devices) - <https://github.com/abrignoni/ALEAPP>
+ALEAPP (Parser: Android Airtag, Android Notification History, Nearby - Fast Pair Devices) - <https://github.com/abrignoni/ALEAPP>

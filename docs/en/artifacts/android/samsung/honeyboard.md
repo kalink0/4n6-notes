@@ -34,6 +34,10 @@ From a digital forensics perspective, an entry in the clipboard history shows th
 
 ## Tools
 
-ALEAPP (parser: Samsung Honeyboard - Clipboard, Samsung Honeyboard - Clipboard Image Clips) - <https://github.com/abrignoni/ALEAPP>
+### Core tools
+
+ALEAPP (parser: Samsung Honeyboard - Clipboard (Live entries), Samsung Honeyboard - Clipboard (Earlier WAL States), Samsung Honeyboard - Clipboard Image Clips) - <https://github.com/abrignoni/ALEAPP>
+
+### Other tools
 
 SELECT queries - <https://github.com/kalink0/useful_scripts/blob/master/sql/Android/Samsung%20Apps/sHoneyboard.sql>

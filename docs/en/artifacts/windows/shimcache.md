@@ -42,26 +42,32 @@ This artifact does not allow a statement about the exact time - but it does allo
 
 ## Tools
 
-AppCompatCacheParser - <https://ericzimmerman.github.io/>
-
-RegRipper (plugin: appcompatcache) - <https://github.com/keydet89/RegRipper4.0>
+### Core tools
 
 DLEAPP (parser: AppCompatCache (Shimcache)) - <https://github.com/abrignoni/DLEAPP>
 
-Velociraptor (artifact: Windows.Registry.AppCompatCache) - <https://docs.velociraptor.app/artifact_references/pages/windows.registry.appcompatcache/>
-
 Dissect (plugin: shimcache) - <https://docs.dissect.tools/en/stable/plugins/shimcache.html>
 
-Volatility 3 (plugin: windows.shimcachemem, from memory) - <https://github.com/volatilityfoundation/volatility3>
+Velociraptor (artifact: Windows.Registry.AppCompatCache) - <https://docs.velociraptor.app/artifact_references/pages/windows.registry.appcompatcache/>
+
+AppCompatCacheParser - <https://ericzimmerman.github.io/>
+
+Registry Explorer (plugin: AppCompatCache) - <https://ericzimmerman.github.io/>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
+artemis - <https://github.com/puffycid/artemis>
+
+juntei (parse-registry shimcache) - <https://github.com/Yamato-Security/juntei>
 
 Plaso (parser: appcompatcache) - <https://github.com/log2timeline/plaso>
 
 regipy (plugin: shimcache) - <https://github.com/mkorman90/regipy>
 
-juntei (parse-registry shimcache) - <https://github.com/Yamato-Security/juntei>
-
-Registry Explorer (plugin: AppCompatCache) - <https://ericzimmerman.github.io/>
-
-artemis - <https://github.com/puffycid/artemis>
+RegRipper (plugin: appcompatcache) - <https://github.com/keydet89/RegRipper4.0>
 
 ShimCacheParser - <https://github.com/mandiant/ShimCacheParser> (old versions only)
+
+Volatility 3 (plugin: windows.shimcachemem, from memory) - <https://github.com/volatilityfoundation/volatility3>

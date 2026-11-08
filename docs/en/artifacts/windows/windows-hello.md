@@ -43,7 +43,11 @@ From a digital forensics perspective, existing Windows Hello data allows the sta
 
 ## Tools
 
+### Core tools
+
 EvtxECmd (Eric Zimmerman) - <https://github.com/EricZimmerman/evtx>
+
+### Other tools
 
 Chainsaw - <https://github.com/WithSecureLabs/chainsaw>
 

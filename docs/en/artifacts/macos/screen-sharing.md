@@ -56,6 +56,12 @@ From a digital forensics perspective, a saved connection shows that the app was 
 
 ## Tools
 
+### Core tools
+
 mac_apt (Plugin: SCREENSHARING) - <https://github.com/ydkhatri/mac_apt>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
 
 macOS Screen Sharing FileTransferHistory Parser - <https://github.com/Forensic-IT/macos-screensharing-filetransferhistory>

@@ -43,8 +43,16 @@ Die Bedeutung der einzelnen Einträge wird im Folgenden beschrieben. Es können 
 
 ## Tools
 
+### Kern-Tools
+
+DLEAPP (Parser: KnowledgeC) - <https://github.com/abrignoni/DLEAPP>
+
 APOLLO (knowledge_*) - <https://github.com/mac4n6/APOLLO>
 
-DLEAPP (KnowledgeC) - <https://github.com/abrignoni/DLEAPP>
-
 Velociraptor (Exchange: MacOS.Applications.KnowledgeC) - <https://github.com/Velocidex/velociraptor>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
+
+Plaso (Parser: mac_knowledgec) - <https://github.com/log2timeline/plaso>

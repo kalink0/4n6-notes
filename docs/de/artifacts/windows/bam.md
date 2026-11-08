@@ -33,18 +33,24 @@ Aus digitalforensischer Sicht bedeuten Einträge des BAM, dass eine Applikation 
 
 ## Tools
 
-RegRipper (bam) - <https://github.com/keydet89/RegRipper4.0>
-
-Registry Explorer - <https://ericzimmerman.github.io/>
-
-Velociraptor (Windows.Forensics.Bam) - <https://docs.velociraptor.app/>
+### Kern-Tools
 
 DLEAPP (Parser: Background and Desktop Activity Moderator) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (Plugin: bam) - <https://docs.dissect.tools/>
 
+Velociraptor (Windows.Forensics.Bam) - <https://docs.velociraptor.app/>
+
+Registry Explorer - <https://ericzimmerman.github.io/>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
+
+juntei (parse-registry bam) - <https://github.com/Yamato-Security/juntei>
+
 Plaso (Parser: bam) - <https://github.com/log2timeline/plaso>
 
 regipy (Plugin: background_activity_moderator) - <https://github.com/mkorman90/regipy>
 
-juntei (parse-registry bam) - <https://github.com/Yamato-Security/juntei>
+RegRipper (bam) - <https://github.com/keydet89/RegRipper4.0>

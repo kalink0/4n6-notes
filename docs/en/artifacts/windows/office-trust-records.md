@@ -39,12 +39,16 @@ From a digital forensics perspective, the existence of a *Trust Record* shows th
 
 ## Tools
 
-RegRipper (msoffice) - <https://github.com/keydet89/RegRipper4.0>
+### Core tools
 
 Dissect (plugin: trusteddocs) - <https://docs.dissect.tools/>
 
-juntei (parse-registry office) - <https://github.com/Yamato-Security/juntei>
+Velociraptor (artifact: Windows.Registry.EnabledMacro) - <https://docs.velociraptor.app/>
 
 Registry Explorer (plugin: TrustedDocuments) - <https://ericzimmerman.github.io/>
 
-Velociraptor (artifact: Windows.Registry.EnabledMacro) - <https://docs.velociraptor.app/>
+### Other tools
+
+juntei (parse-registry office) - <https://github.com/Yamato-Security/juntei>
+
+RegRipper (msoffice) - <https://github.com/keydet89/RegRipper4.0>

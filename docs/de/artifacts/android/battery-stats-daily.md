@@ -33,4 +33,4 @@ Nicht belegt ist, zu welchem genauen Zeitpunkt ein einzelner Schritt oder eine P
 
 ## Tools
 
-ALEAPP (Android Battery Stats Daily) - <https://github.com/abrignoni/ALEAPP>
+ALEAPP (Parser: Android Battery Stats Daily, Android Battery Stats Daily Package Changes) - <https://github.com/abrignoni/ALEAPP>

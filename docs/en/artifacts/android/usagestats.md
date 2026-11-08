@@ -39,4 +39,10 @@ It does not show that a person actively operated the app, or in which way the lo
 
 ## Tools
 
-ALEAPP (Usage Stats) - <https://github.com/abrignoni/ALEAPP>
+### Core tools
+
+ALEAPP (parser: Usage Stats) - <https://github.com/abrignoni/ALEAPP>
+
+### Other tools
+
+Android-Usagestats-XML-Protobuf - <https://github.com/abrignoni/Android-Usagestats-XML-Protobuf>

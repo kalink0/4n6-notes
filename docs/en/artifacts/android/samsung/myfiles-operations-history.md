@@ -32,6 +32,10 @@ From a digital forensics perspective, the entries mean that the respective file/
 
 ## Tools
 
+### Core tools
+
 ALEAPP (parser: My Files Operation History, My Files - File Operations) - <https://github.com/abrignoni/ALEAPP>
+
+### Other tools
 
 SELECT queries - <https://github.com/kalink0/useful_scripts/blob/master/sql/Android/Samsung%20Apps/sMyFiles.sql>

@@ -38,8 +38,16 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass das Programm dem Benutzer
 
 ## Tools
 
+### Kern-Tools
+
 DLEAPP (Parser: Notification Center Records) - <https://github.com/abrignoni/DLEAPP>
 
 mac_apt (Plugin: NOTIFICATIONS) - <https://github.com/ydkhatri/mac_apt>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
+
+macNotifications.py - <https://github.com/ydkhatri/MacForensics> (nur alte Versionen)
 
 Plaso (Parser: mac_notificationcenter) - <https://github.com/log2timeline/plaso>

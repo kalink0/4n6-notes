@@ -54,8 +54,12 @@ From a digital forensics perspective, the data on the owner's device shows which
 
 ## Tools
 
+### Core tools
+
+iLEAPP (parser: Find My Items) - <https://github.com/abrignoni/iLEAPP>
+
 ArtEx2 (Find My) - <https://www.doubleblak.com/app.php?id=ArtEx2>
 
-iLEAPP (findMyItemsInfo) - <https://github.com/abrignoni/iLEAPP>
+### Other tools
 
 Lost Apples - <https://github.com/joshuahickman1/Lost_Apples>

@@ -39,12 +39,14 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass macOS zum angegebenen Zei
 
 ## Tools
 
-ccl-segb - <https://github.com/cclgroupltd/ccl-segb>
+DLEAPP (Parser: Biome, Biome Sets) - <https://github.com/abrignoni/DLEAPP>
 
 crush-forensics (SEGB) - <https://github.com/kalink0/crush-forensics>
 
-DLEAPP (Biome, Biome Sets) - <https://github.com/abrignoni/DLEAPP>
+peach-forensics (Biome) - <https://github.com/kalink0/peach-forensics>
+
+ccl-segb - <https://github.com/cclgroupltd/ccl-segb>
 
 mac_apt (BIOME) - <https://github.com/ydkhatri/mac_apt>
 
-peach-forensics (Biome) - <https://github.com/kalink0/peach-forensics>
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>

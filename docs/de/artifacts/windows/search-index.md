@@ -35,18 +35,18 @@ Aus digitalforensischer Sicht bedeuten Einträge zu Dateien und Ordner im Window
 
 ## Tools
 
-Search Index DB Reporter - <https://github.com/strozfriedberg/sidr>
+### Kern-Tools
 
 DLEAPP (Parser: Windows Search Index, Windows 11 Search Index) - <https://github.com/abrignoni/DLEAPP>
 
-WinSearchDBAnalyzer (bis Windows 10) - <https://github.com/moaistory/WinSearchDBAnalyzer>
-
-ESEDatabaseView (bis Windows 10) - <https://www.nirsoft.net/utils/ese_database_view.html>
-
-DB Browser for SQLite (ab Windows 11) - <https://sqlitebrowser.org/>
-
 Dissect (Plugin: search) - <https://docs.dissect.tools/>
+
+SQLECmd (Maps: Windows_Search_Index_Windows_db, Windows_Search_Index_Windows_gather_db) - <https://ericzimmerman.github.io/>
+
+### Weitere Tools
 
 artemis - <https://github.com/puffycid/artemis>
 
-SQLECmd (Maps: Windows_Search_Index_Windows_db, Windows_Search_Index_Windows_gather_db) - <https://ericzimmerman.github.io/>
+Search Index DB Reporter - <https://github.com/strozfriedberg/sidr>
+
+WinSearchDBAnalyzer (bis Windows 10) - <https://github.com/moaistory/WinSearchDBAnalyzer>

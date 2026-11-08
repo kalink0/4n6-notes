@@ -36,22 +36,28 @@ From a digital forensics perspective, entries in UserAssist provide information 
 
 ## Tools
 
-UserAssistView - <https://www.nirsoft.net/utils/userassist_view.html>
-
-RegRipper (plugin: userassist) - <https://github.com/keydet89/RegRipper4.0>
-
-Registry Explorer (bookmark: UserAssist) - <https://ericzimmerman.github.io/>
+### Core tools
 
 DLEAPP (parser: UserAssist) - <https://github.com/abrignoni/DLEAPP>
 
+Dissect (plugin: userassist) - <https://docs.dissect.tools/en/stable/plugins/userassist.html>
+
 Velociraptor (artifact: Windows.Registry.UserAssist) - <https://docs.velociraptor.app/artifact_references/pages/windows.registry.userassist/>
 
-Dissect (plugin: userassist) - <https://docs.dissect.tools/en/stable/plugins/userassist.html>
+Registry Explorer (bookmark: UserAssist) - <https://ericzimmerman.github.io/>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
+artemis - <https://github.com/puffycid/artemis>
+
+juntei (parse-registry user-assist) - <https://github.com/Yamato-Security/juntei>
 
 Plaso (parser: userassist) - <https://github.com/log2timeline/plaso>
 
 regipy (plugin: user_assist) - <https://github.com/mkorman90/regipy>
 
-juntei (parse-registry user-assist) - <https://github.com/Yamato-Security/juntei>
+RegRipper (plugin: userassist) - <https://github.com/keydet89/RegRipper4.0>
 
-artemis - <https://github.com/puffycid/artemis>
+UserAssistView - <https://www.nirsoft.net/utils/userassist_view.html>

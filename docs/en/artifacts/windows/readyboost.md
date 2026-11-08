@@ -42,8 +42,8 @@ From a digital forensics perspective, an entry shows that a drive with the given
 
 ## Tools
 
+juntei (parse-registry usb) - <https://github.com/Yamato-Security/juntei>
+
 RegRipper (plugin: emdmgmt) - <https://github.com/keydet89/RegRipper4.0>
 
 usb-forensic - <https://github.com/SecurityRonin/usb-forensic>
-
-juntei (parse-registry usb) - <https://github.com/Yamato-Security/juntei>

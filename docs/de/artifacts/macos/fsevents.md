@@ -32,7 +32,19 @@ Aus digitalforensischer Sicht lassen sich anhand von Einträgen des FSEvents Aus
 
 ## Tools
 
+### Kern-Tools
+
 DLEAPP (Parser: FSEvents) - <https://github.com/abrignoni/DLEAPP>
+
+mac_apt (Plugin: FSEVENTS) - <https://github.com/ydkhatri/mac_apt>
+
+Velociraptor (Artefakt: MacOS.Forensics.FSEvents) - <https://docs.velociraptor.app/artifact_references/pages/macos.forensics.fsevents/>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
+
+artemis - <https://github.com/puffycid/artemis>
 
 FSEParser - <https://github.com/dlcowen/FSEventsParser>
 
@@ -40,8 +52,4 @@ FSEventsParser - <https://github.com/mac4n6/FSEventsParser>
 
 FSEventsParser-rs - <https://github.com/Houwenda/FSEventsParser-rs>
 
-mac_apt (Plugin: FSEVENTS) - <https://github.com/ydkhatri/mac_apt>
-
 Plaso (Parser: fseventsd) - <https://github.com/log2timeline/plaso>
-
-Velociraptor (Artefakt: MacOS.Forensics.FSEvents) - <https://docs.velociraptor.app/artifact_references/pages/macos.forensics.fsevents/>

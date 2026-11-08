@@ -34,12 +34,18 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass im Kontext des Benutzerko
 
 ## Tools
 
+### Kern-Tools
+
 DLEAPP (Parser: Explorer Search History) - <https://github.com/abrignoni/DLEAPP>
 
 Registry Explorer (WordWheelQuery Plugin) - <https://ericzimmerman.github.io/>
 
-RegRipper (wordwheelquery) - <https://github.com/keydet89/RegRipper4.0>
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
+
+juntei (parse-registry mru) - <https://github.com/Yamato-Security/juntei>
 
 regipy (Plugin: word_wheel_query) - <https://github.com/mkorman90/regipy>
 
-juntei (parse-registry mru) - <https://github.com/Yamato-Security/juntei>
+RegRipper (wordwheelquery) - <https://github.com/keydet89/RegRipper4.0>

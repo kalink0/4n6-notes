@@ -40,8 +40,16 @@ From a digital forensics perspective, an entry shows that the program delivered 
 
 ## Tools
 
+### Core tools
+
 DLEAPP (parser: Notification Center Records) - <https://github.com/abrignoni/DLEAPP>
 
 mac_apt (plugin: NOTIFICATIONS) - <https://github.com/ydkhatri/mac_apt>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
+macNotifications.py - <https://github.com/ydkhatri/MacForensics> (old versions only)
 
 Plaso (parser: mac_notificationcenter) - <https://github.com/log2timeline/plaso>

@@ -41,8 +41,8 @@ The accuracy with regard to time and place must be taken into account when inter
 
 ## Tools
 
-APOLLO (routined_local_*, routined_cloud_*) - <https://github.com/mac4n6/APOLLO>
+iLEAPP (parser: Significant Locations (routined)) - <https://github.com/abrignoni/iLEAPP>
 
 ArtEx2 (Frequent Locations, Location Transitions) - <https://www.doubleblak.com/app.php?id=ArtEx2>
 
-iLEAPP (appleMapsSignificantLocations, appleMapsSignificantLocationsVisits, appleMapsTrips, routinedCloudVisits) - <https://github.com/abrignoni/iLEAPP>
+APOLLO (routined_local_*, routined_cloud_*) - <https://github.com/mac4n6/APOLLO>

@@ -32,4 +32,4 @@ From a digital forensics perspective, an entry shows that a notification from th
 
 ## Tools
 
-iLEAPP (duetNotifications) - <https://github.com/abrignoni/iLEAPP>
+iLEAPP (parser: DuetExpertCenter - Notifications, DuetExpertCenter - Notification Suggestions) - <https://github.com/abrignoni/iLEAPP>

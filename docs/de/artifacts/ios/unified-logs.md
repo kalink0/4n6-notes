@@ -57,10 +57,16 @@ Eine einzelne tracev3 kann zwar auch gelesen werden, jedoch fehlen die genauen Z
 
 ## Tools
 
-iLEAPP (logarchive) - <https://github.com/abrignoni/iLEAPP>
+### Kern-Tools
+
+iLEAPP (Parser: logarchive) - <https://github.com/abrignoni/iLEAPP>
+
+peach-forensics (AUL) - <https://github.com/kalink0/peach-forensics>
+
+### Weitere Tools
 
 macos-UnifiedLogs - <https://github.com/mandiant/macos-UnifiedLogs>
 
-peach-forensics (AUL) - <https://github.com/kalink0/peach-forensics>
+Plaso (Parser: unified_logging) - <https://github.com/log2timeline/plaso>
 
 UnifiedLogReader - <https://github.com/ydkhatri/UnifiedLogReader> (nur alte Versionen)

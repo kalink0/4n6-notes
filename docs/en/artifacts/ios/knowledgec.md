@@ -51,8 +51,8 @@ The meaning of the individual entries is described below. There may be further t
 
 ## Tools
 
-APOLLO (knowledge_*) - <https://github.com/mac4n6/APOLLO>
+iLEAPP (parser: KnowledgeC) - <https://github.com/abrignoni/iLEAPP>
 
 ArtEx2 (KnowledgeC parser) - <https://www.doubleblak.com/app.php?id=ArtEx2>
 
-iLEAPP (knowledgeC) - <https://github.com/abrignoni/iLEAPP>
+APOLLO (knowledge_*) - <https://github.com/mac4n6/APOLLO>

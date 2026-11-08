@@ -44,6 +44,6 @@ From a digital forensics perspective, these traces show that the device was rese
 
 ## Tools
 
-ArtEx2 (Wipe Events) - <https://www.doubleblak.com/app.php?id=ArtEx2>
+iLEAPP (parser: Wipe Indicators) - <https://github.com/abrignoni/iLEAPP>
 
-iLEAPP (wipe_indicators) - <https://github.com/abrignoni/iLEAPP>
+ArtEx2 (Wipe Events) - <https://www.doubleblak.com/app.php?id=ArtEx2>

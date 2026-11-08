@@ -32,6 +32,10 @@ Aus digitalforensischer Sicht belegt ein Eintrag in der Zwischenablage-Historie,
 
 ## Tools
 
-ALEAPP (Parser: Samsung Honeyboard - Clipboard, Samsung Honeyboard - Clipboard Image Clips) - <https://github.com/abrignoni/ALEAPP>
+### Kern-Tools
+
+ALEAPP (Parser: Samsung Honeyboard - Clipboard (Live entries), Samsung Honeyboard - Clipboard (Earlier WAL States), Samsung Honeyboard - Clipboard Image Clips) - <https://github.com/abrignoni/ALEAPP>
+
+### Weitere Tools
 
 SELECT-Queries - <https://github.com/kalink0/useful_scripts/blob/master/sql/Android/Samsung%20Apps/sHoneyboard.sql>

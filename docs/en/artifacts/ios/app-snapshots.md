@@ -40,4 +40,12 @@ From a digital forensics perspective, the snapshots show the last content of the
 
 ## Tools
 
-iLEAPP (App Snapshots) - <https://github.com/abrignoni/iLEAPP>
+### Core tools
+
+iLEAPP (parser: App Snapshots) - <https://github.com/abrignoni/iLEAPP>
+
+### Other tools
+
+iOS-Snapshot-Triage-Parser - <https://github.com/abrignoni/iOS-Snapshot-Triage-Parser>
+
+ios_ktx2png - <https://github.com/ydkhatri/MacForensics>

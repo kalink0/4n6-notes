@@ -39,18 +39,22 @@ Aus digitalforensischer Sicht belegt eine Datei im Autostart-Ordner, dass sie be
 
 ## Tools
 
-Autoruns - <https://learn.microsoft.com/sysinternals/downloads/autoruns>
-
-RegRipper (rundisabled) - <https://github.com/keydet89/RegRipper4.0>
-
-LECmd - <https://ericzimmerman.github.io/>
+### Kern-Tools
 
 DLEAPP (Parser: Startup Folder Items, Startup Approved States) - <https://github.com/abrignoni/DLEAPP>
 
 Velociraptor (Artefakte: Windows.Sys.StartupItems) - <https://docs.velociraptor.app/>
 
-WhatInStartup - <https://www.nirsoft.net/utils/what_run_in_startup.html>
+LECmd - <https://ericzimmerman.github.io/>
+
+### Weitere Tools
+
+Autoruns - <https://learn.microsoft.com/sysinternals/downloads/autoruns>
 
 juntei (persistence-hunter) - <https://github.com/Yamato-Security/juntei>
 
 PersistenceSniper (Get-StartupPrograms) - <https://github.com/last-byte/PersistenceSniper>
+
+RegRipper (rundisabled) - <https://github.com/keydet89/RegRipper4.0>
+
+WhatInStartup - <https://www.nirsoft.net/utils/what_run_in_startup.html>

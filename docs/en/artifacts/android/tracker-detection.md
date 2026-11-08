@@ -69,4 +69,4 @@ Traces from both sides can be present on the same device:
 
 ## Tools
 
-ALEAPP (Android Airtag Alerts / Scans / Last Scan / Passive Scan, Android Notification History, Nearby - Fast Pair Devices) - <https://github.com/abrignoni/ALEAPP>
+ALEAPP (parser: Android Airtag, Android Notification History, Nearby - Fast Pair Devices) - <https://github.com/abrignoni/ALEAPP>

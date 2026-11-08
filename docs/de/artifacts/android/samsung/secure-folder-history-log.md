@@ -28,6 +28,10 @@ Aus digitalforensischer Sicht belegen die Einträge, dass eine Verschiebeaktion 
 
 ## Tools
 
+### Kern-Tools
+
 ALEAPP (Samsung Secure Folder - History Log) - <https://github.com/abrignoni/ALEAPP>
+
+### Weitere Tools
 
 Samsung Secure Folder History Log Parser - <https://github.com/4n6Wizard/Samsung-HistoryLog-Parser>

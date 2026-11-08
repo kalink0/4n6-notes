@@ -38,4 +38,12 @@ Aus digitalforensischer Sicht zeigen die Snapshots den letzten auf dem Bildschir
 
 ## Tools
 
-iLEAPP (App Snapshots) - <https://github.com/abrignoni/iLEAPP>
+### Kern-Tools
+
+iLEAPP (Parser: App Snapshots) - <https://github.com/abrignoni/iLEAPP>
+
+### Weitere Tools
+
+iOS-Snapshot-Triage-Parser - <https://github.com/abrignoni/iOS-Snapshot-Triage-Parser>
+
+ios_ktx2png - <https://github.com/ydkhatri/MacForensics>

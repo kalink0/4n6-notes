@@ -38,13 +38,17 @@ Wenn eine Datei sich in einer Volume Shadow Copy befindet, kann aus digitalforen
 
 ## Tools
 
-libvshadow - <https://github.com/libyal/libvshadow>
+### Kern-Tools
 
 VSCMount - <https://github.com/EricZimmerman/VSCMount>
 
-Shadow Copy View - <https://www.nirsoft.net/utils/shadow_copy_view.html>
+### Weitere Tools
 
 Arsenal Image Mounter - <https://arsenalrecon.com/downloads/>
+
+libvshadow - <https://github.com/libyal/libvshadow>
+
+Shadow Copy View - <https://www.nirsoft.net/utils/shadow_copy_view.html>
 
 ShadowExplorer - <https://www.shadowexplorer.com/downloads.html>
 

@@ -37,6 +37,12 @@ From a digital forensics perspective, the stored events can provide indications 
 
 ## Tools
 
+### Core tools
+
+DLEAPP (parser: PowerLog) - <https://github.com/abrignoni/DLEAPP>
+
 APOLLO - <https://github.com/mac4n6/APOLLO>
+
+### Other tools
 
 EffectivePower - <https://github.com/saagarjha/EffectivePower>

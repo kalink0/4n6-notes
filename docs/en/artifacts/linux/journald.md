@@ -41,14 +41,22 @@ From a digital forensics perspective, an entry shows that the given process pass
 
 ## Tools
 
-DLEAPP (systemd Journal) - <https://github.com/abrignoni/DLEAPP>
+### Core tools
 
-dissect.target (journal) - <https://github.com/fox-it/dissect.target>
-
-journalctl - <https://github.com/systemd/systemd>
+DLEAPP (parser: systemd Journal, systemd Journal Files) - <https://github.com/abrignoni/DLEAPP>
 
 peach-forensics (journald) - <https://github.com/kalink0/peach-forensics>
 
-plaso (systemd_journal) - <https://github.com/log2timeline/plaso>
+dissect.target (journal) - <https://github.com/fox-it/dissect.target>
 
 Velociraptor (Linux.Forensics.Journal) - <https://github.com/Velocidex/velociraptor>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
+artemis - <https://github.com/puffycid/artemis>
+
+journalctl - <https://github.com/systemd/systemd>
+
+plaso (systemd_journal) - <https://github.com/log2timeline/plaso>

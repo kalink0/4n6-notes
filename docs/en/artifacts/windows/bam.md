@@ -35,18 +35,24 @@ From a digital forensics perspective, BAM entries show that an application was e
 
 ## Tools
 
-RegRipper (bam) - <https://github.com/keydet89/RegRipper4.0>
-
-Registry Explorer - <https://ericzimmerman.github.io/>
-
-Velociraptor (Windows.Forensics.Bam) - <https://docs.velociraptor.app/>
+### Core tools
 
 DLEAPP (parser: Background and Desktop Activity Moderator) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (plugin: bam) - <https://docs.dissect.tools/>
 
+Velociraptor (Windows.Forensics.Bam) - <https://docs.velociraptor.app/>
+
+Registry Explorer - <https://ericzimmerman.github.io/>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
+juntei (parse-registry bam) - <https://github.com/Yamato-Security/juntei>
+
 Plaso (parser: bam) - <https://github.com/log2timeline/plaso>
 
 regipy (plugin: background_activity_moderator) - <https://github.com/mkorman90/regipy>
 
-juntei (parse-registry bam) - <https://github.com/Yamato-Security/juntei>
+RegRipper (bam) - <https://github.com/keydet89/RegRipper4.0>

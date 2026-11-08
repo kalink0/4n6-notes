@@ -33,11 +33,15 @@ Aus digitalforensischer Sicht belegt ein `Zone.Identifier`, dass die Datei von e
 
 ## Tools
 
-MFTECmd - <https://ericzimmerman.github.io/>
+### Kern-Tools
 
 DLEAPP (Parser: Zone.Identifier Streams) - <https://github.com/abrignoni/DLEAPP>
 
 Velociraptor (Artefakte: Windows.Analysis.EvidenceOfDownload, Windows.NTFS.ADSHunter) - <https://docs.velociraptor.app/>
+
+MFTECmd - <https://ericzimmerman.github.io/>
+
+### Weitere Tools
 
 Autopsy (Recent Activity) - <https://www.autopsy.com/>
 

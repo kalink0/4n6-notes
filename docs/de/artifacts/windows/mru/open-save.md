@@ -35,18 +35,24 @@ Aus digitalforensischer Sicht bedeuten Einträge in der Open/Save-MRU, dass das 
 
 ## Tools
 
+### Kern-Tools
+
 DLEAPP (Parser: Open and Save Dialog MRU) - <https://github.com/abrignoni/DLEAPP>
+
+Dissect (Plugin: mru.opensave) - <https://docs.dissect.tools/>
 
 Registry Explorer (ComDlg32 Bookmark) - <https://ericzimmerman.github.io/>
 
-RegRipper (comdlg32) - <https://github.com/keydet89/RegRipper4.0>
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
 
-Dissect (Plugin: mru.opensave) - <https://docs.dissect.tools/>
+### Weitere Tools
+
+juntei (parse-registry open-save-mru) - <https://github.com/Yamato-Security/juntei>
+
+OpenSaveFilesView - <https://www.nirsoft.net/utils/open_save_files_view.html>
 
 Plaso (Parser: mrulistex) - <https://github.com/log2timeline/plaso>
 
 regipy (Plugin: comdlg32) - <https://github.com/mkorman90/regipy>
 
-juntei (parse-registry open-save-mru) - <https://github.com/Yamato-Security/juntei>
-
-OpenSaveFilesView - <https://www.nirsoft.net/utils/open_save_files_view.html>
+RegRipper (comdlg32) - <https://github.com/keydet89/RegRipper4.0>

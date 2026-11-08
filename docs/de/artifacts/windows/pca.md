@@ -38,12 +38,16 @@ Aus digitalforensischer Sicht bedeuten Einträge in der PcaAppLaunchDic.txt, das
 
 ## Tools
 
-Program Compatibility Parser - <https://github.com/kacos2000/Win10/tree/master/ProgramCompatibility>
-
-PCAParser - <https://github.com/AndrewRathbun/PCAParser>
+### Kern-Tools
 
 DLEAPP (Parser: PCA App Launch Dictionary, PCA General Db) - <https://github.com/abrignoni/DLEAPP>
 
+Velociraptor (Artefakte: Windows.System.AppCompatPCA, Windows.System.AppCompatPCAExtend) - <https://docs.velociraptor.app/>
+
+### Weitere Tools
+
+PCAParser - <https://github.com/AndrewRathbun/PCAParser>
+
 Plaso (Parser: winpca_db0, winpca_dic) - <https://github.com/log2timeline/plaso>
 
-Velociraptor (Artefakte: Windows.System.AppCompatPCA, Windows.System.AppCompatPCAExtend) - <https://docs.velociraptor.app/>
+Program Compatibility Parser - <https://github.com/kacos2000/Win10/tree/master/ProgramCompatibility>

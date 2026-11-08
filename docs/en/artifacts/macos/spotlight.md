@@ -41,8 +41,16 @@ From a digital forensics perspective, an entry in the Spotlight database shows t
 
 ## Tools
 
+### Core tools
+
 DLEAPP (parser: Spotlight Store Files) - <https://github.com/abrignoni/DLEAPP>
 
 mac_apt (plugin: SPOTLIGHT) - <https://github.com/ydkhatri/mac_apt>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
+Plaso (parser: spotlight_storedb) - <https://github.com/log2timeline/plaso>
 
 spotlight_parser - <https://github.com/ydkhatri/spotlight_parser>

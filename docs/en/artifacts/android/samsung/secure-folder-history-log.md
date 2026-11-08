@@ -30,6 +30,10 @@ From a digital forensics perspective, the entries show that a move operation wit
 
 ## Tools
 
+### Core tools
+
 ALEAPP (Samsung Secure Folder - History Log) - <https://github.com/abrignoni/ALEAPP>
+
+### Other tools
 
 Samsung Secure Folder History Log Parser - <https://github.com/4n6Wizard/Samsung-HistoryLog-Parser>

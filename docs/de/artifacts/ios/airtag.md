@@ -52,8 +52,12 @@ Aus digitalforensischer Sicht belegen die Daten auf dem Gerät des Besitzers, we
 
 ## Tools
 
+### Kern-Tools
+
+iLEAPP (Parser: Find My Items) - <https://github.com/abrignoni/iLEAPP>
+
 ArtEx2 (Find My) - <https://www.doubleblak.com/app.php?id=ArtEx2>
 
-iLEAPP (findMyItemsInfo) - <https://github.com/abrignoni/iLEAPP>
+### Weitere Tools
 
 Lost Apples - <https://github.com/joshuahickman1/Lost_Apples>

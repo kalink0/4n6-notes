@@ -40,12 +40,18 @@ Aus digitalforensischer Sicht belegt eine Tab-Datei, dass der darin enthaltene T
 
 ## Tools
 
-Notepad-State-Library (WindowsNotepadParser) - <https://github.com/ogmini/Notepad-State-Library>
-
-notepad_parser - <https://github.com/AbdulRhmanAlfaifi/notepad_parser>
+### Kern-Tools
 
 DLEAPP (Parser: Windows Notepad Tabs, Windows Notepad Windows, Windows Notepad Settings) - <https://github.com/abrignoni/DLEAPP>
 
+Dissect (Plugin: windowsnotepad) - <https://docs.dissect.tools/>
+
 Velociraptor (Artefakt: Windows.Forensics.NotepadParser) - <https://docs.velociraptor.app/>
 
-Dissect (Plugin: windowsnotepad) - <https://docs.dissect.tools/>
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
+
+Notepad-State-Library (WindowsNotepadParser) - <https://github.com/ogmini/Notepad-State-Library>
+
+notepad_parser - <https://github.com/AbdulRhmanAlfaifi/notepad_parser>

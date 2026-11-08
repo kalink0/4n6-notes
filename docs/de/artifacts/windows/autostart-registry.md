@@ -49,22 +49,26 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass das Programm mit der ange
 
 ## Tools
 
-RegRipper (run, rundisabled) - <https://github.com/keydet89/RegRipper4.0>
+### Kern-Tools
 
-Autoruns - <https://learn.microsoft.com/sysinternals/downloads/autoruns>
-
-DLEAPP (Parser: Run and RunOnce Keys, Startup Approved States, Registry Autostart Points, Shell-Core Run Key Command Events) - <https://github.com/abrignoni/DLEAPP>
-
-Velociraptor (Artefakte: Windows.Sys.StartupItems) - <https://docs.velociraptor.app/>
+DLEAPP (Parser: Autostart) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (Plugin: runkeys) - <https://docs.dissect.tools/>
 
-Plaso (Parser: windows_run) - <https://github.com/log2timeline/plaso>
+Velociraptor (Artefakte: Windows.Sys.StartupItems) - <https://docs.velociraptor.app/>
 
-WhatInStartup - <https://www.nirsoft.net/utils/what_run_in_startup.html>
+### Weitere Tools
+
+Autoruns - <https://learn.microsoft.com/sysinternals/downloads/autoruns>
 
 juntei (parse-registry persistence) - <https://github.com/Yamato-Security/juntei>
 
+PersistenceSniper (Get-RunAndRunOnce) - <https://github.com/last-byte/PersistenceSniper>
+
+Plaso (Parser: windows_run) - <https://github.com/log2timeline/plaso>
+
 regipy (Plugin: software_plugin, ntuser_persistence) - <https://github.com/mkorman90/regipy>
 
-PersistenceSniper (Get-RunAndRunOnce) - <https://github.com/last-byte/PersistenceSniper>
+RegRipper (run, rundisabled) - <https://github.com/keydet89/RegRipper4.0>
+
+WhatInStartup - <https://www.nirsoft.net/utils/what_run_in_startup.html>

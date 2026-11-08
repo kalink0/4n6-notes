@@ -46,6 +46,10 @@ Aus digitalforensischer Sicht belegen die Einträge zur Programmnutzung, dass ei
 
 ## Tools
 
-ARDvark - <https://github.com/mandiant/ARDvark>
+### Kern-Tools
 
 mac_apt (Plugin: ARD) - <https://github.com/ydkhatri/mac_apt>
+
+### Weitere Tools
+
+ARDvark - <https://github.com/mandiant/ARDvark>

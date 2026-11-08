@@ -35,11 +35,15 @@ From a digital forensics perspective, a `Zone.Identifier` shows that the file wa
 
 ## Tools
 
-MFTECmd - <https://ericzimmerman.github.io/>
+### Core tools
 
 DLEAPP (Parser: Zone.Identifier Streams) - <https://github.com/abrignoni/DLEAPP>
 
 Velociraptor (Artifacts: Windows.Analysis.EvidenceOfDownload, Windows.NTFS.ADSHunter) - <https://docs.velociraptor.app/>
+
+MFTECmd - <https://ericzimmerman.github.io/>
+
+### Other tools
 
 Autopsy (Recent Activity) - <https://www.autopsy.com/>
 

@@ -37,10 +37,14 @@ From a digital forensics perspective, an entry shows that the application displa
 
 ## Tools
 
-EvtxECmd - <https://ericzimmerman.github.io/>
-
-evtx (evtx_dump) - <https://github.com/omerbenamram/evtx>
+### Core tools
 
 DLEAPP (Parser: Office Alerts) - <https://github.com/abrignoni/DLEAPP>
+
+EvtxECmd - <https://ericzimmerman.github.io/>
+
+### Other tools
+
+evtx (evtx_dump) - <https://github.com/omerbenamram/evtx>
 
 evtx2json (oalerts) - <https://github.com/Silv3rHorn/evtx2json>

@@ -35,18 +35,24 @@ From a digital forensics perspective, entries in the RecentDocs MRU list mean th
 
 ## Tools
 
+### Core tools
+
 DLEAPP (parser: Recent Docs) - <https://github.com/abrignoni/DLEAPP>
 
-Registry Explorer (RecentDocs Bookmark) - <https://ericzimmerman.github.io/>
-
-RegRipper (recentdocs) - <https://github.com/keydet89/RegRipper4.0>
+Dissect (plugin: mru.recentdocs) - <https://docs.dissect.tools/>
 
 Velociraptor (artifact: Windows.Registry.RecentDocs) - <https://docs.velociraptor.app/>
 
-Dissect (plugin: mru.recentdocs) - <https://docs.dissect.tools/>
+Registry Explorer (RecentDocs Bookmark) - <https://ericzimmerman.github.io/>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
+juntei (parse-registry recent-docs) - <https://github.com/Yamato-Security/juntei>
 
 Plaso (parser: mrulistex) - <https://github.com/log2timeline/plaso>
 
 regipy (plugin: recentdocs) - <https://github.com/mkorman90/regipy>
 
-juntei (parse-registry recent-docs) - <https://github.com/Yamato-Security/juntei>
+RegRipper (recentdocs) - <https://github.com/keydet89/RegRipper4.0>

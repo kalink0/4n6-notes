@@ -44,24 +44,30 @@ Aus digitalforensischer Sicht bedeuten abgelegte Shellbags, dass der Nutzeraccou
 
 ## Tools
 
+### Kern-Tools
+
+DLEAPP (Parser: ShellBags) - <https://github.com/abrignoni/DLEAPP>
+
+Dissect (Plugin: shellbags) - <https://docs.dissect.tools/en/stable/plugins/shellbags.html>
+
+Velociraptor (Artefakt: Windows.Forensics.Shellbags) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.shellbags/>
+
 SBECmd - <https://ericzimmerman.github.io/>
 
 Shellbag Explorer - <https://ericzimmerman.github.io/>
 
-ShellBags View - <https://www.nirsoft.net/utils/shell_bags_view.html>
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
 
-RegRipper (Plugin: shellbags) - <https://github.com/keydet89/RegRipper4.0>
+### Weitere Tools
 
-DLEAPP (Parser: ShellBags) - <https://github.com/abrignoni/DLEAPP>
+artemis - <https://github.com/puffycid/artemis>
 
-Velociraptor (Artefakt: Windows.Forensics.Shellbags) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.shellbags/>
-
-Dissect (Plugin: shellbags) - <https://docs.dissect.tools/en/stable/plugins/shellbags.html>
+juntei (parse-registry shell-bags) - <https://github.com/Yamato-Security/juntei>
 
 Plaso (Parser: bagmru) - <https://github.com/log2timeline/plaso>
 
 regipy (Plugin: ntuser_shellbag_plugin, usrclass_shellbag_plugin) - <https://github.com/mkorman90/regipy>
 
-juntei (parse-registry shell-bags) - <https://github.com/Yamato-Security/juntei>
+RegRipper (Plugin: shellbags) - <https://github.com/keydet89/RegRipper4.0>
 
-artemis - <https://github.com/puffycid/artemis>
+ShellBags View - <https://www.nirsoft.net/utils/shell_bags_view.html>

@@ -37,4 +37,10 @@ Nicht belegt ist, dass eine Person die App aktiv bedient hat oder auf welche Wei
 
 ## Tools
 
-ALEAPP (Usage Stats) - <https://github.com/abrignoni/ALEAPP>
+### Kern-Tools
+
+ALEAPP (Parser: Usage Stats) - <https://github.com/abrignoni/ALEAPP>
+
+### Weitere Tools
+
+Android-Usagestats-XML-Protobuf - <https://github.com/abrignoni/Android-Usagestats-XML-Protobuf>

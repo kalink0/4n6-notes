@@ -37,14 +37,20 @@ Aus digitalforensischer Sicht bedeuten Einträge in der MRU-Liste für RDC, dass
 
 ## Tools
 
+### Kern-Tools
+
 DLEAPP (Parser: Remote Desktop Client Servers) - <https://github.com/abrignoni/DLEAPP>
-
-RegRipper (tsclient) - <https://github.com/keydet89/RegRipper4.0>
-
-Velociraptor (Windows.Registry.RDP) - <https://docs.velociraptor.app/>
 
 Dissect (Plugin: mru.mstsc) - <https://docs.dissect.tools/>
 
-regipy (Plugin: terminal_services_history) - <https://github.com/mkorman90/regipy>
+Velociraptor (Windows.Registry.RDP) - <https://docs.velociraptor.app/>
 
 Registry Explorer (Plugin: TerminalServerClient) - <https://ericzimmerman.github.io/>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
+
+regipy (Plugin: terminal_services_history) - <https://github.com/mkorman90/regipy>
+
+RegRipper (tsclient) - <https://github.com/keydet89/RegRipper4.0>

@@ -39,6 +39,8 @@ Aus digitalforensischer Sicht bedeutet die Existenz von Einträgen in der Comman
 
 DLEAPP (Parser: PowerShell PSReadLine History) - <https://github.com/abrignoni/DLEAPP>
 
+Dissect (Plugin: powershell_history) - <https://dissect.readthedocs.io/en/stable/plugins/powershell_history.html>
+
 Velociraptor (Artefakt: Windows.System.Powershell.PSReadline) - <https://docs.velociraptor.app/artifact_references/pages/windows.system.powershell.psreadline>
 
-Dissect (Plugin: powershell_history) - <https://dissect.readthedocs.io/en/stable/plugins/powershell_history.html>
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>

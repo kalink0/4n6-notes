@@ -39,14 +39,22 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass der angegebene Prozess zu
 
 ## Tools
 
-DLEAPP (systemd Journal) - <https://github.com/abrignoni/DLEAPP>
+### Kern-Tools
 
-dissect.target (journal) - <https://github.com/fox-it/dissect.target>
-
-journalctl - <https://github.com/systemd/systemd>
+DLEAPP (Parser: systemd Journal, systemd Journal Files) - <https://github.com/abrignoni/DLEAPP>
 
 peach-forensics (journald) - <https://github.com/kalink0/peach-forensics>
 
-plaso (systemd_journal) - <https://github.com/log2timeline/plaso>
+dissect.target (journal) - <https://github.com/fox-it/dissect.target>
 
 Velociraptor (Linux.Forensics.Journal) - <https://github.com/Velocidex/velociraptor>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
+
+artemis - <https://github.com/puffycid/artemis>
+
+journalctl - <https://github.com/systemd/systemd>
+
+plaso (systemd_journal) - <https://github.com/log2timeline/plaso>

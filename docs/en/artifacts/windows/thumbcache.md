@@ -49,12 +49,16 @@ For the older version, thumbs.db, the original path of the file follows from the
 
 ## Tools
 
-Thumbcache Viewer - <https://thumbcacheviewer.github.io/>
-
-Thumb Viewer - <https://thumbsviewer.github.io/>
+### Core tools
 
 DLEAPP (parser: Thumbnail Cache) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (plugin: thumbcache) - <https://docs.dissect.tools/en/stable/plugins/thumbcache.html>
 
 Velociraptor (artifact: Windows.Forensics.ThumbCache) - <https://docs.velociraptor.app/>
+
+### Other tools
+
+Thumb Viewer - <https://thumbsviewer.github.io/>
+
+Thumbcache Viewer - <https://thumbcacheviewer.github.io/>

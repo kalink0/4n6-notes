@@ -40,13 +40,17 @@ If a file is in a volume shadow copy, it can be said from a digital forensics pe
 
 ## Tools
 
-libvshadow - <https://github.com/libyal/libvshadow>
+### Core tools
 
 VSCMount - <https://github.com/EricZimmerman/VSCMount>
 
-Shadow Copy View - <https://www.nirsoft.net/utils/shadow_copy_view.html>
+### Other tools
 
 Arsenal Image Mounter - <https://arsenalrecon.com/downloads/>
+
+libvshadow - <https://github.com/libyal/libvshadow>
+
+Shadow Copy View - <https://www.nirsoft.net/utils/shadow_copy_view.html>
 
 ShadowExplorer - <https://www.shadowexplorer.com/downloads.html>
 

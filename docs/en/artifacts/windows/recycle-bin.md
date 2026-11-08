@@ -38,16 +38,22 @@ From a digital forensics perspective, the files in the Recycle Bin allow the sta
 
 ## Tools
 
-Rifiuti2 - <https://abelcheung.github.io/rifiuti2/>
-
-RBCmd - <https://ericzimmerman.github.io/>
+### Core tools
 
 DLEAPP (parser: Recycle Bin) - <https://github.com/abrignoni/DLEAPP>
 
+Dissect (plugin: recyclebin) - <https://docs.dissect.tools/en/stable/plugins/recyclebin.html>
+
 Velociraptor (artifact: Windows.Forensics.RecycleBin) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.recyclebin/>
 
-Dissect (plugin: recyclebin) - <https://docs.dissect.tools/en/stable/plugins/recyclebin.html>
+RBCmd - <https://ericzimmerman.github.io/>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
+artemis - <https://github.com/puffycid/artemis>
 
 Plaso (parser: recycle_bin, recycle_bin_info2) - <https://github.com/log2timeline/plaso>
 
-artemis - <https://github.com/puffycid/artemis>
+Rifiuti2 - <https://abelcheung.github.io/rifiuti2/>

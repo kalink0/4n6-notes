@@ -116,6 +116,18 @@ Only free tools (open source or free to use), no commercial ones.
 Only tools that decode the artifact; format detection or generic viewers are not enough.
 No version details. The only allowed addition: (old versions only), if the tool is no longer
 developed and only handles older versions of the artifact.
+If a tool only runs another tool for this artifact, the tool it runs is listed instead.
+Order: first the LEAPPs (ALEAPP, DLEAPP, iLEAPP, RLEAPP), crush, peach, ArtEx2, CCL tools,
+mac_apt, APOLLO, Dissect, Velociraptor, EZ Tools, TRACE (these stay even if they only run
+another tool); then all other tools in alphabetical order.
+If there are both groups, they stand under ### Core tools and ### Other tools (as below);
+with only one of the two, the subheadings are left out.
 -->
+
+### Core tools
+
+DLEAPP (parser: …) - <https://github.com/abrignoni/DLEAPP>
+
+### Other tools
 
 Name - <https://…>

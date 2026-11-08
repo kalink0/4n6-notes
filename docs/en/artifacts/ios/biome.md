@@ -44,14 +44,22 @@ From a digital forensics perspective, an entry shows that iOS recorded the respe
 
 ## Tools
 
+### Core tools
+
+iLEAPP (parser: Biome) - <https://github.com/abrignoni/iLEAPP>
+
+crush-forensics (SEGB) - <https://github.com/kalink0/crush-forensics>
+
+peach-forensics (Biome) - <https://github.com/kalink0/peach-forensics>
+
 ArtEx2 (Biome parser) - <https://www.doubleblak.com/app.php?id=ArtEx2>
 
 ccl-segb - <https://github.com/cclgroupltd/ccl-segb>
 
-crush-forensics (SEGB) - <https://github.com/kalink0/crush-forensics>
-
-iLEAPP (Biome modules) - <https://github.com/abrignoni/iLEAPP>
-
 mac_apt (BIOME) - <https://github.com/ydkhatri/mac_apt>
 
-peach-forensics (Biome) - <https://github.com/kalink0/peach-forensics>
+### Other tools
+
+BIOME-Stream-Analyzer - <https://github.com/mb4n6/BIOME-Stream-Analyzer>
+
+SEGB Hunter - <https://github.com/stark4n6/script-stash>

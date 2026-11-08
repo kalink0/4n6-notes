@@ -41,12 +41,14 @@ From a digital forensics perspective, an entry shows that macOS recorded the res
 
 ## Tools
 
-ccl-segb - <https://github.com/cclgroupltd/ccl-segb>
+DLEAPP (parser: Biome, Biome Sets) - <https://github.com/abrignoni/DLEAPP>
 
 crush-forensics (SEGB) - <https://github.com/kalink0/crush-forensics>
 
-DLEAPP (Biome, Biome Sets) - <https://github.com/abrignoni/DLEAPP>
+peach-forensics (Biome) - <https://github.com/kalink0/peach-forensics>
+
+ccl-segb - <https://github.com/cclgroupltd/ccl-segb>
 
 mac_apt (BIOME) - <https://github.com/ydkhatri/mac_apt>
 
-peach-forensics (Biome) - <https://github.com/kalink0/peach-forensics>
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>

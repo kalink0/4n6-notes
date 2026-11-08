@@ -45,20 +45,26 @@ Aus digitalforensischer Sicht bedeutet die Existenz und der Inhalt einer Prefetc
 
 ## Tools
 
-PECmd - <https://ericzimmerman.github.io/>
-
-WinPrefetchView - <https://www.nirsoft.net/utils/win_prefetch_view.html>
+### Kern-Tools
 
 DLEAPP (Parser: Prefetch, Prefetch Files Loaded) - <https://github.com/abrignoni/DLEAPP>
 
-Velociraptor (Artefakt: Windows.Forensics.Prefetch) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.prefetch>
-
 Dissect (Plugin: prefetch) - <https://docs.dissect.tools/en/stable/plugins/prefetch.html>
 
-Plaso (Parser: prefetch) - <https://github.com/log2timeline/plaso>
+Velociraptor (Artefakt: Windows.Forensics.Prefetch) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.prefetch>
 
-juntei (parse-file prefetch) - <https://github.com/Yamato-Security/juntei>
+PECmd - <https://ericzimmerman.github.io/>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
 
 artemis - <https://github.com/puffycid/artemis>
 
+juntei (parse-file prefetch) - <https://github.com/Yamato-Security/juntei>
+
+Plaso (Parser: prefetch) - <https://github.com/log2timeline/plaso>
+
 Windows-Prefetch-Parser - <https://github.com/PoorBillionaire/Windows-Prefetch-Parser> (nur alte Versionen)
+
+WinPrefetchView - <https://www.nirsoft.net/utils/win_prefetch_view.html>

@@ -40,22 +40,28 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass die Applikation bzw. der 
 
 ## Tools
 
-AmcacheParser - <https://github.com/EricZimmerman/AmcacheParser>
+### Kern-Tools
 
-AmCache-EvilHunter - <https://github.com/cristianzsh/amcache-evilhunter>
+DLEAPP (Parser: Amcache) - <https://github.com/abrignoni/DLEAPP>
 
-RegRipper (amcache) - <https://github.com/keydet89/RegRipper4.0>
-
-DLEAPP (Parser: Amcache Application Files, Amcache Applications, Amcache Shortcuts, Amcache Drivers, Amcache Devices, Amcache Device Containers, Amcache Driver Packages, Amcache Files (Windows 8 Format), Amcache Programs (Windows 8 Format)) - <https://github.com/abrignoni/DLEAPP>
+Dissect (Plugin: amcache) - <https://docs.dissect.tools/>
 
 Velociraptor (Artefakt: Windows.Forensics.Amcache) - <https://docs.velociraptor.app/>
 
-Dissect (Plugin: amcache) - <https://docs.dissect.tools/>
+AmcacheParser - <https://github.com/EricZimmerman/AmcacheParser>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
+
+AmCache-EvilHunter - <https://github.com/cristianzsh/amcache-evilhunter>
+
+artemis - <https://github.com/puffycid/artemis>
+
+juntei (parse-registry amcache) - <https://github.com/Yamato-Security/juntei>
 
 Plaso (Parser: amcache) - <https://github.com/log2timeline/plaso>
 
 regipy (Plugin: amcache) - <https://github.com/mkorman90/regipy>
 
-juntei (parse-registry amcache) - <https://github.com/Yamato-Security/juntei>
-
-artemis - <https://github.com/puffycid/artemis>
+RegRipper (amcache) - <https://github.com/keydet89/RegRipper4.0>

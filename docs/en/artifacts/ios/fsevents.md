@@ -32,12 +32,16 @@ From a digital forensics perspective, FSEvents entries allow statements about ac
 
 ## Tools
 
+### Core tools
+
+iLEAPP (parser: FSEvents) - <https://github.com/abrignoni/iLEAPP>
+
+mac_apt (FSEVENTS) - <https://github.com/ydkhatri/mac_apt>
+
+### Other tools
+
 FSEParser - <https://github.com/dlcowen/FSEventsParser>
 
 FSEventsParser - <https://github.com/mac4n6/FSEventsParser>
 
 FSEventsParser-rs - <https://github.com/Houwenda/FSEventsParser-rs>
-
-iLEAPP (iosFileSystemEvents) - <https://github.com/abrignoni/iLEAPP>
-
-mac_apt (FSEVENTS) - <https://github.com/ydkhatri/mac_apt>

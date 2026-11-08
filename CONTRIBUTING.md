@@ -68,6 +68,8 @@ Fixed headings and phrases (each version uses the column of its language):
 | `## Spezifische Kurzinformation` | `## Key facts` |
 | `## Referenzen` | `## References` |
 | `## Tools` | `## Tools` |
+| `### Kern-Tools` | `### Core tools` |
+| `### Weitere Tools` | `### Other tools` |
 | `## Quellen` (glossary) | `## Sources` |
 | `*Noch kein Inhalt.*` | `*No content yet.*` |
 | `Verfügbarkeit` | `Availability` |
@@ -292,6 +294,17 @@ that.
   structured form. Not sufficient:
   - format detection alone (e.g. by signature)
   - generic viewers (e.g. any SQLite browser for an SQLite-based artifact)
+  - collecting the artifact without decoding it (e.g. a KAPE target)
+- A tool that for this artifact only runs another tool is not listed; the tool it runs is listed
+  instead. Exception: the tools named in the next point stay, because they give an overview across
+  many artifacts.
+- Order: first the following tools with broad artifact coverage that are maintained and checked
+  regularly, in this order: the LEAPPs (ALEAPP, DLEAPP, iLEAPP, RLEAPP), crush, peach, ArtEx2, the
+  CCL tools (e.g. ccl-segb), mac_apt, APOLLO, Dissect, Velociraptor, Eric Zimmerman's tools
+  (EZ Tools), TRACE. After them, all other tools in alphabetical order.
+- If a page lists both, the core tools stand under `### Kern-Tools` (core tools) and the others
+  under `### Weitere Tools` (other tools). With only one of the two groups there is no subheading.
+  Order and subheadings are checked by `scripts/check_content.py`.
 - All language versions list the same tools (see [Languages](#languages)).
 - Adding, changing or removing tools does not change the page's status or dates (see
   [Status](#status)).

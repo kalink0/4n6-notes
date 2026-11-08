@@ -42,12 +42,18 @@ From a digital forensics perspective, a tab file shows that the text it contains
 
 ## Tools
 
-Notepad-State-Library (WindowsNotepadParser) - <https://github.com/ogmini/Notepad-State-Library>
-
-notepad_parser - <https://github.com/AbdulRhmanAlfaifi/notepad_parser>
+### Core tools
 
 DLEAPP (parser: Windows Notepad Tabs, Windows Notepad Windows, Windows Notepad Settings) - <https://github.com/abrignoni/DLEAPP>
 
+Dissect (plugin: windowsnotepad) - <https://docs.dissect.tools/>
+
 Velociraptor (artifact: Windows.Forensics.NotepadParser) - <https://docs.velociraptor.app/>
 
-Dissect (plugin: windowsnotepad) - <https://docs.dissect.tools/>
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
+Notepad-State-Library (WindowsNotepadParser) - <https://github.com/ogmini/Notepad-State-Library>
+
+notepad_parser - <https://github.com/AbdulRhmanAlfaifi/notepad_parser>

@@ -14,6 +14,9 @@ Checks:
   extra.topics in mkdocs.base.yml; every topic has a label for every language
 - all language versions of a page have the same topics and the same tools (compared by the URLs
   in `## Tools`)
+- artifact pages list the core tools first in their fixed order and the other tools
+  alphabetically; with both, under the subheadings `### Kern-Tools` / `### Weitere Tools`
+  (`### Core tools` / `### Other tools`), otherwise without subheadings
 - gap lists (gaps/<section>.yml) belong to an existing section and have a name for every entry;
   if a list uses topics, every entry has one known topic
 Reports (without failing) translations whose source version was completed later, overview pages
@@ -54,6 +57,67 @@ def tool_urls(body: str) -> set[str] | None:
     if not m:
         return None
     return {a or b for a, b in TOOL_URL.findall(m.group(1))}
+
+
+# Core tools, listed first and in this order (CONTRIBUTING.md, "Tools"); names in lower case.
+# Each group is one rank; within a group the order is free. CCL tools are names starting with "ccl".
+CORE_TOOLS = [
+    {"aleapp", "dleapp", "ileapp", "rleapp"},
+    {"crush", "crush-forensics"},
+    {"peach", "peach-forensics"},
+    {"artex2"},
+    "ccl",
+    {"mac_apt"},
+    {"apollo"},
+    {"dissect", "dissect.target"},
+    {"velociraptor"},
+    {  # Eric Zimmerman's tools
+        "amcacheparser", "appcompatcacheparser", "bstrings", "evtxecmd", "ezviewer", "hasher",
+        "jlecmd", "jumplist explorer", "kape", "lecmd", "mftecmd", "mftexplorer", "pecmd", "rbcmd",
+        "recentfilecacheparser", "recmd", "registry explorer", "rla", "sbecmd", "sdb explorer",
+        "shellbags explorer", "shellbag explorer", "sqlecmd", "srumecmd", "sumecmd", "timeapp",
+        "timeline explorer", "vscmount", "wxtcmd",
+    },
+    {"trace"},
+]
+# Subheadings of "## Tools" when a page lists core tools and other tools.
+TOOL_HEADINGS = {"de": ("Kern-Tools", "Weitere Tools"), "en": ("Core tools", "Other tools")}
+
+
+def core_rank(name: str) -> int | None:
+    """Rank of a core tool, or None for any other tool."""
+    name = name.lower()
+    for rank, group in enumerate(CORE_TOOLS):
+        if (name.startswith(group) if isinstance(group, str) else name in group):
+            return rank
+    return None
+
+
+def check_tools_order(errors: list[str], rel: str, lang: str, body: str) -> None:
+    """Core tools first in their order, the others alphabetically; with both, one heading each."""
+    m = TOOLS_SECTION.search(body)
+    if not m or lang not in TOOL_HEADINGS:
+        return
+    headings, tools = [], []
+    for para in (p.strip() for p in re.split(r"\n\s*\n", m.group(1)) if p.strip()):
+        if para.startswith("### "):
+            headings.append((len(tools), para[4:].strip()))
+        elif " - <" in para:
+            tools.append(re.split(r" \(| - <", para, maxsplit=1)[0].strip())
+    ranks = [core_rank(t) for t in tools]
+    core = [r for r in ranks if r is not None]
+    other = [t.casefold() for t, r in zip(tools, ranks) if r is None]
+    if ranks != sorted(ranks, key=lambda r: (r is None, r or 0)) or core != sorted(core):
+        errors.append(f"{rel}: tools out of order (core tools first, in the order of CONTRIBUTING.md)")
+    elif other != sorted(other):
+        errors.append(f"{rel}: tools after the core tools are not in alphabetical order")
+    first, second = TOOL_HEADINGS[lang]
+    expected = [(0, first), (len(core), second)] if core and other else []
+    if headings != expected:
+        if expected:
+            errors.append(f"{rel}: tools need the subheadings '### {first}' and '### {second}'")
+        else:
+            errors.append(f"{rel}: subheadings in Tools only when both core and other tools are listed")
 
 
 def check_gaps(errors: list[str], topics: dict, languages: list[str]) -> list[str]:
@@ -158,6 +222,8 @@ def main() -> int:
             if not (is_index and "status" not in meta) and status not in STATUSES:
                 errors.append(f"{rel}: status must be one of {sorted(STATUSES)}, got {status!r}")
             check_dates(errors, rel, meta)
+            if is_artifact:
+                check_tools_order(errors, rel, lang, body)
             authors = parse_people(meta.get("authors"))
             if authors is None:
                 errors.append(f"{rel}: authors must be GitHub handles, optionally 'handle (Full Name)'")

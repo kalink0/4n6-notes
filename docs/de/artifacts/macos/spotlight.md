@@ -39,8 +39,16 @@ Aus digitalforensischer Sicht belegt ein Eintrag in der Spotlight-Datenbank, das
 
 ## Tools
 
+### Kern-Tools
+
 DLEAPP (Parser: Spotlight Store Files) - <https://github.com/abrignoni/DLEAPP>
 
 mac_apt (Plugin: SPOTLIGHT) - <https://github.com/ydkhatri/mac_apt>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
+
+Plaso (Parser: spotlight_storedb) - <https://github.com/log2timeline/plaso>
 
 spotlight_parser - <https://github.com/ydkhatri/spotlight_parser>

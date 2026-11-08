@@ -69,14 +69,18 @@ The digital forensic meaning of the respective data has to be assessed individua
 
 ## Tools
 
-RECmd - <https://github.com/EricZimmerman/RECmd>
+### Core tools
 
-RegRipper - <https://github.com/keydet89/RegRipper4.0>
+RECmd - <https://github.com/EricZimmerman/RECmd>
 
 Registry Explorer - <https://ericzimmerman.github.io/>
 
-regipy (Python; transaction logs: regipy-process-transaction-logs) - <https://github.com/mkorman90/regipy>
-
-yarp - <https://github.com/msuhanov/yarp>
+### Other tools
 
 libregf - <https://github.com/libyal/libregf>
+
+regipy (Python; transaction logs: regipy-process-transaction-logs) - <https://github.com/mkorman90/regipy>
+
+RegRipper - <https://github.com/keydet89/RegRipper4.0>
+
+yarp - <https://github.com/msuhanov/yarp>

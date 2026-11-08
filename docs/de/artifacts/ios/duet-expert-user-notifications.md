@@ -30,4 +30,4 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass zum angegebenen Zeitpunkt
 
 ## Tools
 
-iLEAPP (duetNotifications) - <https://github.com/abrignoni/iLEAPP>
+iLEAPP (Parser: DuetExpertCenter - Notifications, DuetExpertCenter - Notification Suggestions) - <https://github.com/abrignoni/iLEAPP>

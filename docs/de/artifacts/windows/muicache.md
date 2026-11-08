@@ -34,16 +34,20 @@ Aus digitalforensischer Sicht bedeuten Einträge im MUI Cache, dass das Programm
 
 ## Tools
 
-RegRipper (muicache) - <https://github.com/keydet89/RegRipper4.0>
-
-Registry Explorer - <https://ericzimmerman.github.io/>
-
-MUICacheView - <https://www.nirsoft.net/utils/muicache_view.html>
+### Kern-Tools
 
 DLEAPP (Parser: MUICache) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (Plugin: muicache) - <https://docs.dissect.tools/>
 
-regipy (Plugin: muicache) - <https://github.com/mkorman90/regipy>
+Registry Explorer - <https://ericzimmerman.github.io/>
+
+### Weitere Tools
 
 juntei (parse-registry muicache) - <https://github.com/Yamato-Security/juntei>
+
+MUICacheView - <https://www.nirsoft.net/utils/muicache_view.html>
+
+regipy (Plugin: muicache) - <https://github.com/mkorman90/regipy>
+
+RegRipper (muicache) - <https://github.com/keydet89/RegRipper4.0>

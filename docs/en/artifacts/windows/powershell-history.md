@@ -41,6 +41,8 @@ From a digital forensics perspective, the existence of entries in the Command Hi
 
 DLEAPP (parser: PowerShell PSReadLine History) - <https://github.com/abrignoni/DLEAPP>
 
+Dissect (plugin: powershell_history) - <https://dissect.readthedocs.io/en/stable/plugins/powershell_history.html>
+
 Velociraptor (artifact: Windows.System.Powershell.PSReadline) - <https://docs.velociraptor.app/artifact_references/pages/windows.system.powershell.psreadline>
 
-Dissect (plugin: powershell_history) - <https://dissect.readthedocs.io/en/stable/plugins/powershell_history.html>
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>

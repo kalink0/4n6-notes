@@ -40,12 +40,16 @@ From a digital forensics perspective, entries in PcaAppLaunchDic.txt show that t
 
 ## Tools
 
-Program Compatibility Parser - <https://github.com/kacos2000/Win10/tree/master/ProgramCompatibility>
-
-PCAParser - <https://github.com/AndrewRathbun/PCAParser>
+### Core tools
 
 DLEAPP (parser: PCA App Launch Dictionary, PCA General Db) - <https://github.com/abrignoni/DLEAPP>
 
+Velociraptor (artifacts: Windows.System.AppCompatPCA, Windows.System.AppCompatPCAExtend) - <https://docs.velociraptor.app/>
+
+### Other tools
+
+PCAParser - <https://github.com/AndrewRathbun/PCAParser>
+
 Plaso (parser: winpca_db0, winpca_dic) - <https://github.com/log2timeline/plaso>
 
-Velociraptor (artifacts: Windows.System.AppCompatPCA, Windows.System.AppCompatPCAExtend) - <https://docs.velociraptor.app/>
+Program Compatibility Parser - <https://github.com/kacos2000/Win10/tree/master/ProgramCompatibility>

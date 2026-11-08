@@ -30,6 +30,10 @@ Aus digitalforensischer Sicht bedeuten die Einträge, dass die jeweilige Datei/d
 
 ## Tools
 
+### Kern-Tools
+
 ALEAPP (Parser: My Files Operation History, My Files - File Operations) - <https://github.com/abrignoni/ALEAPP>
+
+### Weitere Tools
 
 SELECT-Queries - <https://github.com/kalink0/useful_scripts/blob/master/sql/Android/Samsung%20Apps/sMyFiles.sql>

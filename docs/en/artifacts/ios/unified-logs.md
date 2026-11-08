@@ -59,10 +59,16 @@ A single tracev3 can be read on its own, but the exact timestamps (as they depen
 
 ## Tools
 
-iLEAPP (logarchive) - <https://github.com/abrignoni/iLEAPP>
+### Core tools
+
+iLEAPP (parser: logarchive) - <https://github.com/abrignoni/iLEAPP>
+
+peach-forensics (AUL) - <https://github.com/kalink0/peach-forensics>
+
+### Other tools
 
 macos-UnifiedLogs - <https://github.com/mandiant/macos-UnifiedLogs>
 
-peach-forensics (AUL) - <https://github.com/kalink0/peach-forensics>
+Plaso (parser: unified_logging) - <https://github.com/log2timeline/plaso>
 
 UnifiedLogReader - <https://github.com/ydkhatri/UnifiedLogReader> (old versions only)

@@ -37,18 +37,18 @@ From a digital forensics perspective, entries for files and folders in the Windo
 
 ## Tools
 
-Search Index DB Reporter - <https://github.com/strozfriedberg/sidr>
+### Core tools
 
 DLEAPP (parser: Windows Search Index, Windows 11 Search Index) - <https://github.com/abrignoni/DLEAPP>
 
-WinSearchDBAnalyzer (up to Windows 10) - <https://github.com/moaistory/WinSearchDBAnalyzer>
-
-ESEDatabaseView (up to Windows 10) - <https://www.nirsoft.net/utils/ese_database_view.html>
-
-DB Browser for SQLite (from Windows 11) - <https://sqlitebrowser.org/>
-
 Dissect (plugin: search) - <https://docs.dissect.tools/>
+
+SQLECmd (Maps: Windows_Search_Index_Windows_db, Windows_Search_Index_Windows_gather_db) - <https://ericzimmerman.github.io/>
+
+### Other tools
 
 artemis - <https://github.com/puffycid/artemis>
 
-SQLECmd (Maps: Windows_Search_Index_Windows_db, Windows_Search_Index_Windows_gather_db) - <https://ericzimmerman.github.io/>
+Search Index DB Reporter - <https://github.com/strozfriedberg/sidr>
+
+WinSearchDBAnalyzer (up to Windows 10) - <https://github.com/moaistory/WinSearchDBAnalyzer>

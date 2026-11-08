@@ -35,4 +35,4 @@ It does not show at which exact point in time a single step or a package change 
 
 ## Tools
 
-ALEAPP (Android Battery Stats Daily) - <https://github.com/abrignoni/ALEAPP>
+ALEAPP (parser: Android Battery Stats Daily, Android Battery Stats Daily Package Changes) - <https://github.com/abrignoni/ALEAPP>

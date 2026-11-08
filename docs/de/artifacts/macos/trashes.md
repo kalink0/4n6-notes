@@ -38,8 +38,14 @@ Aus digitalforensischer Sicht belegt ein Objekt im Papierkorb, dass es über das
 
 ## Tools
 
+### Kern-Tools
+
 DLEAPP (Parser: Trash Put Back) - <https://github.com/abrignoni/DLEAPP>
 
-DSStoreParser - <https://github.com/nicoleibrahim/DSStoreParser>
-
 mac_apt (Plugin: TRASH) - <https://github.com/ydkhatri/mac_apt>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
+
+DSStoreParser - <https://github.com/nicoleibrahim/DSStoreParser>

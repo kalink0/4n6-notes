@@ -41,18 +41,22 @@ From a digital forensics perspective, a file in the Startup folder shows that it
 
 ## Tools
 
-Autoruns - <https://learn.microsoft.com/sysinternals/downloads/autoruns>
-
-RegRipper (rundisabled) - <https://github.com/keydet89/RegRipper4.0>
-
-LECmd - <https://ericzimmerman.github.io/>
+### Core tools
 
 DLEAPP (Parser: Startup Folder Items, Startup Approved States) - <https://github.com/abrignoni/DLEAPP>
 
 Velociraptor (Artifacts: Windows.Sys.StartupItems) - <https://docs.velociraptor.app/>
 
-WhatInStartup - <https://www.nirsoft.net/utils/what_run_in_startup.html>
+LECmd - <https://ericzimmerman.github.io/>
+
+### Other tools
+
+Autoruns - <https://learn.microsoft.com/sysinternals/downloads/autoruns>
 
 juntei (persistence-hunter) - <https://github.com/Yamato-Security/juntei>
 
 PersistenceSniper (Get-StartupPrograms) - <https://github.com/last-byte/PersistenceSniper>
+
+RegRipper (rundisabled) - <https://github.com/keydet89/RegRipper4.0>
+
+WhatInStartup - <https://www.nirsoft.net/utils/what_run_in_startup.html>

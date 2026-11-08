@@ -36,16 +36,20 @@ From a digital forensics perspective, entries in the MUI cache show that the pro
 
 ## Tools
 
-RegRipper (muicache) - <https://github.com/keydet89/RegRipper4.0>
-
-Registry Explorer - <https://ericzimmerman.github.io/>
-
-MUICacheView - <https://www.nirsoft.net/utils/muicache_view.html>
+### Core tools
 
 DLEAPP (parser: MUICache) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (plugin: muicache) - <https://docs.dissect.tools/>
 
-regipy (plugin: muicache) - <https://github.com/mkorman90/regipy>
+Registry Explorer - <https://ericzimmerman.github.io/>
+
+### Other tools
 
 juntei (parse-registry muicache) - <https://github.com/Yamato-Security/juntei>
+
+MUICacheView - <https://www.nirsoft.net/utils/muicache_view.html>
+
+regipy (plugin: muicache) - <https://github.com/mkorman90/regipy>
+
+RegRipper (muicache) - <https://github.com/keydet89/RegRipper4.0>

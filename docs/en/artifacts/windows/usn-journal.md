@@ -38,22 +38,26 @@ From a digital forensics perspective, entries in the USN journal mean that the l
 
 ## Tools
 
-Usnjrnl2Csv - <https://github.com/jschicht/UsnJrnl2Csv>
-
-MFTECmd - <https://ericzimmerman.github.io/>
+### Core tools
 
 DLEAPP (parser: USN Journal) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (plugin: usnjrnl) - <https://docs.dissect.tools/en/stable/plugins/usnjrnl.html>
 
-dfir_ntfs - <https://github.com/msuhanov/dfir_ntfs>
-
 Velociraptor (artifact: Windows.Forensics.Usn) - <https://docs.velociraptor.app/>
 
-juntei (parse-ntfs usn-journal) - <https://github.com/Yamato-Security/juntei>
+MFTECmd - <https://ericzimmerman.github.io/>
+
+### Other tools
 
 artemis - <https://github.com/puffycid/artemis>
+
+dfir_ntfs - <https://github.com/msuhanov/dfir_ntfs>
+
+juntei (parse-ntfs usn-journal) - <https://github.com/Yamato-Security/juntei>
 
 RustyUsn - <https://github.com/forensicmatt/RustyUsn>
 
 USN-Journal-Parser - <https://github.com/PoorBillionaire/USN-Journal-Parser>
+
+Usnjrnl2Csv - <https://github.com/jschicht/UsnJrnl2Csv>

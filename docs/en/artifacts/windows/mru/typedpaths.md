@@ -38,14 +38,20 @@ From a digital forensics perspective, an entry shows that the path was typed or 
 
 ## Tools
 
+### Core tools
+
 DLEAPP (parser: Explorer Typed Paths) - <https://github.com/abrignoni/DLEAPP>
 
 RECmd (Kroll_Batch) - <https://ericzimmerman.github.io/>
 
-RegRipper (typedpaths) - <https://github.com/keydet89/RegRipper4.0>
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
+juntei (parse-registry mru) - <https://github.com/Yamato-Security/juntei>
 
 Plaso (parser: windows_typed_urls) - <https://github.com/log2timeline/plaso>
 
 regipy (plugin: typed_paths) - <https://github.com/mkorman90/regipy>
 
-juntei (parse-registry mru) - <https://github.com/Yamato-Security/juntei>
+RegRipper (typedpaths) - <https://github.com/keydet89/RegRipper4.0>

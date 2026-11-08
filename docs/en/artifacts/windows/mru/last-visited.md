@@ -37,16 +37,22 @@ From a digital forensics perspective, entries in the LastVisited MRU mean that t
 
 ## Tools
 
+### Core tools
+
 DLEAPP (parser: File Dialog Application MRU) - <https://github.com/abrignoni/DLEAPP>
+
+Dissect (plugin: mru.lastvisited) - <https://docs.dissect.tools/>
 
 Registry Explorer (ComDlg32 Bookmark) - <https://ericzimmerman.github.io/>
 
-RegRipper (comdlg32) - <https://github.com/keydet89/RegRipper4.0>
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
 
-Dissect (plugin: mru.lastvisited) - <https://docs.dissect.tools/>
+### Other tools
+
+juntei (parse-registry open-save-mru) - <https://github.com/Yamato-Security/juntei>
 
 Plaso (parser: mrulistex) - <https://github.com/log2timeline/plaso>
 
 regipy (plugin: comdlg32) - <https://github.com/mkorman90/regipy>
 
-juntei (parse-registry open-save-mru) - <https://github.com/Yamato-Security/juntei>
+RegRipper (comdlg32) - <https://github.com/keydet89/RegRipper4.0>

@@ -40,26 +40,30 @@ From a digital forensics perspective, a task shows that the named program or com
 
 ## Tools
 
-RegRipper (tasks, hiddentasks) - <https://github.com/keydet89/RegRipper4.0>
+### Core tools
 
-Autoruns - <https://learn.microsoft.com/sysinternals/downloads/autoruns>
-
-EvtxECmd - <https://ericzimmerman.github.io/>
-
-DLEAPP (Parser: Scheduled Tasks, Scheduled Task Cache (TaskCache), Task Scheduler Task Registrations, Task Scheduler Task Actions) - <https://github.com/abrignoni/DLEAPP>
-
-Velociraptor (Artifacts: Windows.System.TaskScheduler, Windows.Registry.TaskCache, Windows.EventLogs.ScheduledTasks) - <https://docs.velociraptor.app/>
+DLEAPP (parser: Scheduled Tasks) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (Plugin: tasks) - <https://docs.dissect.tools/>
 
-Plaso (Parser: winjob, windows_task_cache) - <https://github.com/log2timeline/plaso>
+Velociraptor (Artifacts: Windows.System.TaskScheduler, Windows.Registry.TaskCache, Windows.EventLogs.ScheduledTasks) - <https://docs.velociraptor.app/>
 
-TaskSchedulerView - <https://www.nirsoft.net/utils/task_scheduler_view.html>
+EvtxECmd - <https://ericzimmerman.github.io/>
+
+Registry Explorer (plugin: TaskCache) - <https://ericzimmerman.github.io/>
+
+### Other tools
+
+Autoruns - <https://learn.microsoft.com/sysinternals/downloads/autoruns>
 
 juntei (parse-registry taskcache, persistence-hunter) - <https://github.com/Yamato-Security/juntei>
 
-Windows-Scheduled-Task-Parser - <https://github.com/gajos112/Windows-Scheduled-Task-Parser>
-
 PersistenceSniper (Get-ScheduledTasks) - <https://github.com/last-byte/PersistenceSniper>
 
-Registry Explorer (plugin: TaskCache) - <https://ericzimmerman.github.io/>
+Plaso (Parser: winjob, windows_task_cache) - <https://github.com/log2timeline/plaso>
+
+RegRipper (tasks, hiddentasks) - <https://github.com/keydet89/RegRipper4.0>
+
+TaskSchedulerView - <https://www.nirsoft.net/utils/task_scheduler_view.html>
+
+Windows-Scheduled-Task-Parser - <https://github.com/gajos112/Windows-Scheduled-Task-Parser>

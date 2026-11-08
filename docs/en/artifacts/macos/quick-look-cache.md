@@ -41,8 +41,12 @@ From a digital forensics perspective, an entry shows that the file was present a
 
 ## Tools
 
+### Core tools
+
 DLEAPP (parser: QuickLook Thumbnails) - <https://github.com/abrignoni/DLEAPP>
 
 mac_apt (plugin: QUICKLOOK) - <https://github.com/ydkhatri/mac_apt>
+
+### Other tools
 
 OSX-QuickLook-Parser - <https://github.com/mdegrazia/OSX-QuickLook-Parser> (old versions only)

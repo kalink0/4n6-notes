@@ -59,26 +59,32 @@ From a digital forensics perspective, the existence of JumpLists shows the follo
 
 ## Tools
 
+### Core tools
+
+DLEAPP (parser: Jump Lists, LNK) - <https://github.com/abrignoni/DLEAPP>
+
+Dissect (plugin: jumplist, lnk) - <https://docs.dissect.tools/>
+
+Velociraptor (artifacts: Windows.Forensics.JumpLists, Windows.Forensics.Lnk) - <https://docs.velociraptor.app/>
+
 JLECmd - <https://ericzimmerman.github.io/>
 
 JumpList Explorer - <https://ericzimmerman.github.io/>
 
 LECmd - <https://ericzimmerman.github.io/>
 
-Jumplist-Browser - <https://github.com/kacos2000/Jumplist-Browser>
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
 
-DLEAPP (parser: Jump Lists, Recent Shell Links (LNK), Office Recent Shell Links (LNK), Desktop, Taskbar and Startup Shell Links) - <https://github.com/abrignoni/DLEAPP>
-
-Velociraptor (artifacts: Windows.Forensics.JumpLists, Windows.Forensics.Lnk) - <https://docs.velociraptor.app/>
-
-Dissect (plugin: jumplist, lnk) - <https://docs.dissect.tools/>
-
-Plaso (parser: lnk, olecf_automatic_destinations, custom_destinations) - <https://github.com/log2timeline/plaso>
-
-juntei (parse-file lnk, parse-file jump-lists) - <https://github.com/Yamato-Security/juntei>
-
-JumpListsView - <https://www.nirsoft.net/utils/jump_lists_view.html>
+### Other tools
 
 artemis - <https://github.com/puffycid/artemis>
 
+Jumplist-Browser - <https://github.com/kacos2000/Jumplist-Browser>
+
 JumpList_Lnk_Parser - <https://github.com/salehmuhaysin/JumpList_Lnk_Parser>
+
+JumpListsView - <https://www.nirsoft.net/utils/jump_lists_view.html>
+
+juntei (parse-file lnk, parse-file jump-lists) - <https://github.com/Yamato-Security/juntei>
+
+Plaso (parser: lnk, olecf_automatic_destinations, custom_destinations) - <https://github.com/log2timeline/plaso>

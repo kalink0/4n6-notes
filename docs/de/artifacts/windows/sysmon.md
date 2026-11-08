@@ -70,10 +70,14 @@ Aus digitalforensischer Sicht liefert Sysmon – sofern vorab installiert und ak
 
 ## Tools
 
+### Kern-Tools
+
+DLEAPP (Parser: Sysmon) - <https://github.com/abrignoni/DLEAPP>
+
 EvtxECmd (Eric Zimmerman) - <https://github.com/EricZimmerman/evtx>
+
+### Weitere Tools
 
 Chainsaw - <https://github.com/WithSecureLabs/chainsaw>
 
 Hayabusa - <https://github.com/Yamato-Security/hayabusa>
-
-DLEAPP (Parser: Sysmon) - <https://github.com/abrignoni/DLEAPP>

@@ -33,9 +33,7 @@ From a digital forensics perspective, entries in the Windows Timeline mean that 
 
 ## Tools
 
-WxTCmd - <https://ericzimmerman.github.io/>
-
-WindowsTimeline (kacos2000) - <https://github.com/kacos2000/WindowsTimeline>
+### Core tools
 
 DLEAPP (parser: ActivitiesCache) - <https://github.com/abrignoni/DLEAPP>
 
@@ -43,6 +41,14 @@ Dissect (plugin: activitiescache) - <https://docs.dissect.tools/en/stable/plugin
 
 Velociraptor (artifact: Windows.Forensics.Timeline) - <https://docs.velociraptor.app/>
 
+SQLECmd (map: Windows_ActivitiesCache) - <https://ericzimmerman.github.io/>
+
+WxTCmd - <https://ericzimmerman.github.io/>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Other tools
+
 Plaso (parser: windows_timeline) - <https://github.com/log2timeline/plaso>
 
-SQLECmd (map: Windows_ActivitiesCache) - <https://ericzimmerman.github.io/>
+WindowsTimeline (kacos2000) - <https://github.com/kacos2000/WindowsTimeline>

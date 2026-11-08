@@ -62,12 +62,22 @@ Eine einzelne tracev3 kann zwar auch gelesen werden, jedoch fehlen die genauen Z
 
 ## Tools
 
-DLEAPP (Unified Logs) - <https://github.com/abrignoni/DLEAPP>
+### Kern-Tools
 
-macos-UnifiedLogs - <https://github.com/mandiant/macos-UnifiedLogs>
+DLEAPP (Parser: Unified Logs) - <https://github.com/abrignoni/DLEAPP>
 
 peach-forensics (AUL) - <https://github.com/kalink0/peach-forensics>
 
-UnifiedLogReader - <https://github.com/ydkhatri/UnifiedLogReader> (nur alte Versionen)
-
 Velociraptor (Exchange: MacOS.UnifiedLogParser, MacOS.UnifiedLogHunter) - <https://github.com/Velocidex/velociraptor>
+
+TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
+
+### Weitere Tools
+
+artemis - <https://github.com/puffycid/artemis>
+
+macos-UnifiedLogs - <https://github.com/mandiant/macos-UnifiedLogs>
+
+Plaso (Parser: unified_logging) - <https://github.com/log2timeline/plaso>
+
+UnifiedLogReader - <https://github.com/ydkhatri/UnifiedLogReader> (nur alte Versionen)

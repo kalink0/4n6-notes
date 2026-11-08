@@ -37,14 +37,18 @@ Aus digtalforensischer Sicht bedeuten Einträge, dass der Nutzeraccount von der 
 
 ## Tools
 
-SumECmd - <https://ericzimmerman.github.io/>
-
-KStrike - <https://github.com/brimorlabs/KStrike>
+### Kern-Tools
 
 DLEAPP (Parser: User Access Logging) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (Plugin: ual) - <https://docs.dissect.tools/en/stable/plugins/ual.html>
 
 Velociraptor (Artefakt: Windows.Forensics.UserAccessLogs) - <https://docs.velociraptor.app/>
+
+SumECmd - <https://ericzimmerman.github.io/>
+
+### Weitere Tools
+
+KStrike - <https://github.com/brimorlabs/KStrike>
 
 Plaso (Parser: user_access_logging) - <https://github.com/log2timeline/plaso>
