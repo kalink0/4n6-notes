@@ -3,17 +3,13 @@
 
 - name: Caches
 - name: Cluster und Sektor
-- name: Dateisysteme
 - name: Datenspeicher
-- name: Datenwiederherstellung
 - name: Forensische Datencontainer
-- name: Gelöschte Daten
 - name: Koordinierte Weltzeit
 - name: Partition
 - name: Zeitstempel
 - name: Privater Modus / Inkognito-Modus
 - name: Timeline
-- name: RAID
 - name: Steganografie
 
 # Angriffe
