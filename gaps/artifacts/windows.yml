@@ -31,11 +31,7 @@
 - name: Systeminformationen
   topic: system-config
 
-- name: Autostart-Einträge in der Registry
-  topic: persistence
 - name: Dienste
-  topic: persistence
-- name: Geplante Aufgaben
   topic: persistence
 
 - name: Windows Error Reporting
@@ -45,14 +41,10 @@
 
 - name: 7-Zip-Historie
   topic: file-access
-- name: OAlerts
-  topic: file-access
 
 - name: Microsoft Defender
   topic: file-existence
 
-- name: Zone.Identifier (Mark of the Web)
-  topic: web-activity
 - name: WebCache.dat
   topic: web-activity
 
