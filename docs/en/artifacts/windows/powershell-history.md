@@ -1,10 +1,12 @@
 ---
 title: "PowerShell Command History"
-status: complete
+status: reviewed
 completed: 2026-10-26
 authors: [kalink0 (Marco Neumann)]
-translation: machine
+translation: human
 translation_of: de
+reviewers: [dugeonlady]
+reviewed: 2026-11-07
 topics: [commands-input]
 ---
 
@@ -12,17 +14,16 @@ topics: [commands-input]
 
 ## Meaning
 
-The PowerShell Command History stores the last 4096 (by default) commands executed in PowerShell. This feature serves to easily make the last executed commands available to the user again. The entries are stored chronologically, but without exact times.
+The PowerShell Command History by default stores the last 4096 commands executed in PowerShell. This feature provides easy access to the last executed commands for the user. The entries are stored chronologically, but without exact timestamps.
 
-From a digital forensics perspective, the existence of entries in the Command History means that the listed commands were executed in the user context. It does not show, however, that a command was executed successfully. Likewise, the absence of a command does not show that it was not executed.
+From a digital forensics perspective, the existence of entries in the Command History shows that the listed commands were executed in the user context. It does not show, however, that a command was executed successfully. Likewise, the absence of a command does not show that it was not executed.
 
 ## Key facts
 
-1. From PowerShell v5, Windows 10, enabled by default
-2. By default, the last 4096 commands are stored chronologically, without exact timestamps; identical commands repeated directly are only stored once
-3. The creation date and last modification date allow conclusions about the time period of the history.
-4. NOT written when using the PowerShell ISE - console use only
-5. Commands containing password, token, secret and similar are not stored from PowerShell 7
+1. Prerequisites: Starting with PowerShell v5, Windows 10, enabled by default
+2. Retention: By default, the last 4096 commands are stored chronologically; identical commands repeated directly are only stored once. The creation date and last modification date allow conclusions about the time period of the history.
+3. Timestamps: no exact timestamps are stored
+4. Particularities and pitfalls: NOT written when using the PowerShell ISE - console use only; Commands containing password, token, secret and similar are not stored starting with PowerShell 7
 6. Location:  
    **`%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\*_history.txt`**
 

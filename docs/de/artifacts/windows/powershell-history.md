@@ -4,7 +4,7 @@ status: reviewed
 completed: 2026-10-19
 authors: [kalink0 (Marco Neumann)]
 reviewers: [dugeonlady]
-reviewed: 2026-10-26
+reviewed: 2026-11-06
 topics: [commands-input]
 ---
 
@@ -18,11 +18,10 @@ Aus digitalforensischer Sicht bedeutet die Existenz von Einträgen in der Comman
 
 ## Spezifische Kurzinformation
 
-1. Ab PowerShell v5, Windows 10, standardmäßig aktiviert
-2. Standardmäßig werden die letzten 4096 Befehle chronologisch gespeichert, ohne genaue Zeitstempel; direkt wiederholte identische Befehle werden nur einmal gespeichert
-3. Anhand des Erstelldatums und letzten Bearbeitungsdatums kann Rückschluss auf den Zeitraum der History getroffen werden.
-4. Wird NICHT geschrieben bei Verwendung der PowerShell ISE - nur Konsolenverwendung
-5. Befehle mit password, token, secret u.ä. werden ab PowerShell 7 nicht gespeichert
+1. Voraussetzungen: Ab PowerShell v5, Windows 10, standardmäßig aktiviert
+2. Aufbewahrung: Standardmäßig werden die letzten 4096 Befehle chronologisch gespeichert; direkt wiederholte identische Befehle werden nur einmal gespeichert; Anhand des Erstelldatums und letzten Bearbeitungsdatums kann Rückschluss auf den Zeitraum der History getroffen werden.
+3. Zeitstempel: Es werden keine genauen Zeitstempel gespeichert.
+4. Besonderheiten und Fallstricke: Wird NICHT geschrieben bei Verwendung der PowerShell ISE - nur Konsolenverwendung; Befehle mit password, token, secret u.ä. werden ab PowerShell 7 nicht gespeichert
 6. Ablageort:  
    **`%userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\*_history.txt`**
 

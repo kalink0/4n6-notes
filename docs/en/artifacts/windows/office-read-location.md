@@ -6,7 +6,7 @@ authors: [kalink0 (Marco Neumann)]
 translation: human
 translation_of: de
 reviewers: [dugeonlady]
-reviewed: 2026-11-05
+reviewed: 2026-11-06
 topics: [file-access]
 ---
 
@@ -24,7 +24,7 @@ From a digital forensics perspective, the data allows the statement that a certa
 2. Retention: the data of the **last 50 documents read** is stored.
 3. Format and structure: a subkey `Document n` is created per document, with the values `File Path` (path of the document) and `Datetime` (time of last closing, **local system time**, format without seconds, e.g. `2025-08-23T14:39`). The value `Position` consists of **two numbers separated by a space**: the first corresponds to the `w14:paraId` of the last viewed paragraph (from the internal `document.xml`), the second to the **character position from the start of the document**
 4. Timestamps: cross-validation: after conversion to UTC, the `Datetime` value (local time) should match the **last write time of the respective** `Document n` **subkey**
-5. Special features and pitfalls: PDFs and documents opened via Outlook are also recorded; their path then points to the temporary Outlook cache. Documents on network drives are also recorded.
+5. Particularities and pitfalls: PDFs and documents opened via Outlook are also recorded; their path then points to the temporary Outlook cache. Documents on network drives are also recorded.
 6. Location:  
    **`HKCU\Software\Microsoft\Office\{VERSION}\Word\Reading Locations`**
 

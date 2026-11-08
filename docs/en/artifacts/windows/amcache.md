@@ -6,7 +6,7 @@ authors: [kalink0 (Marco Neumann)]
 translation: human
 translation_of: de
 reviewers: [dugeonlady]
-reviewed: 2026-10-30
+reviewed: 2026-11-06
 topics: [installed-software, program-execution]
 ---
 
@@ -24,7 +24,7 @@ From a digital forensics perspective, an entry shows that the application or dri
 2. Prerequisites: enabled by default
 3. Format and structure: registry hive; structure depends on Windows version and update level
 4. Timestamps: FILETIME, UTC; LastWrite time of an entry = last update, not execution
-5. Special features and pitfalls: SHA1 for large files only over the first 30 MB; include transaction logs (`.LOG1`/`.LOG2`)
+5. Particularities and pitfalls: SHA1 for large files only over the first 30 MB; include transaction logs (`.LOG1`/`.LOG2`)
 6. Location:  
    **`C:\Windows\AppCompat\Programs\Amcache.hve`**
 
