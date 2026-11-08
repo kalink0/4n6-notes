@@ -26,6 +26,7 @@ Reviewed, added by the reviewer (never by whoever made the change); completed an
 
 If the content of a reviewed page changes, it goes back to complete (or draft);
 reviewers and reviewed are removed.
+Changes to the tools do not change status, dates, authors or reviewers.
 -->
 
 # Name of the artifact

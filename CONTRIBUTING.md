@@ -25,22 +25,26 @@ same path in several languages gives the page's **language versions**. They are 
 is the original.
 
 - Each version has its own title, status, `completed` date, authors and reviewers. Whoever writes,
-  translates or extends a version is one of its authors.
+  translates or extends a version is one of its authors; changes to the tools do not count.
 - Each version may be extended on its own. When content is added to one version, the other
   versions should follow; a later `completed` date in another version is shown on the page
   ("Newer language version available").
 - A version translated from another one says so: `translation: human` or `machine` and
   `translation_of: <lang>` (see README, "Page front matter"). It is marked as possibly outdated
   when that version has a later `completed` date; after updating the translation, set its own
-  `completed`. A version that is extended on its own drops both fields.
+  `completed`. A version that is extended on its own drops both fields (changes to the tools do
+  not count).
 - Whoever changes the content of a finished version updates its `completed` date; corrections
-  that do not change the content (typos, formatting) leave it as it is.
+  that do not change the content (typos, formatting) and changes to the tools leave it as it is.
 - A machine translation is checked in the review, not by its author. Until then it shows a notice
   that no person has checked it. The review sets `translation: human`, also if nothing had to be
   changed. A new machine translation of the page sets `translation: machine` and `status: complete`
   again.
 - Topics belong to the page, not to a language; they may be set in any version, and the page gets
-  the topics of all versions. `scripts/check_content.py` reports versions with differing topics.
+  the topics of all versions. Versions with differing topics fail `scripts/check_content.py`.
+- Tools also belong to the page, not to a language: all versions list the same tools. A tool added
+  to or removed from one version is added to or removed from the others as well.
+  Versions with differing tools (compared by URL) fail `scripts/check_content.py`.
 - A page without a version in a language is shown there in another version, with a banner: English
   first (widest readership), then German (the repository's main language), then the others
   (`extra.fallback_order` in `mkdocs.base.yml`).
@@ -145,6 +149,8 @@ reviewed: 2026-10-21
 - If the content of a `reviewed` page changes, it goes back to `complete` (or `draft`, if it is
   unfinished again) until it has been reviewed again; `reviewers` and `reviewed` are removed.
   Whoever makes the change adds themselves to `authors` and updates `completed`.
+- Changes to the tools (`## Tools`) do not count as content changes, since tools are not checked
+  in the review: `status`, `completed`, `authors`, `reviewers` and `reviewed` stay as they are.
 
 ## Glossary
 
@@ -286,6 +292,9 @@ that.
   structured form. Not sufficient:
   - format detection alone (e.g. by signature)
   - generic viewers (e.g. any SQLite browser for an SQLite-based artifact)
+- All language versions list the same tools (see [Languages](#languages)).
+- Adding, changing or removing tools does not change the page's status or dates (see
+  [Status](#status)).
 
 ## Links
 

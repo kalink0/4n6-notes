@@ -78,7 +78,7 @@ translation_of: de   # language of the version it was translated from
 
 When that version gets a later `completed` date, the translation is marked as possibly outdated
 until its own `completed` is updated. A version extended on its own drops `translation` and
-`translation_of`. Topics may be set in any version; see CONTRIBUTING.md (Languages).
+`translation_of` (changes to the tools do not count). Topics may be set in any version; see CONTRIBUTING.md (Languages).
 
 ## Build locally
 

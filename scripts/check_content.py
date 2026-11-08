@@ -12,12 +12,13 @@ Checks:
   translation is not marked `translation: machine`
 - topics (`topics: [key, ...]`) only on artifact pages and only with keys from
   extra.topics in mkdocs.base.yml; every topic has a label for every language
+- all language versions of a page have the same topics and the same tools (compared by the URLs
+  in `## Tools`)
 - gap lists (gaps/<section>.yml) belong to an existing section and have a name for every entry;
   if a list uses topics, every entry has one known topic
-Reports (without failing) translations whose source version was completed later, language versions with
-differing topics, overview pages (index.md, except the start page) with more than the title,
-artifact pages without topics, topics no page uses and gap entries that already have a page or
-heading in their section.
+Reports (without failing) translations whose source version was completed later, overview pages
+(index.md, except the start page) with more than the title, artifact pages without topics, topics
+no page uses and gap entries that already have a page or heading in their section.
 
 Usage:
     python scripts/check_content.py              run all checks
@@ -42,6 +43,17 @@ from i18n import TRANSLATION_OF  # noqa: E402
 DOCS = ROOT / "docs"
 STATUSES = {"draft", "complete", "reviewed"}
 TRANSLATIONS = {"machine", "human"}
+# The "## Tools" section up to the next "## " heading; the heading is the same in every language.
+TOOLS_SECTION = re.compile(r"^## Tools[ \t]*$(.*?)(?=^## |\Z)", re.M | re.S)
+TOOL_URL = re.compile(r"<(https?://[^>\s]+)>|\]\((https?://[^)\s]+)\)")
+
+
+def tool_urls(body: str) -> set[str] | None:
+    """URLs listed in the page's Tools section, or None if it has no Tools section."""
+    m = TOOLS_SECTION.search(body)
+    if not m:
+        return None
+    return {a or b for a, b in TOOL_URL.findall(m.group(1))}
 
 
 def check_gaps(errors: list[str], topics: dict, languages: list[str]) -> list[str]:
@@ -120,8 +132,16 @@ def main() -> int:
             pages.setdefault(uri, {})[lang] = (page.relative_to(DOCS).as_posix(), text, body, meta)
 
     used_topics: set[str] = set()
-    differing_topics: list[str] = []
     for uri, versions in sorted(pages.items()):
+        page_tools = {lang: urls for lang, v in versions.items() if (urls := tool_urls(v[2])) is not None}
+        if len(page_tools) > 1:
+            every = set().union(*page_tools.values())
+            missing = {lang: sorted(every - urls) for lang, urls in page_tools.items() if every - urls}
+            if missing:
+                errors.append(
+                    f"{uri}: tools differ between language versions; "
+                    + "; ".join(f"missing in {lang}: {', '.join(urls)}" for lang, urls in missing.items())
+                )
         is_index = uri.rsplit("/", 1)[-1] == "index.md"
         is_artifact = uri.split("/")[0] == "artifacts" and not is_index
         page_topics: dict[str, list] = {}
@@ -181,12 +201,13 @@ def main() -> int:
         if is_artifact and not page_topics:
             without_topics.append(versions[next(iter(versions))][0])
         if len({tuple(sorted(k)) for k in page_topics.values()}) > 1:
-            differing_topics.append(f"{uri}: " + "; ".join(f"{lang}: {', '.join(k)}" for lang, k in page_topics.items()))
+            errors.append(
+                f"{uri}: topics differ between language versions; "
+                + "; ".join(f"{lang}: {', '.join(k)}" for lang, k in page_topics.items())
+            )
 
     for rel in outdated:
         print(f"outdated translation (source version completed later): {rel}")
-    for entry in differing_topics:
-        print(f"topics differ between language versions: {entry}")
     for rel in busy_index:
         print(f"overview page with more than the title: {rel}")
     for rel in without_topics:
@@ -203,7 +224,6 @@ def main() -> int:
         f"{len(errors)} error(s), {len(outdated)} outdated translation(s), "
         f"{len(busy_index)} overview page(s) with extra content, "
         f"{len(without_topics)} artifact page(s) without topics, "
-        f"{len(differing_topics)} page(s) with differing topics, "
         f"{len(unused_topics)} unused topic(s), {len(covered_gaps)} covered gap entr(y/ies)"
     )
     return 1 if errors else 0

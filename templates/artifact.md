@@ -26,6 +26,7 @@ Reviewed, ergänzt der Reviewer (nie, wer die Änderung gemacht hat); completed 
 
 Ändert sich der Inhalt einer reviewed-Seite, geht sie zurück auf complete (oder draft);
 reviewers und reviewed werden entfernt.
+Änderungen an den Tools ändern nichts an Status, Datum, Autoren oder Reviewern.
 -->
 
 # Name des Artefakts
