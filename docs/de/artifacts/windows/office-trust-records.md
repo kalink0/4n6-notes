@@ -38,3 +38,11 @@ Aus digitalforensischer Sicht bedeutet die Existenz eines *Trust Records*, dass 
 ## Tools
 
 RegRipper (msoffice) - <https://github.com/keydet89/RegRipper4.0>
+
+Dissect (Plugin: trusteddocs) - <https://docs.dissect.tools/>
+
+juntei (parse-registry office) - <https://github.com/Yamato-Security/juntei>
+
+Registry Explorer (Plugin: TrustedDocuments) - <https://ericzimmerman.github.io/>
+
+Velociraptor (Artefakt: Windows.Registry.EnabledMacro) - <https://docs.velociraptor.app/>

@@ -42,8 +42,14 @@ Srum dump - <https://github.com/MarkBaggett/srum-dump>
 
 ESE Database View - <https://www.nirsoft.net/utils/ese_database_view.html>
 
-DLEAPP (Parser: SRUM Network Usage, SRUM Application Resource Usage, SRUM Network Connections) - <https://github.com/abrignoni/DLEAPP>
+DLEAPP (Parser: SRUM Network Usage, SRUM Application Resource Usage, SRUM Network Connections, SRUM Execution Stats, SRUM WPN Notifications, SRUM Energy Usage, SRUM Energy Usage (Long Term), SRUM SDP Cpu, SRUM SDP Physical Disk, SRUM SDP Volume, SRUM SDP Network) - <https://github.com/abrignoni/DLEAPP>
 
 Velociraptor (Artefakt: Windows.Forensics.SRUM) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.srum/>
 
 Dissect (Plugin: sru) - <https://docs.dissect.tools/en/stable/plugins/sru.html>
+
+Plaso (Parser: srum) - <https://github.com/log2timeline/plaso>
+
+juntei (parse-ese srum) - <https://github.com/Yamato-Security/juntei>
+
+artemis - <https://github.com/puffycid/artemis>

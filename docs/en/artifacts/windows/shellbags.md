@@ -59,3 +59,11 @@ DLEAPP (parser: ShellBags) - <https://github.com/abrignoni/DLEAPP>
 Velociraptor (artifact: Windows.Forensics.Shellbags) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.shellbags/>
 
 Dissect (plugin: shellbags) - <https://docs.dissect.tools/en/stable/plugins/shellbags.html>
+
+Plaso (parser: bagmru) - <https://github.com/log2timeline/plaso>
+
+regipy (plugin: ntuser_shellbag_plugin, usrclass_shellbag_plugin) - <https://github.com/mkorman90/regipy>
+
+juntei (parse-registry shell-bags) - <https://github.com/Yamato-Security/juntei>
+
+artemis - <https://github.com/puffycid/artemis>

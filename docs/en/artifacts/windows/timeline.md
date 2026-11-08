@@ -40,3 +40,9 @@ WindowsTimeline (kacos2000) - <https://github.com/kacos2000/WindowsTimeline>
 DLEAPP (parser: ActivitiesCache) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (plugin: activitiescache) - <https://docs.dissect.tools/en/stable/plugins/activitiescache.html>
+
+Velociraptor (artifact: Windows.Forensics.Timeline) - <https://docs.velociraptor.app/>
+
+Plaso (parser: windows_timeline) - <https://github.com/log2timeline/plaso>
+
+SQLECmd (map: Windows_ActivitiesCache) - <https://ericzimmerman.github.io/>

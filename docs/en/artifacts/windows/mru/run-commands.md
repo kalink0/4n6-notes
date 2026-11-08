@@ -35,8 +35,16 @@ From a digital forensics perspective, entries in the Run commands MRU mean that 
 
 ## Tools
 
-DLEAPP (windowsUserMru) - <https://github.com/abrignoni/DLEAPP>
+DLEAPP (parser: Run Dialog MRU) - <https://github.com/abrignoni/DLEAPP>
 
 Registry Explorer (RunMRU Bookmark) - <https://ericzimmerman.github.io/>
 
 RegRipper (runmru) - <https://github.com/keydet89/RegRipper4.0>
+
+Velociraptor (artifact: Windows.Timeline.Registry.RunMRU) - <https://docs.velociraptor.app/>
+
+Dissect (plugin: mru.run) - <https://docs.dissect.tools/>
+
+regipy (plugin: runmru) - <https://github.com/mkorman90/regipy>
+
+juntei (parse-registry mru) - <https://github.com/Yamato-Security/juntei>

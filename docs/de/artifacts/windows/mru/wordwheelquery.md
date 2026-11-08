@@ -34,8 +34,12 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass im Kontext des Benutzerko
 
 ## Tools
 
-DLEAPP (windowsUserMru) - <https://github.com/abrignoni/DLEAPP>
+DLEAPP (Parser: Explorer Search History) - <https://github.com/abrignoni/DLEAPP>
 
 Registry Explorer (WordWheelQuery Plugin) - <https://ericzimmerman.github.io/>
 
 RegRipper (wordwheelquery) - <https://github.com/keydet89/RegRipper4.0>
+
+regipy (Plugin: word_wheel_query) - <https://github.com/mkorman90/regipy>
+
+juntei (parse-registry mru) - <https://github.com/Yamato-Security/juntei>

@@ -36,8 +36,14 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass im Kontext des Benutzerko
 
 ## Tools
 
-DLEAPP (windowsUserMru) - <https://github.com/abrignoni/DLEAPP>
+DLEAPP (Parser: Explorer Typed Paths) - <https://github.com/abrignoni/DLEAPP>
 
 RECmd (Kroll_Batch) - <https://ericzimmerman.github.io/>
 
 RegRipper (typedpaths) - <https://github.com/keydet89/RegRipper4.0>
+
+Plaso (Parser: windows_typed_urls) - <https://github.com/log2timeline/plaso>
+
+regipy (Plugin: typed_paths) - <https://github.com/mkorman90/regipy>
+
+juntei (parse-registry mru) - <https://github.com/Yamato-Security/juntei>

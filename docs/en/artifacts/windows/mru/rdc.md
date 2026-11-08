@@ -39,8 +39,14 @@ From a digital forensics perspective, entries in the MRU list for RDC mean that 
 
 ## Tools
 
-DLEAPP (windowsRdpClientServers) - <https://github.com/abrignoni/DLEAPP>
+DLEAPP (parser: Remote Desktop Client Servers) - <https://github.com/abrignoni/DLEAPP>
 
 RegRipper (tsclient) - <https://github.com/keydet89/RegRipper4.0>
 
 Velociraptor (Windows.Registry.RDP) - <https://docs.velociraptor.app/>
+
+Dissect (plugin: mru.mstsc) - <https://docs.dissect.tools/>
+
+regipy (plugin: terminal_services_history) - <https://github.com/mkorman90/regipy>
+
+Registry Explorer (plugin: TerminalServerClient) - <https://ericzimmerman.github.io/>

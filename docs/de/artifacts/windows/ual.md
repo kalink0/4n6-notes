@@ -44,3 +44,7 @@ KStrike - <https://github.com/brimorlabs/KStrike>
 DLEAPP (Parser: User Access Logging) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (Plugin: ual) - <https://docs.dissect.tools/en/stable/plugins/ual.html>
+
+Velociraptor (Artefakt: Windows.Forensics.UserAccessLogs) - <https://docs.velociraptor.app/>
+
+Plaso (Parser: user_access_logging) - <https://github.com/log2timeline/plaso>

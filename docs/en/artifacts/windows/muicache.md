@@ -41,3 +41,11 @@ RegRipper (muicache) - <https://github.com/keydet89/RegRipper4.0>
 Registry Explorer - <https://ericzimmerman.github.io/>
 
 MUICacheView - <https://www.nirsoft.net/utils/muicache_view.html>
+
+DLEAPP (parser: MUICache) - <https://github.com/abrignoni/DLEAPP>
+
+Dissect (plugin: muicache) - <https://docs.dissect.tools/>
+
+regipy (plugin: muicache) - <https://github.com/mkorman90/regipy>
+
+juntei (parse-registry muicache) - <https://github.com/Yamato-Security/juntei>

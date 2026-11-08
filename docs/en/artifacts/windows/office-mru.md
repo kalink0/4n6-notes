@@ -37,3 +37,15 @@ From a digital forensics perspective, entries in the Office MRU show that certai
 ## Tools
 
 RegRipper (msoffice) - <https://github.com/keydet89/RegRipper4.0>
+
+DLEAPP (parser: Office File and Place MRU) - <https://github.com/abrignoni/DLEAPP>
+
+Dissect (plugin: mru.msoffice) - <https://docs.dissect.tools/>
+
+Plaso (parser: microsoft_office_mru) - <https://github.com/log2timeline/plaso>
+
+juntei (parse-registry office) - <https://github.com/Yamato-Security/juntei>
+
+Registry Explorer (plugin: OfficeMRU) - <https://ericzimmerman.github.io/>
+
+Velociraptor (artifact: Windows.Office.MRU) - <https://docs.velociraptor.app/>

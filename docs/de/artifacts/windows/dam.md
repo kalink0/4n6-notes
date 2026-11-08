@@ -35,3 +35,9 @@ Aus digitalforensischer Sicht bedeuten Einträge des DAM, dass eine Applikation 
 ## Tools
 
 Registry Explorer - <https://ericzimmerman.github.io/>
+
+DLEAPP (Parser: Background and Desktop Activity Moderator) - <https://github.com/abrignoni/DLEAPP>
+
+Dissect (Plugin: bam) - <https://docs.dissect.tools/>
+
+juntei (parse-registry bam) - <https://github.com/Yamato-Security/juntei>

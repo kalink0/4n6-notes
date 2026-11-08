@@ -45,3 +45,17 @@ AmcacheParser - <https://github.com/EricZimmerman/AmcacheParser>
 AmCache-EvilHunter - <https://github.com/cristianzsh/amcache-evilhunter>
 
 RegRipper (amcache) - <https://github.com/keydet89/RegRipper4.0>
+
+DLEAPP (Parser: Amcache Application Files, Amcache Applications, Amcache Shortcuts, Amcache Drivers, Amcache Devices, Amcache Device Containers, Amcache Driver Packages, Amcache Files (Windows 8 Format), Amcache Programs (Windows 8 Format)) - <https://github.com/abrignoni/DLEAPP>
+
+Velociraptor (Artefakt: Windows.Forensics.Amcache) - <https://docs.velociraptor.app/>
+
+Dissect (Plugin: amcache) - <https://docs.dissect.tools/>
+
+Plaso (Parser: amcache) - <https://github.com/log2timeline/plaso>
+
+regipy (Plugin: amcache) - <https://github.com/mkorman90/regipy>
+
+juntei (parse-registry amcache) - <https://github.com/Yamato-Security/juntei>
+
+artemis - <https://github.com/puffycid/artemis>

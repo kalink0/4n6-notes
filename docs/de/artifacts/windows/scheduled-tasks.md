@@ -59,3 +59,5 @@ juntei (parse-registry taskcache, persistence-hunter) - <https://github.com/Yama
 Windows-Scheduled-Task-Parser - <https://github.com/gajos112/Windows-Scheduled-Task-Parser>
 
 PersistenceSniper (Get-ScheduledTasks) - <https://github.com/last-byte/PersistenceSniper>
+
+Registry Explorer (Plugin: TaskCache) - <https://ericzimmerman.github.io/>

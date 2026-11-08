@@ -46,3 +46,9 @@ WinSearchDBAnalyzer (up to Windows 10) - <https://github.com/moaistory/WinSearch
 ESEDatabaseView (up to Windows 10) - <https://www.nirsoft.net/utils/ese_database_view.html>
 
 DB Browser for SQLite (from Windows 11) - <https://sqlitebrowser.org/>
+
+Dissect (plugin: search) - <https://docs.dissect.tools/>
+
+artemis - <https://github.com/puffycid/artemis>
+
+SQLECmd (Maps: Windows_Search_Index_Windows_db, Windows_Search_Index_Windows_gather_db) - <https://ericzimmerman.github.io/>

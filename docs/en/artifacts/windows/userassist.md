@@ -47,3 +47,11 @@ DLEAPP (parser: UserAssist) - <https://github.com/abrignoni/DLEAPP>
 Velociraptor (artifact: Windows.Registry.UserAssist) - <https://docs.velociraptor.app/artifact_references/pages/windows.registry.userassist/>
 
 Dissect (plugin: userassist) - <https://docs.dissect.tools/en/stable/plugins/userassist.html>
+
+Plaso (parser: userassist) - <https://github.com/log2timeline/plaso>
+
+regipy (plugin: user_assist) - <https://github.com/mkorman90/regipy>
+
+juntei (parse-registry user-assist) - <https://github.com/Yamato-Security/juntei>
+
+artemis - <https://github.com/puffycid/artemis>

@@ -47,3 +47,7 @@ DLEAPP (parser: Recycle Bin) - <https://github.com/abrignoni/DLEAPP>
 Velociraptor (artifact: Windows.Forensics.RecycleBin) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.recyclebin/>
 
 Dissect (plugin: recyclebin) - <https://docs.dissect.tools/en/stable/plugins/recyclebin.html>
+
+Plaso (parser: recycle_bin, recycle_bin_info2) - <https://github.com/log2timeline/plaso>
+
+artemis - <https://github.com/puffycid/artemis>

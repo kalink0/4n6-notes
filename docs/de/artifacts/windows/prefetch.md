@@ -54,3 +54,11 @@ DLEAPP (Parser: Prefetch, Prefetch Files Loaded) - <https://github.com/abrignoni
 Velociraptor (Artefakt: Windows.Forensics.Prefetch) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.prefetch>
 
 Dissect (Plugin: prefetch) - <https://docs.dissect.tools/en/stable/plugins/prefetch.html>
+
+Plaso (Parser: prefetch) - <https://github.com/log2timeline/plaso>
+
+juntei (parse-file prefetch) - <https://github.com/Yamato-Security/juntei>
+
+artemis - <https://github.com/puffycid/artemis>
+
+Windows-Prefetch-Parser - <https://github.com/PoorBillionaire/Windows-Prefetch-Parser> (nur alte Versionen)

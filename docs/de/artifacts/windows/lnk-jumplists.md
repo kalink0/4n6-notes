@@ -64,3 +64,19 @@ JumpList Explorer - <https://ericzimmerman.github.io/>
 LECmd - <https://ericzimmerman.github.io/>
 
 Jumplist-Browser - <https://github.com/kacos2000/Jumplist-Browser>
+
+DLEAPP (Parser: Jump Lists, Recent Shell Links (LNK), Office Recent Shell Links (LNK), Desktop, Taskbar and Startup Shell Links) - <https://github.com/abrignoni/DLEAPP>
+
+Velociraptor (Artefakte: Windows.Forensics.JumpLists, Windows.Forensics.Lnk) - <https://docs.velociraptor.app/>
+
+Dissect (Plugin: jumplist, lnk) - <https://docs.dissect.tools/>
+
+Plaso (Parser: lnk, olecf_automatic_destinations, custom_destinations) - <https://github.com/log2timeline/plaso>
+
+juntei (parse-file lnk, parse-file jump-lists) - <https://github.com/Yamato-Security/juntei>
+
+JumpListsView - <https://www.nirsoft.net/utils/jump_lists_view.html>
+
+artemis - <https://github.com/puffycid/artemis>
+
+JumpList_Lnk_Parser - <https://github.com/salehmuhaysin/JumpList_Lnk_Parser>

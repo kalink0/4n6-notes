@@ -36,8 +36,12 @@ From a digital forensics perspective, an entry shows that the term was searched 
 
 ## Tools
 
-DLEAPP (windowsUserMru) - <https://github.com/abrignoni/DLEAPP>
+DLEAPP (parser: Explorer Search History) - <https://github.com/abrignoni/DLEAPP>
 
 Registry Explorer (WordWheelQuery Plugin) - <https://ericzimmerman.github.io/>
 
 RegRipper (wordwheelquery) - <https://github.com/keydet89/RegRipper4.0>
+
+regipy (plugin: word_wheel_query) - <https://github.com/mkorman90/regipy>
+
+juntei (parse-registry mru) - <https://github.com/Yamato-Security/juntei>

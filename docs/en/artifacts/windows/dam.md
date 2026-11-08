@@ -37,3 +37,9 @@ From a digital forensics perspective, DAM entries show that an application was e
 ## Tools
 
 Registry Explorer - <https://ericzimmerman.github.io/>
+
+DLEAPP (parser: Background and Desktop Activity Moderator) - <https://github.com/abrignoni/DLEAPP>
+
+Dissect (plugin: bam) - <https://docs.dissect.tools/>
+
+juntei (parse-registry bam) - <https://github.com/Yamato-Security/juntei>

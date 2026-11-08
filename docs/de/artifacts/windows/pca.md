@@ -41,3 +41,9 @@ Aus digitalforensischer Sicht bedeuten Einträge in der PcaAppLaunchDic.txt, das
 Program Compatibility Parser - <https://github.com/kacos2000/Win10/tree/master/ProgramCompatibility>
 
 PCAParser - <https://github.com/AndrewRathbun/PCAParser>
+
+DLEAPP (Parser: PCA App Launch Dictionary, PCA General Db) - <https://github.com/abrignoni/DLEAPP>
+
+Plaso (Parser: winpca_db0, winpca_dic) - <https://github.com/log2timeline/plaso>
+
+Velociraptor (Artefakte: Windows.System.AppCompatPCA, Windows.System.AppCompatPCAExtend) - <https://docs.velociraptor.app/>

@@ -46,4 +46,8 @@ Notepad-State-Library (WindowsNotepadParser) - <https://github.com/ogmini/Notepa
 
 notepad_parser - <https://github.com/AbdulRhmanAlfaifi/notepad_parser>
 
-DLEAPP (windowsNotepad) - <https://github.com/abrignoni/DLEAPP>
+DLEAPP (parser: Windows Notepad Tabs, Windows Notepad Windows, Windows Notepad Settings) - <https://github.com/abrignoni/DLEAPP>
+
+Velociraptor (artifact: Windows.Forensics.NotepadParser) - <https://docs.velociraptor.app/>
+
+Dissect (plugin: windowsnotepad) - <https://docs.dissect.tools/>

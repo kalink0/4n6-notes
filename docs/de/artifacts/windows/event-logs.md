@@ -83,8 +83,12 @@ peach - <https://github.com/kalink0/peach-forensics>
 
 DLEAPP (Parser: Windows Security Logons, Windows Account Management, Windows Process Creation, Windows Service Installations, Task Scheduler Task Registrations, Task Scheduler Task Actions, Windows Terminal Services Sessions, Windows Remote Desktop Connections, Remote Desktop Client Connections, Partition Diagnostic Disk Events, WLAN Connection Events, PowerShell Script Blocks, Kernel Boot Events, Windows Security Time Changes, Event Logs Cleared) - <https://github.com/abrignoni/DLEAPP>
 
-Velociraptor (Artefakte: Windows.EventLogs.Evtx, Windows.EventLogs.EvtxHunter, Windows.EventLogs.RDPAuth) - <https://github.com/Velocidex/velociraptor>
+Velociraptor (Artefakte: Windows.EventLogs.Evtx, Windows.EventLogs.EvtxHunter, Windows.EventLogs.RDPAuth, Windows.Carving.Evtx) - <https://github.com/Velocidex/velociraptor>
 
 Dissect (Plugin: evtx, evt) - <https://github.com/fox-it/dissect>
 
 Partition-4DiagnosticParser - <https://github.com/theAtropos4n6/Partition-4DiagnosticParser>
+
+Plaso (Parser: winevtx) - <https://github.com/log2timeline/plaso>
+
+artemis - <https://github.com/puffycid/artemis>

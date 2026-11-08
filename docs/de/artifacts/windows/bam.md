@@ -38,3 +38,13 @@ RegRipper (bam) - <https://github.com/keydet89/RegRipper4.0>
 Registry Explorer - <https://ericzimmerman.github.io/>
 
 Velociraptor (Windows.Forensics.Bam) - <https://docs.velociraptor.app/>
+
+DLEAPP (Parser: Background and Desktop Activity Moderator) - <https://github.com/abrignoni/DLEAPP>
+
+Dissect (Plugin: bam) - <https://docs.dissect.tools/>
+
+Plaso (Parser: bam) - <https://github.com/log2timeline/plaso>
+
+regipy (Plugin: background_activity_moderator) - <https://github.com/mkorman90/regipy>
+
+juntei (parse-registry bam) - <https://github.com/Yamato-Security/juntei>

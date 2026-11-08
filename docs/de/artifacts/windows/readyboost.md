@@ -45,3 +45,5 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass ein Datenträger mit den 
 RegRipper (Plugin: emdmgmt) - <https://github.com/keydet89/RegRipper4.0>
 
 usb-forensic - <https://github.com/SecurityRonin/usb-forensic>
+
+juntei (parse-registry usb) - <https://github.com/Yamato-Security/juntei>

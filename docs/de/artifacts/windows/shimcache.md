@@ -51,3 +51,15 @@ Velociraptor (Artefakt: Windows.Registry.AppCompatCache) - <https://docs.velocir
 Dissect (Plugin: shimcache) - <https://docs.dissect.tools/en/stable/plugins/shimcache.html>
 
 Volatility 3 (Plugin: windows.shimcachemem, aus dem Arbeitsspeicher) - <https://github.com/volatilityfoundation/volatility3>
+
+Plaso (Parser: appcompatcache) - <https://github.com/log2timeline/plaso>
+
+regipy (Plugin: shimcache) - <https://github.com/mkorman90/regipy>
+
+juntei (parse-registry shimcache) - <https://github.com/Yamato-Security/juntei>
+
+Registry Explorer (Plugin: AppCompatCache) - <https://ericzimmerman.github.io/>
+
+artemis - <https://github.com/puffycid/artemis>
+
+ShimCacheParser - <https://github.com/mandiant/ShimCacheParser> (nur alte Versionen)

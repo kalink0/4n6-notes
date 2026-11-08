@@ -35,3 +35,15 @@ Aus digitalforensischer Sicht bedeuten Einträge in der Office MRU, dass die ang
 ## Tools
 
 RegRipper (msoffice) - <https://github.com/keydet89/RegRipper4.0>
+
+DLEAPP (Parser: Office File and Place MRU) - <https://github.com/abrignoni/DLEAPP>
+
+Dissect (Plugin: mru.msoffice) - <https://docs.dissect.tools/>
+
+Plaso (Parser: microsoft_office_mru) - <https://github.com/log2timeline/plaso>
+
+juntei (parse-registry office) - <https://github.com/Yamato-Security/juntei>
+
+Registry Explorer (Plugin: OfficeMRU) - <https://ericzimmerman.github.io/>
+
+Velociraptor (Artefakt: Windows.Office.MRU) - <https://docs.velociraptor.app/>
