@@ -43,7 +43,7 @@ DLEAPP (Parser: Remote Desktop Client Servers) - <https://github.com/abrignoni/D
 
 Dissect (Plugin: mru.mstsc) - <https://docs.dissect.tools/>
 
-Velociraptor (Windows.Registry.RDP) - <https://docs.velociraptor.app/>
+Velociraptor (Artefakt: Windows.Registry.RDP) - <https://docs.velociraptor.app/>
 
 Registry Explorer (Plugin: TerminalServerClient) - <https://ericzimmerman.github.io/>
 

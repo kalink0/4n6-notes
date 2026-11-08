@@ -43,7 +43,7 @@ Aus digitalforensischer Sicht belegt eine Datei im Autostart-Ordner, dass sie be
 
 DLEAPP (Parser: Startup Folder Items, Startup Approved States) - <https://github.com/abrignoni/DLEAPP>
 
-Velociraptor (Artefakte: Windows.Sys.StartupItems) - <https://docs.velociraptor.app/>
+Velociraptor (Artefakt: Windows.Sys.StartupItems) - <https://docs.velociraptor.app/>
 
 LECmd - <https://ericzimmerman.github.io/>
 

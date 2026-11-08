@@ -42,7 +42,7 @@ Aus digitalforensischer Sicht bedeuten Einträge in der PcaAppLaunchDic.txt, das
 
 DLEAPP (Parser: PCA App Launch Dictionary, PCA General Db) - <https://github.com/abrignoni/DLEAPP>
 
-Velociraptor (Artefakte: Windows.System.AppCompatPCA, Windows.System.AppCompatPCAExtend) - <https://docs.velociraptor.app/>
+Velociraptor (Exchange-Artefakte: Windows.System.AppCompatPCA, Windows.System.AppCompatPCAExtend) - <https://docs.velociraptor.app/>
 
 ### Weitere Tools
 

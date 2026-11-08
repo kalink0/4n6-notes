@@ -55,7 +55,7 @@ DLEAPP (parser: Thumbnail Cache) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (plugin: thumbcache) - <https://docs.dissect.tools/en/stable/plugins/thumbcache.html>
 
-Velociraptor (artifact: Windows.Forensics.ThumbCache) - <https://docs.velociraptor.app/>
+Velociraptor (Exchange artifact: Windows.Forensics.ThumbCache) - <https://docs.velociraptor.app/>
 
 ### Other tools
 

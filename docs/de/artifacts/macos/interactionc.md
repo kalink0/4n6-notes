@@ -1,7 +1,7 @@
 ---
 title: "InteractionC"
 status: complete
-completed: 2026-10-22
+completed: 2026-11-08
 authors: [kalink0 (Marco Neumann)]
 topics: [communication]
 ---
@@ -16,7 +16,7 @@ Aus digitalforensischer Sicht belegt ein Eintrag, dass zum angegebenen Zeitpunkt
 
 ## Spezifische Kurzinformation
 
-1. Seit macOS 10.15 vorhanden, unter macOS 15 weiterhin befüllt
+1. Verfügbarkeit: seit macOS 10.15
 2. SQLite-Datenbank; zentrale Tabelle `ZINTERACTIONS`, dazu `ZCONTACTS` (je Kontakt Interaktionszähler sowie erster und letzter Kontakt), `ZATTACHMENT` und `ZKEYWORDS`
 3. Zeitstempel im Format Mac Absolute Time (Sekunden seit 2001-01-01, UTC)
 4. Ablageort:  

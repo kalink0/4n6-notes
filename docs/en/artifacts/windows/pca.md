@@ -44,7 +44,7 @@ From a digital forensics perspective, entries in PcaAppLaunchDic.txt show that t
 
 DLEAPP (parser: PCA App Launch Dictionary, PCA General Db) - <https://github.com/abrignoni/DLEAPP>
 
-Velociraptor (artifacts: Windows.System.AppCompatPCA, Windows.System.AppCompatPCAExtend) - <https://docs.velociraptor.app/>
+Velociraptor (Exchange artifacts: Windows.System.AppCompatPCA, Windows.System.AppCompatPCAExtend) - <https://docs.velociraptor.app/>
 
 ### Other tools
 

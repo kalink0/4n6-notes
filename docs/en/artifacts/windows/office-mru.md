@@ -42,7 +42,7 @@ DLEAPP (parser: Office File and Place MRU) - <https://github.com/abrignoni/DLEAP
 
 Dissect (plugin: mru.msoffice) - <https://docs.dissect.tools/>
 
-Velociraptor (artifact: Windows.Office.MRU) - <https://docs.velociraptor.app/>
+Velociraptor (Exchange artifact: Windows.Office.MRU) - <https://docs.velociraptor.app/>
 
 Registry Explorer (plugin: OfficeMRU) - <https://ericzimmerman.github.io/>
 

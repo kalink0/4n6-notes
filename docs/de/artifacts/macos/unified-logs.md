@@ -68,7 +68,7 @@ DLEAPP (Parser: Unified Logs) - <https://github.com/abrignoni/DLEAPP>
 
 peach-forensics (AUL) - <https://github.com/kalink0/peach-forensics>
 
-Velociraptor (Exchange: MacOS.UnifiedLogParser, MacOS.UnifiedLogHunter) - <https://github.com/Velocidex/velociraptor>
+Velociraptor (Exchange-Artefakte: MacOS.UnifiedLogParser, MacOS.UnifiedLogHunter) - <https://docs.velociraptor.app/>
 
 TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
 

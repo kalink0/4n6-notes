@@ -39,7 +39,7 @@ DLEAPP (Parser: Background and Desktop Activity Moderator) - <https://github.com
 
 Dissect (Plugin: bam) - <https://docs.dissect.tools/>
 
-Velociraptor (Windows.Forensics.Bam) - <https://docs.velociraptor.app/>
+Velociraptor (Artefakt: Windows.Forensics.Bam) - <https://docs.velociraptor.app/>
 
 Registry Explorer - <https://ericzimmerman.github.io/>
 

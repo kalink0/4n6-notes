@@ -1,7 +1,7 @@
 ---
 title: "InteractionC"
 status: complete
-completed: 2026-10-26
+completed: 2026-11-08
 authors: [kalink0 (Marco Neumann)]
 translation: machine
 translation_of: de
@@ -18,7 +18,7 @@ From a digital forensics perspective, an entry shows that an interaction with th
 
 ## Key facts
 
-1. Present since macOS 10.15, still populated on macOS 15
+1. Availability: since macOS 10.15
 2. SQLite database; central table `ZINTERACTIONS`, plus `ZCONTACTS` (per contact interaction counters as well as first and last contact), `ZATTACHMENT` and `ZKEYWORDS`
 3. Timestamps in Mac Absolute Time format (seconds since 2001-01-01, UTC)
 4. Location:  

@@ -39,7 +39,7 @@ From a digital forensics perspective, a `Zone.Identifier` shows that the file wa
 
 DLEAPP (Parser: Zone.Identifier Streams) - <https://github.com/abrignoni/DLEAPP>
 
-Velociraptor (Artifacts: Windows.Analysis.EvidenceOfDownload, Windows.NTFS.ADSHunter) - <https://docs.velociraptor.app/>
+Velociraptor (artifacts: Windows.Analysis.EvidenceOfDownload, Windows.NTFS.ADSHunter) - <https://docs.velociraptor.app/>
 
 MFTECmd - <https://ericzimmerman.github.io/>
 

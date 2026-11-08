@@ -44,7 +44,7 @@ DLEAPP (Parser: Recycle Bin) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (Plugin: recyclebin) - <https://docs.dissect.tools/en/stable/plugins/recyclebin.html>
 
-Velociraptor (Artefakt: Windows.Forensics.RecycleBin) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.recyclebin/>
+Velociraptor (Artefakt: Windows.Forensics.RecycleBin) - <https://docs.velociraptor.app/>
 
 RBCmd - <https://ericzimmerman.github.io/>
 

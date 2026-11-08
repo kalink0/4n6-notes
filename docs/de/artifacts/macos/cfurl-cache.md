@@ -40,6 +40,6 @@ DLEAPP (Parser: App URL Cache) - <https://github.com/abrignoni/DLEAPP>
 
 mac_apt (Plugin: CFURLCACHE) - <https://github.com/ydkhatri/mac_apt>
 
-Velociraptor (Artefakt: MacOS.Applications.Cache) - <https://docs.velociraptor.app/exchange/artifacts/pages/macos.applications.cache>
+Velociraptor (Exchange-Artefakt: MacOS.Applications.Cache) - <https://docs.velociraptor.app/>
 
 TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>

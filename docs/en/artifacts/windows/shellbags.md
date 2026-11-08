@@ -52,7 +52,7 @@ DLEAPP (parser: ShellBags) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (plugin: shellbags) - <https://docs.dissect.tools/en/stable/plugins/shellbags.html>
 
-Velociraptor (artifact: Windows.Forensics.Shellbags) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.shellbags/>
+Velociraptor (artifact: Windows.Forensics.Shellbags) - <https://docs.velociraptor.app/>
 
 SBECmd - <https://ericzimmerman.github.io/>
 

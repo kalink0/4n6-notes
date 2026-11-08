@@ -42,7 +42,7 @@ DLEAPP (parser: UserAssist) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (plugin: userassist) - <https://docs.dissect.tools/en/stable/plugins/userassist.html>
 
-Velociraptor (artifact: Windows.Registry.UserAssist) - <https://docs.velociraptor.app/artifact_references/pages/windows.registry.userassist/>
+Velociraptor (artifact: Windows.Registry.UserAssist) - <https://docs.velociraptor.app/>
 
 Registry Explorer (bookmark: UserAssist) - <https://ericzimmerman.github.io/>
 

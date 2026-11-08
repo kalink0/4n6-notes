@@ -51,7 +51,7 @@ DLEAPP (Parser: Prefetch, Prefetch Files Loaded) - <https://github.com/abrignoni
 
 Dissect (Plugin: prefetch) - <https://docs.dissect.tools/en/stable/plugins/prefetch.html>
 
-Velociraptor (Artefakt: Windows.Forensics.Prefetch) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.prefetch>
+Velociraptor (Artefakt: Windows.Forensics.Prefetch) - <https://docs.velociraptor.app/>
 
 PECmd - <https://ericzimmerman.github.io/>
 

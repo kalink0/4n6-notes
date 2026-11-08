@@ -45,9 +45,9 @@ DLEAPP (Parser: systemd Journal, systemd Journal Files) - <https://github.com/ab
 
 peach-forensics (journald) - <https://github.com/kalink0/peach-forensics>
 
-dissect.target (journal) - <https://github.com/fox-it/dissect.target>
+Dissect (Plugin: journal) - <https://docs.dissect.tools/>
 
-Velociraptor (Linux.Forensics.Journal) - <https://github.com/Velocidex/velociraptor>
+Velociraptor (Artefakt: Linux.Forensics.Journal) - <https://docs.velociraptor.app/>
 
 TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
 
@@ -57,4 +57,4 @@ artemis - <https://github.com/puffycid/artemis>
 
 journalctl - <https://github.com/systemd/systemd>
 
-plaso (systemd_journal) - <https://github.com/log2timeline/plaso>
+Plaso (Parser: systemd_journal) - <https://github.com/log2timeline/plaso>

@@ -47,7 +47,7 @@ From a digital forensics perspective, a Recall entry means that the captured win
 
 ### Core tools
 
-Velociraptor (artifacts: Windows.System.Recall.WindowCaptureEvent, Windows.System.Recall.AllWindowEvents) - <https://docs.velociraptor.app/exchange/artifacts/pages/windows.system.recall.windowcaptureevent/>
+Velociraptor (Exchange artifacts: Windows.System.Recall.WindowCaptureEvent, Windows.System.Recall.AllWindowEvents) - <https://docs.velociraptor.app/>
 
 KAPE (target: WindowsCopilotRecall) - <https://github.com/EricZimmerman/KapeFiles/blob/master/Targets/Windows/WindowsCopilotRecall.tkape>
 

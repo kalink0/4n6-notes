@@ -81,7 +81,7 @@ peach - <https://github.com/kalink0/peach-forensics>
 
 Dissect (plugin: evtx, evt) - <https://github.com/fox-it/dissect>
 
-Velociraptor (artifacts: Windows.EventLogs.Evtx, Windows.EventLogs.EvtxHunter, Windows.EventLogs.RDPAuth, Windows.Carving.Evtx) - <https://github.com/Velocidex/velociraptor>
+Velociraptor (artifacts: Windows.EventLogs.Evtx, Windows.EventLogs.EvtxHunter, Windows.EventLogs.RDPAuth, Windows.Carving.Evtx) - <https://docs.velociraptor.app/>
 
 EvtxECmd - <https://ericzimmerman.github.io/>
 

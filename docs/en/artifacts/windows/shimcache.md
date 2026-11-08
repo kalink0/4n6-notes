@@ -48,7 +48,7 @@ DLEAPP (parser: AppCompatCache (Shimcache)) - <https://github.com/abrignoni/DLEA
 
 Dissect (plugin: shimcache) - <https://docs.dissect.tools/en/stable/plugins/shimcache.html>
 
-Velociraptor (artifact: Windows.Registry.AppCompatCache) - <https://docs.velociraptor.app/artifact_references/pages/windows.registry.appcompatcache/>
+Velociraptor (artifact: Windows.Registry.AppCompatCache) - <https://docs.velociraptor.app/>
 
 AppCompatCacheParser - <https://ericzimmerman.github.io/>
 

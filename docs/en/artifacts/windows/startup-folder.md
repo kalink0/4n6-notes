@@ -45,7 +45,7 @@ From a digital forensics perspective, a file in the Startup folder shows that it
 
 DLEAPP (Parser: Startup Folder Items, Startup Approved States) - <https://github.com/abrignoni/DLEAPP>
 
-Velociraptor (Artifacts: Windows.Sys.StartupItems) - <https://docs.velociraptor.app/>
+Velociraptor (artifact: Windows.Sys.StartupItems) - <https://docs.velociraptor.app/>
 
 LECmd - <https://ericzimmerman.github.io/>
 

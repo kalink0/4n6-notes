@@ -44,7 +44,7 @@ DLEAPP (parser: SRUM) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (plugin: sru) - <https://docs.dissect.tools/en/stable/plugins/sru.html>
 
-Velociraptor (artifact: Windows.Forensics.SRUM) - <https://docs.velociraptor.app/artifact_references/pages/windows.forensics.srum/>
+Velociraptor (artifact: Windows.Forensics.SRUM) - <https://docs.velociraptor.app/>
 
 SrumECmd - <https://ericzimmerman.github.io/>
 

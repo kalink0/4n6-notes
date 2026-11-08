@@ -51,7 +51,7 @@ DLEAPP (parser: KnowledgeC) - <https://github.com/abrignoni/DLEAPP>
 
 APOLLO (knowledge_*) - <https://github.com/mac4n6/APOLLO>
 
-Velociraptor (Exchange: MacOS.Applications.KnowledgeC) - <https://github.com/Velocidex/velociraptor>
+Velociraptor (Exchange artifact: MacOS.Applications.KnowledgeC) - <https://docs.velociraptor.app/>
 
 TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
 

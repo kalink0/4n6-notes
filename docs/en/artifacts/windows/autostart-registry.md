@@ -57,7 +57,7 @@ DLEAPP (parser: Autostart) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (Plugin: runkeys) - <https://docs.dissect.tools/>
 
-Velociraptor (Artifacts: Windows.Sys.StartupItems) - <https://docs.velociraptor.app/>
+Velociraptor (artifact: Windows.Sys.StartupItems) - <https://docs.velociraptor.app/>
 
 ### Other tools
 

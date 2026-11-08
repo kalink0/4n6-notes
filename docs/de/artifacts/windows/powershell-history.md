@@ -41,6 +41,6 @@ DLEAPP (Parser: PowerShell PSReadLine History) - <https://github.com/abrignoni/D
 
 Dissect (Plugin: powershell_history) - <https://dissect.readthedocs.io/en/stable/plugins/powershell_history.html>
 
-Velociraptor (Artefakt: Windows.System.Powershell.PSReadline) - <https://docs.velociraptor.app/artifact_references/pages/windows.system.powershell.psreadline>
+Velociraptor (Artefakt: Windows.System.Powershell.PSReadline) - <https://docs.velociraptor.app/>
 
 TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>

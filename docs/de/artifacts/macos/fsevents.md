@@ -38,7 +38,7 @@ DLEAPP (Parser: FSEvents) - <https://github.com/abrignoni/DLEAPP>
 
 mac_apt (Plugin: FSEVENTS) - <https://github.com/ydkhatri/mac_apt>
 
-Velociraptor (Artefakt: MacOS.Forensics.FSEvents) - <https://docs.velociraptor.app/artifact_references/pages/macos.forensics.fsevents/>
+Velociraptor (Artefakt: MacOS.Forensics.FSEvents) - <https://docs.velociraptor.app/>
 
 TRACE - <https://github.com/Gadzhovski/TRACE-Forensic-Toolkit>
 

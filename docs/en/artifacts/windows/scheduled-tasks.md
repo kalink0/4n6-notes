@@ -46,7 +46,7 @@ DLEAPP (parser: Scheduled Tasks) - <https://github.com/abrignoni/DLEAPP>
 
 Dissect (Plugin: tasks) - <https://docs.dissect.tools/>
 
-Velociraptor (Artifacts: Windows.System.TaskScheduler, Windows.Registry.TaskCache, Windows.EventLogs.ScheduledTasks) - <https://docs.velociraptor.app/>
+Velociraptor (artifacts: Windows.System.TaskScheduler, Windows.Registry.TaskCache, Windows.EventLogs.ScheduledTasks) - <https://docs.velociraptor.app/>
 
 EvtxECmd - <https://ericzimmerman.github.io/>
 
