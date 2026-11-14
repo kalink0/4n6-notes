@@ -6,8 +6,6 @@
 
 - name: Recent Tasks / Snapshots
   topic: program-execution
-- name: Berechtigungen / App Ops / Privacy Dashboard
-  topic: program-execution
 - name: Digital Wellbeing (Google)
   topic: program-execution
 - name: Battery Usage (Settings Intelligence)
