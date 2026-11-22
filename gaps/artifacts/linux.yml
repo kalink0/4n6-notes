@@ -21,8 +21,6 @@
 
 - name: Editor-/Tool-Historien (viminfo, lesshst, python_history)
   topic: file-access
-- name: recently-used.xbel
-  topic: file-access
 - name: CUPS-Druckaufträge
   topic: file-access
 - name: Zeitgeist (Pantheon / elementary OS)
