@@ -28,8 +28,6 @@
 
 - name: Papierkorb (Trash)
   topic: file-existence
-- name: Thumbnail-Cache
-  topic: file-existence
 - name: Snapshots (Timeshift, Snapper, Btrfs)
   topic: file-existence
 
