@@ -1,16 +1,15 @@
 # Linux-Artefakte, die noch keine eigene Seite haben (siehe hooks/gaps.py).
 # Jeder Eintrag hat genau ein Topic (Schlüssel aus extra.topics in mkdocs.base.yml); die Seite
 # gruppiert danach. Bekommt ein Eintrag eine Seite, wird er hier gelöscht.
-# Desktop-Umgebungen haben noch keinen eigenen Unterabschnitt; ihre Einträge tragen GNOME oder
-# KDE im Namen.
+# Artefakte einer bestimmten Desktop-Umgebung stehen in gaps/artifacts/linux/<desktop>.yml
+# (gnome.yml, kde.yml). Hier stehen systemweite Artefakte und solche nach freedesktop.org-Standards,
+# die für alle Desktop-Umgebungen gelten.
 
 - name: auditd
   topic: program-execution
 - name: systemd-coredump
   topic: program-execution
 - name: .xsession-errors
-  topic: program-execution
-- name: application_state (GNOME)
   topic: program-execution
 
 - name: Paketverwaltung (dpkg/apt, dnf/yum, pacman)
@@ -26,15 +25,7 @@
   topic: file-access
 - name: CUPS-Druckaufträge
   topic: file-access
-- name: Nautilus-Lesezeichen (GNOME)
-  topic: file-access
-- name: Zeitgeist (GNOME)
-  topic: file-access
-- name: KActivities (KDE)
-  topic: file-access
-- name: RecentDocuments (KDE)
-  topic: file-access
-- name: Dolphin (KDE)
+- name: Zeitgeist (Pantheon / elementary OS)
   topic: file-access
 
 - name: Papierkorb (Trash)
@@ -43,18 +34,8 @@
   topic: file-existence
 - name: Snapshots (Timeshift, Snapper, Btrfs)
   topic: file-existence
-- name: Tracker / LocalSearch (GNOME)
-  topic: file-existence
-- name: Baloo (KDE)
-  topic: file-existence
 
 - name: Shell-History (bash, zsh)
-  topic: commands-input
-- name: Zwischenablage-Verlauf (GNOME)
-  topic: commands-input
-- name: Klipper-Verlauf (KDE)
-  topic: commands-input
-- name: KRunner-Verlauf (KDE)
   topic: commands-input
 
 - name: wtmp / btmp / lastlog
@@ -62,12 +43,6 @@
 - name: sudo-Protokollierung
   topic: accounts
 - name: Benutzerkonten (passwd, shadow, group)
-  topic: accounts
-- name: GNOME Keyring
-  topic: accounts
-- name: GNOME Online Accounts
-  topic: accounts
-- name: KWallet (KDE)
   topic: accounts
 - name: auth.log / secure
   topic: accounts
@@ -88,14 +63,10 @@
   topic: external-devices
 - name: USB / udev
   topic: external-devices
-- name: KDE Connect
-  topic: external-devices
 
 - name: Systeminformationen
   topic: system-config
 - name: fstab / Mounts
-  topic: system-config
-- name: dconf / GSettings (GNOME)
   topic: system-config
 
 - name: cron / systemd-Timer und -Units

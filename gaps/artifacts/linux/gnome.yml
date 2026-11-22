@@ -1,0 +1,23 @@
+# GNOME-Artefakte, die noch keine eigene Seite haben (siehe hooks/gaps.py).
+# Jeder Eintrag hat genau ein Topic (Schlüssel aus extra.topics in mkdocs.base.yml); die Seite
+# gruppiert danach. Bekommt ein Eintrag eine Seite, wird er hier gelöscht.
+
+- name: application_state
+  topic: program-execution
+
+- name: Nautilus-Lesezeichen
+  topic: file-access
+
+- name: Tracker / LocalSearch
+  topic: file-existence
+
+- name: Zwischenablage-Verlauf
+  topic: commands-input
+
+- name: GNOME Keyring
+  topic: accounts
+- name: GNOME Online Accounts
+  topic: accounts
+
+- name: dconf / GSettings
+  topic: system-config

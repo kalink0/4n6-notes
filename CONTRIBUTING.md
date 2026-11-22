@@ -100,6 +100,10 @@ If a similar artifact exists on several platforms (e.g. FSEvents on macOS and iO
 separate artifacts, each with its own complete page. Texts are not merged or replaced by links, even
 if they are almost identical. The pages do not link to each other.
 
+Artifacts of one manufacturer or desktop environment go into a subfolder of the platform, e.g.
+`artifacts/android/samsung/` or `artifacts/linux/gnome/`. Artifacts that follow a cross-desktop
+standard (e.g. the freedesktop.org trash or thumbnail specification) stay in the platform folder.
+
 ## Topics
 
 Every artifact page gets at least one topic in its front matter (in any language version). Topics say

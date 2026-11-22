@@ -1,0 +1,24 @@
+# KDE-Artefakte, die noch keine eigene Seite haben (siehe hooks/gaps.py).
+# Jeder Eintrag hat genau ein Topic (Schlüssel aus extra.topics in mkdocs.base.yml); die Seite
+# gruppiert danach. Bekommt ein Eintrag eine Seite, wird er hier gelöscht.
+
+- name: KActivities
+  topic: file-access
+- name: RecentDocuments
+  topic: file-access
+- name: Dolphin
+  topic: file-access
+
+- name: Baloo
+  topic: file-existence
+
+- name: Klipper-Verlauf
+  topic: commands-input
+- name: KRunner-Verlauf
+  topic: commands-input
+
+- name: KWallet
+  topic: accounts
+
+- name: KDE Connect
+  topic: external-devices
