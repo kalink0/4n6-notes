@@ -4,7 +4,7 @@ status: reviewed
 completed: 2026-10-19
 authors: [kalink0 (Marco Neumann)]
 reviewers: [dugeonlady]
-reviewed: 2026-10-26
+reviewed: 2026-11-18
 topics: [program-execution]
 ---
 
@@ -18,12 +18,11 @@ Aus digitalforensischer Sicht bedeutet die Existenz und der Inhalt einer Prefetc
 
 ## Spezifische Kurzinformation
 
-1. Kann über **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Control\Session Manager\Memory Management\PrefetchParameters\EnablePrefetcher`** deaktiviert sein; auf Servern teils nicht aktiv
-2. Seit Windows 8 maximal 1024 Dateien, davor 128
-3. Seit Windows 10 komprimiert (MAM), nicht direkt lesbar
-4. Zeitstempel als FILETIME in UTC
-5. Die erste Ausführung ergibt sich aus dem Erstelldatum der .pf-Datei; die Datei wird ca. 10 Sekunden nach dem Start geschrieben
-6. Dateiname enthält einen Hash des Programmpfads; dasselbe Programm aus verschiedenen Pfaden ergibt getrennte Dateien
+1. Verfügbarkeit: bis Windows 8, 128 Dateien; ab Windows 8, 1024 Dateien
+2. Voraussetzungen: standardmäßig aktiviert ; kann über **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Control\Session Manager\Memory Management\PrefetchParameters\EnablePrefetcher`** deaktiviert sein; auf Servern teils nicht aktiv
+3. Format und Struktur: Seit Windows 10 komprimiert (MAM), nicht direkt lesbar
+4. Zeitstempel: als FILETIME in UTC
+5. Besonderheiten und Fallstricke: Die erste Ausführung ergibt sich aus dem Erstelldatum der .pf-Datei -> die Datei wird ca. 10 Sekunden nach dem Start geschrieben; Dateiname enthält einen Hash des Programmpfads; dasselbe Programm aus verschiedenen Pfaden ergibt getrennte Dateien
 7. Ablageort:  
    **`C:\Windows\Prefetch\*.pf`**
 
