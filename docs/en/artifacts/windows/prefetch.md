@@ -1,10 +1,12 @@
 ---
 title: "Prefetch"
-status: complete
+status: reviewed
 completed: 2026-10-26
 authors: [kalink0 (Marco Neumann)]
-translation: machine
+translation: human
 translation_of: de
+reviewers: [dugeonlady]
+reviewed: 2026-11-26
 topics: [program-execution]
 ---
 
@@ -12,18 +14,17 @@ topics: [program-execution]
 
 ## Meaning
 
-The Windows operating system creates so-called prefetch files. These files contain at least the last execution of a program, the number of executions and the libraries and files loaded at startup. In addition, up to 7 further times of program executions can be included. The benefit of these prefetch files is that the operating system can take technical measures to enable applications to start faster and thus improve the user experience.
+The Windows operating system creates so-called prefetch files. These files contain at least the last execution of a program, the number of executions and the libraries and files loaded at startup. Timestamps of up to 7 further program executions are also included if available. The operating system uses these prefetch files to take technical measures to decrease application startup times and thus improve the user experience.
 
-From a digital forensics perspective, the existence and content of a prefetch file mean that a referenced application was started on the system at the given times. In addition, it can be said which libraries and files are used when the application starts.
+From a digital forensics perspective, the existence and content of a prefetch file shows that a referenced application was started on the system at the given times. In addition, it shows which libraries and files are used when the application starts.
 
 ## Key facts
 
-1. Can be disabled via **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Control\Session Manager\Memory Management\PrefetchParameters\EnablePrefetcher`**; sometimes not active on servers
-2. Since Windows 8 a maximum of 1024 files, before that 128
-3. Compressed since Windows 10 (MAM), not directly readable
-4. Timestamps as FILETIME in UTC
-5. The first execution follows from the creation date of the .pf file; the file is written approx. 10 seconds after the start
-6. The file name contains a hash of the program path; the same program from different paths results in separate files
+1. Availability: up to Windows 8, 128 files stored; starting with Windows 8, 1024 files stored
+2. Prerequisites: Enabled by default; can be disabled via **`HKLM\SYSTEM\{CURRENT_CONTROL_SET}\Control\Session Manager\Memory Management\PrefetchParameters\EnablePrefetcher`**; sometimes not active on servers
+3. Format and Structure: Compressed since Windows 10 (MAM), not directly readable
+4. Timestamps: as FILETIME in UTC
+5. Particularities and pitfalls: The first execution follows from the creation date of the .pf file -> the file is written approx. 10 seconds after the start; the file name contains a hash of the program path; the same program from different paths results in separate files
 7. Location:  
    **`C:\Windows\Prefetch\*.pf`**
 
